@@ -77,6 +77,13 @@ export const AgencySchema = z.object({
   relevantScenarios: z.array(z.string()).default([]),
 });
 
+export const SupportContactKind = z.enum(["phone", "email", "web"]);
+
+export const SupportContactSchema = z.object({
+  kind: SupportContactKind,
+  value: z.string().min(1),
+});
+
 export const SupportChannelSchema = z.object({
   id: z.string(),
   name: z.string(),
@@ -85,7 +92,10 @@ export const SupportChannelSchema = z.object({
   jurisdiction: z.string().optional(),
   issuesHandled: z.array(z.string()).default([]),
   url: z.string().url().optional(),
-  contact: z.string().optional(),
+  /** Tappable ways to reach the channel. */
+  contacts: z.array(SupportContactSchema).default([]),
+  /** True only after the published values were checked against the official page. */
+  contactVerified: z.boolean().default(false),
   verificationSource: z.string().optional(),
   lastVerified: z.string().optional(),
   limitations: z.string().optional(),
@@ -107,4 +117,5 @@ export type Source = z.infer<typeof SourceSchema>;
 export type Scenario = z.infer<typeof ScenarioSchema>;
 export type Agency = z.infer<typeof AgencySchema>;
 export type SupportChannel = z.infer<typeof SupportChannelSchema>;
+export type SupportContact = z.infer<typeof SupportContactSchema>;
 export type Feedback = z.infer<typeof FeedbackSchema>;

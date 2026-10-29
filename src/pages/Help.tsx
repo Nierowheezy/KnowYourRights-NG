@@ -1,29 +1,28 @@
 import "../styles/help.css";
 import { PageHero, AdSlot, AdAnchor, Reveal } from "../components/ui";
 import { isSupportVerified, supportChannels } from "../lib/content";
-import type { SupportChannel } from "../lib/schema";
+import type { SupportChannel, SupportContact } from "../lib/schema";
 
-const EMERGENCY_TILES = [
-  { num: "112", tel: "112", label: "National emergency — police, fire, medical. Free from any network.", red: true },
-  { num: "122", tel: "122", label: "FRSC rescue line — crashes and highway emergencies.", red: false },
-  { num: "199", tel: "08022202158", label: "NEMA — disasters and mass-casualty incidents.", red: false },
-];
-
-const WARN_BADGE = {
-  background: "var(--warning-tint)",
-  borderColor: "var(--warn-line)",
-  color: "var(--warning)",
-};
-
-function verification(channel: SupportChannel): { label: string; ok: boolean } {
-  if (!isSupportVerified(channel)) return { label: "Verification pending", ok: false };
+/** Short check date, e.g. "Oct 2026", or null when the entry is not verified. */
+function checkLabel(channel: SupportChannel): string | null {
+  if (!channel.contactVerified || !channel.lastVerified) return null;
   const d = new Date(`${channel.lastVerified}T00:00:00`);
+  if (Number.isNaN(d.getTime())) return null;
   const month = d.toLocaleDateString("en-GB", { month: "short" });
-  return { label: `✓ Checked ${month} ${d.getFullYear()}`, ok: true };
+  return `${month} ${d.getFullYear()}`;
+}
+
+function contactHref(contact: SupportContact): string {
+  if (contact.kind === "phone") {
+    const dialable = contact.value.replace(/[^\d+]/g, "").replace(/^\+?2340/, "+234");
+    return `tel:${dialable}`;
+  }
+  if (contact.kind === "email") return `mailto:${contact.value}`;
+  return contact.value;
 }
 
 function ChannelCard({ channel, delay }: { channel: SupportChannel; delay?: number }) {
-  const check = verification(channel);
+  const checked = checkLabel(channel);
   return (
     <div className="card reveal" style={delay ? { transitionDelay: `${delay}s` } : undefined}>
       <div className="card__icon">{channel.icon}</div>
@@ -34,76 +33,113 @@ function ChannelCard({ channel, delay }: { channel: SupportChannel; delay?: numb
           <span key={issue} className="issue-tag">{issue}</span>
         ))}
       </div>
-      <div className="contact-line">{channel.contact}</div>
-      {!check.ok && channel.limitations && (
+      <div className="contact-line">
+        {channel.contacts.map((contact, i) => (
+          <span key={`${contact.kind}-${contact.value}`}>
+            {i > 0 && <span className="contact-line__sep" aria-hidden="true"> · </span>}
+            <a href={contactHref(contact)}>{contact.value}</a>
+          </span>
+        ))}
+      </div>
+      {channel.limitations && (
         <p className="muted" style={{ fontSize: "0.76rem", margin: "0 0 10px" }}>{channel.limitations}</p>
       )}
       <div className="card__foot">
-        {check.ok ? (
-          <span className="badge-lime">{check.label}</span>
-        ) : (
-          <span className="badge-gray" style={WARN_BADGE}>{check.label}</span>
-        )}
+        <span className="badge-lime">{checked ? `✓ Checked ${checked}` : "Check date missing"}</span>
         <span className="card__meta">{channel.coverageNote ?? channel.agencyOrOrg}</span>
       </div>
+      {channel.url && (
+        <a className="card__source" href={channel.url} target="_blank" rel="noopener noreferrer">
+          Source: {channel.verificationSource ?? channel.agencyOrOrg}
+        </a>
+      )}
     </div>
   );
 }
 
 export default function Help() {
-  const complaints = supportChannels.filter((c) => c.type === "complaints");
-  const legal = supportChannels.filter((c) => c.type === "legal-aid" || c.type === "civil-society");
+  const published = supportChannels.filter((c) => isSupportVerified(c));
+  const emergencies = published.filter((c) => c.type === "emergency");
+  const complaints = published.filter((c) => c.type === "complaints");
+  const legal = published.filter((c) => c.type === "legal-aid" || c.type === "civil-society");
 
   return (
     <>
       {/* Page hero */}
       <PageHero
         title="Get help. The verified kind."
-        lede="Official complaint channels and legal support for enforcement encounters. Each entry shows its source and the date it was last checked; entries still awaiting re-verification are labelled."
+        lede="Official complaint channels and legal support for enforcement encounters. Every entry was checked against the organisation's own page, and shows that source and the date it was last checked."
         ledeStyle={{ maxWidth: 600, marginTop: 14, animationDelay: ".08s" }}
       />
 
       {/* Emergency band */}
-      <section className="section--tight" style={{ paddingTop: 8 }}>
-        <div className="container">
-          <div className="emergency-band">
-            {EMERGENCY_TILES.map((tile) => (
-              <a
-                key={tile.num}
-                href={`tel:${tile.tel}`}
-                className={`emergency-tile${tile.red ? " emergency-tile--red" : ""} reveal`}
-                style={tile.red ? undefined : { transitionDelay: tile.num === "122" ? ".06s" : ".12s" }}
-              >
-                <div className="emergency-tile__num">{tile.num}</div>
-                <div className="emergency-tile__label">{tile.label}</div>
-              </a>
-            ))}
+      {emergencies.length > 0 && (
+        <section className="section--tight" style={{ paddingTop: 8 }}>
+          <div className="container">
+            <div className="emergency-band">
+              {emergencies.map((channel, i) => {
+                const phone = channel.contacts.find((c) => c.kind === "phone");
+                const checked = checkLabel(channel);
+                return (
+                  <div
+                    key={channel.id}
+                    className={`emergency-tile${i === 0 ? " emergency-tile--red" : ""} reveal`}
+                    style={i ? { transitionDelay: `${i * 0.06}s` } : undefined}
+                  >
+                    <a className="emergency-tile__num" href={phone ? contactHref(phone) : undefined}>
+                      {channel.name}
+                    </a>
+                    <div className="emergency-tile__label">{channel.description ?? channel.agencyOrOrg}</div>
+                    <div className="emergency-tile__source">
+                      {checked ? <span>Checked {checked}</span> : <span>Check date missing</span>}
+                      {channel.url && (
+                        <a href={channel.url} target="_blank" rel="noopener noreferrer">
+                          {channel.verificationSource ?? channel.agencyOrOrg}
+                        </a>
+                      )}
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      )}
 
       {/* Complaints + legal aid */}
       <section className="section--tight">
         <div className="container">
-          <Reveal className="channel-group">
-            <h2>Complaint channels <span className="count">{complaints.length} listed</span></h2>
-            <p className="sub">When your rights were breached and you want it on record.</p>
-            <div className="card-grid card-grid--3">
-              {complaints.map((channel, i) => (
-                <ChannelCard key={channel.id} channel={channel} delay={(i % 3) * 0.05} />
-              ))}
-            </div>
-          </Reveal>
+          {complaints.length > 0 ? (
+            <Reveal className="channel-group">
+              <h2>Complaint channels <span className="count">{complaints.length} listed</span></h2>
+              <p className="sub">When your rights were breached and you want it on record.</p>
+              <div className="card-grid card-grid--3">
+                {complaints.map((channel, i) => (
+                  <ChannelCard key={channel.id} channel={channel} delay={(i % 3) * 0.05} />
+                ))}
+              </div>
+            </Reveal>
+          ) : (
+            <Reveal className="channel-group">
+              <p className="sub">No complaint channel has passed checking yet. Check back after the next review.</p>
+            </Reveal>
+          )}
 
-          <Reveal className="channel-group">
-            <h2>Free legal support <span className="count">{legal.length} listed</span></h2>
-            <p className="sub">When you need a lawyer, not just a complaint.</p>
-            <div className="card-grid card-grid--3">
-              {legal.map((channel, i) => (
-                <ChannelCard key={channel.id} channel={channel} delay={(i % 3) * 0.05} />
-              ))}
-            </div>
-          </Reveal>
+          {legal.length > 0 ? (
+            <Reveal className="channel-group">
+              <h2>Free legal support <span className="count">{legal.length} listed</span></h2>
+              <p className="sub">When you need a lawyer, not just a complaint.</p>
+              <div className="card-grid card-grid--3">
+                {legal.map((channel, i) => (
+                  <ChannelCard key={channel.id} channel={channel} delay={(i % 3) * 0.05} />
+                ))}
+              </div>
+            </Reveal>
+          ) : (
+            <Reveal className="channel-group">
+              <p className="sub">No free legal support channel has passed checking yet. Check back after the next review.</p>
+            </Reveal>
+          )}
 
           {/* MPU ad (300 × 250) */}
           <AdSlot variant="square" size="300 × 250 / MPU" reveal style={{ margin: "8px auto 44px", maxWidth: 340 }} />
@@ -111,7 +147,7 @@ export default function Help() {
           {/* Note */}
           <div className="callout callout--tint reveal">
             <svg width="20" height="20" viewBox="0 0 20 20" fill="none" style={{ flexShrink: 0 }}><circle cx="10" cy="10" r="7.5" stroke="currentColor" strokeWidth="1.4"/><path d="M10 9v4M10 6.6v.2" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/></svg>
-            <span><strong>We show the date each channel was last checked, and label any entry still awaiting re-verification.</strong> Numbers change; if one doesn't work, treat the entry as unverified until the next review. This directory is information, not a referral or endorsement.</span>
+            <span><strong>Every listing shows the date it was last checked against the organisation's own page.</strong> Numbers change; if one doesn't work, treat the entry as unverified until the next review. This directory is information, not a referral or endorsement.</span>
           </div>
         </div>
       </section>

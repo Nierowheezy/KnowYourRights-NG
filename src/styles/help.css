@@ -2,18 +2,15 @@
 
     .emergency-band {
       display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
       gap: 20px;
     }
-
-    @media (max-width: 860px) { .emergency-band { grid-template-columns: 1fr; } }
 
     .emergency-tile {
       background: var(--forest-deep);
       color: #fff;
       border-radius: var(--radius-lg);
       padding: 28px;
-      text-decoration: none;
       position: relative;
       overflow: hidden;
       transition: transform 0.2s ease, box-shadow 0.2s ease;
@@ -24,17 +21,33 @@
     .emergency-tile--red { background: #7f1d12; }
 
     .emergency-tile__num {
+      display: inline-block;
       font-family: var(--font-display);
       font-weight: 800;
       font-size: 2.4rem;
       letter-spacing: -0.04em;
       color: var(--lime);
       line-height: 1;
+      text-decoration: none;
     }
+
+    .emergency-tile__num:hover,
+    .emergency-tile__num:focus-visible { text-decoration: underline; }
 
     .emergency-tile--red .emergency-tile__num { color: #ffd7d2; }
 
     .emergency-tile__label { font-size: 0.9rem; color: #cdd5c4; margin-top: 8px; line-height: 1.5; }
+
+    .emergency-tile__source {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 4px 10px;
+      margin-top: 14px;
+      font-size: 0.72rem;
+      color: #a8b6a0;
+    }
+
+    .emergency-tile__source a { color: #d9e4d2; text-decoration: underline; }
 
     .channel-group { margin-bottom: 44px; }
 
@@ -83,4 +96,32 @@
       margin: 4px 0 12px;
       overflow-x: auto;
       white-space: nowrap;
+    }
+
+    .contact-line a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .contact-line a:hover,
+    .contact-line a:focus-visible {
+      text-decoration: underline;
+    }
+
+    .contact-line__sep {
+      color: var(--muted);
+    }
+
+    .card__source {
+      display: block;
+      margin-top: 10px;
+      font-size: 0.74rem;
+      color: var(--text-faint);
+      text-decoration: none;
+    }
+
+    .card__source:hover,
+    .card__source:focus-visible {
+      color: var(--forest);
+      text-decoration: underline;
     }

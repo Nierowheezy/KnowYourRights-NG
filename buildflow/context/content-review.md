@@ -69,8 +69,8 @@ npm run review:queue
 ```
 
 The report groups scenarios into source-verified, awaiting source check, under
-review, needs revision, and due for re-check. It also lists unverified sources
-and any scenario that cites one. The report is a local maintenance aid; it is
+review, needs revision, and due for re-check. It also lists unverified sources,
+any scenario that cites one, and every help directory entry that is not checked. The report is a local maintenance aid; it is
 not stored in the app.
 
 ## Correction process
@@ -107,11 +107,46 @@ The initial library is complete when all three hold:
 
 ## Known source gaps
 
-Tracked here so they are not lost:
+Tracked here so they are not lost. No open gap remains in the initial library or
+the help directory.
 
-- **Support contacts:** entries in `src/content/support.json` still need checking
-  against official agency websites. This is outside the initial library bar
-  because it is directory data, not legal text.
+- **Closed 2026-10-29 - support contacts:** every entry in
+  `src/content/support.json` was checked against an official agency page. See
+  **Help directory verification** for the changes and the pages used.
+
+## Help directory rule
+
+An entry in `src/content/support.json` is published only when it has
+`contactVerified: true`, at least one contact, `url` pointing at the
+organisation's own page, `verificationSource`, and `lastVerified` with the date of
+the check. An entry that cannot be checked is removed, never published as pending.
+The emergency tiles follow the same rule because they are entries in the same
+file. If a published number stops working, treat it as unverified until the next
+review.
+
+`npm run validate:content` fails on a directory entry that breaks this rule, and
+`npm run review:queue` lists any entry that is not verified.
+
+## Help directory verification
+
+Dated record of directory changes and the pages they were checked against.
+
+- **2026-10-29:** removed the Nigeria Police Force complaint-unit entry.
+  `npf.gov.ng` answers automated requests with a bot checkpoint, so the seeded
+  contact could not be checked against the Force's own page. Police complaints are
+  now covered by the Police Service Commission, the Public Complaints Commission,
+  and the National Human Rights Commission entries.
+- **2026-10-29:** removed the NBA Pro Bono Centre entry. The Nigerian Bar
+  Association site is a JavaScript app whose fetched HTML contains no contact
+  details, so the seeded email could not be checked against it. Free legal support
+  remains covered by the Legal Aid Council entry.
+- **2026-10-29:** moved the emergency band out of hardcoded page copy and into
+  `support.json`, so it follows the same check rule as the rest of the directory.
+  Kept 112, checked against NEMA's page on the national emergency short code, and
+  122, checked against the FRSC contact page. Removed the NEMA "199" tile: NEMA's
+  contact page lists only `info@nema.gov.ng` and `nemapress@yahoo.com`, a site
+  search for 199 returns unrelated results, and the hardcoded `0802 220 2158` does
+  not appear on any NEMA page checked.
 
 ## Commands
 

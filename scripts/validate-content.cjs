@@ -108,6 +108,51 @@ for (const a of agencies) {
   }
 }
 
+const CONTACT_KINDS = new Set(["phone", "email", "web"]);
+const supportIds = new Set();
+for (const c of support) {
+  if (!isText(c.id)) {
+    errors.push("support entry missing id");
+    continue;
+  }
+  if (supportIds.has(c.id)) errors.push(`duplicate support id: ${c.id}`);
+  supportIds.add(c.id);
+  if (!isText(c.name)) errors.push(`support ${c.id} missing name`);
+  if (!isText(c.agencyOrOrg)) errors.push(`support ${c.id} missing agencyOrOrg`);
+  if (!["emergency", "complaints", "legal-aid", "civil-society"].includes(c.type)) {
+    errors.push(`support ${c.id} has unknown type ${c.type}`);
+  }
+  if (!Array.isArray(c.contacts) || c.contacts.length === 0) {
+    errors.push(`support ${c.id} needs at least one contact`);
+  }
+  for (const contact of c.contacts || []) {
+    if (!CONTACT_KINDS.has(contact.kind)) errors.push(`support ${c.id} contact has unknown kind ${contact.kind}`);
+    if (!isText(contact.value)) {
+      errors.push(`support ${c.id} contact needs a value`);
+    } else if (contact.kind === "phone" && (contact.value.match(/\d/g) || []).length < 3) {
+      errors.push(`support ${c.id} phone needs at least 3 digits (short codes are valid)`);
+    } else if (contact.kind === "email" && !contact.value.includes("@")) {
+      errors.push(`support ${c.id} email looks wrong: ${contact.value}`);
+    }
+  }
+  if (c.contactVerified !== true) {
+    errors.push(`support ${c.id} is not verified (contactVerified must be true)`);
+  }
+  if (!isText(c.verificationSource)) {
+    errors.push(`support ${c.id} needs verificationSource (the page the contacts were checked against)`);
+  }
+  if (!isText(c.lastVerified)) {
+    errors.push(`support ${c.id} needs lastVerified (the date the page was checked)`);
+  } else if (!isDate(c.lastVerified)) {
+    errors.push(`support ${c.id} lastVerified must be YYYY-MM-DD`);
+  }
+  if (!isText(c.url)) {
+    errors.push(`support ${c.id} needs url (official page used for the check)`);
+  } else if (!/^https?:\/\//.test(c.url)) {
+    errors.push(`support ${c.id} bad url`);
+  }
+}
+
 const statusSummary = Object.entries(statusCounts)
   .map(([status, count]) => `${status}=${count}`)
   .join(" ");
@@ -115,6 +160,7 @@ const statusSummary = Object.entries(statusCounts)
 console.log(`sources: ${sources.length}  scenarios: ${scenarios.length}  agencies: ${agencies.length}  support: ${support.length}`);
 console.log(`statuses: ${statusSummary}`);
 console.log(`verified sources: ${sources.filter((s) => s.currentStatusVerified).length}/${sources.length}`);
+console.log(`verified support channels: ${support.filter((c) => c.contactVerified).length}/${support.length}`);
 if (errors.length) {
   console.error("\nERRORS:");
   errors.forEach((e) => console.error(" - " + e));

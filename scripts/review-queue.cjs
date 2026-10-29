@@ -11,6 +11,7 @@ const TODAY = new Date().toISOString().slice(0, 10);
 
 const read = (p) => JSON.parse(fs.readFileSync(p, "utf8"));
 const sources = read(path.join(C, "sources.json"));
+const support = read(path.join(C, "support.json"));
 const scenarios = fs
   .readdirSync(SCEN)
   .filter((f) => f.endsWith(".json"))
@@ -113,5 +114,18 @@ else {
   citingUnverifiedSources.forEach((s) => {
     const ids = (s.sources || []).map((r) => r.sourceId).filter((id) => unverifiedIds.has(id));
     console.log(row(s, `cites ${[...new Set(ids)].join(", ")}`));
+  });
+}
+console.log("");
+
+const supportVerified = support.filter((c) => c.contactVerified);
+const supportUnverified = support.filter((c) => !c.contactVerified);
+console.log(`## Help directory (${support.length})`);
+console.log(`- Verified: ${supportVerified.length} | unverified: ${supportUnverified.length}`);
+if (supportUnverified.length === 0) {
+  console.log("- Every entry is checked against an official page and records its source and date.");
+} else {
+  supportUnverified.forEach((c) => {
+    console.log(`- **${c.name}** (${c.id}) | not checked against its official page`);
   });
 }

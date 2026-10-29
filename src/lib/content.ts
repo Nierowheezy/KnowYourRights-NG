@@ -128,8 +128,7 @@ export function getReviewBadge(s: Scenario): ReviewBadge {
   return { label: "Draft", tone: "muted" };
 }
 
-/** Support entries whose contact details still need checking are never shown as verified. */
+/** Support entries are verified only when someone checked the values against the official page. */
 export function isSupportVerified(channel: SupportChannel): boolean {
-  if (!channel.lastVerified) return false;
-  return !/pending|re-verif|not.*verif/i.test(channel.limitations ?? "");
+  return channel.contactVerified;
 }

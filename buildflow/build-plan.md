@@ -35,7 +35,7 @@ If your first pass is just rough bullets, that is okay. Run `/overview` after fi
 - [x] 7. **Situation-based search** - search scenario titles, keywords, agencies, and plain-language questions
 - [x] 8. **Agency and jurisdiction browsing** - browse guidance by enforcement agency and distinguish federal from state-specific rules
 - [x] 9. **Immediate encounter mode** - provide concise, safety-first guidance for users dealing with an ongoing encounter
-- [ ] 10. **Verified help directory** - list official complaint channels and legal support resources with verification dates
+- [x] 10. **Verified help directory** - list official complaint channels and legal support resources with verification dates
 - [x] 11. **Related scenarios and search recovery** - suggest relevant guides and useful categories when no exact result is found
 - [x] 12. **Content validation** - validate scenario records, required fields, and source links before publication
 - [x] 13. **PWA and offline access** - support installation and offline reading of the application and selected reviewed scenarios

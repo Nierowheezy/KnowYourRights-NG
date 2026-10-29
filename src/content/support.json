@@ -1,18 +1,35 @@
 [
   {
-    "id": "npf-complaint-unit",
-    "name": "NPF Complaint Unit (X-Squad)",
-    "type": "complaints",
-    "agencyOrOrg": "Nigeria Police Force",
+    "id": "emergency-112",
+    "name": "112",
+    "type": "emergency",
+    "agencyOrOrg": "National emergency short code",
     "jurisdiction": "federal",
-    "issuesHandled": ["Extortion", "Detention", "Seizure"],
-    "description": "Handles police misconduct reports — extortion, unlawful detention, phone seizures.",
-    "contact": "complaints@npf.gov.ng · 0803 123 4567",
-    "verificationSource": "NPF public contact directory",
-    "lastVerified": "2026-01-15",
-    "coverageNote": "Federal",
-    "icon": "🚓",
-    "limitations": "Details pending re-verification against the official NPF contact page before publication."
+    "issuesHandled": ["Police", "Fire", "Medical"],
+    "description": "National emergency line for police, fire and medical emergencies.",
+    "contacts": [{ "kind": "phone", "value": "112" }],
+    "contactVerified": true,
+    "url": "https://nema.gov.ng/ncc-has-provided-112-as-national-emergency-number-ogar/",
+    "verificationSource": "NEMA page on the 112 short code",
+    "lastVerified": "2026-10-29",
+    "coverageNote": "Nationwide",
+    "icon": "🚨"
+  },
+  {
+    "id": "emergency-122",
+    "name": "122",
+    "type": "emergency",
+    "agencyOrOrg": "Federal Road Safety Corps",
+    "jurisdiction": "federal",
+    "issuesHandled": ["Crashes", "Highway emergencies"],
+    "description": "FRSC rescue line for crashes and highway emergencies.",
+    "contacts": [{ "kind": "phone", "value": "122" }],
+    "contactVerified": true,
+    "url": "https://frsc.gov.ng/contact-us/",
+    "verificationSource": "FRSC contact page",
+    "lastVerified": "2026-10-29",
+    "coverageNote": "Federal roads",
+    "icon": "🛣️"
   },
   {
     "id": "police-service-commission",
@@ -22,12 +39,17 @@
     "jurisdiction": "federal",
     "issuesHandled": ["Officer conduct", "Discipline"],
     "description": "Independent oversight of the police — disciplinary action against named officers.",
-    "contact": "info@psc.gov.ng · 09 461 5021",
-    "verificationSource": "PSC official website",
-    "lastVerified": "2026-01-15",
+    "contacts": [
+      { "kind": "email", "value": "info@psc.gov.ng" },
+      { "kind": "phone", "value": "+234 703 407 2676" },
+      { "kind": "phone", "value": "+234 703 407 2677" }
+    ],
+    "contactVerified": true,
+    "url": "https://psc.gov.ng/contact/",
+    "verificationSource": "PSC contact page",
+    "lastVerified": "2026-10-29",
     "coverageNote": "Federal",
-    "icon": "🏛️",
-    "limitations": "Details pending re-verification against the official PSC contact page before publication."
+    "icon": "🏛️"
   },
   {
     "id": "frsc-public-complaints",
@@ -37,12 +59,58 @@
     "jurisdiction": "federal",
     "issuesHandled": ["Unlawful fines", "Impound"],
     "description": "Misconduct by marshals, unlawful fines, impound issues on federal highways.",
-    "contact": "callcentre@frsc.gov.ng · 122 / 0700 2255 3772",
-    "verificationSource": "FRSC official website",
-    "lastVerified": "2026-01-15",
+    "contacts": [
+      { "kind": "email", "value": "info@frsc.gov.ng" },
+      { "kind": "phone", "value": "122" },
+      { "kind": "phone", "value": "0700 2255 3772" }
+    ],
+    "contactVerified": true,
+    "url": "https://frsc.gov.ng/contact-us/",
+    "verificationSource": "FRSC contact page",
+    "lastVerified": "2026-10-29",
     "coverageNote": "Federal",
-    "icon": "🛣️",
-    "limitations": "Details pending re-verification against the official FRSC contact page before publication."
+    "icon": "🛣️"
+  },
+  {
+    "id": "public-complaints-commission",
+    "name": "Public Complaints Commission",
+    "type": "complaints",
+    "agencyOrOrg": "Public Complaints Commission",
+    "jurisdiction": "federal",
+    "issuesHandled": ["Maladministration", "Agency inaction", "Unresolved complaints"],
+    "description": "Federal ombudsman for complaints about government agencies and public officials.",
+    "contacts": [
+      { "kind": "email", "value": "complaint@pcc.gov.ng" },
+      { "kind": "email", "value": "info@pcc.gov.ng" },
+      { "kind": "phone", "value": "+234 807 010 0580" },
+      { "kind": "phone", "value": "+234 209 700 0099" }
+    ],
+    "contactVerified": true,
+    "url": "https://pcc.gov.ng/contact-us/",
+    "verificationSource": "PCC contact page",
+    "lastVerified": "2026-10-29",
+    "coverageNote": "Federal · free",
+    "icon": "📨"
+  },
+  {
+    "id": "national-human-rights-commission",
+    "name": "National Human Rights Commission",
+    "type": "complaints",
+    "agencyOrOrg": "National Human Rights Commission",
+    "jurisdiction": "federal",
+    "issuesHandled": ["Rights violations", "Police abuse", "Detention"],
+    "description": "Federal commission that receives complaints about rights violations by public officials.",
+    "contacts": [
+      { "kind": "email", "value": "info@nhrc.gov.ng" },
+      { "kind": "phone", "value": "6472" },
+      { "kind": "phone", "value": "0800 6472 428" }
+    ],
+    "contactVerified": true,
+    "url": "https://nhrc.gov.ng/contact-us/",
+    "verificationSource": "NHRC contact page",
+    "lastVerified": "2026-10-29",
+    "coverageNote": "Federal · free · 6472 is a toll-free short code",
+    "icon": "🛡️"
   },
   {
     "id": "legal-aid-council",
@@ -52,27 +120,16 @@
     "jurisdiction": "federal",
     "issuesHandled": ["Detention", "Arraignment", "Trial"],
     "description": "Government legal aid for detained or charged persons who cannot afford counsel.",
-    "contact": "info@legalaid.gov.ng · 090 2888 7333",
-    "verificationSource": "Legal Aid Council official website",
-    "lastVerified": "2026-01-15",
+    "contacts": [
+      { "kind": "email", "value": "info@legalaidcouncil.gov.ng" },
+      { "kind": "phone", "value": "+234 703 191 5990" }
+    ],
+    "contactVerified": true,
+    "url": "https://legalaidcouncil.gov.ng/contact-us/",
+    "verificationSource": "Legal Aid Council contact page",
+    "lastVerified": "2026-10-29",
     "coverageNote": "Federal · free",
-    "icon": "⚖️",
-    "limitations": "Details pending re-verification against the official council contact page before publication."
-  },
-  {
-    "id": "nba-pro-bono-centre",
-    "name": "NBA Pro Bono Centre",
-    "type": "legal-aid",
-    "agencyOrOrg": "Nigerian Bar Association",
-    "jurisdiction": "federal",
-    "issuesHandled": ["Rights claims", "Police matters"],
-    "description": "Nigerian Bar Association's scheme matching people to volunteer lawyers.",
-    "contact": "probono@nigerianbar.org.ng",
-    "verificationSource": "NBA official website",
-    "lastVerified": "2026-01-15",
-    "coverageNote": "Free · income rules may apply",
-    "icon": "🤝",
-    "limitations": "Details pending re-verification against the official NBA contact page before publication."
+    "icon": "⚖️"
   },
   {
     "id": "cleen-foundation",
@@ -82,11 +139,15 @@
     "jurisdiction": "federal",
     "issuesHandled": ["Documentation", "Advocacy"],
     "description": "Civil society group documenting police abuse and supporting victims through the process.",
-    "contact": "info@cleen.org",
-    "verificationSource": "CLEEN Foundation official website",
-    "lastVerified": "2026-01-15",
+    "contacts": [
+      { "kind": "email", "value": "cleen@cleen.org" },
+      { "kind": "phone", "value": "0810 249 3148" }
+    ],
+    "contactVerified": true,
+    "url": "https://cleen.org/contact/",
+    "verificationSource": "CLEEN contact page",
+    "lastVerified": "2026-10-29",
     "coverageNote": "Civil society",
-    "icon": "📣",
-    "limitations": "Details pending re-verification against the official CLEEN contact page before publication."
+    "icon": "📣"
   }
 ]
