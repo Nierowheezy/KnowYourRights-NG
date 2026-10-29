@@ -107,6 +107,27 @@ body {
   text-rendering: optimizeLegibility;
 }
 
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+.skip-link:focus-visible {
+  position: fixed;
+  left: 16px;
+  top: 16px;
+  width: auto;
+  height: auto;
+  padding: 10px 14px;
+  background: var(--forest-deep);
+  color: #fff;
+  border-radius: var(--radius);
+  z-index: 1000;
+}
+
 a { color: inherit; }
 
 img, svg { display: block; }
@@ -1483,6 +1504,22 @@ mark {
     transition-duration: 0.01ms !important;
   }
   .reveal { opacity: 1; transform: none; }
+}
+
+/* Touch target minimum */
+.btn, .nav__link, .theme-toggle, .nav-toggle {
+  min-height: 44px;
+  min-width: 44px;
+}
+
+/* Low bandwidth mode */
+html[data-lowbw="1"] img.decorative,
+html[data-lowbw="1"] .reveal {
+  display: none !important;
+}
+html[data-lowbw="1"] *, html[data-lowbw="1"] *::before, html[data-lowbw="1"] *::after {
+  animation: none !important;
+  transition: none !important;
 }
 
 /* ============================================================

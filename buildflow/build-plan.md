@@ -40,7 +40,7 @@ If your first pass is just rough bullets, that is okay. Run `/overview` after fi
 - [x] 12. **Content validation** - validate scenario records, required fields, and source links before publication
 - [x] 13. **PWA and offline access** - support installation and offline reading of the application and selected reviewed scenarios
 - [x] 14. **Offline freshness indicators** - display cached content status and review dates
-- [ ] 15. **Accessibility and low-bandwidth support** - provide readable layouts, keyboard navigation, accessible contrast, and lightweight loading
+- [x] 15. **Accessibility and low-bandwidth support** - provide readable layouts, keyboard navigation, accessible contrast, and lightweight loading
 - [ ] 16. **Privacy-preserving feedback** - let users flag missing, confusing, or outdated guidance without collecting unnecessary personal data
 - [ ] 17. **Content history and corrections** - track material legal content changes and support corrections and rollback
 - [ ] 18. **Usability testing** - validate search success, comprehension, navigation, and safety of guidance with target users
