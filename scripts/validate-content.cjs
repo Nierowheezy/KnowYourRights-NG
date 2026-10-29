@@ -7,6 +7,12 @@ const ROOT = path.resolve(__dirname, "..");
 const C = path.join(ROOT, "src", "content");
 const SCEN = path.join(C, "scenarios");
 
+const STATUSES = new Set(["draft", "under-review", "approved", "needs-revision", "retired"]);
+const REVIEWED_STATUSES = new Set(["under-review", "approved", "needs-revision"]);
+const HISTORY_STATUSES = new Set(["under-review", "approved", "needs-revision", "retired"]);
+const PRE_REVIEW_REVIEWER = /pre-review|content team|pending|unreviewed|draft/i;
+const DATE = /^\d{4}-\d{2}-\d{2}$/;
+
 const read = (p) => JSON.parse(fs.readFileSync(p, "utf8"));
 const sources = read(path.join(C, "sources.json"));
 const agencies = read(path.join(C, "agencies.json"));
@@ -16,6 +22,10 @@ const scenarios = scenarioFiles.map((f) => ({ file: f, data: read(path.join(SCEN
 
 const errors = [];
 const warn = [];
+const statusCounts = {};
+
+const isText = (value) => typeof value === "string" && value.trim().length > 0;
+const isDate = (value) => typeof value === "string" && DATE.test(value);
 
 const srcIds = new Set();
 for (const s of sources) {
@@ -26,18 +36,59 @@ for (const s of sources) {
 }
 
 const scenIds = new Set();
-const required = ["id", "title", "question", "shortAnswer", "legalExplanation", "practicalOptions", "jurisdiction", "category", "sources"];
 for (const { file, data: s } of scenarios) {
-  if (!s.id) errors.push(`${file}: missing id`);
+  if (!s.id) {
+    errors.push(`${file}: missing id`);
+    continue;
+  }
   if (scenIds.has(s.id)) errors.push(`${file}: duplicate scenario id ${s.id}`);
   scenIds.add(s.id);
+}
+
+const required = ["id", "title", "question", "shortAnswer", "legalExplanation", "practicalOptions", "jurisdiction", "category", "sources"];
+for (const { file, data: s } of scenarios) {
   for (const k of required) if (!s[k] || (Array.isArray(s[k]) && s[k].length === 0)) errors.push(`${file}: missing ${k}`);
   if (!Array.isArray(s.sources) || s.sources.length === 0) errors.push(`${file}: no sources`);
   for (const ref of s.sources || []) {
     if (!srcIds.has(ref.sourceId)) errors.push(`${file}: unknown sourceId ${ref.sourceId}`);
+    if (!Array.isArray(ref.sections) || ref.sections.length === 0) {
+      errors.push(`${file}: source ${ref.sourceId} has no sections`);
+    }
   }
-  if (s.status === "approved" && /pre-review/i.test(s.reviewer || "")) {
-    warn.push(`${file}: status=approved but reviewer is "${s.reviewer}" (not lawyer-reviewed)`);
+  for (const rid of s.relatedScenarios || []) {
+    if (!scenIds.has(rid)) errors.push(`${file}: related scenario ${rid} does not exist`);
+  }
+
+  if (!STATUSES.has(s.status)) {
+    errors.push(`${file}: invalid status "${s.status}"`);
+    continue;
+  }
+  statusCounts[s.status] = (statusCounts[s.status] || 0) + 1;
+
+  if (REVIEWED_STATUSES.has(s.status)) {
+    if (!isText(s.reviewer)) errors.push(`${file}: status=${s.status} requires reviewer`);
+    if (!isDate(s.lastReviewed)) errors.push(`${file}: status=${s.status} requires lastReviewed as YYYY-MM-DD`);
+    if (!isText(s.reviewNotes)) errors.push(`${file}: status=${s.status} requires reviewNotes`);
+  }
+
+  if (s.status === "approved") {
+    if (!isDate(s.nextReview)) errors.push(`${file}: status=approved requires nextReview as YYYY-MM-DD`);
+    if (isDate(s.lastReviewed) && isDate(s.nextReview) && s.nextReview < s.lastReviewed) {
+      errors.push(`${file}: nextReview must not be earlier than lastReviewed`);
+    }
+    if (isText(s.reviewer) && PRE_REVIEW_REVIEWER.test(s.reviewer)) {
+      warn.push(`${file}: approved but reviewer is "${s.reviewer}" (awaiting lawyer sign-off)`);
+    }
+  }
+
+  if (HISTORY_STATUSES.has(s.status)) {
+    if (!Array.isArray(s.changeHistory) || s.changeHistory.length === 0) {
+      errors.push(`${file}: status=${s.status} requires at least one changeHistory entry`);
+    }
+  }
+  for (const entry of s.changeHistory || []) {
+    if (!isDate(entry.date)) errors.push(`${file}: changeHistory entry needs a YYYY-MM-DD date`);
+    if (!isText(entry.note)) errors.push(`${file}: changeHistory entry needs a note`);
   }
 }
 
@@ -47,7 +98,12 @@ for (const a of agencies) {
   }
 }
 
+const statusSummary = Object.entries(statusCounts)
+  .map(([status, count]) => `${status}=${count}`)
+  .join(" ");
+
 console.log(`sources: ${sources.length}  scenarios: ${scenarios.length}  agencies: ${agencies.length}  support: ${support.length}`);
+console.log(`statuses: ${statusSummary}`);
 console.log(`verified sources: ${sources.filter((s) => s.currentStatusVerified).length}/${sources.length}`);
 if (errors.length) {
   console.error("\nERRORS:");

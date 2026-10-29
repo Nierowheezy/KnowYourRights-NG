@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
 import "../styles/scenario.css";
 import { AdSlot } from "../components/ui";
@@ -68,6 +68,29 @@ function parseBlocks(text: string): Block[] {
   return blocks;
 }
 
+function ChangeHistory({ entries }: { entries: Scenario["changeHistory"] }) {
+  return (
+    <section className="change-history reveal" id="change-history" aria-labelledby="change-history-title">
+      <h3 id="change-history-title">Change history</h3>
+      {entries.length > 0 ? (
+        <ol className="change-history__list">
+          {entries.map((entry, i) => (
+            <li key={`${entry.date}-${i}`} className="change-history__item">
+              <div className="change-history__meta">
+                <span className="change-history__date">{formatDate(entry.date)}</span>
+                {entry.reviewer && <span>{entry.reviewer}</span>}
+              </div>
+              <p>{entry.note}</p>
+            </li>
+          ))}
+        </ol>
+      ) : (
+        <p className="change-history__empty">No material changes recorded.</p>
+      )}
+    </section>
+  );
+}
+
 function ProseBlocks({ text }: { text: string }) {
   return (
     <>
@@ -91,7 +114,6 @@ function ProseBlocks({ text }: { text: string }) {
 export default function Scenario() {
   const { id } = useParams<{ id: string }>();
   const scenario = id ? getScenarioById(id) : undefined;
-  const [feedback, setFeedback] = useState<string | null>(null);
 
   useEffect(() => {
     if (scenario) document.title = `${scenario.title} — KnowYourRights NG`;
@@ -185,25 +207,16 @@ export default function Scenario() {
               )}
             </div>
 
-            {/* Feedback */}
-            <div className="feedback-card reveal" id="feedback">
-              <strong style={{ fontFamily: "var(--font-display)", letterSpacing: "-0.02em" }}>Was this guidance useful?</strong>
-              <div className="badge-row">
-                {["👍 Helpful", "Confusing", "Outdated"].map((label) => (
-                  <a
-                    key={label}
-                    href="#feedback"
-                    className={`chip${label.includes("Helpful") ? " chip--tint" : ""}`}
-                    onClick={(e) => { e.preventDefault(); setFeedback(label); }}
-                  >
-                    {label}
-                  </a>
-                ))}
-              </div>
-              <span className="muted" style={{ fontSize: "0.8rem", marginLeft: "auto" }}>
-                {feedback ? `Noted — "${feedback}" saved anonymously.` : "Anonymous · no account needed · nothing about you is stored"}
-              </span>
+            {/* Corrections */}
+            <div className="feedback-card reveal" id="corrections">
+              <strong style={{ fontFamily: "var(--font-display)", letterSpacing: "-0.02em" }}>Corrections</strong>
+              <p className="muted" style={{ margin: 0, fontSize: "0.85rem", lineHeight: 1.6, flex: "1 1 320px" }}>
+                In-app feedback is not connected yet. When a source check changes this guidance, the update is recorded in the change history above.
+              </p>
+              <Link to="/help" className="chip" style={{ marginLeft: "auto" }}>Official complaint channels</Link>
             </div>
+
+            <ChangeHistory entries={scenario.changeHistory} />
 
             {/* Related */}
             {related.length > 0 && (
@@ -276,7 +289,7 @@ export default function Scenario() {
               <div className="review-row"><span className="k">Last reviewed</span><span className="v">{formatDate(scenario.lastReviewed) || "—"}</span></div>
               <div className="review-row"><span className="k">Next review</span><span className="v">{formatDate(scenario.nextReview) || "—"}</span></div>
               <div className="review-row"><span className="k">Material changes</span><span className="v">{scenario.changeHistory.length} logged</span></div>
-              <a href="#" className="link-green" style={{ fontSize: "0.82rem", display: "inline-block", marginTop: 10 }}>See change history →</a>
+              <a href="#change-history" className="link-green" style={{ fontSize: "0.82rem", display: "inline-block", marginTop: 10 }}>See change history →</a>
             </div>
 
             <div className="side-card reveal" style={{ transitionDelay: ".12s", background: "var(--bg-ground)" }}>

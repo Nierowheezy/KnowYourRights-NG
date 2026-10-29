@@ -174,7 +174,7 @@ export default function Search() {
                   <Link to="/scenario/officer-demanded-money" className="chip">Complaints</Link>
                 </div>
                 <p className="muted" style={{ fontSize: "0.8rem", marginTop: 18 }}>
-                  Nothing close? <Link to="/scenario/police-stop-search-car#feedback" className="link-green">Flag it for review</Link> — anonymous, takes 10 seconds.
+                  Nothing close? <Link to="/about#corrections" className="link-green">Read how corrections work</Link>. In-app feedback is not connected yet.
                 </p>
               </div>
             </section>

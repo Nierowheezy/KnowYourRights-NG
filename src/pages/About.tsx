@@ -25,7 +25,7 @@ const PROCESS_STEPS = [
   { n: 1, title: "Drafted from sources", desc: "Researchers read the Act, regulation or official guidance and draft the scenario in plain language." },
   { n: 2, title: "Legal check", desc: "A Nigerian lawyer checks every claim, the exceptions, and the practical options against the cited sources." },
   { n: 3, title: "Sign-off & dated", desc: "Only scenarios signed off by a named Nigerian lawyer are labelled lawyer-reviewed. Entries awaiting sign-off say so openly." },
-  { n: 4, title: "Corrected openly", desc: "Flagged issues trigger a review; material changes are tracked in a public change history." },
+  { n: 4, title: "Corrected openly", desc: "Material changes are checked against the sources and recorded in a dated change history." },
 ];
 
 export default function About() {
@@ -111,7 +111,7 @@ export default function About() {
                 <div>
                   <h3>Your search history is<br />nobody's business.</h3>
                   <p>No accounts, no tracking pixels on content, and no selling of data — ever. Not in v1, not with ads, not "anonymised".</p>
-                  <p style={{ marginBottom: 0 }}>Feedback is anonymous by design: it stores what you flagged, never who you are.</p>
+                  <p style={{ marginBottom: 0 }}>In-app feedback is not connected yet, so the app does not collect or store what you read or flag.</p>
                 </div>
                 <div className="privacy-points">
                   <div className="privacy-point"><span className="tick">✓</span> No accounts, no sign-up, no email required</div>
@@ -124,13 +124,13 @@ export default function About() {
 
             {/* Corrections */}
             <section className="about-section" id="corrections">
-              <Reveal as="h2">Corrections &amp; feedback</Reveal>
-              <Reveal as="p" className="sub">Every scenario page has a one-tap feedback row — helpful, confusing, outdated, or missing.</Reveal>
+              <Reveal as="h2">Corrections &amp; change history</Reveal>
+              <Reveal as="p" className="sub">Material corrections are recorded in each scenario's change history. In-app feedback collection is not connected yet.</Reveal>
 
               <div className="callout callout--tint reveal" style={{ flexDirection: "column", alignItems: "flex-start", gap: 12 }}>
-                <span style={{ maxWidth: 640 }}>Flagged items go straight into the review queue, anonymously. Material corrections are published with a visible change note, and the review trail on each page shows the history.</span>
+                <span style={{ maxWidth: 640 }}>When a source check or review changes a legal conclusion, the scenario gets a dated change entry and its review status is updated. The review queue is maintained by the project owner; the app does not store or send feedback yet.</span>
                 <div style={{ display: "flex", gap: 10, flexWrap: "wrap", marginTop: 6 }}>
-                  <Link to="/scenario/police-stop-search-car#feedback" className="btn btn--primary btn--sm">Flag a scenario →</Link>
+                  <Link to="/scenario/police-stop-search-car#change-history" className="btn btn--primary btn--sm">See a change history →</Link>
                   <Link to="/help" className="btn btn--soft btn--sm">Open the help directory</Link>
                 </div>
               </div>

@@ -69,8 +69,8 @@ const TRUST_CARDS = [
   },
   {
     label: "Open corrections",
-    title: "Every page takes feedback",
-    body: "Anonymous flags go into the review queue, and material changes are logged in each scenario's change history.",
+    title: "Every change is dated",
+    body: "Material corrections are logged in each scenario's change history. In-app feedback collection is not connected yet.",
   },
 ];
 

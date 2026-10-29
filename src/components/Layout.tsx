@@ -135,9 +135,8 @@ export default function Layout() {
                 <h4>Support</h4>
                 <ul>
                   <li><Link to="/help">Help directory</Link></li>
-                  <li><Link to="/scenario/police-stop-search-car#feedback">Flag an issue</Link></li>
+                  <li><Link to="/about#corrections">Corrections</Link></li>
                   <li><Link to="/about">How we review</Link></li>
-                  <li><a href="#">Corrections<span className="footer__soon">SOON</span></a></li>
                 </ul>
               </div>
               <div className="footer__col">

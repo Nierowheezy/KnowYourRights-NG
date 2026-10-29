@@ -20,37 +20,25 @@ A common order that works well: build the core UI with placeholder data first, t
 
 Use checkboxes. Each item should be a feature-sized outcome, not a loose task or a whole product area.
 
-Good:
-
-- [ ] 1. **Skill submission** - upload a skill package and save its metadata
-- [ ] 2. **Validation result** - run checks and show pass/fail status for a skill
-- [ ] 3. **Directory listing** - browse and filter published skills
-- [ ] 4. **Deployment readiness** - configure a free hosting tier and verify the production build
-
-Avoid:
-
-- Upload stuff
-- Database
-- Make it look nice
-- Auth, billing, dashboard, validation, and deploy
+A good item is a feature-sized outcome, e.g. "**Validation result** - run checks and show pass/fail status for a skill." Avoid loose tasks like "upload stuff", "database", or "auth, billing, dashboard, validation, and deploy".
 
 If your first pass is just rough bullets, that is okay. Run `/overview` after filling both planning docs; it will flag plan-shape problems and can propose a cleaned-up checkbox version before generating the project overview.
 
 ## MVP
 
-- [ ] 1. **Legal content model** - define structured records for scenarios, legal sources, jurisdiction, review status, exceptions, and review dates
-- [ ] 2. **Legal source register** - catalogue verified legislation, regulations, official guidance, and state-specific legal sources
-- [ ] 3. **Scenario review workflow** - establish drafting, lawyer review, approval, publication, correction, and retirement of legal content
+- [x] 1. **Legal content model** - define structured records for scenarios, legal sources, jurisdiction, review status, exceptions, and review dates
+- [x] 2. **Legal source register** - catalogue verified legislation, regulations, official guidance, and state-specific legal sources
+- [x] 3. **Scenario review workflow** - establish drafting, lawyer review, approval, publication, correction, and retirement of legal content
 - [ ] 4. **Initial scenario library** - publish lawyer-reviewed roadside encounter guides with source-backed explanations and safety-first next steps
-- [ ] 5. **Application shell** - build responsive navigation, homepage, scenario categories, and immediate guidance entry point
-- [ ] 6. **Scenario detail pages** - display concise answers, legal explanations, exceptions, practical options, source links, and review dates
-- [ ] 7. **Situation-based search** - search scenario titles, keywords, agencies, and plain-language questions
-- [ ] 8. **Agency and jurisdiction browsing** - browse guidance by enforcement agency and distinguish federal from state-specific rules
-- [ ] 9. **Immediate encounter mode** - provide concise, safety-first guidance for users dealing with an ongoing encounter
+- [x] 5. **Application shell** - build responsive navigation, homepage, scenario categories, and immediate guidance entry point
+- [x] 6. **Scenario detail pages** - display concise answers, legal explanations, exceptions, practical options, source links, and review dates
+- [x] 7. **Situation-based search** - search scenario titles, keywords, agencies, and plain-language questions
+- [x] 8. **Agency and jurisdiction browsing** - browse guidance by enforcement agency and distinguish federal from state-specific rules
+- [x] 9. **Immediate encounter mode** - provide concise, safety-first guidance for users dealing with an ongoing encounter
 - [ ] 10. **Verified help directory** - list official complaint channels and legal support resources with verification dates
-- [ ] 11. **Related scenarios and search recovery** - suggest relevant guides and useful categories when no exact result is found
-- [ ] 12. **Content validation** - validate scenario records, required fields, and source links before publication
-- [ ] 13. **PWA and offline access** - support installation and offline reading of the application and selected reviewed scenarios
+- [x] 11. **Related scenarios and search recovery** - suggest relevant guides and useful categories when no exact result is found
+- [x] 12. **Content validation** - validate scenario records, required fields, and source links before publication
+- [x] 13. **PWA and offline access** - support installation and offline reading of the application and selected reviewed scenarios
 - [ ] 14. **Offline freshness indicators** - display cached content status and review dates
 - [ ] 15. **Accessibility and low-bandwidth support** - provide readable layouts, keyboard navigation, accessible contrast, and lightweight loading
 - [ ] 16. **Privacy-preserving feedback** - let users flag missing, confusing, or outdated guidance without collecting unnecessary personal data

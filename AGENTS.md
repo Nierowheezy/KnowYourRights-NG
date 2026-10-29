@@ -24,6 +24,7 @@ The workflow is defined by the local skills and context files below.
 - `buildflow/context/project-overview.md` - the project's source of truth
 - `buildflow/context/coding-standards.md` - read before changing code
 - `buildflow/context/ai-interaction.md` - read when running the BuildFlow workflow
+- `buildflow/context/content-review.md` - read when changing legal content or review metadata
 - `buildflow/context/current-feature.md` - the one feature, fix, or rollback being built right now
 
 ## Project configuration
@@ -205,7 +206,9 @@ checks do not make the BuildFlow unusable.
 ## Commands
 
 - Dev server: `npm run dev` (http://localhost:5173)
-- Build: `npm run build`
+- Build: `npm run build` (runs content validation first)
+- Validate content: `npm run validate:content`
+- Review queue: `npm run review:queue`
 - Preview: `npm run preview`
 - Lint: `npm run lint`
 - Typecheck: `npm run typecheck` (if available)

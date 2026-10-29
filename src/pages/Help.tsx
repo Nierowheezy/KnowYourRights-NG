@@ -111,7 +111,7 @@ export default function Help() {
           {/* Note */}
           <div className="callout callout--tint reveal">
             <svg width="20" height="20" viewBox="0 0 20 20" fill="none" style={{ flexShrink: 0 }}><circle cx="10" cy="10" r="7.5" stroke="currentColor" strokeWidth="1.4"/><path d="M10 9v4M10 6.6v.2" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/></svg>
-            <span><strong>We show the date each channel was last checked, and label any entry still awaiting re-verification.</strong> Numbers change; if one doesn't work, <a href="#feedback" style={{ color: "var(--forest)", fontWeight: 600 }}>flag it</a> and we'll re-check. This directory is information, not a referral or endorsement.</span>
+            <span><strong>We show the date each channel was last checked, and label any entry still awaiting re-verification.</strong> Numbers change; if one doesn't work, treat the entry as unverified until the next review. This directory is information, not a referral or endorsement.</span>
           </div>
         </div>
       </section>
