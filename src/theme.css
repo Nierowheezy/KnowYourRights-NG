@@ -1512,6 +1512,31 @@ mark {
   min-width: 44px;
 }
 
+/* Modal */
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 300;
+}
+.modal {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 20px;
+  max-width: 520px;
+  width: calc(100% - 32px);
+}
+.modal-actions {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+  margin-top: 14px;
+}
+
 /* Low bandwidth mode */
 html[data-lowbw="1"] img.decorative,
 html[data-lowbw="1"] .reveal {

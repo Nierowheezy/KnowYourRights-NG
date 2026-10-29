@@ -21,6 +21,7 @@ export default function Layout() {
   const [lowBw, setLowBw] = useState(() => {
     try { return localStorage.getItem("kyr-lowbw") === "1"; } catch { return false; }
   });
+  const [feedbackCount, setFeedbackCount] = useState(0);
 
   const announce = getAnnounce(location.pathname);
 
@@ -29,6 +30,19 @@ export default function Layout() {
     if (lowBw) document.documentElement.setAttribute("data-lowbw", "1");
     else document.documentElement.removeAttribute("data-lowbw");
   }, [lowBw]);
+
+  useEffect(() => {
+    const update = () => {
+      try {
+        const raw = localStorage.getItem("kyr-feedback-queue");
+        const arr = raw ? JSON.parse(raw) : [];
+        setFeedbackCount(arr.length);
+      } catch { setFeedbackCount(0); }
+    };
+    update();
+    window.addEventListener("storage", update);
+    return () => window.removeEventListener("storage", update);
+  }, []);
   useEffect(() => {
     setTheme(theme);
   }, [theme]);
@@ -114,6 +128,25 @@ export default function Layout() {
               title="Toggle low bandwidth mode"
             >
               {lowBw ? "Low bandwidth on" : "Low bandwidth off"}
+            </button>
+            <button
+              className="btn btn--ghost btn--sm"
+              type="button"
+              onClick={() => {
+                try {
+                  const raw = localStorage.getItem("kyr-feedback-queue");
+                  const data = raw ? JSON.parse(raw) : [];
+                  const blob = new Blob([JSON.stringify(data, null, 2)], { type: "application/json" });
+                  const url = URL.createObjectURL(blob);
+                  const a = document.createElement("a");
+                  a.href = url;
+                  a.download = "kyr-feedback.json";
+                  a.click();
+                  URL.revokeObjectURL(url);
+                } catch {}
+              }}
+            >
+              Export feedback {feedbackCount > 0 ? `(${feedbackCount})` : ""}
             </button>
             <Link to="/help" className="btn btn--primary btn--sm">Get help now</Link>
             <button

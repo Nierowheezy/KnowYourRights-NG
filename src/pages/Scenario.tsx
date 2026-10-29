@@ -1,10 +1,11 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import "../styles/scenario.css";
 import { AdSlot } from "../components/ui";
 import { agencies as agencyList, CATEGORY_LABEL, getReviewBadge, getScenarioById, getSourcesForScenario, isSourceVerified } from "../lib/content";
 import { useOnlineStatus } from "../hooks/useOnlineStatus";
 import { RELEASE_LABEL } from "../lib/release";
+import FeedbackModal from "../components/FeedbackModal";
 import type { Scenario } from "../lib/schema";
 import NotFound from "./NotFound";
 
@@ -116,6 +117,7 @@ function ProseBlocks({ text }: { text: string }) {
 export default function Scenario() {
   const { id } = useParams<{ id: string }>();
   const scenario = id ? getScenarioById(id) : undefined;
+  const [showFeedback, setShowFeedback] = useState(false);
 
   useEffect(() => {
     if (scenario) document.title = `${scenario.title} — KnowYourRights NG`;
@@ -215,8 +217,13 @@ export default function Scenario() {
               <p className="muted" style={{ margin: 0, fontSize: "0.85rem", lineHeight: 1.6, flex: "1 1 320px" }}>
                 In-app feedback is not connected yet. When a source check changes this guidance, the update is recorded in the change history above.
               </p>
-              <Link to="/help" className="chip" style={{ marginLeft: "auto" }}>Official complaint channels</Link>
+              <div style={{ marginLeft: "auto", display: "flex", gap: 8 }}>
+                <button className="chip" type="button" onClick={() => setShowFeedback(true)}>Flag this guide</button>
+                <Link to="/help" className="chip">Official complaint channels</Link>
+              </div>
             </div>
+
+            <FeedbackModal scenarioId={scenario.id} open={showFeedback} onClose={() => setShowFeedback(false)} />
 
             <ChangeHistory entries={scenario.changeHistory} />
 
