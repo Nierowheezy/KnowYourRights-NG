@@ -95,18 +95,23 @@ saved, sent, or queued until that feature ships.
 
 Retired and draft entries stay out of public lists.
 
+## Initial library release bar
+
+The initial library is complete when all three hold:
+
+1. Every published guide is `approved`, has a `reviewer` and `lastReviewed`,
+   and cites only verified sources.
+2. No published guide carries an open gap in `reviewNotes`.
+3. The register has no unverified entry, or the one remaining gap is documented
+   under **Known source gaps** with the reason it cannot be closed.
+
 ## Known source gaps
 
 Tracked here so they are not lost:
 
-- **NSCDC Act 2003:** only the 2007 amendment text is downloaded; the principal
-  Act is not in the register. The `nscdc-act` source stays unverified until the
-  full text is obtained.
-- **`officer-demanded-money`:** the Corrupt Practices and Other Related Offences
-  Act 2000 and the Criminal Code are not yet in the source register for the
-  bribery analysis.
 - **Support contacts:** entries in `src/content/support.json` still need checking
-  against official agency websites.
+  against official agency websites. This is outside the initial library bar
+  because it is directory data, not legal text.
 
 ## Commands
 

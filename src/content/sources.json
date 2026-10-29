@@ -135,16 +135,16 @@
   },
   {
     "id": "nscdc-act",
-    "title": "Nigeria Security and Civil Defence Corps Act, 2003 (as amended 2007)",
+    "title": "Nigeria Security and Civil Defence Corps Act, 2003",
     "issuingBody": "National Assembly of the Federal Republic of Nigeria",
     "jurisdiction": "federal",
     "type": "act",
     "publicationDate": "2003-06-28",
     "commencementDate": "2003-06-28",
-    "amendmentStatus": "Amended by Act No. 6 of 2007",
-    "currentStatusVerified": false,
-    "url": "https://nms.ng/files/Nigeria_Security_And_Civil_Defence_Corps_Act_2007.pdf",
-    "documentRef": "NSCDC Act 2003 + Amendment Act 2007 (Official Gazette)",
+    "amendmentStatus": "Amended by the NSCDC (Amendment) Act 2007; the checked text carries the 2007 annotations",
+    "currentStatusVerified": true,
+    "url": "https://lawsofnigeria.placng.org/view2.php?sn=402",
+    "documentRef": "Act No. 2 of 2003 (commencement 28 June 2003)",
     "sections": [
       "3",
       "5",
@@ -152,8 +152,50 @@
       "7",
       "8"
     ],
-    "lastAccessed": "2026-10-28",
-    "verificationNotes": "Downloaded document is the NSCDC (Amendment) Act 2007 only; principal Act 2003 full text not obtained. Do not publish NSCDC-specific claims until the principal Act is verified.",
+    "lastAccessed": "2026-10-29",
+    "verificationNotes": "Full principal Act checked in the PLAC Laws of Nigeria compendium; its citation section reads 'Nigeria Security and Civil Defence Corps Act, 2003'. The NSCDC website describes the Act but publishes no PDF, so the compendium text is the source. The separately downloaded nscdc-act-2007.pdf is the amendment only.",
+    "isPrimary": true
+  },
+  {
+    "id": "cpo-act-2000",
+    "title": "Corrupt Practices and Other Related Offences Act, 2000",
+    "issuingBody": "National Assembly of the Federal Republic of Nigeria",
+    "jurisdiction": "federal",
+    "type": "act",
+    "publicationDate": "2000-06-13",
+    "amendmentStatus": "Act No. 5 of 2000; check for amendments before relying on the text",
+    "currentStatusVerified": true,
+    "url": "https://icpc.gov.ng/wp-content/uploads/2024/09/ICPC-Act-2000.pdf",
+    "documentRef": "2000 Act No. 5",
+    "sections": [
+      "8",
+      "9",
+      "10",
+      "23"
+    ],
+    "lastAccessed": "2026-10-29",
+    "verificationNotes": "Official PDF published by the ICPC, the Commission the Act establishes. s8 accepting gratification by a public officer; s9 giving or promising gratification; s10 accepting gratification on account of a public officer's act; s23 duty to report bribery. The commencement date is left blank in this reproduction; the Act is dated 13 June 2000.",
+    "isPrimary": true
+  },
+  {
+    "id": "criminal-code-act",
+    "title": "Criminal Code Act (Cap. C38, Laws of the Federation of Nigeria 2004)",
+    "issuingBody": "Federal Republic of Nigeria",
+    "jurisdiction": "federal",
+    "type": "act",
+    "publicationDate": "1916-06-01",
+    "commencementDate": "1916-06-01",
+    "amendmentStatus": "Cap. C38, Laws of the Federation of Nigeria 2004. Lagos and some states have their own criminal laws; check the law of the state where an offence is tried.",
+    "currentStatusVerified": true,
+    "url": "https://lawsofnigeria.placng.org/laws/C38.pdf",
+    "documentRef": "Cap. C38, Laws of the Federation of Nigeria 2004",
+    "sections": [
+      "98",
+      "98A",
+      "98B"
+    ],
+    "lastAccessed": "2026-10-29",
+    "verificationNotes": "Text extracted from the Cap. C38 PDF in the PLAC Laws of Nigeria compendium. s98 official corruption by a public official asking or receiving; s98A giving or promising; s98B inviting bribes on account of a public official's actions. Commenced 1 June 1916.",
     "isPrimary": true
   },
   {

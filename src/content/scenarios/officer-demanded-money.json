@@ -17,8 +17,13 @@
   "reviewer": "Content team (source check)",
   "lastReviewed": "2026-10-29",
   "nextReview": "2027-04-30",
-  "reviewNotes": "Citations checked against the official texts downloaded from the issuing agency's portal on 2026-10-29. Source verification is not legal advice. Re-check before the next review date. Open gap: the Corrupt Practices and Other Related Offences Act 2000 and the Criminal Code are not yet in the source register for the bribery analysis.",
+  "reviewNotes": "Citations checked against the official texts downloaded from the issuing agency's portal on 2026-10-29. Source verification is not legal advice. Re-check before the next review date. Bribery claims now cite the Corrupt Practices and Other Related Offences Act 2000 and the Criminal Code (Cap. C38).",
   "changeHistory": [
+    {
+      "date": "2026-10-29",
+      "note": "Added verified Corrupt Practices and Other Related Offences Act 2000 and Criminal Code citations for the bribery claims; closed the open source gap.",
+      "reviewer": "Content team (source check)"
+    },
     {
       "date": "2026-10-29",
       "note": "Review model changed: status now records verification against official source texts, not lawyer sign-off.",
@@ -61,6 +66,24 @@
         "50"
       ],
       "notes": "Lawful stop/search requirements; demands outside these powers should be documented."
+    },
+    {
+      "sourceId": "cpo-act-2000",
+      "sections": [
+        "8",
+        "9",
+        "10",
+        "23"
+      ],
+      "notes": "s8 officer accepting gratification; s9 giving or promising gratification; s10 accepting on account of a public officer's act; s23 duty to report bribery."
+    },
+    {
+      "sourceId": "criminal-code-act",
+      "sections": [
+        "98",
+        "98A"
+      ],
+      "notes": "s98 official corruption by a public official; s98A giving or promising a bribe."
     }
   ]
 }
