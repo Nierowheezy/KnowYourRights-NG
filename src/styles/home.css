@@ -1,0 +1,229 @@
+    /* ----- Landing-specific ----- */
+
+    .hero { padding: 88px 0 64px; }
+    @media (max-width: 640px) { .hero { padding: 60px 0 44px; } }
+
+    .hero__badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      padding: 7px 15px;
+      border-radius: var(--radius-pill);
+      background: var(--surface);
+      border: 1px solid var(--line);
+      color: var(--text-muted);
+      font-size: 0.8rem;
+      font-weight: 500;
+      margin-bottom: 30px;
+      box-shadow: 0 1px 2px rgba(21, 48, 10, 0.05);
+    }
+
+    .hero__badge .tag-new {
+      color: var(--link);
+      font-weight: 700;
+    }
+
+    .hero__title { max-width: 780px; margin: 0 auto; }
+
+    .hero__lede { max-width: 540px; margin: 24px auto 34px; }
+
+    .hero .search-lg { margin-bottom: 22px; }
+
+    .hero__ctas {
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-bottom: 26px;
+    }
+
+    .hero__trust {
+      display: flex;
+      gap: 22px;
+      justify-content: center;
+      flex-wrap: wrap;
+      font-size: 0.8rem;
+      color: var(--text-faint);
+    }
+
+    .hero__trust span { display: inline-flex; align-items: center; gap: 6px; }
+
+    .hero__trust .ok { color: var(--forest); font-weight: 700; }
+
+    /* ----- Bento ----- */
+
+    .bento {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+
+    @media (max-width: 920px) {
+      .bento { grid-template-columns: 1fr 1fr; }
+      .bento .span2 { grid-column: span 2; }
+    }
+
+    @media (max-width: 620px) {
+      .bento { grid-template-columns: 1fr; }
+      .bento .span2 { grid-column: span 1; }
+    }
+
+    .bento-card {
+      position: relative;
+      overflow: hidden;
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-lg);
+      padding: 26px;
+      min-height: 250px;
+      display: flex;
+      flex-direction: column;
+      text-decoration: none;
+      color: inherit;
+      transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+    }
+
+    .bento-card:hover {
+      border-color: var(--line-strong);
+      box-shadow: 0 12px 32px -16px rgba(21, 48, 10, 0.18);
+      transform: translateY(-2px);
+    }
+
+    .bento-card__icon {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 38px;
+      height: 38px;
+      border-radius: 10px;
+      background: var(--bg-tint);
+      border: 1px solid var(--line-tint);
+      color: var(--forest);
+      margin-bottom: 16px;
+    }
+
+    .bento-card__title {
+      font-family: var(--font-display);
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      font-size: 1.05rem;
+      margin: 0 0 6px;
+    }
+
+    .bento-card__desc {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+      margin: 0 0 16px;
+    }
+
+    .bento-card__cta {
+      margin-top: auto;
+      color: var(--link);
+      font-size: 0.88rem;
+      font-weight: 600;
+    }
+
+    .bento-card--dark {
+      background: var(--forest-deep);
+      border-color: var(--forest-deep);
+      color: #fff;
+    }
+
+    .bento-card--dark .bento-card__title { color: #fff; }
+    .bento-card--dark .bento-card__desc { color: #b6bcae; }
+    .bento-card--dark .bento-card__icon { background: rgba(193,255,114,0.12); border-color: #2d3a20; color: var(--lime); }
+    .bento-card--dark .bento-card__cta { color: var(--lime); }
+
+    /* Mini encounter steps (bento preview) */
+    .mini-steps { display: flex; flex-direction: column; gap: 0; margin: auto 0 18px; }
+
+    .mini-step {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      padding: 11px 12px;
+      border-radius: 10px;
+      font-size: 0.86rem;
+    }
+
+    .mini-step__n {
+      width: 24px; height: 24px;
+      border-radius: 7px;
+      background: var(--bg-tint);
+      border: 1px solid var(--line-tint);
+      color: var(--forest);
+      display: inline-flex; align-items: center; justify-content: center;
+      font-family: var(--font-display); font-weight: 800; font-size: 0.72rem;
+      flex-shrink: 0;
+    }
+
+    .mini-step--active { background: var(--bg-tint); }
+    .mini-step--active .mini-step__n { background: var(--lime); border-color: var(--lime); color: var(--lime-ink); }
+
+    .mini-step__t { font-weight: 600; color: var(--text); line-height: 1.4; padding-top: 2px; }
+
+    .mini-bar {
+      height: 3px; border-radius: 3px; background: var(--lime);
+      margin-top: 7px;
+      animation: breathe 2.6s ease-in-out infinite;
+    }
+
+    /* Mini statute (source-linked card) */
+    .mini-statute {
+      margin-top: auto;
+      background: var(--bg-ground);
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      padding: 12px 14px;
+      font-size: 0.8rem;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      justify-content: space-between;
+    }
+
+    .mini-statute .mono { color: var(--text-muted); }
+
+    /* Mini agency chips */
+    .mini-agencies { margin-top: auto; display: flex; flex-wrap: wrap; gap: 7px; }
+
+    /* Mini emergency tiles */
+    .mini-emergency { margin-top: auto; display: flex; gap: 10px; }
+
+    .mini-tile {
+      flex: 1;
+      background: var(--forest-deep);
+      color: var(--lime);
+      border-radius: 10px;
+      padding: 12px 8px;
+      font-family: var(--font-display);
+      font-weight: 800;
+      font-size: 1.15rem;
+      letter-spacing: -0.03em;
+      text-align: center;
+    }
+
+    .mini-tile small {
+      display: block;
+      font-family: var(--font-sans);
+      font-size: 0.62rem;
+      font-weight: 500;
+      color: #b6bcae;
+      letter-spacing: 0;
+      margin-top: 3px;
+    }
+
+    /* Sponsored bento card */
+    .sponsored-fill {
+      flex: 1;
+      border: 1px dashed var(--line-strong);
+      border-radius: 10px;
+      background: var(--bg-ground);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      color: var(--text-faint);
+    }

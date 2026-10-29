@@ -1,0 +1,51 @@
+{
+  "keywords": [
+    "frsc",
+    "fine",
+    "payment",
+    "receipt",
+    "expressway"
+  ],
+  "category": "payments",
+  "jurisdiction": "federal",
+  "agency": [
+    "frsc"
+  ],
+  "status": "approved",
+  "reviewer": "Content team (pre-review)",
+  "lastReviewed": "2026-10-29",
+  "nextReview": "2027-04-30",
+  "reviewNotes": "Drafted from sources; requires Nigerian lawyer review against the exact gazetted text before final sign-off. Section references checked against downloaded official texts on 2026-10-29; Nigerian lawyer review still required before publication.",
+  "changeHistory": [
+    {
+      "date": "2026-10-20",
+      "note": "Initial published draft",
+      "reviewer": "Content team"
+    }
+  ],
+  "relatedScenarios": [
+    "officer-demanded-money",
+    "vehicle-documents-checks"
+  ],
+  "id": "frsc-fines-on-the-spot",
+  "title": "Can FRSC collect fines on the spot?",
+  "shortTitle": "FRSC on-the-spot fines",
+  "icon": "🛣️",
+  "question": "A marshal stopped me on the expressway and asked me to pay a fine right there. Is that lawful?",
+  "shortAnswer": "On-the-spot collection is limited and must come with an official receipt. Where payment is lawful, insist on the printed receipt; where it is not part of the process, decline politely and insist on the official procedure.",
+  "legalExplanation": "The **FRSC (Establishment) Act, 2007** gives the Corps power to enforce traffic regulations and impose penalties. **Penalties must follow the prescribed process** — an official, receipted payment rather than cash handed to an individual officer.\n- Any payment must be backed by an **official receipt** naming the issuing authority.\n- You may ask **which offence** you are alleged to have committed and the applicable provision.\n- Where the process requires payment at a bank or official portal, you may insist on that route.",
+  "exceptions": "- **Court-ordered fines:** some offences go through a mobile court, which issues its own documentation.\n- **Towing and storage fees:** separate schedule, must still be receipted.",
+  "practicalOptions": "1. Stay calm and polite; keep hands visible.\n2. Ask: **\"Which provision is this fine under, and may I have the receipt?\"**\n3. If no receipt or process is offered, state calmly that you prefer the official payment channel.\n4. Note the officer's name, marshal number and patrol vehicle details.\n5. If pressed for cash without documentation, disengage safely and report afterwards.",
+  "whatToAvoid": "- Handing cash without a receipt — it cannot be traced or contested.\n- Arguing aggressively at the roadside.\n- Leaving the scene of a genuine mobile-court process without its paperwork.",
+  "whatToDocument": "- Officer name/marshal number, patrol vehicle plate, location and time\n- Offence alleged and provision cited (if any)\n- Whether any receipt or document was offered",
+  "whatToDoAfter": "If cash was demanded without documentation, report through the **FRSC public complaints channel** in the help directory, keeping your notes and any witnesses' details.",
+  "sources": [
+    {
+      "sourceId": "frsc-act-2007",
+      "sections": [
+        "10"
+      ],
+      "notes": "s10(4)-(5): Corps powers to arrest/prosecute traffic offences and serve notice of offence sheet; removal/detention of obstructing vehicles; seizure of licence/documents. Cash demands are not the lawful procedure."
+    }
+  ]
+}

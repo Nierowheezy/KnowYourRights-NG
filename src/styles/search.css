@@ -1,0 +1,111 @@
+    .search-stage { padding: 56px 0 0; }
+
+    .search-box {
+      position: relative;
+      max-width: 720px;
+      margin: 0 auto;
+    }
+
+    .search-box__field {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      background: var(--surface);
+      border: 2px solid var(--forest);
+      border-radius: var(--radius-lg);
+      padding: 18px 20px;
+      box-shadow: 0 12px 30px -12px rgba(46, 100, 23, 0.25);
+    }
+
+    .search-box__query {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 1.15rem;
+      letter-spacing: -0.02em;
+      color: var(--text);
+      flex: 1;
+      white-space: nowrap;
+      overflow: hidden;
+    }
+
+    .suggestions {
+      position: absolute;
+      top: calc(100% + 8px);
+      left: 0;
+      right: 0;
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-lg);
+      box-shadow: 0 24px 48px -20px rgba(21, 48, 10, 0.22);
+      overflow: hidden;
+      z-index: 20;
+    }
+
+    .suggestion {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 14px 18px;
+      font-size: 0.94rem;
+      cursor: pointer;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .suggestion:last-child { border-bottom: none; }
+    .suggestion:hover, .suggestion--active { background: var(--bg-tint); }
+
+    .suggestion__q { font-weight: 600; color: var(--text); }
+    .suggestion__meta { margin-left: auto; font-size: 0.78rem; color: var(--text-faint); white-space: nowrap; }
+
+    .results-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      margin: 48px 0 8px;
+      flex-wrap: wrap;
+    }
+
+    .result { padding: 26px 4px; border-bottom: 1px solid var(--line); }
+
+    .result__crumb {
+      font-size: 0.78rem;
+      color: var(--text-faint);
+      margin-bottom: 6px;
+    }
+
+    .result__title {
+      font-family: var(--font-display);
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      font-size: 1.15rem;
+      margin: 0 0 8px;
+    }
+
+    .result__title a { color: var(--text); text-decoration: none; }
+    .result__title a:hover { color: var(--forest); }
+
+    .result__snippet { font-size: 0.93rem; color: var(--text-muted); line-height: 1.65; margin: 0 0 12px; }
+
+    .recovery {
+      border: 1px dashed var(--line-strong);
+      border-radius: var(--radius-lg);
+      background: var(--bg-ground);
+      padding: 32px;
+      text-align: center;
+    }
+
+/* ----- Functional input in the prototype's query slot (additive) ----- */
+input.search-box__query {
+  flex: 1;
+  min-width: 0;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  font: inherit;
+  font-weight: 600;
+  color: var(--text);
+  padding: 0;
+}
+input.search-box__query::placeholder { color: var(--text-faint); font-weight: 500; }
+.search-box__field:focus-within .caret { display: none; }

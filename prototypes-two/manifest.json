@@ -1,0 +1,27 @@
+{
+  "name": "KnowYourRights NG",
+  "short_name": "KnowYourRights",
+  "description": "Free, source-backed guidance for police, FRSC, and other enforcement stops in Nigeria. Stay safe and know what to do.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#fefdf8",
+  "theme_color": "#14b8a6",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["reference", "education", "utilities"],
+  "lang": "en",
+  "dir": "ltr"
+}

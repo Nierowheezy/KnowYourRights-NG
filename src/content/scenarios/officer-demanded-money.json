@@ -1,0 +1,61 @@
+{
+  "keywords": [
+    "bribe",
+    "extortion",
+    "demanded money",
+    "report",
+    "complaint"
+  ],
+  "category": "complaints",
+  "jurisdiction": "federal",
+  "agency": [
+    "npf",
+    "frsc",
+    "lastma"
+  ],
+  "status": "approved",
+  "reviewer": "Content team (pre-review)",
+  "lastReviewed": "2026-10-29",
+  "nextReview": "2027-04-30",
+  "reviewNotes": "Drafted from sources; requires Nigerian lawyer review against the exact gazetted text before final sign-off. Section references checked against downloaded official texts on 2026-10-29; Nigerian lawyer review still required before publication. Add the Corrupt Practices and Other Related Offences Act 2000 and the Criminal Code to the source register before publication.",
+  "changeHistory": [
+    {
+      "date": "2026-10-20",
+      "note": "Initial published draft",
+      "reviewer": "Content team"
+    }
+  ],
+  "relatedScenarios": [
+    "police-stop-search-car",
+    "frsc-fines-on-the-spot"
+  ],
+  "id": "officer-demanded-money",
+  "title": "An officer demanded money. What now?",
+  "shortTitle": "Officer demanded money",
+  "icon": "⚖️",
+  "question": "An officer is hinting that 'something small' will end the stop. What should I do right now?",
+  "shortAnswer": "Stay safe in the moment, don't pay, and document everything. Paying is itself an offence and it funds the demand. Afterwards, report through the verified complaint channels with the details you noted.",
+  "legalExplanation": "Bribe-taking **and** bribe-giving are offences under Nigerian criminal law. Paying 'to avoid wahala' exposes you legally and guarantees a repeat. The safe sequence:\n- **In the moment:** stay calm, decline politely, do not reach for money.\n- **Protect the record:** note time, place, officer details, exactly what was said.\n- **Afterwards:** report through verified channels so it is on the record.",
+  "exceptions": "- Where safety genuinely demands de-escalation, **prioritise leaving safely** and report with as much detail as you can gather.",
+  "practicalOptions": "1. Decline calmly: **\"I'm sorry, I can't do that.\"**\n2. Keep the interaction short and move towards resolution.\n3. Note the officer's name, unit, vehicle and exact words.\n4. If you recorded safely, preserve the original file.\n5. Report through the **NPF Complaint Unit or PSC** in the help directory.",
+  "whatToAvoid": "- Paying, even 'small' amounts — it is an offence and it confirms the tactic.\n- Confronting the officer about corruption at the roadside.",
+  "whatToDocument": "- Exact words used, officer details, location, time, witnesses, any receipt or lack of one",
+  "whatToDoAfter": "Submit a complaint through the verified channels within days, attaching your notes and any recording.",
+  "sources": [
+    {
+      "sourceId": "constitution-1999",
+      "sections": [
+        "34"
+      ],
+      "notes": "Right to dignity of the human person."
+    },
+    {
+      "sourceId": "nigeria-police-act-2020",
+      "sections": [
+        "49",
+        "50"
+      ],
+      "notes": "Lawful stop/search requirements; demands outside these powers should be documented."
+    }
+  ]
+}

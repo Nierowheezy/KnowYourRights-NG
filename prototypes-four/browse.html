@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="system">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Browse Scenarios — KnowYourRights NG</title>
+  <meta name="description" content="Browse all common roadside encounter scenarios and learn your rights.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="theme.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container header__inner">
+      <a href="index.html" class="brand">
+        <svg class="brand__mark" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.5"/>
+          <path d="M10 6v5M10 14h.01" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+        </svg>
+        <span class="brand__text">KnowYourRights NG</span>
+      </a>
+      <nav class="nav" aria-label="Main navigation">
+        <a href="encounter.html" class="nav__link nav__link--primary">I need help now</a>
+        <a href="browse.html" class="nav__link" style="color: var(--text-primary); background: var(--surface-hover);">Browse</a>
+        <a href="search.html" class="nav__link">Search</a>
+        <a href="help.html" class="nav__link">Get help</a>
+        <a href="about.html" class="nav__link">About</a>
+      </nav>
+      <div class="header__actions">
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+          <svg class="theme-toggle__icon theme-toggle__icon--system" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="3" y="4" width="12" height="8" rx="1.5" stroke="currentColor" stroke-width="1.2"/>
+            <path d="M7 14h4M9 12v2" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+          </svg>
+          <svg class="theme-toggle__icon theme-toggle__icon--light" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="9" cy="9" r="3.25" stroke="currentColor" stroke-width="1.2"/>
+            <path d="M9 2.5v1.25M9 14.25v1.25M15.5 9h-1.25M3.75 9H2.5M13.596 4.404l-.884.884M5.288 12.712l-.884.884M13.596 13.596l-.884-.884M5.288 5.288l-.884-.884" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+          </svg>
+          <svg class="theme-toggle__icon theme-toggle__icon--dark" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M15 9.79A6 6 0 018.21 3 6 6 0 1015 9.79z" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <span class="theme-toggle__label">System</span>
+        </button>
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-header">
+      <div class="container">
+        <nav class="breadcrumb">
+          <a href="index.html">Home</a>
+          <span>›</span>
+          <span>Browse</span>
+        </nav>
+        <h1 class="page-header__title">Browse scenarios</h1>
+        <p class="page-header__subtitle">Learn your rights for common roadside encounters in Nigeria</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="grid grid--3">
+          <a href="scenario.html?type=stopped" id="stopped" class="card card--interactive">
+            <div class="card__icon">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="10" cy="10" r="7" stroke="currentColor" stroke-width="1.5"/>
+                <path d="M10 7v4M10 13h.01" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <h3 class="card__title">I've been stopped</h3>
+            <p class="card__description">What to do when an officer pulls you over. Stay calm, document, and know your rights.</p>
+            <span class="card__arrow">Read guidance →</span>
+          </a>
+          <a href="scenario.html?type=documents" id="documents" class="card card--interactive">
+            <div class="card__icon">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="4" y="3" width="12" height="14" rx="1.5" stroke="currentColor" stroke-width="1.5"/>
+                <path d="M7 7h6M7 10h6M7 13h4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <h3 class="card__title">Documents requested</h3>
+            <p class="card__description">License, vehicle registration, insurance, and other papers. What to provide and what to verify.</p>
+            <span class="card__arrow">Read guidance →</span>
+          </a>
+          <a href="scenario.html?type=search" id="search" class="card card--interactive">
+            <div class="card__icon">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="9" cy="9" r="5.5" stroke="currentColor" stroke-width="1.5"/>
+                <path d="M13 13l3.5 3.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <h3 class="card__title">Search requests</h3>
+            <p class="card__description">Vehicle searches, personal belongings, and phone searches. Your rights and safe responses.</p>
+            <span class="card__arrow">Read guidance →</span>
+          </a>
+          <a href="scenario.html?type=arrest" id="arrest" class="card card--interactive">
+            <div class="card__icon">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="5" y="4" width="10" height="12" rx="1.5" stroke="currentColor" stroke-width="1.5"/>
+                <circle cx="10" cy="11" r="1.5" fill="currentColor"/>
+                <path d="M8 7h4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <h3 class="card__title">Arrest or taken to station</h3>
+            <p class="card__description">Your rights if detained, when you must go, and steps to take to protect yourself.</p>
+            <span class="card__arrow">Read guidance →</span>
+          </a>
+          <a href="scenario.html?type=money" id="money" class="card card--interactive">
+            <div class="card__icon">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="10" cy="10" r="7" stroke="currentColor" stroke-width="1.5"/>
+                <path d="M10 6v8M7 8h4a1.5 1.5 0 010 3H7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <h3 class="card__title">Asked for money</h3>
+            <p class="card__description">How to respond safely, document the incident, and report extortion attempts.</p>
+            <span class="card__arrow">Read guidance →</span>
+          </a>
+          <a href="scenario.html?type=impound" id="impound" class="card card--interactive">
+            <div class="card__icon">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="4" y="6" width="12" height="8" rx="1.5" stroke="currentColor" stroke-width="1.5"/>
+                <path d="M6 6V5a2 2 0 012-2h4a2 2 0 012 2v1M8 10h4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <h3 class="card__title">Vehicle impounded</h3>
+            <p class="card__description">What you can do immediately, where to check, and steps to recover your vehicle.</p>
+            <span class="card__arrow">Read guidance →</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--alt">
+      <div class="container">
+        <div class="cta-card">
+          <div class="cta-card__content">
+            <h2 class="cta-card__title">In an emergency right now?</h2>
+            <p class="cta-card__subtitle">Get step-by-step guidance tailored to your exact situation</p>
+            <a href="encounter.html" class="btn btn--primary btn--lg">
+              Start emergency guidance
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M6 12l4-4-4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__top">
+        <div class="footer__brand">
+          <div class="brand">
+            <svg class="brand__mark" width="18" height="18" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.5"/>
+              <path d="M10 6v5M10 14h.01" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+            <span class="brand__text">KnowYourRights NG</span>
+          </div>
+          <p class="footer__description">Free, source-backed legal information for Nigerian roadside encounters. Not legal advice.</p>
+        </div>
+        <div class="footer__links">
+          <div class="footer__group">
+            <h4 class="footer__group-title">Navigate</h4>
+            <ul class="footer__list">
+              <li><a href="browse.html">Browse</a></li>
+              <li><a href="search.html">Search</a></li>
+              <li><a href="encounter.html">Emergency help</a></li>
+              <li><a href="scenario.html">All scenarios</a></li>
+            </ul>
+          </div>
+          <div class="footer__group">
+            <h4 class="footer__group-title">Resources</h4>
+            <ul class="footer__list">
+              <li><a href="help.html">Get help</a></li>
+              <li><a href="about.html">About</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p class="footer__copy">© 2026 KnowYourRights NG. All rights reserved.</p>
+        <p class="footer__disclaimer">Source-backed • Safety-first • Free to use</p>
+      </div>
+    </div>
+  </footer>
+
+  <div class="modal" id="mobileNavModal">
+    <div class="modal__backdrop" id="navBackdrop"></div>
+    <div class="modal__content modal__content--nav">
+      <div class="modal__header">
+        <div class="brand">
+          <svg class="brand__mark" width="18" height="18" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.5"/>
+            <path d="M10 6v5M10 14h.01" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
+          <span class="brand__text">Menu</span>
+        </div>
+        <button class="modal__close" id="navClose" aria-label="Close menu">×</button>
+      </div>
+      <nav class="modal__nav">
+        <a href="encounter.html" class="modal__nav-link modal__nav-link--primary">I need help now</a>
+        <a href="browse.html" class="modal__nav-link">Browse scenarios</a>
+        <a href="search.html" class="modal__nav-link">Search</a>
+        <a href="scenario.html" class="modal__nav-link">All scenarios</a>
+        <a href="help.html" class="modal__nav-link">Get help</a>
+        <a href="about.html" class="modal__nav-link">About</a>
+      </nav>
+    </div>
+  </div>
+
+  <style>
+    .page-header {
+      padding: var(--space-10) 0 var(--space-8);
+      border-bottom: 1px solid var(--border);
+    }
+    
+    .breadcrumb {
+      display: flex;
+      align-items: center;
+      gap: var(--space-2);
+      font-size: 0.8125rem;
+      color: var(--text-tertiary);
+      margin-bottom: var(--space-4);
+    }
+    
+    .breadcrumb a {
+      color: var(--text-secondary);
+      text-decoration: none;
+      transition: color var(--transition-fast);
+    }
+    
+    .breadcrumb a:hover {
+      color: var(--text-primary);
+    }
+    
+    .page-header__title {
+      font-size: clamp(1.875rem, 4vw, 2.5rem);
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      margin: 0 0 var(--space-2);
+      color: var(--text-primary);
+    }
+    
+    .page-header__subtitle {
+      font-size: 1rem;
+      color: var(--text-secondary);
+      margin: 0;
+    }
+  </style>
+
+  <script src="app.js"></script>
+</body>
+</html>

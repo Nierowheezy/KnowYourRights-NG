@@ -1,0 +1,55 @@
+{
+  "keywords": [
+    "vio",
+    "impound",
+    "vehicle",
+    "papers",
+    "receipt",
+    "lagos"
+  ],
+  "category": "impoundment",
+  "jurisdiction": "state",
+  "agency": [
+    "vio"
+  ],
+  "status": "approved",
+  "reviewer": "Content team (pre-review)",
+  "lastReviewed": "2026-10-29",
+  "nextReview": "2027-04-30",
+  "reviewNotes": "Drafted from sources; requires Nigerian lawyer review against the exact gazetted text before final sign-off. Section references checked against downloaded official texts on 2026-10-29; Nigerian lawyer review still required before publication.",
+  "changeHistory": [
+    {
+      "date": "2026-10-20",
+      "note": "Initial published draft",
+      "reviewer": "Content team"
+    }
+  ],
+  "relatedScenarios": [
+    "lastma-towing",
+    "vehicle-documents-checks"
+  ],
+  "id": "vio-vehicle-impound",
+  "title": "When can VIO impound my vehicle?",
+  "shortTitle": "VIO vehicle impoundment",
+  "icon": "🚧",
+  "question": "A vehicle inspection officer wants to take my car to their yard for expired papers. Can they?",
+  "shortAnswer": "Impoundment is limited to the grounds set by the applicable state traffic law, and the vehicle — not your personal belongings — is what is taken. You are entitled to remove personal items and to a receipt documenting the impoundment.",
+  "legalExplanation": "Under the **Lagos State Traffic Law, 2012** and related vehicle inspection rules, impoundment is tied to **specific grounds** — such as expired or missing vehicle documents, unroadworthy vehicles, or prescribed parking violations.\n- Impoundment covers the **vehicle only**; personal belongings remain yours.\n- You are entitled to an **inventory and receipt** for the impoundment.\n- Release follows the prescribed process — typically paper regularisation plus any lawful fee.",
+  "exceptions": "- **Court orders** can compel release or extend detention of the vehicle.\n- Where the vehicle creates a **safety hazard**, removal may proceed first with documentation after.",
+  "practicalOptions": "1. Ask calmly: **\"Under which ground is the vehicle being impounded?\"**\n2. Remove your **personal belongings** before the vehicle is taken.\n3. Demand an **inventory receipt** showing the yard address and the impoundment ground.\n4. Note the officer's name and the tow/vehicle details.\n5. Regularise the documents and retrieve the vehicle through the official process.",
+  "whatToAvoid": "- Leaving valuables in the vehicle.\n- Handing over documents or keys without any record of who took them.\n- Paying cash at the roadside without a receipt.",
+  "whatToDocument": "- Ground stated for impoundment, officer details, yard location\n- Items removed from the vehicle, and the receipt number",
+  "whatToDoAfter": "If no receipt was issued or belongings went missing, report through the **state-level complaint channels** in the help directory with your documentation.",
+  "sources": [
+    {
+      "sourceId": "lagos-state-traffic-law-2012",
+      "sections": [
+        "11",
+        "12",
+        "15",
+        "16"
+      ],
+      "notes": "s11 establishes the Vehicle Inspection Service; s12 VIO functions incl. roadworthiness and power to impound vehicles failing standards; s15 impound for missing particulars; s16 release and fees."
+    }
+  ]
+}

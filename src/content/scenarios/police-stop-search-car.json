@@ -1,0 +1,57 @@
+{
+  "id": "police-stop-search-car",
+  "title": "Can police search my car at a checkpoint?",
+  "shortTitle": "Police car search",
+  "icon": "🚓",
+  "question": "Can police search my car at a checkpoint without my consent?",
+  "keywords": [
+    "police",
+    "checkpoint",
+    "stop and search",
+    "car search",
+    "consent"
+  ],
+  "category": "stop-search",
+  "shortAnswer": "Police powers of stop and search are not unlimited. You have the right to ask for the reason for the stop. While officers may conduct searches in specific circumstances prescribed by law, a general demand to 'search everything' without lawful basis must be approached carefully. Stay calm, ask for the reason and grounds, and document what happens.",
+  "legalExplanation": "The **Nigeria Police Act, 2020** sets out when police may stop and search. Under **section 49**, an officer may stop and search a person or vehicle in a public place where there are reasonable grounds to suspect the person has stolen or unlawfully obtained property, is carrying an unlawful article, or where other statutory grounds apply. **Section 50** requires the officer, before searching, to give their name, station, the object of the search and the grounds, and to be identifiable (uniform or ID). **Section 51** governs how a search must be conducted. **Section 37 of the Constitution** protects privacy, including telephone conversations. A general demand to 'search everything' without a stated lawful basis can be questioned calmly.",
+  "exceptions": "There may be circumstances where the law permits searches without a warrant (e.g. in pursuit, where there is reasonable suspicion of certain offences, or other exceptions as provided by statute). The precise scope depends on the operative provisions of the Nigeria Police Act 2020 and other applicable laws. Always ask for the reason and grounds for any search.",
+  "practicalOptions": "1. Stay calm and keep hands visible.\n2. Ask: 'Officer, please what is the issue/reason for this stop?'\n3. If asked to search your car, ask: 'Is this a routine check or do you have specific grounds to search?'\n4. You may politely decline consent to a search you don't believe is lawful — do so calmly.\n5. Note the officer's name, rank, unit, and vehicle registration.\n6. If you record, do so safely and only where lawful.\n7. If detained or pressured, ask: 'Am I under arrest? On what grounds?'",
+  "whatToAvoid": "- Do not physically resist.\n- Avoid arguing aggressively or escalating.\n- Do not offer bribes (this is a crime).\n- Avoid reaching suddenly for items in the car.",
+  "whatToDocument": "- Time, location, road/junction\n- Officer name, rank, unit, badge/ID number if visible\n- Vehicle details (patrol vehicle reg)\n- Reason given for stop/search\n- What was searched and whether consent was asked/ given/refused\n- Names/contact of witnesses if safe",
+  "whatToDoAfter": "- If your rights were violated, document and consider reporting through a verified complaint channel.\n- See the Help directory for verified complaint options.\n- If you need legal advice, use verified legal aid contacts.",
+  "sources": [
+    {
+      "sourceId": "nigeria-police-act-2020",
+      "sections": [
+        "49",
+        "50",
+        "51"
+      ],
+      "notes": "s49 power to stop and search (public places; reasonable grounds); s50 pre-search requirements (officer must give name, station, object and grounds, and be in uniform/ID); s51 conduct of search."
+    },
+    {
+      "sourceId": "constitution-1999",
+      "sections": [
+        "37"
+      ],
+      "notes": "Privacy of citizens, homes and communications."
+    }
+  ],
+  "jurisdiction": "federal",
+  "agency": [
+    "npf"
+  ],
+  "status": "approved",
+  "reviewer": "Content team (pre-review)",
+  "lastReviewed": "2026-10-29",
+  "nextReview": "2027-10-28",
+  "reviewNotes": "Drafted from structure; requires Nigerian lawyer review against gazetted Nigeria Police Act 2020 text. Section references checked against downloaded official texts on 2026-10-29; Nigerian lawyer review still required before publication.",
+  "changeHistory": [
+    {
+      "date": "2026-10-28",
+      "note": "Initial published draft",
+      "reviewer": "Content team"
+    }
+  ],
+  "relatedScenarios": []
+}

@@ -1,0 +1,57 @@
+{
+  "keywords": [
+    "lastma",
+    "towing",
+    "tow",
+    "fees",
+    "lagos",
+    "valuables"
+  ],
+  "category": "impoundment",
+  "jurisdiction": "state",
+  "agency": [
+    "lastma"
+  ],
+  "status": "approved",
+  "reviewer": "Content team (pre-review)",
+  "lastReviewed": "2026-10-29",
+  "nextReview": "2027-04-30",
+  "reviewNotes": "Drafted from sources; requires Nigerian lawyer review against the exact gazetted text before final sign-off. Section references checked against downloaded official texts on 2026-10-29; Nigerian lawyer review still required before publication.",
+  "changeHistory": [
+    {
+      "date": "2026-10-20",
+      "note": "Initial published draft",
+      "reviewer": "Content team"
+    }
+  ],
+  "relatedScenarios": [
+    "vio-vehicle-impound",
+    "officer-demanded-money"
+  ],
+  "id": "lastma-towing",
+  "title": "Can LASTMA tow my car while I'm inside?",
+  "shortTitle": "LASTMA towing",
+  "icon": "🚦",
+  "question": "My car stalled in traffic and LASTMA is attaching a tow rope with me still inside. Is that allowed?",
+  "shortAnswer": "Towing follows a procedure, and you have the right to remove valuables before the vehicle is taken. The lawful fees are scheduled — anything else is not part of the process.",
+  "legalExplanation": "The **Lagos State Traffic Law, 2012** and LASTMA's operating rules prescribe **when and how** vehicles may be towed — typically where a vehicle obstructs traffic or is unroadworthy in a live lane.\n- You must be allowed to **remove personal valuables**.\n- Towing and storage attract **scheduled fees** payable through official channels with receipts.\n- Release requires the **official process**, not roadside negotiation.",
+  "exceptions": "- **Safety emergencies** may justify immediate removal, with documentation after.\n- **Court orders** can affect custody of the vehicle.",
+  "practicalOptions": "1. Signal calmly and ask for **one minute to remove valuables**.\n2. Take your phone, documents and valuables before the tow.\n3. Ask **where the vehicle is being taken** and note the yard name.\n4. Insist on the **official fee schedule and receipt** at release.\n5. Retrieve the vehicle promptly — storage fees accrue daily.",
+  "whatToAvoid": "- Wrestling over the tow rope — it is dangerous and creates offences.\n- Paying roadside cash without a receipt.",
+  "whatToDocument": "- Officers' names, tow truck details, yard address, time, fee schedule applied",
+  "whatToDoAfter": "If fees beyond the schedule were demanded, report through **Lagos State complaint channels** in the help directory with your receipts.",
+  "sources": [
+    {
+      "sourceId": "lagos-state-traffic-law-2012",
+      "sections": [
+        "8",
+        "15",
+        "16",
+        "17",
+        "Schedule I",
+        "Schedule II"
+      ],
+      "notes": "s8 removal/towing of stationary or abandoned vehicles; s15 impound of vehicles without prescribed particulars; s16 release within 24 hours / two weeks and fees; s17 unclaimed vehicles; Schedules I-II towing/storage fees."
+    }
+  ]
+}

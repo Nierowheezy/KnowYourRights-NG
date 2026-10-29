@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Browse by agency — KnowYourRights NG</title>
+  <meta name="description" content="Browse guidance by enforcement agency — federal and state.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Geist:wght@700;800&display=swap" rel="stylesheet">
+  <script>try{document.documentElement.dataset.theme=localStorage.getItem("kyr-theme")||"system"}catch(e){document.documentElement.dataset.theme="system"}</script>
+  <link rel="stylesheet" href="theme.css">
+  <style>
+    .page-hero { padding: 64px 0 32px; }
+
+    .agency-abbr {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 46px;
+      height: 46px;
+      border-radius: 12px;
+      background: var(--forest-deep);
+      color: var(--lime);
+      font-family: var(--font-display);
+      font-weight: 800;
+      font-size: 0.85rem;
+      letter-spacing: -0.03em;
+      margin-bottom: 16px;
+    }
+
+    .agency-abbr--state { background: var(--forest); color: #fff; }
+
+    .section-label {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin: 0 0 20px;
+      font-family: var(--font-display);
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      font-size: 1.3rem;
+    }
+
+    .section-label .count {
+      font-family: var(--font-sans);
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: var(--forest);
+      background: var(--bg-tint);
+      border: 1px solid var(--line-tint);
+      padding: 3px 11px;
+      border-radius: 999px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="announce">
+    <div class="container announce__inner">
+      <span class="pulse-dot"></span>
+      <span class="announce__label">New</span>
+      <span class="announce__title">KAROTA scenarios added for Kano</span>
+      <span class="announce__meta">· State-specific guidance, lawyer reviewed</span>
+      <a href="#state" class="announce__link">See state agencies →</a>
+    </div>
+  </div>
+
+  <header class="header">
+    <div class="header__pill">
+      <a class="brand" href="index.html">
+        <svg width="28" height="28" viewBox="0 0 30 30" aria-hidden="true">
+          <rect width="30" height="30" rx="8" fill="#15300a"/>
+          <rect x="13.4" y="6.5" width="3.2" height="10.5" rx="1.6" fill="#c1ff72"/>
+          <circle cx="15" cy="21.4" r="1.9" fill="#c1ff72"/>
+        </svg>
+        <span class="brand__text">KnowYourRights NG</span>
+      </a>
+      <nav class="nav" aria-label="Main">
+        <a href="encounter.html" class="nav__link">Encounter mode</a>
+        <a href="browse.html" class="nav__link">Browse</a>
+        <a href="agencies.html" class="nav__link" aria-current="page">Agencies</a>
+        <a href="search.html" class="nav__link">Search</a>
+        <a href="help.html" class="nav__link">Help</a>
+        <a href="about.html" class="nav__link">About</a>
+      </nav>
+      <div class="header__actions">
+        <button class="theme-toggle" id="themeToggle" type="button" aria-label="Switch theme" title="Light / dark / system">
+          <svg class="ticon icon-sun" width="15" height="15" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="3" stroke="currentColor" stroke-width="1.3"/><path d="M8 1.5v1.4M8 13.1v1.4M14.5 8h-1.4M2.9 8H1.5M12.4 3.6l-1 1M4.6 11.4l-1 1M12.4 12.4l-1-1M4.6 4.6l-1-1" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg>
+          <svg class="ticon icon-moon" width="15" height="15" viewBox="0 0 16 16" fill="none"><path d="M13.5 9A5.6 5.6 0 0 1 7 2.6 5.7 5.7 0 1 0 8.9 14 5.7 5.7 0 0 1 13.5 9Z" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"/></svg>
+          <svg class="ticon icon-sys" width="15" height="15" viewBox="0 0 16 16" fill="none"><rect x="1.8" y="2.8" width="12.4" height="8.4" rx="1.4" stroke="currentColor" stroke-width="1.3"/><path d="M5.5 13.7h5M8 11.2v2.5" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg>
+        </button>
+        <a href="help.html" class="btn btn--primary btn--sm">Get help now</a>
+        <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="encounter.html" class="is-cta">Encounter mode — I need help now</a>
+      <a href="browse.html">Browse by situation</a>
+      <a href="agencies.html">Browse by agency</a>
+      <a href="search.html">Search</a>
+      <a href="help.html">Help directory</a>
+      <a href="about.html">About</a>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- Page hero -->
+    <section class="page-hero">
+      <div class="container">
+        <h1 class="display display--section anim">Who's stopping you?</h1>
+        <p class="lede anim" style="max-width:560px;margin-top:14px;animation-delay:.08s;">
+          Different agencies have different powers. Start with who you're
+          dealing with — we'll show only what applies to them.
+        </p>
+      </div>
+    </section>
+
+    <!-- Federal agencies -->
+    <section class="section--tight">
+      <div class="container">
+        <h2 class="section-label reveal">Federal agencies <span class="count">6 covered</span></h2>
+        <div class="card-grid card-grid--3">
+
+          <a href="scenario.html" class="card card--hover reveal">
+            <span class="agency-abbr">NP</span>
+            <h3 class="card__title">Nigeria Police Force</h3>
+            <p class="card__desc">General law enforcement, checkpoints, arrest, search and detention — the most common encounter.</p>
+            <div class="card__foot"><span class="badge-outline badge-federal">Federal</span><span class="card__meta">12 scenarios</span></div>
+          </a>
+
+          <a href="scenario.html" class="card card--hover reveal" style="transition-delay:.05s;">
+            <span class="agency-abbr">FR</span>
+            <h3 class="card__title">FRSC</h3>
+            <p class="card__desc">Federal Road Safety Corps — highways, driver fitness, vehicle roadworthiness and road safety rules.</p>
+            <div class="card__foot"><span class="badge-outline badge-federal">Federal</span><span class="card__meta">9 scenarios</span></div>
+          </a>
+
+          <a href="scenario.html" class="card card--hover reveal" style="transition-delay:.1s;">
+            <span class="agency-abbr">NC</span>
+            <h3 class="card__title">Nigeria Customs</h3>
+            <p class="card__desc">Border and import enforcement. Where their highway jurisdiction starts, and where it stops.</p>
+            <div class="card__foot"><span class="badge-outline badge-federal">Federal</span><span class="card__meta">4 scenarios</span></div>
+          </a>
+
+          <a href="scenario.html" class="card card--hover reveal">
+            <span class="agency-abbr">NS</span>
+            <h3 class="card__title">NSCDC</h3>
+            <p class="card__desc">Nigeria Security and Civil Defence Corps — critical infrastructure and their limits on the road.</p>
+            <div class="card__foot"><span class="badge-outline badge-federal">Federal</span><span class="card__meta">3 scenarios</span></div>
+          </a>
+
+          <a href="scenario.html" class="card card--hover reveal" style="transition-delay:.05s;">
+            <span class="agency-abbr">ND</span>
+            <h3 class="card__title">NDLEA</h3>
+            <p class="card__desc">Drug enforcement stops, search powers, and what "reasonable suspicion" actually requires.</p>
+            <div class="card__foot"><span class="badge-outline badge-federal">Federal</span><span class="card__meta">3 scenarios</span></div>
+          </a>
+
+          <a href="scenario.html" class="card card--hover reveal" style="transition-delay:.1s;">
+            <span class="agency-abbr">IM</span>
+            <h3 class="card__title">Immigration</h3>
+            <p class="card__desc">Nigeria Immigration Service — residency checks and document demands, and your rights in them.</p>
+            <div class="card__foot"><span class="badge-outline badge-federal">Federal</span><span class="card__meta">2 scenarios</span></div>
+          </a>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- In-feed ad (728 × 90) -->
+    <section class="section--tight">
+      <div class="container">
+        <div class="ad-slot ad-slot--inline reveal">
+          <span class="ad-slot__label">Advertisement</span>
+          <span class="ad-slot__hint">Ad space — supports the free guide</span>
+          <span class="ad-slot__size">728 × 90 / responsive</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- State agencies -->
+    <section class="section--tight" id="state">
+      <div class="container">
+        <h2 class="section-label reveal">State agencies <span class="count">4 covered · more coming</span></h2>
+        <div class="card-grid card-grid--3">
+
+          <a href="scenario.html" class="card card--hover reveal">
+            <span class="agency-abbr agency-abbr--state">LA</span>
+            <h3 class="card__title">LASTMA</h3>
+            <p class="card__desc">Lagos State Traffic Management Authority — towing, impound procedure and lawful fees.</p>
+            <div class="card__foot"><span class="badge-outline badge-state">Lagos · State</span><span class="card__meta">5 scenarios</span></div>
+          </a>
+
+          <a href="scenario.html" class="card card--hover reveal" style="transition-delay:.05s;">
+            <span class="agency-abbr agency-abbr--state">DV</span>
+            <h3 class="card__title">Lagos VIS / DVS</h3>
+            <p class="card__desc">Vehicle Inspection Service — roadworthiness stops and the narrow grounds for impoundment.</p>
+            <div class="card__foot"><span class="badge-outline badge-state">Lagos · State</span><span class="card__meta">4 scenarios</span></div>
+          </a>
+
+          <a href="scenario.html" class="card card--hover reveal" style="transition-delay:.1s;">
+            <span class="agency-abbr agency-abbr--state">KA</span>
+            <h3 class="card__title">KAROTA</h3>
+            <p class="card__desc">Kano Road and Traffic Agency — state traffic rules that differ from federal highway rules.</p>
+            <div class="card__foot"><span class="badge-outline badge-state">Kano · State</span><span class="card__meta">3 scenarios</span></div>
+          </a>
+
+          <a href="scenario.html" class="card card--hover reveal">
+            <span class="agency-abbr agency-abbr--state">LN</span>
+            <h3 class="card__title">LNSC</h3>
+            <p class="card__desc">Lagos Neighbourhood Safety Corps — community policing powers and their legal limits.</p>
+            <div class="card__foot"><span class="badge-outline badge-state">Lagos · State</span><span class="card__meta">2 scenarios</span></div>
+          </a>
+
+          <a href="#" class="card reveal" style="transition-delay:.15s;border-style:dashed;opacity:.75;">
+            <span class="agency-abbr" style="background:var(--chip-surface);color:var(--chip-ink);border:1px dashed var(--chip-line);">+?</span>
+            <h3 class="card__title">Your state next</h3>
+            <p class="card__desc">We add agencies as legal review completes. Tell us which one to prioritise.</p>
+            <div class="card__foot"><span class="badge-gray">In legal review</span><span class="card__meta">Post-MVP</span></div>
+          </a>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="section--tight">
+      <div class="container">
+        <div class="ad-slot ad-slot--leaderboard reveal">
+          <span class="ad-slot__label">Advertisement</span>
+          <span class="ad-slot__hint">Ad space — supports the free guide</span>
+          <span class="ad-slot__size">970 × 90 / responsive</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Note -->
+    <section class="section--tight">
+      <div class="container">
+        <div class="callout callout--tint reveal">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" style="flex-shrink:0;"><circle cx="10" cy="10" r="7.5" stroke="currentColor" stroke-width="1.4"/><path d="M10 9v4M10 6.6v.2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+          <span><strong>State rules can differ from federal rules.</strong> Every scenario shows a federal or state badge — always check the state note before acting on general guidance.</span>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div>
+          <a class="brand brand--footer" href="index.html">
+            <svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true">
+              <rect width="30" height="30" rx="8" fill="#2c3a1c"/>
+              <rect x="13.4" y="6.5" width="3.2" height="10.5" rx="1.6" fill="#c1ff72"/>
+              <circle cx="15" cy="21.4" r="1.9" fill="#c1ff72"/>
+            </svg>
+            <span class="brand__text">KnowYourRights NG</span>
+          </a>
+          <p class="footer__desc">Free, lawyer-reviewed guidance for roadside and related enforcement encounters in Nigeria. Sources-linked, safety-first, always free.</p>
+          <p class="footer__quote">"Not legal advice — accurate, reviewed information."</p>
+        </div>
+        <div class="footer__cols">
+          <div class="footer__col">
+            <h4>Guide</h4>
+            <ul>
+              <li><a href="encounter.html">Encounter mode</a></li>
+              <li><a href="browse.html">Browse situations</a></li>
+              <li><a href="agencies.html">By agency</a></li>
+              <li><a href="search.html">Search</a></li>
+            </ul>
+          </div>
+          <div class="footer__col">
+            <h4>Support</h4>
+            <ul>
+              <li><a href="help.html">Help directory</a></li>
+              <li><a href="scenario.html#feedback">Flag an issue</a></li>
+              <li><a href="about.html">How we review</a></li>
+              <li><a href="#">Corrections<span class="footer__soon">SOON</span></a></li>
+            </ul>
+          </div>
+          <div class="footer__col">
+            <h4>Trust</h4>
+            <ul>
+              <li><a href="about.html">Scope &amp; limitations</a></li>
+              <li><a href="about.html">Privacy</a></li>
+              <li><a href="about.html#disclaimer">Legal disclaimer</a></li>
+              <li><a href="#">Pidgin version<span class="footer__soon">SOON</span></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <div class="footer__socials">
+          <a href="#" class="social-dot" aria-label="X">
+            <svg width="15" height="15" viewBox="0 0 16 16" fill="currentColor"><path d="M9.5 6.9 15 .5h-1.6L8.7 5.9 5 .5H.7l5.8 8.2L.7 15.5h1.6l5.1-5.8 4 5.8h4.3L9.5 6.9Z"/></svg>
+          </a>
+          <a href="#" class="social-dot" aria-label="GitHub">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M8 .5a7.5 7.5 0 0 0-2.37 14.62c.37.07.5-.16.5-.36v-1.27c-2.08.45-2.52-.9-2.52-.9-.34-.87-.83-1.1-.83-1.1-.68-.46.05-.45.05-.45.75.05 1.14.77 1.14.77.67 1.15 1.75.82 2.18.63.07-.49.26-.82.48-1.01-1.67-.19-3.42-.83-3.42-3.71 0-.82.29-1.49.77-2.01-.08-.19-.34-.96.07-2 0 0 .63-.2 2.06.77a7.2 7.2 0 0 1 3.76 0c1.43-.97 2.06-.77 2.06-.77.41 1.04.15 1.81.07 2 .48.52.77 1.19.77 2.01 0 2.89-1.76 3.52-3.43 3.7.27.23.5.69.5 1.39V14.8c0 .2.14.44.51.36A7.5 7.5 0 0 0 8 .5Z"/></svg>
+          </a>
+          <a href="#" class="social-dot" aria-label="Instagram">
+            <svg width="15" height="15" viewBox="0 0 16 16" fill="none"><rect x="1.5" y="1.5" width="13" height="13" rx="4" stroke="currentColor" stroke-width="1.3"/><circle cx="8" cy="8" r="3" stroke="currentColor" stroke-width="1.3"/><circle cx="12" cy="4" r="0.9" fill="currentColor"/></svg>
+          </a>
+        </div>
+        <div class="footer__legal">
+          © 2026 KnowYourRights NG. All rights reserved.&nbsp;&nbsp;·&nbsp;&nbsp;Free &amp; anonymous — no accounts, no tracking.
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Dismissible mobile anchor ad (320 × 100) -->
+  <div class="ad-anchor" role="complementary" aria-label="Advertisement">
+    <button class="ad-anchor__close" type="button" aria-label="Close ad" onclick="this.parentElement.remove()">×</button>
+    <div class="ad-slot ad-slot--large-mobile">
+      <span class="ad-slot__label">Ad</span>
+      <span class="ad-slot__hint">320 × 100 — large mobile banner</span>
+    </div>
+  </div>
+
+  <script>
+    // Theme: cycles light -> dark -> system, persisted
+    const themeBtn = document.getElementById('themeToggle');
+    const order = ['light', 'dark', 'system'];
+    themeBtn.addEventListener('click', () => {
+      const cur = document.documentElement.dataset.theme || 'system';
+      const next = order[(order.indexOf(cur) + 1) % order.length];
+      document.documentElement.dataset.theme = next;
+      themeBtn.setAttribute('aria-label', 'Theme: ' + next);
+      try { localStorage.setItem('kyr-theme', next); } catch (e) {}
+    });
+
+    // Mobile menu
+    const navToggle = document.getElementById('navToggle');
+    const mobileMenu = document.getElementById('mobileMenu');
+    navToggle.addEventListener('click', () => {
+      const open = mobileMenu.classList.toggle('is-open');
+      navToggle.setAttribute('aria-expanded', open);
+    });
+
+    // Scroll reveal
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach((e) => {
+        if (e.isIntersecting) { e.target.classList.add('is-in'); io.unobserve(e.target); }
+      });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.reveal').forEach((el) => io.observe(el));
+  </script>
+</body>
+</html>

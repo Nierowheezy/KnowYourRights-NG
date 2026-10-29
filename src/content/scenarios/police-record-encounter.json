@@ -1,0 +1,58 @@
+{
+  "keywords": [
+    "record",
+    "video",
+    "documentation",
+    "evidence",
+    "safety"
+  ],
+  "category": "documents",
+  "jurisdiction": "federal",
+  "agency": [
+    "npf"
+  ],
+  "status": "approved",
+  "reviewer": "Content team (pre-review)",
+  "lastReviewed": "2026-10-29",
+  "nextReview": "2027-04-30",
+  "reviewNotes": "Drafted from sources; requires Nigerian lawyer review against the exact gazetted text before final sign-off. Section references checked against downloaded official texts on 2026-10-29; Nigerian lawyer review still required before publication.",
+  "changeHistory": [
+    {
+      "date": "2026-10-20",
+      "note": "Initial published draft",
+      "reviewer": "Content team"
+    }
+  ],
+  "relatedScenarios": [
+    "police-phone-search-checkpoint",
+    "officer-demanded-money"
+  ],
+  "id": "police-record-encounter",
+  "title": "Am I allowed to record the encounter?",
+  "shortTitle": "Recording the encounter",
+  "icon": "🎥",
+  "question": "Can I take out my phone and record officers during a stop?",
+  "shortAnswer": "Usually yes, openly, where it is safe to do so. Recording is often the strongest protection you have — but safety comes first, and some agencies' internal rules say more.",
+  "legalExplanation": "There is no general ban on recording a public official performing duties in public. Recording is protected expression under **section 39 of the 1999 Constitution**. Practical rules:\n- **Open recording** is usually safer than concealed recording.\n- **Safety first**: if recording escalates the situation, put the phone away and prioritise leaving safely.\n- A recording is **evidence** — preserve the original file and note the time and place.",
+  "exceptions": "- **Secure or restricted premises** may have their own rules.\n- Interfering with a lawful operation while recording can create separate liability.",
+  "practicalOptions": "1. Announce it calmly: **\"I am recording for my own record.\"**\n2. Keep recording **passive** — film, don't argue into the camera.\n3. Back up the file the same day.\n4. If told to stop, weigh safety; you may continue discreetly and note the demand.",
+  "whatToAvoid": "- Recording while arguing — it escalates and weakens the footage's value.\n- Streaming live before securing the original file.",
+  "whatToDocument": "- Date, time, location, officers visible, any demand to stop recording",
+  "whatToDoAfter": "If the recording captured a breach, share it with a **lawyer or the verified complaint channels** rather than posting first.",
+  "sources": [
+    {
+      "sourceId": "constitution-1999",
+      "sections": [
+        "39"
+      ],
+      "notes": "Freedom of expression, including receiving and imparting information."
+    },
+    {
+      "sourceId": "nigeria-police-act-2020",
+      "sections": [
+        "50"
+      ],
+      "notes": "Pre-search: officer must give name, station, object and grounds; supports noting officer details."
+    }
+  ]
+}

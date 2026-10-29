@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KnowYourRights NG — Know your rights during roadside encounters</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="theme.css">
+  <script defer src="theme-toggle.js"></script>
+</head>
+<body data-theme="system">
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand">
+        <svg class="brand-mark" width="36" height="36" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M2 17L12 22L22 17" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M2 12L12 17L22 12" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <div class="brand-name">
+          <span class="brand-main">KnowYourRights</span>
+          <span class="brand-suffix">NG</span>
+        </div>
+      </a>
+      <nav class="site-nav" aria-label="Main navigation">
+        <a href="index.html" class="nav-link nav-link--active">Home</a>
+        <a href="browse.html" class="nav-link">Browse</a>
+        <a href="search.html" class="nav-link">Search</a>
+        <a href="help.html" class="nav-link">Help</a>
+        <a href="about.html" class="nav-link">About</a>
+      </nav>
+      <div class="header-actions">
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme" title="Toggle theme">
+          <svg id="theme-icon" viewBox="0 0 24 24"><path d="M12 3c4.97 0 9 4.03 9 9s-4.03 9-9 9-9-4.03-9-9 4.03-9 9-9z"/><circle cx="12" cy="12" r="3"/></svg>
+        </button>
+        <a href="encounter.html" class="btn btn--primary">I am dealing with this right now</a>
+      </div>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Open menu" aria-expanded="false">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="hero-badge">
+          <span class="badge-dot" aria-hidden="true"></span>
+          <span>Free &middot; source-backed &middot; safety-first</span>
+        </div>
+        <h1 class="hero-title">Know your rights during <span class="gradient-text">roadside encounters</span></h1>
+        <p class="hero-desc">Plain-language guidance for police, FRSC, customs, and other enforcement stops in Nigeria. Know what the law permits before you speak.</p>
+        <div class="hero-actions">
+          <a href="encounter.html" class="btn btn--primary btn--large">I am dealing with this right now</a>
+          <a href="browse.html" class="btn btn--outline btn--large">Browse all scenarios</a>
+        </div>
+        <div class="hero-stats">
+          <div class="stat">
+            <span class="stat-number">10k+</span>
+            <span class="stat-label">lookups this month</span>
+          </div>
+          <div class="stat-divider" aria-hidden="true"></div>
+          <div class="stat">
+            <span class="stat-number">Lawyer-reviewed</span>
+            <span class="stat-label">every scenario</span>
+          </div>
+          <div class="stat-divider" aria-hidden="true"></div>
+          <div class="stat">
+            <span class="stat-number">Offline-ready</span>
+            <span class="stat-label">PWA support</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="categories" aria-label="Browse by situation">
+      <div class="container">
+        <div class="section-head">
+          <h2 class="section-title">Find guidance by situation</h2>
+          <p class="section-desc">Common roadside encounters, organised by what happens. Each card links to detailed scenarios.</p>
+        </div>
+        <div class="category-grid">
+          <a href="browse.html#stopped" class="category-card">
+            <div class="category-icon">&#9873;</div>
+            <h3>I&rsquo;ve been stopped</h3>
+            <p>What to do when an officer pulls you over — your rights and safety-first steps.</p>
+          </a>
+          <a href="browse.html#documents" class="category-card">
+            <div class="category-icon">&#128218;</div>
+            <h3>Documents requested</h3>
+            <p>Licence, registration, insurance, and vehicle papers — what you must show.</p>
+          </a>
+          <a href="browse.html#search" class="category-card">
+            <div class="category-icon">&#128270;</div>
+            <h3>Search requests</h3>
+            <p>Vehicle, personal belongings, and phone searches — when they can and can&rsquo;t search.</p>
+          </a>
+          <a href="browse.html#arrest" class="category-card">
+            <div class="category-icon">&#128203;</div>
+            <h3>Arrest or station</h3>
+            <p>Your rights and safety-first steps if you are arrested or taken to a station.</p>
+          </a>
+          <a href="browse.html#money" class="category-card">
+            <div class="category-icon">&#128176;</div>
+            <h3>Asked for money</h3>
+            <p>How to respond safely and report an on-the-spot payment demand.</p>
+          </a>
+          <a href="browse.html#impound" class="category-card">
+            <div class="category-icon">&#128662;</div>
+            <h3>Vehicle impounded</h3>
+            <p>What you can do and where to get help if your vehicle is impounded.</p>
+          </a>
+          <a href="browse.html#documents" class="category-card">
+            <div class="category-icon">&#128205;</div>
+            <h3>Your documents</h3>
+            <p>Checklist of documents to carry and digital alternatives accepted by law.</p>
+          </a>
+          <a href="browse.html#after" class="category-card">
+            <div class="category-icon">&#128102;</div>
+            <h3>After the stop</h3>
+            <p>How to file complaints, get legal help, and document the encounter properly.</p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="scenarios" aria-label="Recent scenarios">
+      <div class="container">
+        <div class="section-head">
+          <div class="section-title-wrap">
+            <h2 class="section-title">Recently published guidance</h2>
+            <span class="section-pill">New this week</span>
+          </div>
+          <p class="section-desc">Latest lawyer-reviewed scenarios across Nigerian enforcement agencies.</p>
+        </div>
+        <div class="scenario-grid">
+          <article class="scenario-card">
+            <div class="scenario-header">
+              <span class="scenario-badge">Police</span>
+            </div>
+            <h3>Officer requests your phone</h3>
+            <p>You are not required to unlock or hand over your phone without a warrant. Know the exceptions.</p>
+            <div class="scenario-meta">
+              <span class="scenario-meta-item">Federal</span>
+              <span class="scenario-meta-item">Approved</span>
+              <a href="scenario.html?id=phone" class="scenario-link">Read guide &#8594;</a>
+            </div>
+          </article>
+          <article class="scenario-card">
+            <div class="scenario-header">
+              <span class="scenario-badge">FRSC</span>
+            </div>
+            <h3>FRSC asks for particulars</h3>
+            <p>Which documents FRSC officers can legally demand at checkpoints and what to do if they ask for more.</p>
+            <div class="scenario-meta">
+              <span class="scenario-meta-item">Federal</span>
+              <span class="scenario-meta-item">Approved</span>
+              <a href="scenario.html?id=frsc" class="scenario-link">Read guide &#8594;</a>
+            </div>
+          </article>
+          <article class="scenario-card">
+            <div class="scenario-header">
+              <span class="scenario-badge">Customs</span>
+            </div>
+            <h3>Customs stops your vehicle</h3>
+            <p>Your rights during customs vehicle searches, seizures, and the legal basis for their authority.</p>
+            <div class="scenario-meta">
+              <span class="scenario-meta-item">Federal</span>
+              <span class="scenario-meta-item">Approved</span>
+              <a href="scenario.html?id=customs" class="scenario-link">Read guide &#8594;</a>
+            </div>
+          </article>
+          <article class="scenario-card">
+            <div class="scenario-header">
+              <span class="scenario-badge">VIO</span>
+            </div>
+            <h3>VIO demands particulars</h3>
+            <p>Vehicle Inspection Officers' powers differ from police — know what they can and cannot enforce.</p>
+            <div class="scenario-meta">
+              <span class="scenario-meta-item">State</span>
+              <span class="scenario-meta-item">Under review</span>
+              <a href="scenario.html?id=vio" class="scenario-link">Read guide &#8594;</a>
+            </div>
+          </article>
+          <article class="scenario-card">
+            <div class="scenario-header">
+              <span class="scenario-badge">Police</span>
+            </div>
+            <h3>Asked to pay on the spot</h3>
+            <p>How to respond safely when an officer solicits a bribe, and how to report it through proper channels.</p>
+            <div class="scenario-meta">
+              <span class="scenario-meta-item">Federal &middot; State</span>
+              <span class="scenario-meta-item">Approved</span>
+              <a href="scenario.html?id=bribe" class="scenario-link">Read guide &#8594;</a>
+            </div>
+          </article>
+          <article class="scenario-card">
+            <div class="scenario-header">
+              <span class="scenario-badge">VIO / Police</span>
+            </div>
+            <h3>Vehicle impounded</h3>
+            <p>Legal grounds for impoundment, your right to a receipt, and how to recover your vehicle.</p>
+            <div class="scenario-meta">
+              <span class="scenario-meta-item">State</span>
+              <span class="scenario-meta-item">Under review</span>
+              <a href="scenario.html?id=impound" class="scenario-link">Read guide &#8594;</a>
+            </div>
+          </article>
+        </div>
+        <div class="section-footer">
+          <a href="browse.html" class="btn btn--outline">View all scenarios</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="trust" aria-label="Why trust us">
+      <div class="container">
+        <div class="section-head section-head--center">
+          <h2 class="section-title">Why trust KnowYourRights NG</h2>
+          <p class="section-desc">Built on verified legal sources with a rigorous review process.</p>
+        </div>
+        <div class="trust-grid">
+          <div class="trust-card">
+            <div class="trust-icon">&#10003;</div>
+            <h3>Lawyer-reviewed</h3>
+            <p>Every scenario is reviewed by Nigerian legal practitioners before publication.</p>
+          </div>
+          <div class="trust-card">
+            <div class="trust-icon">&#128218;</div>
+            <h3>Source-backed</h3>
+            <p>All guidance cites the exact Act, Regulation, or Court decision — no hearsay.</p>
+          </div>
+          <div class="trust-card">
+            <div class="trust-icon">&#128187;</div>
+            <h3>Safety-first</h3>
+            <p>Guidance prioritises your physical safety over legal technicalities in the moment.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="testimonials" aria-label="What people are saying">
+      <div class="container">
+        <div class="section-head section-head--center">
+          <h2 class="section-title">What users are saying</h2>
+          <p class="section-desc">Real reactions from people using KnowYourRights NG.</p>
+        </div>
+        <div class="testimonial-grid">
+          <blockquote class="testimonial">
+            <div class="testimonial-rating">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <p class="testimonial-body">&ldquo;This is actually useful when you&rsquo;re preparing for a negotiation because you have a reference instead of just picking a number.&rdquo;</p>
+            <cite class="testimonial-author">Pejuola &middot; @Pejuola_a</cite>
+          </blockquote>
+          <blockquote class="testimonial">
+            <div class="testimonial-rating">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <p class="testimonial-body">&ldquo;KnowYourRights NG is building the guide Nigerians need during roadside stops &mdash; practical, source-backed, and free.&rdquo;</p>
+            <cite class="testimonial-author">Techpoint Africa &middot; @TechpointAfrica</cite>
+          </blockquote>
+          <blockquote class="testimonial">
+            <div class="testimonial-rating">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <p class="testimonial-body">&ldquo;Helped me understand where I stand during a stop. This tool answered my questions.&rdquo;</p>
+            <cite class="testimonial-author">Enny &middot; Customer</cite>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta" aria-label="Get started">
+      <div class="container cta-inner">
+        <div class="cta-glow" aria-hidden="true"></div>
+        <div class="cta-content">
+          <h2 class="cta-heading">Need help right now?</h2>
+          <p class="cta-desc">Get concise, safety-first guidance for your situation in under a minute. No account required.</p>
+        </div>
+        <a href="encounter.html" class="btn btn--primary btn--large">Start here</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <svg class="brand-mark" width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M2 17L12 22L22 17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M2 12L12 17L22 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <div class="brand-name">
+          <span class="brand-main">KnowYourRights</span>
+          <span class="brand-suffix">NG</span>
+        </div>
+        <p class="footer-tagline">Free, source-backed guidance for Nigerian roadside encounters. Know your rights. Stay safe.</p>
+      </div>
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <div class="footer-col">
+          <h3 class="footer-col-title">Guide</h3>
+          <a href="encounter.html" class="footer-link">Immediate help</a>
+          <a href="browse.html" class="footer-link">Browse scenarios</a>
+          <a href="search.html" class="footer-link">Search</a>
+        </div>
+        <div class="footer-col">
+          <h3 class="footer-col-title">Support</h3>
+          <a href="help.html" class="footer-link">Complaint channels</a>
+          <a href="#" class="footer-link">Legal aid</a>
+        </div>
+        <div class="footer-col">
+          <h3 class="footer-col-title">About</h3>
+          <a href="about.html" class="footer-link">Scope & review</a>
+          <a href="#" class="footer-link">Limitations</a>
+        </div>
+        <div class="footer-col">
+          <h3 class="footer-col-title">Legal</h3>
+          <a href="#" class="footer-link">Privacy Policy</a>
+          <a href="#" class="footer-link">Terms of Service</a>
+        </div>
+      </nav>
+      <div class="footer-legal">
+        <p class="footer-copy">&copy; 2026 KnowYourRights NG. All rights reserved.</p>
+        <p class="footer-disclaimer">KnowYourRights NG provides general legal information, not legal advice or representation. Source-backed &middot; Safety-first &middot; Free to use.</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

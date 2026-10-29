@@ -1,0 +1,68 @@
+{
+  "keywords": [
+    "phone",
+    "passcode",
+    "biometrics",
+    "detention",
+    "seizure"
+  ],
+  "category": "arrest",
+  "jurisdiction": "federal",
+  "agency": [
+    "npf"
+  ],
+  "status": "under-review",
+  "reviewer": "Content team (pre-review)",
+  "lastReviewed": "2026-10-29",
+  "nextReview": "2027-04-30",
+  "reviewNotes": "Drafted from sources; requires Nigerian lawyer review against the exact gazetted text before final sign-off. Section references checked against downloaded official texts on 2026-10-29; Nigerian lawyer review still required before publication.",
+  "changeHistory": [
+    {
+      "date": "2026-10-20",
+      "note": "Initial published draft",
+      "reviewer": "Content team"
+    }
+  ],
+  "relatedScenarios": [
+    "police-phone-search-checkpoint",
+    "police-arrest-detention"
+  ],
+  "id": "police-phone-unlock",
+  "title": "Must I unlock my phone if detained?",
+  "shortTitle": "Unlocking your phone",
+  "icon": "📱",
+  "question": "I've been detained and officers want my passcode. Must I unlock my phone for them?",
+  "shortAnswer": "No — and you cannot be forced to give up passcodes or biometrics without proper legal process. If your phone is seized, insist on an inventory receipt and record the officer's details.",
+  "legalExplanation": "A seized device must be handled under **documented procedures**: an inventory of property taken from a detained person, with a receipt. Compelled access to a device's contents requires **specific legal process**, not a roadside demand.\n- You may state calmly that you **do not consent** to unlocking.\n- A seized phone must appear on an **inventory/receipt**.",
+  "exceptions": "- **Court-ordered examinations** of devices follow their own procedure.\n- Devices seized under specific statutory investigation regimes carry their own rules.",
+  "practicalOptions": "1. State calmly: **\"I don't consent to unlocking my phone.\"**\n2. If seized, demand an **inventory receipt** naming the device.\n3. Note officers' details, time and place.\n4. Contact **legal aid** from the help directory as early as possible.",
+  "whatToAvoid": "- Unlocking \"to prove innocence\" — it removes your protection.\n- Volunteering the passcode under pressure.",
+  "whatToDocument": "- Device make/model, IMEI if known, who seized it, receipt number",
+  "whatToDoAfter": "Report any failure to receipt the device through the **verified complaint channels** and raise it with your lawyer.",
+  "sources": [
+    {
+      "sourceId": "constitution-1999",
+      "sections": [
+        "37"
+      ],
+      "notes": "Privacy of telephone conversations and correspondence."
+    },
+    {
+      "sourceId": "nigeria-police-act-2020",
+      "sections": [
+        "49",
+        "50",
+        "52"
+      ],
+      "notes": "s49-50 stop/search requirements; s52 limits search of arrested suspects."
+    },
+    {
+      "sourceId": "acja-2015",
+      "sections": [
+        "9",
+        "10"
+      ],
+      "notes": "s9 search of arrested suspect; s10 inventory of seized property."
+    }
+  ]
+}

@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Help & Complaint Channels — KnowYourRights NG</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="theme.css">
+  <script defer src="theme-toggle.js"></script>
+</head>
+<body data-theme="system">
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand">
+        <svg class="brand-mark" width="36" height="36" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M2 17L12 22L22 17" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M2 12L12 17L22 12" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <div class="brand-name">
+          <span class="brand-main">KnowYourRights</span>
+          <span class="brand-suffix">NG</span>
+        </div>
+      </a>
+      <nav class="site-nav" aria-label="Main navigation">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="browse.html" class="nav-link">Browse</a>
+        <a href="search.html" class="nav-link">Search</a>
+        <a href="help.html" class="nav-link nav-link--active">Help</a>
+        <a href="about.html" class="nav-link">About</a>
+      </nav>
+      <div class="header-actions">
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme" title="Toggle theme">
+          <svg id="theme-icon" viewBox="0 0 24 24"><path d="M12 3c4.97 0 9 4.03 9 9s-4.03 9-9 9-9-4.03-9-9 4.03-9 9-9z"/><circle cx="12" cy="12" r="3"/></svg>
+        </button>
+        <a href="encounter.html" class="btn btn--primary">I need help now</a>
+      </div>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Open menu" aria-expanded="false">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" style="padding: var(--space-16) 0 var(--space-12); text-align: left;">
+      <div class="container hero-inner" style="max-width: none; text-align: left; margin: 0;">
+        <div class="hero-badge" style="margin-bottom: var(--space-6); display: inline-block;">
+          Verified help directory
+        </div>
+        <h1 class="hero-title" style="font-size: clamp(2rem, 4vw + 1rem, 3rem); margin-bottom: var(--space-4); text-align: left;">Get help after a stop</h1>
+        <p class="hero-desc" style="margin-bottom: var(--space-8); text-align: left; max-width: none; margin-left: 0; margin-right: 0;">Official complaint channels and verified legal support resources. All contacts verified with source documentation.</p>
+      </div>
+    </section>
+
+    <div class="container">
+      <section aria-labelledby="emergency" style="margin-bottom: var(--space-20);">
+        <div class="section-head">
+          <h2 class="section-title" id="emergency">Emergency contacts</h2>
+          <p class="section-desc">Immediate assistance for ongoing situations.</p>
+        </div>
+        <div class="scenario-grid">
+          <article class="scenario-card" style="border-left: 4px solid var(--color-danger);">
+            <div class="scenario-header">
+              <span class="scenario-badge" style="background: rgba(220,38,38,0.1); color: var(--color-danger); border-color: var(--color-danger);">Emergency</span>
+            </div>
+            <h3>Nigeria Police Emergency</h3>
+            <p>For immediate threat to life or ongoing crime. Available 24/7.</p>
+            <div class="scenario-meta">
+              <span class="scenario-meta-item">&#128222; 199 / 112</span>
+              <span class="scenario-meta-item">Available 24/7</span>
+              <a href="#" class="scenario-link">Details &#8594;</a>
+            </div>
+          </article>
+          <article class="scenario-card" style="border-left: 4px solid var(--color-warning);">
+            <div class="scenario-header">
+              <span class="scenario-badge" style="background: rgba(217,119,6,0.1); color: var(--color-warning); border-color: var(--color-warning);">Emergency</span>
+            </div>
+            <h3>FRSC Emergency</h3>
+            <p>Road crashes, vehicle breakdowns on highways, emergency towing.</p>
+            <div class="scenario-meta">
+              <span class="scenario-meta-item">&#128222; 122</span>
+              <span class="scenario-meta-item">Highways only</span>
+              <a href="#" class="scenario-link">Details &#8594;</a>
+            </div>
+          </article>
+          <article class="scenario-card" style="border-left: 4px solid var(--color-info);">
+            <div class="scenario-header">
+              <span class="scenario-badge" style="background: rgba(8,145,178,0.1); color: var(--color-info); border-color: var(--color-info);">Emergency</span>
+            </div>
+            <h3>Legal Aid Council</h3>
+            <p>Free legal representation for indigent citizens. Federal and state offices.</p>
+            <div class="scenario-meta">
+              <span class="scenario-meta-item">Nationwide</span>
+              <span class="scenario-meta-item">Means-tested</span>
+              <a href="#" class="scenario-link">Details &#8594;</a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section aria-labelledby="complaints">
+        <div class="section-head">
+          <h2 class="section-title" id="complaints">Official complaint channels</h2>
+          <p class="section-desc">Report misconduct, file complaints, and seek redress through proper channels.</p>
+        </div>
+        <div class="scenario-grid">
+          <article class="scenario-card">
+            <div class="scenario-header">
+              <span class="scenario-badge">Police</span>
+            </div>
+            <h3>Police Complaints Response Unit (CRU)</h3>
+            <p>Report police misconduct, harassment, bribery, or rights violations. Online and phone reporting.</p>
+            <div class="scenario-meta">
+              <span class="scenario-meta-item">&#128222; 0805 700 0001</span>
+              <span class="scenario-meta-item">&#9993; cru@npf.gov.ng</span>
+              <a href="#" class="scenario-link">File complaint &#8594;</a>
+            </div>
+          </article>
+          <article class="scenario-card">
+            <div class="scenario-header">
+              <span class="scenario-badge">Police</span>
+            </div>
+            <h3>Public Complaints Bureau (PCB)</h3>
+            <p>State-level police complaint desks at every command headquarters. Walk-in or written complaints.</p>
+            <div class="scenario-meta">
+              <span class="scenario-meta-item">Every state command</span>
+              <span class="scenario-meta-item">In-person / written</span>
+              <a href="#" class="scenario-link">Find location &#8594;</a>
+            </div>
+          </article>
+          <article class="scenario-card">
+            <div class="scenario-header">
+              <span class="scenario-badge">FRSC</span>
+            </div>
+            <h3>FRSC Complaints Unit</h3>
+            <p>Report FRSC officer misconduct, extortion, or procedural violations at checkpoints.</p>
+            <div class="scenario-meta">
+              <span class="scenario-meta-item">&#128222; 0807 769 0000</span>
+              <span class="scenario-meta-item">Online portal</span>
+              <a href="#" class="scenario-link">File complaint &#8594;</a>
+            </div>
+          </article>
+          <article class="scenario-card">
+            <div class="scenario-header">
+              <span class="scenario-badge">Customs</span>
+            </div>
+            <h3>Nigeria Customs Service Complaints</h3>
+            <p>Report customs officer misconduct, illegal seizures, or extortion at borders and checkpoints.</p>
+            <div class="scenario-meta">
+              <span class="scenario-meta-item">&#128222; 0903 222 1122</span>
+              <span class="scenario-meta-item">customs.gov.ng</span>
+              <a href="#" class="scenario-link">File complaint &#8594;</a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section aria-labelledby="legal-aid" style="margin-top: var(--space-20); padding-top: var(--space-20); border-top: 1px solid var(--color-border);">
+        <div class="section-head">
+          <h2 class="section-title" id="legal-aid">Legal aid & civil society</h2>
+          <p class="section-desc">Organisations providing free or low-cost legal support.</p>
+        </div>
+        <div class="trust-grid">
+          <div class="trust-card">
+            <div class="trust-icon">&#9755;</div>
+            <h3>Legal Aid Council of Nigeria</h3>
+            <p>Federal agency providing free legal representation to indigent citizens. Offices in all 36 states + FCT.</p>
+          </div>
+          <div class="trust-card">
+            <div class="trust-icon">&#9755;</div>
+            <h3>FIDA Nigeria</h3>
+            <p>International Federation of Women Lawyers — free legal aid for women and children. Branches nationwide.</p>
+          </div>
+          <div class="trust-card">
+            <div class="trust-icon">&#9755;</div>
+            <h3>NHRC</h3>
+            <p>National Human Rights Commission — investigate rights violations, mediate complaints, refer for prosecution.</p>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <svg class="brand-mark" width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M2 17L12 22L22 17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M2 12L12 17L22 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <div class="brand-name">
+          <span class="brand-main">KnowYourRights</span>
+          <span class="brand-suffix">NG</span>
+        </div>
+        <p class="footer-tagline">Free, source-backed guidance for Nigerian roadside encounters.</p>
+      </div>
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <div class="footer-col">
+          <h3 class="footer-col-title">Guide</h3>
+          <a href="index.html" class="footer-link">Home</a>
+          <a href="browse.html" class="footer-link">Browse scenarios</a>
+          <a href="encounter.html" class="footer-link">Immediate help</a>
+        </div>
+        <div class="footer-col">
+          <h3 class="footer-col-title">Support</h3>
+          <a href="help.html" class="footer-link">Complaint channels</a>
+          <a href="#" class="footer-link">Legal aid</a>
+        </div>
+        <div class="footer-col">
+          <h3 class="footer-col-title">About</h3>
+          <a href="about.html" class="footer-link">Scope & review</a>
+          <a href="#" class="footer-link">Limitations</a>
+        </div>
+        <div class="footer-col">
+          <h3 class="footer-col-title">Legal</h3>
+          <a href="#" class="footer-link">Privacy Policy</a>
+          <a href="#" class="footer-link">Terms of Service</a>
+        </div>
+      </nav>
+      <div class="footer-legal">
+        <p class="footer-copy">&copy; 2026 KnowYourRights NG. All rights reserved.</p>
+        <p class="footer-disclaimer">KnowYourRights NG provides general legal information, not legal advice or representation. Source-backed &middot; Safety-first &middot; Free to use.</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

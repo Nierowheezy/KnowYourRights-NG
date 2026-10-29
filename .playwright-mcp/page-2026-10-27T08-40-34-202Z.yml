@@ -1,0 +1,195 @@
+- generic [active] [ref=f1e1]:
+  - banner [ref=f1e2]:
+    - generic [ref=f1e3]:
+      - link "K KnowYourRights NG" [ref=f1e4] [cursor=pointer]:
+        - /url: index.html
+        - generic [ref=f1e5]: K
+        - generic [ref=f1e6]:
+          - text: KnowYourRights
+          - generic [ref=f1e7]: NG
+      - link "Report a stop" [ref=f1e8] [cursor=pointer]:
+        - /url: "#"
+      - button "Open menu" [ref=f1e9] [cursor=pointer]
+  - main [ref=f1e13]:
+    - generic [ref=f1e15]:
+      - generic [ref=f1e16]: Free · source-backed · safety-first
+      - heading "Know your rights during roadside encounters" [level=1] [ref=f1e17]
+      - paragraph [ref=f1e18]: Plain-language guidance for police, FRSC, customs, and other enforcement stops in Nigeria. Know what the law permits before you speak.
+      - generic [ref=f1e19]:
+        - link "I am dealing with this right now" [ref=f1e20] [cursor=pointer]:
+          - /url: "#"
+        - link "Browse all scenarios" [ref=f1e21] [cursor=pointer]:
+          - /url: "#"
+      - generic [ref=f1e22]:
+        - generic [ref=f1e23]: 10,000+
+        - generic [ref=f1e24]: rights lookups this month
+    - region "Browse by situation" [ref=f1e25]:
+      - generic [ref=f1e26]:
+        - generic [ref=f1e27]:
+          - heading "Find guidance by situation" [level=2] [ref=f1e28]
+          - paragraph [ref=f1e29]: Common roadside encounters, organised by what happens.
+        - generic [ref=f1e30]:
+          - link "⚑ I’ve been stopped" [ref=f1e31] [cursor=pointer]:
+            - /url: "#"
+            - generic [ref=f1e32]: ⚑
+            - generic [ref=f1e33]: I’ve been stopped
+          - link "📚 Documents requested" [ref=f1e34] [cursor=pointer]:
+            - /url: "#"
+            - generic [ref=f1e35]: 📚
+            - generic [ref=f1e36]: Documents requested
+          - link "🔎 Search requests" [ref=f1e37] [cursor=pointer]:
+            - /url: "#"
+            - generic [ref=f1e38]: 🔎
+            - generic [ref=f1e39]: Search requests
+          - link "📋 Arrest or station" [ref=f1e40] [cursor=pointer]:
+            - /url: "#"
+            - generic [ref=f1e41]: 📋
+            - generic [ref=f1e42]: Arrest or station
+          - link "💰 Asked for money" [ref=f1e43] [cursor=pointer]:
+            - /url: "#"
+            - generic [ref=f1e44]: 💰
+            - generic [ref=f1e45]: Asked for money
+          - link "🚖 Vehicle impounded" [ref=f1e46] [cursor=pointer]:
+            - /url: "#"
+            - generic [ref=f1e47]: 🚖
+            - generic [ref=f1e48]: Vehicle impounded
+          - link "📍 Your documents" [ref=f1e49] [cursor=pointer]:
+            - /url: "#"
+            - generic [ref=f1e50]: 📍
+            - generic [ref=f1e51]: Your documents
+          - link "👦 After the stop" [ref=f1e52] [cursor=pointer]:
+            - /url: "#"
+            - generic [ref=f1e53]: 👦
+            - generic [ref=f1e54]: After the stop
+    - region "Recent scenarios" [ref=f1e55]:
+      - generic [ref=f1e56]:
+        - generic [ref=f1e57]:
+          - heading "Recently published guidance" [level=2] [ref=f1e58]
+          - paragraph [ref=f1e59]: Latest lawyer-reviewed scenarios across Nigerian enforcement agencies.
+        - table [ref=f1e61]:
+          - rowgroup [ref=f1e62]:
+            - row [ref=f1e63]:
+              - columnheader "Situation" [ref=f1e64]
+              - columnheader "Agency" [ref=f1e65]
+              - columnheader "Jurisdiction" [ref=f1e66]
+              - columnheader "Status" [ref=f1e67]
+          - rowgroup [ref=f1e68]:
+            - row [ref=f1e69]:
+              - cell [ref=f1e70]:
+                - link "Officer requests your phone" [ref=f1e71] [cursor=pointer]:
+                  - /url: "#"
+              - cell "Police" [ref=f1e72]
+              - cell "Federal" [ref=f1e73]
+              - cell "Approved" [ref=f1e74]
+            - row [ref=f1e76]:
+              - cell [ref=f1e77]:
+                - link "FRSC asks for particulars" [ref=f1e78] [cursor=pointer]:
+                  - /url: "#"
+              - cell "FRSC" [ref=f1e79]
+              - cell "Federal" [ref=f1e80]
+              - cell "Approved" [ref=f1e81]
+            - row [ref=f1e83]:
+              - cell [ref=f1e84]:
+                - link "Customs stops your vehicle" [ref=f1e85] [cursor=pointer]:
+                  - /url: "#"
+              - cell "Nigeria Customs" [ref=f1e86]
+              - cell "Federal" [ref=f1e87]
+              - cell "Approved" [ref=f1e88]
+            - row [ref=f1e90]:
+              - cell [ref=f1e91]:
+                - link "VIO demands particulars" [ref=f1e92] [cursor=pointer]:
+                  - /url: "#"
+              - cell "VIO" [ref=f1e93]
+              - cell "State" [ref=f1e94]
+              - cell "Under review" [ref=f1e95]
+            - row [ref=f1e97]:
+              - cell [ref=f1e98]:
+                - link "Asked to pay on the spot" [ref=f1e99] [cursor=pointer]:
+                  - /url: "#"
+              - cell "Police" [ref=f1e100]
+              - cell "Federal · State" [ref=f1e101]
+              - cell "Approved" [ref=f1e102]
+            - row [ref=f1e104]:
+              - cell [ref=f1e105]:
+                - link "Vehicle impounded" [ref=f1e106] [cursor=pointer]:
+                  - /url: "#"
+              - cell "VIO / Police" [ref=f1e107]
+              - cell "State" [ref=f1e108]
+              - cell "Under review" [ref=f1e109]
+        - link "View all scenarios" [ref=f1e112] [cursor=pointer]:
+          - /url: "#"
+    - region "What people are saying" [ref=f1e113]:
+      - generic [ref=f1e114]:
+        - generic [ref=f1e115]:
+          - heading "What users are saying" [level=2] [ref=f1e116]
+          - paragraph [ref=f1e117]: Real reactions from people using KnowYourRights NG to understand the market.
+        - generic [ref=f1e118]:
+          - blockquote [ref=f1e119]:
+            - paragraph [ref=f1e120]: “This is actually useful when you’re preparing for a salary negotiation because you have a market reference instead of just picking a number.”
+            - generic [ref=f1e121]: Pejuola · @Pejuola_a
+          - blockquote [ref=f1e122]:
+            - paragraph [ref=f1e123]: “KnowYourRights NG is building the guide Nigerians need during roadside stops — practical, source-backed, and free.”
+            - generic [ref=f1e124]: Techpoint Africa · @TechpointAfrica
+          - blockquote [ref=f1e125]:
+            - paragraph [ref=f1e126]: “Helped me understand where I stand during a stop. I’d done research before, and this tool answered my questions.”
+            - generic [ref=f1e127]: Enny · Customer
+          - blockquote [ref=f1e128]:
+            - paragraph [ref=f1e129]: “Is there a world wherein KnowYourRights NG becomes the go-to reference for every Nigerian driver?”
+            - generic [ref=f1e130]: Collins Iheagwara · Co-founder, Simpu Inc.
+    - region "Get started" [ref=f1e131]:
+      - generic [ref=f1e132]:
+        - generic [ref=f1e133]:
+          - heading "Need help right now?" [level=2] [ref=f1e134]
+          - paragraph [ref=f1e135]: Get concise, safety-first guidance for your situation in under a minute. No account required.
+        - link "Start here" [ref=f1e136] [cursor=pointer]:
+          - /url: "#"
+  - contentinfo [ref=f1e137]:
+    - generic [ref=f1e138]:
+      - generic [ref=f1e139]:
+        - generic [ref=f1e140]: K
+        - generic [ref=f1e141]:
+          - text: KnowYourRights
+          - generic [ref=f1e142]: NG
+        - paragraph [ref=f1e143]: The compensation intelligence platform for Africans. Salary Data, Compensation Benchmarks and Market Intelligence.
+      - navigation "Footer navigation" [ref=f1e144]:
+        - generic [ref=f1e145]:
+          - heading "Products" [level=3] [ref=f1e146]
+          - link "All Salaries" [ref=f1e147] [cursor=pointer]:
+            - /url: "#"
+          - link "Salary Benchmarks" [ref=f1e148] [cursor=pointer]:
+            - /url: "#"
+          - link "Know Your Worth" [ref=f1e149] [cursor=pointer]:
+            - /url: "#"
+        - generic [ref=f1e150]:
+          - heading "Community" [level=3] [ref=f1e151]
+          - link "Salaries" [ref=f1e152] [cursor=pointer]:
+            - /url: "#"
+          - link "Internships" [ref=f1e153] [cursor=pointer]:
+            - /url: "#"
+          - link "NYSC" [ref=f1e154] [cursor=pointer]:
+            - /url: "#"
+          - link "Graduate Trainee" [ref=f1e155] [cursor=pointer]:
+            - /url: "#"
+        - generic [ref=f1e156]:
+          - heading "Resources" [level=3] [ref=f1e157]
+          - link "About Salary Index" [ref=f1e158] [cursor=pointer]:
+            - /url: "#"
+          - link "How It Works" [ref=f1e159] [cursor=pointer]:
+            - /url: "#"
+          - link "Add Salary" [ref=f1e160] [cursor=pointer]:
+            - /url: "#"
+          - link "Post a Job" [ref=f1e161] [cursor=pointer]:
+            - /url: "#"
+        - generic [ref=f1e162]:
+          - heading "Legal" [level=3] [ref=f1e163]
+          - link "Cookie Settings" [ref=f1e164] [cursor=pointer]:
+            - /url: "#"
+          - link "Privacy Policy" [ref=f1e165] [cursor=pointer]:
+            - /url: "#"
+          - link "Terms of Service" [ref=f1e166] [cursor=pointer]:
+            - /url: "#"
+          - link "Sub-processors" [ref=f1e167] [cursor=pointer]:
+            - /url: "#"
+      - generic [ref=f1e168]:
+        - paragraph [ref=f1e169]: © 2026 KnowYourRights NG. All rights reserved.
+        - paragraph [ref=f1e170]: KnowYourRights NG provides general legal information, not legal advice or representation. Source-backed · Safety-first · Free to use.

@@ -1,0 +1,108 @@
+[
+  {
+    "id": "npf",
+    "name": "Nigeria Police Force (NPF)",
+    "abbr": "NPF",
+    "type": "law-enforcement",
+    "jurisdiction": "federal",
+    "mandate": "General law enforcement, checkpoints, arrest, search and detention — the most common encounter.",
+    "relevantScenarios": [
+      "police-stop-search-car",
+      "police-phone-search-checkpoint",
+      "police-arrest-detention",
+      "police-record-encounter",
+      "police-phone-unlock",
+      "officer-demanded-money"
+    ]
+  },
+  {
+    "id": "frsc",
+    "name": "Federal Road Safety Corps (FRSC)",
+    "abbr": "FRSC",
+    "type": "traffic",
+    "jurisdiction": "federal",
+    "mandate": "Highways, driver fitness, vehicle roadworthiness and road safety rules.",
+    "relevantScenarios": [
+      "frsc-fines-on-the-spot",
+      "vehicle-documents-checks"
+    ]
+  },
+  {
+    "id": "ncs",
+    "name": "Nigeria Customs Service (NCS)",
+    "abbr": "NCS",
+    "type": "customs",
+    "jurisdiction": "federal",
+    "mandate": "Border and import enforcement. Where their highway jurisdiction starts, and where it stops.",
+    "relevantScenarios": [
+      "customs-highway-stop"
+    ]
+  },
+  {
+    "id": "nscdc",
+    "name": "Nigeria Security and Civil Defence Corps (NSCDC)",
+    "abbr": "NSCDC",
+    "type": "civil-defence",
+    "jurisdiction": "federal",
+    "mandate": "Critical infrastructure protection and their limits on the road.",
+    "relevantScenarios": []
+  },
+  {
+    "id": "ndlea",
+    "name": "National Drug Law Enforcement Agency (NDLEA)",
+    "abbr": "NDLEA",
+    "type": "law-enforcement",
+    "jurisdiction": "federal",
+    "mandate": "Drug enforcement stops, search powers, and what reasonable suspicion actually requires.",
+    "relevantScenarios": []
+  },
+  {
+    "id": "nis",
+    "name": "Nigeria Immigration Service (NIS)",
+    "abbr": "NIS",
+    "type": "immigration",
+    "jurisdiction": "federal",
+    "mandate": "Residency checks and document demands, and your rights in them.",
+    "relevantScenarios": []
+  },
+  {
+    "id": "lastma",
+    "name": "Lagos State Traffic Management Authority (LASTMA)",
+    "abbr": "LASTMA",
+    "type": "traffic",
+    "jurisdiction": "state",
+    "mandate": "Towing, impound procedure and lawful fees.",
+    "relevantScenarios": [
+      "lastma-towing"
+    ]
+  },
+  {
+    "id": "vio",
+    "name": "Lagos VIS / DVS",
+    "abbr": "VIO",
+    "type": "traffic",
+    "jurisdiction": "state",
+    "mandate": "Roadworthiness stops and the narrow grounds for impoundment.",
+    "relevantScenarios": [
+      "vio-vehicle-impound"
+    ]
+  },
+  {
+    "id": "karota",
+    "name": "Kano Road and Traffic Agency (KAROTA)",
+    "abbr": "KAROTA",
+    "type": "traffic",
+    "jurisdiction": "state",
+    "mandate": "State traffic rules that differ from federal highway rules.",
+    "relevantScenarios": []
+  },
+  {
+    "id": "lnsc",
+    "name": "Lagos Neighbourhood Safety Corps (LNSC)",
+    "abbr": "LNSC",
+    "type": "other",
+    "jurisdiction": "state",
+    "mandate": "Community policing powers and their legal limits.",
+    "relevantScenarios": []
+  }
+]

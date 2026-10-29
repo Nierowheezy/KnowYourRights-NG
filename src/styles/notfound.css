@@ -1,0 +1,70 @@
+    /* Deliberately ad-free — error pages stay clean. */
+
+    .nf {
+      min-height: calc(100vh - 200px);
+      display: flex;
+      align-items: center;
+      padding: 72px 0 88px;
+    }
+
+    .nf__art {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0;
+      margin-bottom: 26px;
+    }
+
+    .nf__barrier { animation: float 5s ease-in-out infinite; }
+
+    .road-wrap {
+      width: 220px;
+      height: 6px;
+      overflow: hidden;
+      border-radius: 3px;
+      margin-top: 20px;
+      position: relative;
+    }
+
+    .road-dashes {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 200%;
+      background: repeating-linear-gradient(90deg, var(--line-strong) 0 16px, transparent 16px 32px);
+      animation: roadMove 1.4s linear infinite;
+    }
+
+    @keyframes roadMove {
+      from { transform: translateX(0); }
+      to { transform: translateX(-32px); }
+    }
+
+    .nf__code {
+      font-family: var(--font-display);
+      font-weight: 800;
+      letter-spacing: -0.05em;
+      font-size: clamp(4.6rem, 16vw, 7.5rem);
+      line-height: 1;
+      color: var(--text);
+    }
+
+    .nf__code .zero { color: var(--forest); }
+
+    .nf__title {
+      font-family: var(--font-display);
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      font-size: clamp(1.3rem, 4vw, 1.7rem);
+      margin: 18px 0 0;
+    }
+
+    .nf .lede { max-width: 460px; margin: 14px auto 30px; }
+    .nf .search-lg { max-width: 480px; margin: 0 auto 22px; }
+    .nf .chip-row { justify-content: center; margin-bottom: 30px; }
+    .nf__ctas { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+
+    @media (prefers-reduced-motion: reduce) {
+      .nf__barrier, .road-dashes { animation: none; }
+    }

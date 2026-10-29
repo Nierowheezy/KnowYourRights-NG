@@ -1,0 +1,41 @@
+    .page-hero { padding: 64px 0 32px; }
+
+    .agency-abbr {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 46px;
+      height: 46px;
+      border-radius: 12px;
+      background: var(--forest-deep);
+      color: var(--lime);
+      font-family: var(--font-display);
+      font-weight: 800;
+      font-size: 0.85rem;
+      letter-spacing: -0.03em;
+      margin-bottom: 16px;
+    }
+
+    .agency-abbr--state { background: var(--forest); color: #fff; }
+
+    .section-label {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin: 0 0 20px;
+      font-family: var(--font-display);
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      font-size: 1.3rem;
+    }
+
+    .section-label .count {
+      font-family: var(--font-sans);
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: var(--forest);
+      background: var(--bg-tint);
+      border: 1px solid var(--line-tint);
+      padding: 3px 11px;
+      border-radius: 999px;
+    }

@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="system">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About — KnowYourRights NG</title>
+  <meta name="description" content="Scope, legal review process, privacy and limitations of KnowYourRights NG.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Geist:wght@700;800&display=swap" rel="stylesheet">
+  <script>try{document.documentElement.dataset.theme=localStorage.getItem("kyr-theme")||"system"}catch(e){document.documentElement.dataset.theme="system"}</script>
+  <link rel="stylesheet" href="theme.css">
+  <style>
+    .page-hero { padding: 56px 0 40px; }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 230px;
+      gap: 56px;
+      align-items: start;
+    }
+
+    @media (max-width: 920px) {
+      .about-grid { grid-template-columns: 1fr; }
+      .toc-sidebar { position: static !important; }
+    }
+
+    .toc-sidebar { position: sticky; top: 96px; }
+
+    .toc-card {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-lg);
+      padding: 20px;
+    }
+
+    .toc-card h4 {
+      font-family: var(--font-mono);
+      font-size: 0.68rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--text-faint);
+      margin: 0 0 12px;
+    }
+
+    .toc-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 4px; }
+
+    .toc-list a {
+      display: block;
+      padding: 7px 10px;
+      border-radius: 8px;
+      font-size: 0.87rem;
+      color: var(--text-muted);
+      text-decoration: none;
+      transition: background 0.15s ease, color 0.15s ease;
+    }
+
+    .toc-list a:hover { background: var(--bg-ground); color: var(--text); }
+
+    .about-section { padding: 40px 0; border-top: 1px solid var(--line); }
+    .about-section:first-of-type { border-top: none; padding-top: 8px; }
+
+    .about-section > h2 {
+      font-family: var(--font-display);
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      font-size: 1.55rem;
+      margin: 0 0 10px;
+    }
+
+    .about-section > .sub { font-size: 0.95rem; color: var(--text-muted); margin: 0 0 26px; line-height: 1.7; }
+
+    /* What it is / isn't */
+    .split-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+    @media (max-width: 700px) { .split-cards { grid-template-columns: 1fr; } }
+
+    .split-card { border-radius: var(--radius-lg); padding: 26px; border: 1px solid var(--line-tint); background: var(--bg-tint); }
+    .split-card--no { border-color: var(--danger-line); background: var(--danger-tint); }
+
+    .split-card h3 {
+      font-family: var(--font-display);
+      letter-spacing: -0.02em;
+      font-size: 1.05rem;
+      margin: 0 0 16px;
+      display: flex;
+      align-items: center;
+      gap: 9px;
+    }
+
+    .split-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 11px; }
+    .split-list li { display: flex; gap: 10px; font-size: 0.9rem; line-height: 1.55; color: var(--text-muted); }
+    .split-list li strong { color: var(--text); }
+    .split-list .ico { flex-shrink: 0; margin-top: 1px; }
+    .split-list .ico--ok { color: var(--forest); }
+    .split-list .ico--no { color: var(--danger); }
+
+    /* Review process */
+    .process { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+    @media (max-width: 900px) { .process { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 540px) { .process { grid-template-columns: 1fr; } }
+
+    .process-step { position: relative; padding-top: 18px; border-top: 3px solid var(--line); }
+
+    .process-step::before {
+      content: attr(data-step);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 36px;
+      height: 36px;
+      border-radius: 10px;
+      background: var(--lime);
+      color: var(--lime-ink);
+      font-family: var(--font-display);
+      font-weight: 800;
+      font-size: 0.9rem;
+      margin-bottom: 6px;
+    }
+
+    .process-step h4 { font-size: 0.96rem; font-weight: 700; margin: 12px 0 8px; }
+    .process-step p { font-size: 0.86rem; color: var(--text-muted); line-height: 1.65; margin: 0; }
+
+    /* Privacy dark card */
+    .privacy-card {
+      background: var(--forest-deep);
+      color: #fff;
+      border-radius: var(--radius-xl);
+      padding: 44px 40px;
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 36px;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    @media (max-width: 860px) { .privacy-card { grid-template-columns: 1fr; padding: 36px 26px; } }
+
+    .privacy-card::after {
+      content: "";
+      position: absolute;
+      bottom: -140px;
+      left: -60px;
+      width: 320px;
+      height: 320px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(193, 255, 114, 0.16), transparent 65%);
+      animation: glowPulse 7s ease-in-out infinite;
+    }
+
+    .privacy-card h3 { font-family: var(--font-display); letter-spacing: -0.03em; font-size: 1.6rem; margin: 0 0 14px; }
+    .privacy-card p { color: #b6bcae; font-size: 0.92rem; line-height: 1.7; margin: 0 0 12px; position: relative; z-index: 1; }
+    .privacy-card h3, .privacy-card p { position: relative; z-index: 1; }
+
+    .privacy-points { display: flex; flex-direction: column; gap: 12px; position: relative; z-index: 1; }
+
+    .privacy-point {
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid #2d3324;
+      border-radius: 12px;
+      padding: 13px 16px;
+      font-size: 0.86rem;
+      line-height: 1.5;
+      color: #e8ebe4;
+    }
+
+    .privacy-point .tick { color: var(--lime); font-weight: 800; flex-shrink: 0; }
+
+    /* Corrections + disclaimer */
+    .fine-print {
+      background: var(--bg-ground);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-lg);
+      padding: 22px 26px;
+      font-size: 0.84rem;
+      color: var(--text-muted);
+      line-height: 1.7;
+    }
+
+    .fine-print strong { color: var(--text); }
+  </style>
+</head>
+<body>
+
+  <div class="announce">
+    <div class="container announce__inner">
+      <span class="pulse-dot"></span>
+      <span class="announce__label">Content v2.4.1</span>
+      <span class="announce__title">Release notes — 42 scenarios · 6 sources updated</span>
+      <a href="#" class="announce__link">See what changed →</a>
+    </div>
+  </div>
+
+  <header class="header">
+    <div class="header__pill">
+      <a class="brand" href="index.html">
+        <svg width="28" height="28" viewBox="0 0 30 30" aria-hidden="true">
+          <rect width="30" height="30" rx="8" fill="#15300a"/>
+          <rect x="13.4" y="6.5" width="3.2" height="10.5" rx="1.6" fill="#c1ff72"/>
+          <circle cx="15" cy="21.4" r="1.9" fill="#c1ff72"/>
+        </svg>
+        <span class="brand__text">KnowYourRights NG</span>
+      </a>
+      <nav class="nav" aria-label="Main">
+        <a href="encounter.html" class="nav__link">Encounter mode</a>
+        <a href="browse.html" class="nav__link">Browse</a>
+        <a href="agencies.html" class="nav__link">Agencies</a>
+        <a href="search.html" class="nav__link">Search</a>
+        <a href="help.html" class="nav__link">Help</a>
+        <a href="about.html" class="nav__link" aria-current="page">About</a>
+      </nav>
+      <div class="header__actions">
+        <button class="theme-toggle" id="themeToggle" type="button" aria-label="Switch theme" title="Light / dark / system">
+          <svg class="ticon icon-sun" width="15" height="15" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="3" stroke="currentColor" stroke-width="1.3"/><path d="M8 1.5v1.4M8 13.1v1.4M14.5 8h-1.4M2.9 8H1.5M12.4 3.6l-1 1M4.6 11.4l-1 1M12.4 12.4l-1-1M4.6 4.6l-1-1" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg>
+          <svg class="ticon icon-moon" width="15" height="15" viewBox="0 0 16 16" fill="none"><path d="M13.5 9A5.6 5.6 0 0 1 7 2.6 5.7 5.7 0 1 0 8.9 14 5.7 5.7 0 0 1 13.5 9Z" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"/></svg>
+          <svg class="ticon icon-sys" width="15" height="15" viewBox="0 0 16 16" fill="none"><rect x="1.8" y="2.8" width="12.4" height="8.4" rx="1.4" stroke="currentColor" stroke-width="1.3"/><path d="M5.5 13.7h5M8 11.2v2.5" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg>
+        </button>
+        <a href="help.html" class="btn btn--primary btn--sm">Get help now</a>
+        <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="encounter.html" class="is-cta">Encounter mode — I need help now</a>
+      <a href="browse.html">Browse by situation</a>
+      <a href="agencies.html">Browse by agency</a>
+      <a href="search.html">Search</a>
+      <a href="help.html">Help directory</a>
+      <a href="about.html">About</a>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- Page hero -->
+    <section class="page-hero">
+      <div class="container">
+        <nav class="breadcrumb anim" style="font-size:0.83rem;color:var(--text-faint);" aria-label="Breadcrumb">
+          <a href="index.html" style="text-decoration:none;color:inherit;">Home</a>&nbsp;/&nbsp;<span style="color:var(--text);font-weight:600;">About</span>
+        </nav>
+        <h1 class="display display--section anim" style="margin-top:14px;animation-delay:.06s;">About this guide</h1>
+        <p class="lede anim" style="max-width:600px;margin-top:14px;animation-delay:.12s;">
+          What this is, what it isn't, how every answer gets reviewed, and why
+          we collect almost nothing about you.
+        </p>
+      </div>
+    </section>
+
+    <div class="container">
+      <div class="about-grid">
+
+        <!-- Main column -->
+        <div>
+
+          <!-- Scope -->
+          <section class="about-section" id="scope">
+            <h2 class="reveal">Scope &amp; honesty</h2>
+            <p class="sub reveal">A guide you can trust starts with being clear about what it can and cannot do.</p>
+
+            <div class="split-cards">
+              <div class="split-card reveal">
+                <h3 style="color:var(--link);">
+                  <svg width="19" height="19" viewBox="0 0 18 18" fill="none"><circle cx="9" cy="9" r="7.5" stroke="currentColor" stroke-width="1.4"/><path d="m5.8 9.2 2.2 2.2 4.2-4.6" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  What this is
+                </h3>
+                <ul class="split-list">
+                  <li><span class="ico ico--ok">✓</span><span><strong>Plain-language summaries</strong> of Nigerian law on roadside encounters, in one place.</span></li>
+                  <li><span class="ico ico--ok">✓</span><span><strong>Source-backed:</strong> every answer links the actual Act, regulation or official guidance.</span></li>
+                  <li><span class="ico ico--ok">✓</span><span><strong>Safety-first:</strong> practical steps ordered by what protects you in the moment.</span></li>
+                  <li><span class="ico ico--ok">✓</span><span><strong>Free and anonymous</strong> — no account, no data trail, works offline.</span></li>
+                </ul>
+              </div>
+
+              <div class="split-card split-card--no reveal" style="transition-delay:.08s;">
+                <h3 style="color:var(--danger);">
+                  <svg width="19" height="19" viewBox="0 0 18 18" fill="none"><circle cx="9" cy="9" r="7.5" stroke="currentColor" stroke-width="1.4"/><path d="m6.2 6.2 5.6 5.6M11.8 6.2l-5.6 5.6" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
+                  What this is not
+                </h3>
+                <ul class="split-list">
+                  <li><span class="ico ico--no">✗</span><span><strong>Not legal advice.</strong> It's reviewed information about the law, not advice on your specific case.</span></li>
+                  <li><span class="ico ico--no">✗</span><span><strong>Not a lawyer.</strong> For your situation, the help directory connects you to real counsel.</span></li>
+                  <li><span class="ico ico--no">✗</span><span><strong>Not a guarantee of outcomes.</strong> Enforcement practice varies; the law is one part of the encounter.</span></li>
+                  <li><span class="ico ico--no">✗</span><span><strong>Not complete.</strong> Coverage grows as legal review finishes — gaps are labelled, not hidden.</span></li>
+                </ul>
+              </div>
+            </div>
+          </section>
+
+          <!-- Review process -->
+          <section class="about-section" id="review">
+            <h2 class="reveal">How every scenario gets reviewed</h2>
+            <p class="sub reveal">Nothing publishes without Nigerian legal review. Dates and reviewers are shown on every page.</p>
+
+            <div class="process">
+              <div class="process-step reveal" data-step="1">
+                <h4>Drafted from sources</h4>
+                <p>Researchers read the Act, regulation or official guidance and draft the scenario in plain language.</p>
+              </div>
+              <div class="process-step reveal" data-step="2" style="transition-delay:.07s;">
+                <h4>Lawyer review</h4>
+                <p>A Nigerian lawyer checks every claim, the exceptions, and the practical options against the sources.</p>
+              </div>
+              <div class="process-step reveal" data-step="3" style="transition-delay:.14s;">
+                <h4>Published &amp; dated</h4>
+                <p>Approved scenarios go live with reviewer, last-reviewed and next-review dates shown publicly.</p>
+              </div>
+              <div class="process-step reveal" data-step="4" style="transition-delay:.21s;">
+                <h4>Corrected openly</h4>
+                <p>Flagged issues trigger a review; material changes are tracked in a public change history.</p>
+              </div>
+            </div>
+          </section>
+
+          <!-- Privacy -->
+          <section class="about-section" id="privacy">
+            <h2 class="reveal">Privacy</h2>
+            <p class="sub reveal">People search this guide for sensitive reasons. The design reflects that.</p>
+
+            <div class="privacy-card reveal">
+              <div>
+                <h3>Your search history is<br>nobody's business.</h3>
+                <p>No accounts, no tracking pixels on content, and no selling of data — ever. Not in v1, not with ads, not "anonymised".</p>
+                <p style="margin-bottom:0;">Feedback is anonymous by design: it stores what you flagged, never who you are.</p>
+              </div>
+              <div class="privacy-points">
+                <div class="privacy-point"><span class="tick">✓</span> No accounts, no sign-up, no email required</div>
+                <div class="privacy-point"><span class="tick">✓</span> No third-party analytics on scenario pages</div>
+                <div class="privacy-point"><span class="tick">✓</span> Offline mode keeps reading fully on your device</div>
+                <div class="privacy-point"><span class="tick">✓</span> Ads never receive your searches — slots are contextual, not behavioural</div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Corrections -->
+          <section class="about-section" id="corrections">
+            <h2 class="reveal">Corrections &amp; feedback</h2>
+            <p class="sub reveal">Every scenario page has a one-tap feedback row — helpful, confusing, outdated, or missing.</p>
+
+            <div class="callout callout--tint reveal" style="flex-direction:column;align-items:flex-start;gap:12px;">
+              <span style="max-width:640px;">Flagged items go straight into the review queue, anonymously. Material corrections are published with a visible change note, and the review trail on each page shows the history.</span>
+              <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:6px;">
+                <a href="scenario.html#feedback" class="btn btn--primary btn--sm">Flag a scenario →</a>
+                <a href="help.html" class="btn btn--soft btn--sm">Open the help directory</a>
+              </div>
+            </div>
+          </section>
+
+          <!-- Disclaimer -->
+          <section class="about-section" id="disclaimer">
+            <h2 class="reveal">Legal disclaimer</h2>
+            <div class="fine-print reveal">
+              <strong>KnowYourRights NG is an information resource, not a law firm.</strong>
+              Content is reviewed by Nigerian legal practitioners before publication, but it does not
+              constitute legal advice and no lawyer–client relationship is created by using it. Laws
+              change and enforcement practice varies by state and agency; scenarios carry their last
+              review date and should be read with it. For advice on a specific matter, consult a
+              qualified legal practitioner — the <a href="help.html" style="color:var(--link);font-weight:600;">help directory</a> lists verified free options.
+              Encounters with enforcement agencies carry real risks; the safety-first ordering of
+              guidance reflects this, and following it cannot guarantee any particular outcome.
+            </div>
+          </section>
+
+        </div>
+
+        <!-- TOC sidebar -->
+        <aside class="toc-sidebar">
+          <div class="toc-card">
+            <h4>On this page</h4>
+            <ul class="toc-list">
+              <li><a href="#scope">Scope &amp; honesty</a></li>
+              <li><a href="#review">How we review</a></li>
+              <li><a href="#privacy">Privacy</a></li>
+              <li><a href="#corrections">Corrections</a></li>
+              <li><a href="#disclaimer">Legal disclaimer</a></li>
+            </ul>
+          </div>
+          <div class="toc-card" style="margin-top:16px;background:var(--bg-ground);">
+            <h4>Content status</h4>
+            <div class="review-row" style="display:flex;justify-content:space-between;font-size:0.84rem;padding:7px 0;">
+              <span style="color:var(--text-muted);">Version</span><strong>v2.4.1</strong>
+            </div>
+            <div class="review-row" style="display:flex;justify-content:space-between;font-size:0.84rem;padding:7px 0;">
+              <span style="color:var(--text-muted);">Released</span><strong>Oct 2026</strong>
+            </div>
+            <div class="review-row" style="display:flex;justify-content:space-between;font-size:0.84rem;padding:7px 0;">
+              <span style="color:var(--text-muted);">Scenarios</span><strong>42</strong>
+            </div>
+          </div>
+        </aside>
+
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div>
+          <a class="brand brand--footer" href="index.html">
+            <svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true">
+              <rect width="30" height="30" rx="8" fill="#2c3a1c"/>
+              <rect x="13.4" y="6.5" width="3.2" height="10.5" rx="1.6" fill="#c1ff72"/>
+              <circle cx="15" cy="21.4" r="1.9" fill="#c1ff72"/>
+            </svg>
+            <span class="brand__text">KnowYourRights NG</span>
+          </a>
+          <p class="footer__desc">Free, lawyer-reviewed guidance for roadside and related enforcement encounters in Nigeria. Sources-linked, safety-first, always free.</p>
+          <p class="footer__quote">"Not legal advice — accurate, reviewed information."</p>
+        </div>
+        <div class="footer__cols">
+          <div class="footer__col">
+            <h4>Guide</h4>
+            <ul>
+              <li><a href="encounter.html">Encounter mode</a></li>
+              <li><a href="browse.html">Browse situations</a></li>
+              <li><a href="agencies.html">By agency</a></li>
+              <li><a href="search.html">Search</a></li>
+            </ul>
+          </div>
+          <div class="footer__col">
+            <h4>Support</h4>
+            <ul>
+              <li><a href="help.html">Help directory</a></li>
+              <li><a href="scenario.html#feedback">Flag an issue</a></li>
+              <li><a href="about.html">How we review</a></li>
+              <li><a href="#">Corrections<span class="footer__soon">SOON</span></a></li>
+            </ul>
+          </div>
+          <div class="footer__col">
+            <h4>Trust</h4>
+            <ul>
+              <li><a href="about.html">Scope &amp; limitations</a></li>
+              <li><a href="about.html">Privacy</a></li>
+              <li><a href="about.html#disclaimer">Legal disclaimer</a></li>
+              <li><a href="#">Pidgin version<span class="footer__soon">SOON</span></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <div class="footer__socials">
+          <a href="#" class="social-dot" aria-label="X">
+            <svg width="15" height="15" viewBox="0 0 16 16" fill="currentColor"><path d="M9.5 6.9 15 .5h-1.6L8.7 5.9 5 .5H.7l5.8 8.2L.7 15.5h1.6l5.1-5.8 4 5.8h4.3L9.5 6.9Z"/></svg>
+          </a>
+          <a href="#" class="social-dot" aria-label="GitHub">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M8 .5a7.5 7.5 0 0 0-2.37 14.62c.37.07.5-.16.5-.36v-1.27c-2.08.45-2.52-.9-2.52-.9-.34-.87-.83-1.1-.83-1.1-.68-.46.05-.45.05-.45.75.05 1.14.77 1.14.77.67 1.15 1.75.82 2.18.63.07-.49.26-.82.48-1.01-1.67-.19-3.42-.83-3.42-3.71 0-.82.29-1.49.77-2.01-.08-.19-.34-.96.07-2 0 0 .63-.2 2.06.77a7.2 7.2 0 0 1 3.76 0c1.43-.97 2.06-.77 2.06-.77.41 1.04.15 1.81.07 2 .48.52.77 1.19.77 2.01 0 2.89-1.76 3.52-3.43 3.7.27.23.5.69.5 1.39V14.8c0 .2.14.44.51.36A7.5 7.5 0 0 0 8 .5Z"/></svg>
+          </a>
+          <a href="#" class="social-dot" aria-label="Instagram">
+            <svg width="15" height="15" viewBox="0 0 16 16" fill="none"><rect x="1.5" y="1.5" width="13" height="13" rx="4" stroke="currentColor" stroke-width="1.3"/><circle cx="8" cy="8" r="3" stroke="currentColor" stroke-width="1.3"/><circle cx="12" cy="4" r="0.9" fill="currentColor"/></svg>
+          </a>
+        </div>
+        <div class="footer__legal">
+          © 2026 KnowYourRights NG. All rights reserved.&nbsp;&nbsp;·&nbsp;&nbsp;Free &amp; anonymous — no accounts, no tracking.
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Theme: cycles light -> dark -> system, persisted
+    const themeBtn = document.getElementById('themeToggle');
+    const order = ['light', 'dark', 'system'];
+    themeBtn.addEventListener('click', () => {
+      const cur = document.documentElement.dataset.theme || 'system';
+      const next = order[(order.indexOf(cur) + 1) % order.length];
+      document.documentElement.dataset.theme = next;
+      themeBtn.setAttribute('aria-label', 'Theme: ' + next);
+      try { localStorage.setItem('kyr-theme', next); } catch (e) {}
+    });
+
+    // Mobile menu
+    const navToggle = document.getElementById('navToggle');
+    const mobileMenu = document.getElementById('mobileMenu');
+    navToggle.addEventListener('click', () => {
+      const open = mobileMenu.classList.toggle('is-open');
+      navToggle.setAttribute('aria-expanded', open);
+    });
+
+    // Scroll reveal
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach((e) => {
+        if (e.isIntersecting) { e.target.classList.add('is-in'); io.unobserve(e.target); }
+      });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.reveal').forEach((el) => io.observe(el));
+  </script>
+</body>
+</html>

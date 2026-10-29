@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Immediate help — KnowYourRights NG</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="theme.css">
+  <script defer src="theme-toggle.js"></script>
+</head>
+<body data-theme="system">
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand">
+        <svg class="brand-mark" width="36" height="36" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M2 17L12 22L22 17" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M2 12L12 17L22 12" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <div class="brand-name">
+          <span class="brand-main">KnowYourRights</span>
+          <span class="brand-suffix">NG</span>
+        </div>
+      </a>
+      <nav class="site-nav" aria-label="Main navigation">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="encounter.html" class="nav-link nav-link--active">Encounter</a>
+        <a href="browse.html" class="nav-link">Browse</a>
+        <a href="search.html" class="nav-link">Search</a>
+        <a href="help.html" class="nav-link">Help</a>
+        <a href="about.html" class="nav-link">About</a>
+      </nav>
+      <div class="header-actions">
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme" title="Toggle theme">
+          <svg id="theme-icon" viewBox="0 0 24 24"><path d="M12 3c4.97 0 9 4.03 9 9s-4.03 9-9 9-9-4.03-9-9 4.03-9 9-9z"/><circle cx="12" cy="12" r="3"/></svg>
+        </button>
+        <a href="help.html" class="btn btn--outline">Complaint channels</a>
+      </div>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Open menu" aria-expanded="false">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" style="padding: var(--space-16) 0 var(--space-12);">
+      <div class="container hero-inner">
+        <div class="hero-badge" style="background: rgba(220,38,38,0.1); border-color: var(--color-danger); color: var(--color-danger);">
+          <span class="badge-dot" aria-hidden="true" style="background: var(--color-danger); box-shadow: 0 0 12px var(--color-danger);"></span>
+          <span>Safety first &mdash; you are dealing with this now</span>
+        </div>
+        <h1 class="hero-title">Immediate encounter guidance</h1>
+        <p class="hero-desc">Stay calm, know what to say, and what to avoid. Quick steps for police, FRSC, customs, and other stops.</p>
+        <div class="hero-actions" style="flex-direction: column; align-items: stretch;">
+          <a href="browse.html#stopped" class="btn btn--primary btn--large">I&rsquo;ve been stopped</a>
+          <a href="browse.html#money" class="btn btn--outline btn--large">Asked for money</a>
+          <a href="help.html" class="btn btn--outline btn--large">Find a complaint channel</a>
+        </div>
+      </div>
+    </section>
+
+    <div class="container">
+      <div class="category-grid">
+        <a href="browse.html#stopped" class="category-card" style="border-left: 4px solid var(--color-accent);">
+          <div class="category-icon" style="background: var(--gradient-accent); color: var(--color-accent-contrast);">&#9992;</div>
+          <h3>Stay calm & safe</h3>
+          <p>Keep your hands visible. Do not run, resist, or argue. Your safety comes before winning the argument.</p>
+        </a>
+        <a href="browse.html#documents" class="category-card" style="border-left: 4px solid var(--color-info);">
+          <div class="category-icon" style="background: linear-gradient(135deg, rgba(8,145,178,0.1), rgba(8,145,178,0.05)); color: var(--color-info);">&#128218;</div>
+          <h3>Documents & particulars</h3>
+          <p>Know which documents you must show and which you can decline. Licence, registration, insurance.</p>
+        </a>
+        <a href="browse.html#money" class="category-card" style="border-left: 4px solid var(--color-warning);">
+          <div class="category-icon" style="background: linear-gradient(135deg, rgba(217,119,6,0.1), rgba(217,119,6,0.05)); color: var(--color-warning);">&#128176;</div>
+          <h3>Asked for money</h3>
+          <p>How to respond safely when an officer solicits a bribe, and how to report it.</p>
+        </a>
+        <a href="browse.html#arrest" class="category-card" style="border-left: 4px solid var(--color-danger);">
+          <div class="category-icon" style="background: linear-gradient(135deg, rgba(220,38,38,0.1), rgba(220,38,38,0.05)); color: var(--color-danger);">&#128203;</div>
+          <h3>Arrest or station</h3>
+          <p>Your rights if you are taken to a station, and who to contact first.</p>
+        </a>
+      </div>
+    </div>
+
+    <section class="cta" aria-label="Get help">
+      <div class="container cta-inner">
+        <div class="cta-glow" aria-hidden="true"></div>
+        <div class="cta-content">
+          <h2 class="cta-heading">Need a lawyer or complaint channel?</h2>
+          <p class="cta-desc">Find verified legal aid organisations and official complaint channels near you.</p>
+        </div>
+        <a href="help.html" class="btn btn--primary btn--large">View help directory</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <svg class="brand-mark" width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M2 17L12 22L22 17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M2 12L12 17L22 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <div class="brand-name">
+          <span class="brand-main">KnowYourRights</span>
+          <span class="brand-suffix">NG</span>
+        </div>
+        <p class="footer-tagline">Free, source-backed guidance for Nigerian roadside encounters.</p>
+      </div>
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <div class="footer-col">
+          <h3 class="footer-col-title">Guide</h3>
+          <a href="index.html" class="footer-link">Home</a>
+          <a href="browse.html" class="footer-link">Browse scenarios</a>
+          <a href="search.html" class="footer-link">Search</a>
+        </div>
+        <div class="footer-col">
+          <h3 class="footer-col-title">Support</h3>
+          <a href="help.html" class="footer-link">Complaint channels</a>
+          <a href="#" class="footer-link">Legal aid</a>
+        </div>
+        <div class="footer-col">
+          <h3 class="footer-col-title">About</h3>
+          <a href="about.html" class="footer-link">Scope & review</a>
+          <a href="#" class="footer-link">Limitations</a>
+        </div>
+        <div class="footer-col">
+          <h3 class="footer-col-title">Legal</h3>
+          <a href="#" class="footer-link">Privacy Policy</a>
+          <a href="#" class="footer-link">Terms of Service</a>
+        </div>
+      </nav>
+      <div class="footer-legal">
+        <p class="footer-copy">&copy; 2026 KnowYourRights NG. All rights reserved.</p>
+        <p class="footer-disclaimer">KnowYourRights NG provides general legal information, not legal advice or representation. Source-backed &middot; Safety-first &middot; Free to use.</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

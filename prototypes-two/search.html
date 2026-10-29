@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Search - KnowYourRights NG</title>
+  <meta name="description" content="Search for roadside encounter guidance by situation, agency, or keywords. Find answers in plain language.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="theme.css">
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to main content</a>
+
+  <header role="banner">
+    <div class="container header-content">
+      <a href="index.html" class="logo" aria-label="KnowYourRights NG - Home">
+        <span class="logo-dot" aria-hidden="true"></span>
+        <span>KnowYourRights NG</span>
+      </a>
+      <nav role="navigation" aria-label="Main navigation">
+        <a href="encounter.html">I need help now</a>
+        <a href="browse.html">Browse</a>
+        <a href="search.html" class="active" aria-current="page">Search</a>
+        <a href="help.html">Get help</a>
+        <a href="about.html">About</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="container" role="main">
+    <div style="margin-bottom: var(--space-6);">
+      <a href="index.html" class="source-link">← Back to home</a>
+    </div>
+
+    <div class="card animate-fade-in" style="margin-bottom: var(--space-6);">
+      <div class="card-header">
+        <h1 class="card-title" style="font-size: 1.75rem;">Search scenarios</h1>
+        <p class="card-subtitle">Type what's happening — we'll find relevant guidance</p>
+      </div>
+      <form class="search-bar" role="search" id="search-form">
+        <label for="search-input" class="visually-hidden">Search for guidance</label>
+        <input type="search" id="search-input" name="q" class="input" placeholder="e.g., police want my phone, FRSC stopped me, asked for money, vehicle impounded" autocomplete="off" aria-describedby="search-hint" autofocus>
+        <button type="submit" class="btn btn-large">Search</button>
+      </form>
+      <p id="search-hint" style="margin-top: var(--space-3); font-size: 0.8125rem; color: var(--text-tertiary);">Searches scenario titles, questions, keywords, agencies, and legal terms. Works offline after first visit.</p>
+    </div>
+
+    <section aria-labelledby="suggestions-title" class="animate-fade-in stagger-1" style="margin-bottom: var(--space-8);">
+      <h2 id="suggestions-title" class="card-title" style="font-size: 1.25rem; margin-bottom: var(--space-4);">Popular searches</h2>
+      <div style="display: flex; flex-wrap: wrap; gap: var(--space-2);">
+        <a href="search.html?q=police+stop" class="badge">Police stop</a>
+        <a href="search.html?q=FRSC" class="badge">FRSC stop</a>
+        <a href="search.html?q=phone+search" class="badge">Phone search</a>
+        <a href="search.html?q=asked+for+money" class="badge badge-accent">Asked for money</a>
+        <a href="search.html?q=vehicle+search" class="badge">Vehicle search</a>
+        <a href="search.html?q=arrest" class="badge">Arrest / station</a>
+        <a href="search.html?q=impound" class="badge">Vehicle impounded</a>
+        <a href="search.html?q=documents" class="badge">License & papers</a>
+        <a href="search.html?q=passenger" class="badge">Passenger rights</a>
+        <a href="search.html?q=complaint" class="badge">File complaint</a>
+        <a href="search.html?q=bail" class="badge">Bail & release</a>
+        <a href="search.html?q=traffic+ticket" class="badge">Traffic ticket</a>
+      </div>
+    </section>
+
+    <section aria-labelledby="categories-title" class="animate-fade-in stagger-2">
+      <h2 id="categories-title" class="card-title" style="font-size: 1.25rem; margin-bottom: var(--space-4);">Browse by category</h2>
+      <div class="grid grid-3">
+        <a href="browse.html#stopped" class="card category-card">
+          <div class="category-icon" style="background: var(--brand-light); color: var(--brand);" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+          </div>
+          <h3>Stops</h3>
+          <p>Police, FRSC, LASTMA, Customs stops</p>
+        </a>
+        <a href="browse.html#documents" class="card category-card">
+          <div class="category-icon" style="background: var(--accent-light); color: var(--accent);" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+          </div>
+          <h3>Documents & ID</h3>
+          <p>License, registration, insurance, digital docs</p>
+        </a>
+        <a href="browse.html#search" class="card category-card">
+          <div class="category-icon" style="background: var(--success-light); color: var(--success);" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          </div>
+          <h3>Searches</h3>
+          <p>Vehicle, phone, bag, checkpoint searches</p>
+        </a>
+        <a href="browse.html#money" class="card category-card">
+          <div class="category-icon" style="background: var(--warning-light); color: var(--warning);" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+          </div>
+          <h3>Payments & Fines</h3>
+          <p>Bribes, tickets, spot fines, official payments</p>
+        </a>
+        <a href="browse.html#arrest" class="card category-card">
+          <div class="category-icon" style="background: var(--danger-light); color: var(--danger);" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <h3>Arrest & Detention</h3>
+          <p>Rights, bail, station procedures</p>
+        </a>
+        <a href="browse.html#impound" class="card category-card">
+          <div class="category-icon" style="background: var(--info-light); color: var(--info);" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-.6 0-1.1.4-1.4.9l-1.4 2.9A3.7 3.7 0 0 0 2 12v4c0 .6.4 1 1 1h2"/><circle cx="7" cy="17" r="2"/><circle cx="17" cy="17" r="2"/></svg>
+          </div>
+          <h3>Impoundment</h3>
+          <p>Vehicle seizure, fees, getting it back</p>
+        </a>
+      </div>
+    </section>
+
+    <section aria-labelledby="results-title" class="search-results animate-fade-in stagger-3" style="margin-top: var(--space-10);" id="results-section" hidden>
+      <h2 id="results-title" style="font-size: 1.375rem; font-weight: 700; margin-bottom: var(--space-4); color: var(--text-primary);">Search results</h2>
+      <p id="results-count" style="color: var(--text-secondary); margin-bottom: var(--space-4);"></p>
+      <div id="results-container"></div>
+    </section>
+
+    <section class="search-empty animate-fade-in stagger-3" id="empty-state" hidden>
+      <div class="search-empty-icon" aria-hidden="true">🔍</div>
+      <h2 style="margin: 0 0 var(--space-2); font-size: 1.5rem;">No results found</h2>
+      <p style="color: var(--text-secondary); margin: 0 0 var(--space-6); max-width: 400px; margin-left: auto; margin-right: auto;">We couldn't find any scenarios matching your search. Try different keywords or browse by category.</p>
+      <div style="display: flex; gap: var(--space-3); justify-content: center; flex-wrap: wrap;">
+        <a href="browse.html" class="btn btn-secondary">Browse all scenarios</a>
+        <a href="help.html" class="btn btn-secondary">Get help directory</a>
+      </div>
+    </section>
+
+    <section aria-labelledby="tips-title" class="animate-fade-in stagger-4" style="margin-top: var(--space-12);">
+      <div class="card" style="background: var(--brand-light); border-color: var(--brand-lighter);">
+        <div class="card-header">
+          <h2 id="tips-title" class="card-title" style="display: flex; align-items: center; gap: var(--space-2);">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
+            Search tips
+          </h2>
+        </div>
+        <ul style="margin: 0; padding-left: var(--space-6); color: var(--text-secondary); line-height: 2;">
+          <li>Use plain language: <code style="background: var(--surface); padding: 0 0.25rem; border-radius: var(--radius-sm); font-size: 0.8125rem;">"police want my phone"</code></li>
+          <li>Search by agency: <code style="background: var(--surface); padding: 0 0.25rem; border-radius: var(--radius-sm); font-size: 0.8125rem;">"FRSC"</code>, <code style="background: var(--surface); padding: 0 0.25rem; border-radius: var(--radius-sm); font-size: 0.8125rem;">"LASTMA"</code>, <code style="background: var(--surface); padding: 0 0.25rem; border-radius: var(--radius-sm); font-size: 0.8125rem;">"Customs"</code></li>
+          <li>Search by situation: <code style="background: var(--surface); padding: 0 0.25rem; border-radius: var(--radius-sm); font-size: 0.8125rem;">"stopped"</code>, <code style="background: var(--surface); padding: 0 0.25rem; border-radius: var(--radius-sm); font-size: 0.8125rem;">"arrest"</code>, <code style="background: var(--surface); padding: 0 0.25rem; border-radius: var(--radius-sm); font-size: 0.8125rem;">"impounded"</code></li>
+          <li>Combine terms: <code style="background: var(--surface); padding: 0 0.25rem; border-radius: var(--radius-sm); font-size: 0.8125rem;">"passenger phone search"</code></li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer role="contentinfo">
+    <div class="container">
+      <p>KnowYourRights NG provides general legal information, not legal advice or representation.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Simple client-side search simulation
+    const scenarios = [
+      { id: 'police-stop', title: 'Police have stopped my vehicle', desc: 'What to do, your rights, and safety-first steps during a police traffic stop', category: 'Stops', agency: 'Police', url: 'scenario.html?id=police-stop' },
+      { id: 'frsc-stop', title: 'FRSC has stopped me', desc: 'FRSC powers, required documents, and what to expect', category: 'Stops', agency: 'FRSC', url: 'scenario.html?id=frsc-stop' },
+      { id: 'lastma-stop', title: 'LASTMA / State traffic agency stop', desc: 'State traffic enforcement powers and your rights', category: 'Stops', agency: 'LASTMA', url: 'scenario.html?id=lastma-stop' },
+      { id: 'customs-stop', title: 'Customs or border checkpoint stop', desc: 'Nigeria Customs Service powers at checkpoints and borders', category: 'Stops', agency: 'Customs', url: 'scenario.html?id=customs-stop' },
+      { id: 'license-papers', title: 'Officer asking for license and vehicle papers', desc: 'What you must show, what you can ask', category: 'Documents', agency: 'Police', url: 'scenario.html?id=license-papers' },
+      { id: 'phone-search', title: 'Officer wants to search my phone', desc: 'Digital privacy, consent, and safe response strategies', category: 'Searches', agency: 'Police', url: 'scenario.html?id=phone-search' },
+      { id: 'vehicle-search', title: 'Officer wants to search my vehicle', desc: 'Consent, reasonable grounds, plain view, and safety', category: 'Searches', agency: 'Police', url: 'scenario.html?id=vehicle-search' },
+      { id: 'asked-money', title: 'Officer asking for money (unofficial)', desc: 'How to respond safely, document, and report bribe demands', category: 'Payments', agency: 'Police', url: 'scenario.html?id=asked-money' },
+      { id: 'traffic-ticket', title: 'Issued a traffic ticket or told to pay fine', desc: 'Valid tickets, official payment channels, contesting fines', category: 'Payments', agency: 'FRSC/Police', url: 'scenario.html?id=traffic-ticket' },
+      { id: 'threatened-arrest', title: 'Threatened with arrest or taken to station', desc: 'Your rights, safety-first steps, and what happens at the station', category: 'Arrest', agency: 'Police', url: 'scenario.html?id=threatened-arrest' },
+      { id: 'vehicle-impounded', title: 'Vehicle or goods may be impounded', desc: 'When impoundment is allowed, fees, and how to get your vehicle back', category: 'Impoundment', agency: 'Police/FRSC', url: 'scenario.html?id=vehicle-impounded' },
+      { id: 'file-complaint', title: 'How to file a complaint against an officer', desc: 'Official channels, what to include, and follow-up process', category: 'Complaints', agency: 'All', url: 'scenario.html?id=file-complaint' },
+    ];
+
+    function initSearch() {
+      const form = document.getElementById('search-form');
+      const input = document.getElementById('search-input');
+      const resultsSection = document.getElementById('results-section');
+      const emptyState = document.getElementById('empty-state');
+      const resultsContainer = document.getElementById('results-container');
+      const resultsCount = document.getElementById('results-count');
+
+      // Check for query in URL
+      const params = new URLSearchParams(window.location.search);
+      const initialQuery = params.get('q');
+      if (initialQuery) {
+        input.value = initialQuery;
+        performSearch(initialQuery);
+      }
+
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const query = input.value.trim();
+        if (query) {
+          performSearch(query);
+          // Update URL without reload
+          const url = new URL(window.location);
+          url.searchParams.set('q', query);
+          window.history.pushState({}, '', url);
+        }
+      });
+
+      function performSearch(query) {
+        const terms = query.toLowerCase().split(/\s+/).filter(t => t.length > 1);
+        const results = scenarios.filter(s => {
+          const haystack = `${s.title} ${s.desc} ${s.category} ${s.agency}`.toLowerCase();
+          return terms.every(term => haystack.includes(term));
+        });
+
+        resultsSection.hidden = false;
+        emptyState.hidden = true;
+
+        if (results.length === 0) {
+          resultsSection.hidden = true;
+          emptyState.hidden = false;
+          return;
+        }
+
+        resultsCount.textContent = `Found ${results.length} scenario${results.length !== 1 ? 's' : ''} for "${query}"`;
+        resultsContainer.innerHTML = results.map((r, i) => `
+          <a href="${r.url}" class="search-result-item animate-fade-in" style="animation-delay: ${i * 50}ms;">
+            <div style="display: flex; flex-wrap: wrap; gap: var(--space-2); margin-bottom: var(--space-2);">
+              <span class="badge badge-brand">${r.category}</span>
+              <span class="badge">${r.agency}</span>
+            </div>
+            <h3 class="search-result-title">${r.title}</h3>
+            <p class="search-result-desc">${r.desc}</p>
+          </a>
+        `).join('');
+      }
+    }
+
+    document.addEventListener('DOMContentLoaded', initSearch);
+  </script>
+</body>
+</html>

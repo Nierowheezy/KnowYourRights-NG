@@ -1,0 +1,70 @@
+{
+  "keywords": [
+    "documents",
+    "licence",
+    "insurance",
+    "roadworthiness",
+    "papers"
+  ],
+  "category": "documents",
+  "jurisdiction": "federal",
+  "agency": [
+    "frsc",
+    "npf",
+    "vio"
+  ],
+  "status": "approved",
+  "reviewer": "Content team (pre-review)",
+  "lastReviewed": "2026-10-29",
+  "nextReview": "2027-04-30",
+  "reviewNotes": "Drafted from sources; requires Nigerian lawyer review against the exact gazetted text before final sign-off. Section references checked against downloaded official texts on 2026-10-29; Nigerian lawyer review still required before publication.",
+  "changeHistory": [
+    {
+      "date": "2026-10-20",
+      "note": "Initial published draft",
+      "reviewer": "Content team"
+    }
+  ],
+  "relatedScenarios": [
+    "police-stop-search-car",
+    "vio-vehicle-impound"
+  ],
+  "id": "vehicle-documents-checks",
+  "title": "Which documents must I carry while driving?",
+  "shortTitle": "Driving documents",
+  "icon": "📄",
+  "question": "What can I legally be asked to produce at a stop — and what is optional?",
+  "shortAnswer": "Driver's licence, vehicle licence/roadworthiness and insurance are the core documents officers may demand. Proof of ownership is useful but demands beyond the prescribed documents can be declined politely.",
+  "legalExplanation": "Traffic laws administered by the **FRSC**, state traffic laws and vehicle inspection rules require drivers to hold and produce **prescribed documents** on demand:\n- **Driver's licence** — appropriate class for the vehicle.\n- **Vehicle licence / roadworthiness** — current and displayed or carried as prescribed.\n- **Motor vehicle insurance** — at least third-party.\n- **Proof of ownership** — valuable when ownership questions arise.",
+  "exceptions": "- **Electronic copies** are increasingly accepted where the issuing authority provides verification.\n- **Commercial vehicles** carry additional requirements (hackney permit and similar).",
+  "practicalOptions": "1. Produce the **prescribed documents** calmly when asked.\n2. If asked for anything beyond them, ask: **\"Under which provision?\"**\n3. Keep digital and physical copies organised for quick access.\n4. Regularise expired papers promptly — it removes the most common pretext.",
+  "whatToAvoid": "- Handing over your whole wallet or bag rather than the specific document.\n- Bidding to \"settle\" for missing papers instead of regularising them.",
+  "whatToDoAfter": "If a demand went beyond the prescribed documents, note it and report through the relevant **complaint channel** in the help directory.",
+  "sources": [
+    {
+      "sourceId": "frsc-act-2007",
+      "sections": [
+        "10"
+      ],
+      "notes": "s10 functions/powers re driver licensing, vehicle roadworthiness and enforcement."
+    },
+    {
+      "sourceId": "lagos-state-traffic-law-2012",
+      "sections": [
+        "12",
+        "15"
+      ],
+      "notes": "s12 VIO inspection/roadworthiness and impound powers; s15 impound for missing prescribed particulars."
+    },
+    {
+      "sourceId": "national-road-traffic-regulations-2012",
+      "sections": [
+        "18",
+        "22",
+        "26",
+        "142"
+      ],
+      "notes": "Regs on vehicle particulars, vehicle licence, display, and certificate of roadworthiness."
+    }
+  ]
+}

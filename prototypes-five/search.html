@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Search — KnowYourRights NG</title>
+  <meta name="description" content="Search the guide in plain language — questions work.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Geist:wght@700;800&display=swap" rel="stylesheet">
+  <script>try{document.documentElement.dataset.theme=localStorage.getItem("kyr-theme")||"system"}catch(e){document.documentElement.dataset.theme="system"}</script>
+  <link rel="stylesheet" href="theme.css">
+  <style>
+    .search-stage { padding: 56px 0 0; }
+
+    .search-box {
+      position: relative;
+      max-width: 720px;
+      margin: 0 auto;
+    }
+
+    .search-box__field {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      background: var(--surface);
+      border: 2px solid var(--forest);
+      border-radius: var(--radius-lg);
+      padding: 18px 20px;
+      box-shadow: 0 12px 30px -12px rgba(46, 100, 23, 0.25);
+    }
+
+    .search-box__query {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 1.15rem;
+      letter-spacing: -0.02em;
+      color: var(--text);
+      flex: 1;
+      white-space: nowrap;
+      overflow: hidden;
+    }
+
+    .suggestions {
+      position: absolute;
+      top: calc(100% + 8px);
+      left: 0;
+      right: 0;
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-lg);
+      box-shadow: 0 24px 48px -20px rgba(21, 48, 10, 0.22);
+      overflow: hidden;
+      z-index: 20;
+    }
+
+    .suggestion {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 14px 18px;
+      font-size: 0.94rem;
+      cursor: pointer;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .suggestion:last-child { border-bottom: none; }
+    .suggestion:hover, .suggestion--active { background: var(--bg-tint); }
+
+    .suggestion__q { font-weight: 600; color: var(--text); }
+    .suggestion__meta { margin-left: auto; font-size: 0.78rem; color: var(--text-faint); white-space: nowrap; }
+
+    .results-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      margin: 48px 0 8px;
+      flex-wrap: wrap;
+    }
+
+    .result { padding: 26px 4px; border-bottom: 1px solid var(--line); }
+
+    .result__crumb {
+      font-size: 0.78rem;
+      color: var(--text-faint);
+      margin-bottom: 6px;
+    }
+
+    .result__title {
+      font-family: var(--font-display);
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      font-size: 1.15rem;
+      margin: 0 0 8px;
+    }
+
+    .result__title a { color: var(--text); text-decoration: none; }
+    .result__title a:hover { color: var(--forest); }
+
+    .result__snippet { font-size: 0.93rem; color: var(--text-muted); line-height: 1.65; margin: 0 0 12px; }
+
+    .recovery {
+      border: 1px dashed var(--line-strong);
+      border-radius: var(--radius-lg);
+      background: var(--bg-ground);
+      padding: 32px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="announce">
+    <div class="container announce__inner">
+      <span class="pulse-dot"></span>
+      <span class="announce__label">Tip</span>
+      <span class="announce__title">Ask the way you'd ask a friend</span>
+      <span class="announce__meta">· "officer collect my phone" works too</span>
+      <a href="browse.html" class="announce__link">Browse instead →</a>
+    </div>
+  </div>
+
+  <header class="header">
+    <div class="header__pill">
+      <a class="brand" href="index.html">
+        <svg width="28" height="28" viewBox="0 0 30 30" aria-hidden="true">
+          <rect width="30" height="30" rx="8" fill="#15300a"/>
+          <rect x="13.4" y="6.5" width="3.2" height="10.5" rx="1.6" fill="#c1ff72"/>
+          <circle cx="15" cy="21.4" r="1.9" fill="#c1ff72"/>
+        </svg>
+        <span class="brand__text">KnowYourRights NG</span>
+      </a>
+      <nav class="nav" aria-label="Main">
+        <a href="encounter.html" class="nav__link">Encounter mode</a>
+        <a href="browse.html" class="nav__link">Browse</a>
+        <a href="agencies.html" class="nav__link">Agencies</a>
+        <a href="search.html" class="nav__link" aria-current="page">Search</a>
+        <a href="help.html" class="nav__link">Help</a>
+        <a href="about.html" class="nav__link">About</a>
+      </nav>
+      <div class="header__actions">
+        <button class="theme-toggle" id="themeToggle" type="button" aria-label="Switch theme" title="Light / dark / system">
+          <svg class="ticon icon-sun" width="15" height="15" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="3" stroke="currentColor" stroke-width="1.3"/><path d="M8 1.5v1.4M8 13.1v1.4M14.5 8h-1.4M2.9 8H1.5M12.4 3.6l-1 1M4.6 11.4l-1 1M12.4 12.4l-1-1M4.6 4.6l-1-1" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg>
+          <svg class="ticon icon-moon" width="15" height="15" viewBox="0 0 16 16" fill="none"><path d="M13.5 9A5.6 5.6 0 0 1 7 2.6 5.7 5.7 0 1 0 8.9 14 5.7 5.7 0 0 1 13.5 9Z" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"/></svg>
+          <svg class="ticon icon-sys" width="15" height="15" viewBox="0 0 16 16" fill="none"><rect x="1.8" y="2.8" width="12.4" height="8.4" rx="1.4" stroke="currentColor" stroke-width="1.3"/><path d="M5.5 13.7h5M8 11.2v2.5" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg>
+        </button>
+        <a href="help.html" class="btn btn--primary btn--sm">Get help now</a>
+        <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="encounter.html" class="is-cta">Encounter mode — I need help now</a>
+      <a href="browse.html">Browse by situation</a>
+      <a href="agencies.html">Browse by agency</a>
+      <a href="search.html">Search</a>
+      <a href="help.html">Help directory</a>
+      <a href="about.html">About</a>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- Search stage with suggestions open -->
+    <section class="search-stage">
+      <div class="container">
+        <div class="search-box anim">
+          <div class="search-box__field">
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" style="color:var(--forest);flex-shrink:0;">
+              <circle cx="8" cy="8" r="5.25" stroke="currentColor" stroke-width="1.6"/>
+              <path d="M12.5 12.5 15.5 15.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+            </svg>
+            <span class="search-box__query">can police search my phone<span class="caret"></span></span>
+            <span class="badge-lime">27 matches</span>
+          </div>
+
+          <div class="suggestions anim" style="animation-delay:.12s;">
+            <div class="suggestion suggestion--active">
+              <svg width="15" height="15" viewBox="0 0 16 16" fill="none" style="color:var(--forest);flex-shrink:0;"><path d="M6 12l4-4-4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" transform="rotate(-90 8 8)"/></svg>
+              <span class="suggestion__q">can police search my <mark>phone</mark> at a checkpoint?</span>
+              <span class="suggestion__meta">Stop &amp; search · top match</span>
+            </div>
+            <div class="suggestion">
+              <svg width="15" height="15" viewBox="0 0 16 16" fill="none" style="color:var(--text-faint);flex-shrink:0;"><circle cx="8" cy="8" r="5.25" stroke="currentColor" stroke-width="1.4"/><path d="M12.5 12.5 15.5 15.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
+              <span class="suggestion__q">must I unlock my <mark>phone</mark> if detained?</span>
+              <span class="suggestion__meta">Arrest</span>
+            </div>
+            <div class="suggestion">
+              <svg width="15" height="15" viewBox="0 0 16 16" fill="none" style="color:var(--text-faint);flex-shrink:0;"><circle cx="8" cy="8" r="5.25" stroke="currentColor" stroke-width="1.4"/><path d="M12.5 12.5 15.5 15.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
+              <span class="suggestion__q">can they seize my <mark>phone</mark> as "evidence"?</span>
+              <span class="suggestion__meta">Impoundment</span>
+            </div>
+            <div class="suggestion">
+              <svg width="15" height="15" viewBox="0 0 16 16" fill="none" style="color:var(--text-faint);flex-shrink:0;"><circle cx="8" cy="8" r="5.25" stroke="currentColor" stroke-width="1.4"/><path d="M12.5 12.5 15.5 15.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
+              <span class="suggestion__q">See all 27 results for "<mark>phone</mark>"</span>
+              <span class="suggestion__meta">Enter ↵</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Filters -->
+    <section class="section--tight" style="padding-top:56px;">
+      <div class="container">
+        <div class="chip-row chip-row--start reveal" style="justify-content:flex-start;">
+          <a href="#" class="chip chip--active">All agencies</a>
+          <a href="#" class="chip">Nigeria Police</a>
+          <a href="#" class="chip">FRSC</a>
+          <a href="#" class="chip">Lagos VIS / DVS</a>
+          <a href="#" class="chip">Customs</a>
+          <a href="#" class="chip chip--tint">✓ Reviewed only</a>
+          <a href="#" class="chip">Federal only</a>
+        </div>
+
+        <div class="results-head reveal">
+          <span class="muted" style="font-size:0.85rem;">27 matches for "<strong style="color:var(--text);">phone</strong>" · sorted by relevance · 0.12s</span>
+          <a href="#" class="link-green">Sort: Relevance ▾</a>
+        </div>
+
+        <!-- Results -->
+        <div>
+          <article class="result reveal">
+            <div class="result__crumb">Stop &amp; search · Nigeria Police (NPF)</div>
+            <h3 class="result__title"><a href="scenario.html">Can police search my <mark>phone</mark> at a checkpoint?</a></h3>
+            <p class="result__snippet">Generally, no. Your <mark>phone</mark> is private property, and a routine roadside stop does not create the power to search it. Police generally need a valid search warrant — or a specific statutory power — before…</p>
+            <div class="badge-row">
+              <span class="badge-outline badge-federal">Federal</span>
+              <span class="badge-lime">2026</span>
+              <span class="badge-gray">Lawyer reviewed</span>
+              <span class="card__meta">Last reviewed 12 Oct 2026</span>
+            </div>
+          </article>
+
+          <article class="result reveal">
+            <div class="result__crumb">Arrest · Nigeria Police (NPF)</div>
+            <h3 class="result__title"><a href="scenario.html">Must I unlock my <mark>phone</mark> if detained?</a></h3>
+            <p class="result__snippet">No — and you cannot be forced to give up passcodes or biometrics without proper legal process. If your <mark>phone</mark> is seized, insist on an inventory receipt and record the officer's details.</p>
+            <div class="badge-row">
+              <span class="badge-outline badge-federal">Federal</span>
+              <span class="badge-lime">2025</span>
+              <span class="badge-gray badge-warning" style="background:var(--warning-tint);border-color:var(--warn-line);color:var(--warning);">Under review</span>
+              <span class="card__meta">Last reviewed 3 Mar 2025</span>
+            </div>
+          </article>
+
+          <article class="result reveal">
+            <div class="result__crumb">Documentation · Multiple agencies</div>
+            <h3 class="result__title"><a href="scenario.html">Can I record the encounter on my <mark>phone</mark>?</a></h3>
+            <p class="result__snippet">Usually yes, openly, where it is safe to do so. Recording is often the strongest protection you have — but safety comes first, and some agencies' internal rules say more.</p>
+            <div class="badge-row">
+              <span class="badge-outline badge-federal">Federal</span>
+              <span class="badge-lime">2026</span>
+              <span class="badge-gray">Lawyer reviewed</span>
+              <span class="card__meta">Last reviewed 28 Jan 2026</span>
+            </div>
+          </article>
+
+          <article class="result reveal">
+            <div class="result__crumb">Impoundment · Lagos VIS / DVS</div>
+            <h3 class="result__title"><a href="scenario.html">Can they seize my <mark>phone</mark> along with the vehicle?</a></h3>
+            <p class="result__snippet">No. Impoundment covers the vehicle, not your personal belongings. You are entitled to remove personal items — including your <mark>phone</mark> — before the vehicle is taken, and to a receipt.</p>
+            <div class="badge-row">
+              <span class="badge-outline badge-state">Lagos · State</span>
+              <span class="badge-lime">2026</span>
+              <span class="badge-gray">Lawyer reviewed</span>
+              <span class="card__meta">Last reviewed 15 Sep 2026</span>
+            </div>
+          </article>
+        </div>
+
+        <div class="ad-slot ad-slot--inline reveal">
+          <span class="ad-slot__label">Advertisement</span>
+          <span class="ad-slot__hint">Ad space — supports the free guide</span>
+          <span class="ad-slot__size">728 × 90 / in-feed</span>
+        </div>
+
+        <!-- No-result recovery -->
+        <section style="padding:48px 0 12px;">
+          <div class="recovery reveal">
+            <h3 class="display display--compact" style="font-size:1.3rem;">Looking for something else?</h3>
+            <p class="lede" style="font-size:0.92rem;margin:10px auto 20px;max-width:420px;">
+              No exact match for "<strong>plaintiff rights at checkpoint</strong>" —
+              but these related situations might cover it.
+            </p>
+            <div class="chip-row" style="justify-content:center;">
+              <a href="scenario.html" class="chip">Checkpoints</a>
+              <a href="scenario.html" class="chip">Stop &amp; search</a>
+              <a href="scenario.html" class="chip">Complaints</a>
+              <a href="browse.html" class="chip chip--tint">Browse all situations</a>
+            </div>
+            <p class="muted" style="font-size:0.8rem;margin-top:18px;">Nothing close? <a href="scenario.html#feedback" class="link-green">Flag it for review</a> — anonymous, takes 10 seconds.</p>
+          </div>
+        </section>
+      </div>
+    </section>
+
+  <!-- Billboard ad (970 × 250) -->
+  <section class="section--tight">
+    <div class="container">
+      <div class="ad-slot ad-slot--billboard reveal">
+          <span class="ad-slot__label">Advertisement</span>
+          <span class="ad-slot__hint">Ad space — supports the free guide</span>
+          <span class="ad-slot__size">970 × 250 / billboard</span>
+        </div>
+    </div>
+  </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div>
+          <a class="brand brand--footer" href="index.html">
+            <svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true">
+              <rect width="30" height="30" rx="8" fill="#2c3a1c"/>
+              <rect x="13.4" y="6.5" width="3.2" height="10.5" rx="1.6" fill="#c1ff72"/>
+              <circle cx="15" cy="21.4" r="1.9" fill="#c1ff72"/>
+            </svg>
+            <span class="brand__text">KnowYourRights NG</span>
+          </a>
+          <p class="footer__desc">Free, lawyer-reviewed guidance for roadside and related enforcement encounters in Nigeria. Sources-linked, safety-first, always free.</p>
+          <p class="footer__quote">"Not legal advice — accurate, reviewed information."</p>
+        </div>
+        <div class="footer__cols">
+          <div class="footer__col">
+            <h4>Guide</h4>
+            <ul>
+              <li><a href="encounter.html">Encounter mode</a></li>
+              <li><a href="browse.html">Browse situations</a></li>
+              <li><a href="agencies.html">By agency</a></li>
+              <li><a href="search.html">Search</a></li>
+            </ul>
+          </div>
+          <div class="footer__col">
+            <h4>Support</h4>
+            <ul>
+              <li><a href="help.html">Help directory</a></li>
+              <li><a href="scenario.html#feedback">Flag an issue</a></li>
+              <li><a href="about.html">How we review</a></li>
+              <li><a href="#">Corrections<span class="footer__soon">SOON</span></a></li>
+            </ul>
+          </div>
+          <div class="footer__col">
+            <h4>Trust</h4>
+            <ul>
+              <li><a href="about.html">Scope &amp; limitations</a></li>
+              <li><a href="about.html">Privacy</a></li>
+              <li><a href="about.html#disclaimer">Legal disclaimer</a></li>
+              <li><a href="#">Pidgin version<span class="footer__soon">SOON</span></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <div class="footer__socials">
+          <a href="#" class="social-dot" aria-label="X">
+            <svg width="15" height="15" viewBox="0 0 16 16" fill="currentColor"><path d="M9.5 6.9 15 .5h-1.6L8.7 5.9 5 .5H.7l5.8 8.2L.7 15.5h1.6l5.1-5.8 4 5.8h4.3L9.5 6.9Z"/></svg>
+          </a>
+          <a href="#" class="social-dot" aria-label="GitHub">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M8 .5a7.5 7.5 0 0 0-2.37 14.62c.37.07.5-.16.5-.36v-1.27c-2.08.45-2.52-.9-2.52-.9-.34-.87-.83-1.1-.83-1.1-.68-.46.05-.45.05-.45.75.05 1.14.77 1.14.77.67 1.15 1.75.82 2.18.63.07-.49.26-.82.48-1.01-1.67-.19-3.42-.83-3.42-3.71 0-.82.29-1.49.77-2.01-.08-.19-.34-.96.07-2 0 0 .63-.2 2.06.77a7.2 7.2 0 0 1 3.76 0c1.43-.97 2.06-.77 2.06-.77.41 1.04.15 1.81.07 2 .48.52.77 1.19.77 2.01 0 2.89-1.76 3.52-3.43 3.7.27.23.5.69.5 1.39V14.8c0 .2.14.44.51.36A7.5 7.5 0 0 0 8 .5Z"/></svg>
+          </a>
+          <a href="#" class="social-dot" aria-label="Instagram">
+            <svg width="15" height="15" viewBox="0 0 16 16" fill="none"><rect x="1.5" y="1.5" width="13" height="13" rx="4" stroke="currentColor" stroke-width="1.3"/><circle cx="8" cy="8" r="3" stroke="currentColor" stroke-width="1.3"/><circle cx="12" cy="4" r="0.9" fill="currentColor"/></svg>
+          </a>
+        </div>
+        <div class="footer__legal">
+          © 2026 KnowYourRights NG. All rights reserved.&nbsp;&nbsp;·&nbsp;&nbsp;Free &amp; anonymous — no accounts, no tracking.
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Dismissible mobile anchor ad (320 × 100) -->
+  <div class="ad-anchor" role="complementary" aria-label="Advertisement">
+    <button class="ad-anchor__close" type="button" aria-label="Close ad" onclick="this.parentElement.remove()">×</button>
+    <div class="ad-slot ad-slot--large-mobile">
+      <span class="ad-slot__label">Ad</span>
+      <span class="ad-slot__hint">320 × 100 — large mobile banner</span>
+    </div>
+  </div>
+
+  <script>
+    // Theme: cycles light -> dark -> system, persisted
+    const themeBtn = document.getElementById('themeToggle');
+    const order = ['light', 'dark', 'system'];
+    themeBtn.addEventListener('click', () => {
+      const cur = document.documentElement.dataset.theme || 'system';
+      const next = order[(order.indexOf(cur) + 1) % order.length];
+      document.documentElement.dataset.theme = next;
+      themeBtn.setAttribute('aria-label', 'Theme: ' + next);
+      try { localStorage.setItem('kyr-theme', next); } catch (e) {}
+    });
+
+    // Mobile menu
+    const navToggle = document.getElementById('navToggle');
+    const mobileMenu = document.getElementById('mobileMenu');
+    navToggle.addEventListener('click', () => {
+      const open = mobileMenu.classList.toggle('is-open');
+      navToggle.setAttribute('aria-expanded', open);
+    });
+
+    // Scroll reveal
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach((e) => {
+        if (e.isIntersecting) { e.target.classList.add('is-in'); io.unobserve(e.target); }
+      });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.reveal').forEach((el) => io.observe(el));
+  </script>
+</body>
+</html>

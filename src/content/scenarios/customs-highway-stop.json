@@ -1,0 +1,58 @@
+{
+  "keywords": [
+    "customs",
+    "highway",
+    "jurisdiction",
+    "stop",
+    "smuggling"
+  ],
+  "category": "other",
+  "jurisdiction": "federal",
+  "agency": [
+    "ncs"
+  ],
+  "status": "approved",
+  "reviewer": "Content team (pre-review)",
+  "lastReviewed": "2026-10-29",
+  "nextReview": "2027-04-30",
+  "reviewNotes": "Drafted from sources; requires Nigerian lawyer review against the exact gazetted text before final sign-off. Section references checked against downloaded official texts on 2026-10-29; Nigerian lawyer review still required before publication.",
+  "changeHistory": [
+    {
+      "date": "2026-10-20",
+      "note": "Initial published draft",
+      "reviewer": "Content team"
+    }
+  ],
+  "relatedScenarios": [
+    "police-stop-search-car",
+    "officer-demanded-money"
+  ],
+  "id": "customs-highway-stop",
+  "title": "Can customs officers stop me on the highway?",
+  "shortTitle": "Customs highway stops",
+  "icon": "📦",
+  "question": "Officers in customs uniform set up a stop far from any border. Do they have jurisdiction over me?",
+  "shortAnswer": "Customs jurisdiction is tied to border and import enforcement, not general traffic control. Within their statutory powers they may act on suspicion of smuggling or duty evasion; general roadside traffic matters remain outside their mandate.",
+  "legalExplanation": "The **Nigeria Customs Service Act, 2023** (which repealed the Customs and Excise Management Act) gives the Service powers **for customs purposes** — preventive and enforcement powers relating to imports, exports and duty evasion (ss 3–6, 30–31, 226–227).\n- Their powers attach to **customs matters** (smuggling, duty evasion, prohibited goods), not ordinary traffic enforcement.\n- **Section 227** permits entry and search of places, premises or means of conveyance, and search of persons arriving or departing the customs territory, where there are reasonable grounds to suspect an offence under the Act.\n- Demands unrelated to customs matters can be declined politely and reported.\n- Where they act on genuine customs suspicion, cooperation with the **documented process** is the safe path.\n- Officers must identify themselves, state the customs basis, and follow due process (inventory, receipts).",
+  "exceptions": "- **Convoys/joint operations** may include other agencies — ask which agency is acting and why.\n- **Border zones** and **customs control zones** (ss 30–31) have heightened powers.\n- **Section 227** allows entry and search on reasonable grounds of a customs offence; ordinary traffic enforcement is not a customs purpose.",
+  "practicalOptions": "1. Ask calmly: **\"Which agency is this, and what is the customs matter?\"**\n2. For ordinary traffic questions, state that you will address the **appropriate agency**.\n3. Note names, unit and vehicle details.\n4. If goods are genuinely at issue, insist on the **documented process and receipts**.",
+  "whatToAvoid": "- Opening your luggage or boot to a demand with no stated customs basis.\n- Handing over documents unrelated to customs matters.",
+  "whatToDocument": "- Agency claimed, officers' details, location (distance from any border), demand made",
+  "whatToDoAfter": "Report extra-mandate demands through the **Public Complaints Commission** or the agency's own complaint channel in the help directory.",
+  "sources": [
+    {
+      "sourceId": "nigeria-customs-service-act-2023",
+      "sections": [
+        "3",
+        "4",
+        "5",
+        "6",
+        "30",
+        "31",
+        "226",
+        "227"
+      ],
+      "notes": "s3 scope; ss4-5 functions/powers; s6 customs officers exercise police powers for customs purposes; ss30-31 customs control and control zones; s226 patrol; s227 entry/search of places and conveyances and search of persons arriving/departing the customs territory on reasonable grounds."
+    }
+  ]
+}

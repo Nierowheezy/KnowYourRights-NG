@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="system">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Emergency Help — KnowYourRights NG</title>
+  <meta name="description" content="Get step-by-step guidance for your roadside encounter right now.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="theme.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container header__inner">
+      <a href="index.html" class="brand">
+        <svg class="brand__mark" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.5"/>
+          <path d="M10 6v5M10 14h.01" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+        </svg>
+        <span class="brand__text">KnowYourRights NG</span>
+      </a>
+      <nav class="nav" aria-label="Main navigation">
+        <a href="encounter.html" class="nav__link nav__link--primary" style="color: var(--accent); background: var(--accent-subtle);">I need help now</a>
+        <a href="browse.html" class="nav__link">Browse</a>
+        <a href="search.html" class="nav__link">Search</a>
+        <a href="help.html" class="nav__link">Get help</a>
+        <a href="about.html" class="nav__link">About</a>
+      </nav>
+      <div class="header__actions">
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+          <svg class="theme-toggle__icon theme-toggle__icon--system" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="3" y="4" width="12" height="8" rx="1.5" stroke="currentColor" stroke-width="1.2"/>
+            <path d="M7 14h4M9 12v2" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+          </svg>
+          <svg class="theme-toggle__icon theme-toggle__icon--light" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="9" cy="9" r="3.25" stroke="currentColor" stroke-width="1.2"/>
+            <path d="M9 2.5v1.25M9 14.25v1.25M15.5 9h-1.25M3.75 9H2.5M13.596 4.404l-.884.884M5.288 12.712l-.884.884M13.596 13.596l-.884-.884M5.288 5.288l-.884-.884" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+          </svg>
+          <svg class="theme-toggle__icon theme-toggle__icon--dark" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M15 9.79A6 6 0 018.21 3 6 6 0 1015 9.79z" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <span class="theme-toggle__label">System</span>
+        </button>
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-header">
+      <div class="container">
+        <nav class="breadcrumb">
+          <a href="index.html">Home</a>
+          <span>›</span>
+          <span>Emergency help</span>
+        </nav>
+        <h1 class="page-header__title">Emergency roadside guidance</h1>
+        <p class="page-header__subtitle">Get step-by-step guidance for your current situation</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container" style="max-width: 800px;">
+        <div class="alert-card">
+          <div class="alert-card__icon">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="10" cy="10" r="7" stroke="currentColor" stroke-width="1.5"/>
+              <path d="M10 7v4M10 13h.01" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <div class="alert-card__content">
+            <h3 class="alert-card__title">Safety first</h3>
+            <p class="alert-card__description">Stay calm, keep your hands visible, be polite but firm. Never argue aggressively. Prioritize your safety above everything else.</p>
+          </div>
+        </div>
+
+        <div class="card" style="margin-top: var(--space-6);">
+          <div class="card__header">
+            <h2 class="card__section-title">What's happening right now?</h2>
+            <p class="card__section-subtitle">Select the option that best matches your situation</p>
+          </div>
+          <div class="option-grid">
+            <a href="scenario.html?type=stopped" class="option-card">
+              <div class="option-card__icon">🚗</div>
+              <div class="option-card__content">
+                <h3 class="option-card__title">Pulled over / stopped</h3>
+                <p class="option-card__description">Officer has stopped me while driving</p>
+              </div>
+              <span class="option-card__arrow">→</span>
+            </a>
+            <a href="scenario.html?type=documents" class="option-card">
+              <div class="option-card__icon">📄</div>
+              <div class="option-card__content">
+                <h3 class="option-card__title">Documents requested</h3>
+                <p class="option-card__description">Asked to show license, papers, insurance</p>
+              </div>
+              <span class="option-card__arrow">→</span>
+            </a>
+            <a href="scenario.html?type=search" class="option-card">
+              <div class="option-card__icon">🔍</div>
+              <div class="option-card__content">
+                <h3 class="option-card__title">Search requested</h3>
+                <p class="option-card__description">Want to search vehicle or belongings</p>
+              </div>
+              <span class="option-card__arrow">→</span>
+            </a>
+            <a href="scenario.html?type=arrest" class="option-card">
+              <div class="option-card__icon">⚖️</div>
+              <div class="option-card__content">
+                <h3 class="option-card__title">Arrest / taken to station</h3>
+                <p class="option-card__description">Being detained or told to go to station</p>
+              </div>
+              <span class="option-card__arrow">→</span>
+            </a>
+            <a href="scenario.html?type=money" class="option-card">
+              <div class="option-card__icon">💰</div>
+              <div class="option-card__content">
+                <h3 class="option-card__title">Asked for money/bribe</h3>
+                <p class="option-card__description">Asked to pay on the spot</p>
+              </div>
+              <span class="option-card__arrow">→</span>
+            </a>
+            <a href="scenario.html?type=impound" class="option-card">
+              <div class="option-card__icon">🚧</div>
+              <div class="option-card__content">
+                <h3 class="option-card__title">Vehicle impounded</h3>
+                <p class="option-card__description">Vehicle being taken or seized</p>
+              </div>
+              <span class="option-card__arrow">→</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="help-box">
+          <h3 class="help-box__title">Need help finding the right category?</h3>
+          <p class="help-box__description">Describe your situation in your own words and we'll guide you to the right information.</p>
+          <a href="search.html" class="btn btn--ghost">Search with description →</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__top">
+        <div class="footer__brand">
+          <div class="brand">
+            <svg class="brand__mark" width="18" height="18" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.5"/>
+              <path d="M10 6v5M10 14h.01" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+            <span class="brand__text">KnowYourRights NG</span>
+          </div>
+          <p class="footer__description">Free, source-backed legal information for Nigerian roadside encounters. Not legal advice.</p>
+        </div>
+        <div class="footer__links">
+          <div class="footer__group">
+            <h4 class="footer__group-title">Navigate</h4>
+            <ul class="footer__list">
+              <li><a href="browse.html">Browse</a></li>
+              <li><a href="search.html">Search</a></li>
+              <li><a href="encounter.html">Emergency help</a></li>
+              <li><a href="scenario.html">All scenarios</a></li>
+            </ul>
+          </div>
+          <div class="footer__group">
+            <h4 class="footer__group-title">Resources</h4>
+            <ul class="footer__list">
+              <li><a href="help.html">Get help</a></li>
+              <li><a href="about.html">About</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p class="footer__copy">© 2026 KnowYourRights NG. All rights reserved.</p>
+        <p class="footer__disclaimer">Source-backed • Safety-first • Free to use</p>
+      </div>
+    </div>
+  </footer>
+
+  <div class="modal" id="mobileNavModal">
+    <div class="modal__backdrop" id="navBackdrop"></div>
+    <div class="modal__content modal__content--nav">
+      <div class="modal__header">
+        <div class="brand">
+          <svg class="brand__mark" width="18" height="18" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.5"/>
+            <path d="M10 6v5M10 14h.01" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
+          <span class="brand__text">Menu</span>
+        </div>
+        <button class="modal__close" id="navClose" aria-label="Close menu">×</button>
+      </div>
+      <nav class="modal__nav">
+        <a href="encounter.html" class="modal__nav-link modal__nav-link--primary">I need help now</a>
+        <a href="browse.html" class="modal__nav-link">Browse scenarios</a>
+        <a href="search.html" class="modal__nav-link">Search</a>
+        <a href="scenario.html" class="modal__nav-link">All scenarios</a>
+        <a href="help.html" class="modal__nav-link">Get help</a>
+        <a href="about.html" class="modal__nav-link">About</a>
+      </nav>
+    </div>
+  </div>
+
+  <style>
+    .page-header {
+      padding: var(--space-10) 0 var(--space-8);
+      border-bottom: 1px solid var(--border);
+    }
+    
+    .breadcrumb {
+      display: flex;
+      align-items: center;
+      gap: var(--space-2);
+      font-size: 0.8125rem;
+      color: var(--text-tertiary);
+      margin-bottom: var(--space-4);
+    }
+    
+    .breadcrumb a {
+      color: var(--text-secondary);
+      text-decoration: none;
+      transition: color var(--transition-fast);
+    }
+    
+    .breadcrumb a:hover {
+      color: var(--text-primary);
+    }
+    
+    .page-header__title {
+      font-size: clamp(1.875rem, 4vw, 2.5rem);
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      margin: 0 0 var(--space-2);
+      color: var(--text-primary);
+    }
+    
+    .page-header__subtitle {
+      font-size: 1rem;
+      color: var(--text-secondary);
+      margin: 0;
+    }
+    
+    .alert-card {
+      display: flex;
+      gap: var(--space-3);
+      padding: var(--space-4);
+      background: var(--warning-subtle);
+      border: 1px solid rgba(217, 119, 6, 0.2);
+      border-radius: var(--radius-lg);
+    }
+    
+    .alert-card__icon {
+      color: var(--warning);
+      flex-shrink: 0;
+    }
+    
+    .alert-card__content {
+      flex: 1;
+    }
+    
+    .alert-card__title {
+      font-size: 0.875rem;
+      font-weight: 600;
+      color: var(--text-primary);
+      margin: 0 0 var(--space-1);
+    }
+    
+    .alert-card__description {
+      font-size: 0.8125rem;
+      color: var(--text-secondary);
+      margin: 0;
+      line-height: 1.6;
+    }
+    
+    .card__header {
+      margin-bottom: var(--space-6);
+    }
+    
+    .card__section-title {
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin: 0 0 var(--space-2);
+      color: var(--text-primary);
+    }
+    
+    .card__section-subtitle {
+      font-size: 0.875rem;
+      color: var(--text-secondary);
+      margin: 0;
+    }
+    
+    .option-grid {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-2);
+    }
+    
+    .option-card {
+      display: flex;
+      align-items: center;
+      gap: var(--space-3);
+      padding: var(--space-3);
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      text-decoration: none;
+      color: inherit;
+      transition: all var(--transition-fast);
+    }
+    
+    .option-card:hover {
+      border-color: var(--border-strong);
+      background: var(--surface-hover);
+    }
+    
+    .option-card__icon {
+      font-size: 1.25rem;
+      flex-shrink: 0;
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--bg-subtle);
+      border-radius: var(--radius);
+    }
+    
+    .option-card__content {
+      flex: 1;
+      min-width: 0;
+    }
+    
+    .option-card__title {
+      font-size: 0.875rem;
+      font-weight: 600;
+      margin: 0 0 var(--space-1);
+      color: var(--text-primary);
+    }
+    
+    .option-card__description {
+      font-size: 0.8125rem;
+      color: var(--text-secondary);
+      margin: 0;
+    }
+    
+    .option-card__arrow {
+      color: var(--text-tertiary);
+      font-size: 0.875rem;
+      transition: all var(--transition-fast);
+    }
+    
+    .option-card:hover .option-card__arrow {
+      color: var(--accent);
+      transform: translateX(2px);
+    }
+    
+    .help-box {
+      margin-top: var(--space-6);
+      padding: var(--space-6);
+      background: var(--bg-subtle);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-xl);
+      text-align: center;
+    }
+    
+    .help-box__title {
+      font-size: 1rem;
+      font-weight: 600;
+      margin: 0 0 var(--space-2);
+      color: var(--text-primary);
+    }
+    
+    .help-box__description {
+      font-size: 0.875rem;
+      color: var(--text-secondary);
+      margin: 0 0 var(--space-4);
+    }
+  </style>
+
+  <script src="app.js"></script>
+</body>
+</html>

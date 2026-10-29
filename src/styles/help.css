@@ -1,0 +1,86 @@
+    .page-hero { padding: 64px 0 36px; }
+
+    .emergency-band {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 20px;
+    }
+
+    @media (max-width: 860px) { .emergency-band { grid-template-columns: 1fr; } }
+
+    .emergency-tile {
+      background: var(--forest-deep);
+      color: #fff;
+      border-radius: var(--radius-lg);
+      padding: 28px;
+      text-decoration: none;
+      position: relative;
+      overflow: hidden;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .emergency-tile:hover { transform: translateY(-3px); box-shadow: var(--shadow-green); }
+
+    .emergency-tile--red { background: #7f1d12; }
+
+    .emergency-tile__num {
+      font-family: var(--font-display);
+      font-weight: 800;
+      font-size: 2.4rem;
+      letter-spacing: -0.04em;
+      color: var(--lime);
+      line-height: 1;
+    }
+
+    .emergency-tile--red .emergency-tile__num { color: #ffd7d2; }
+
+    .emergency-tile__label { font-size: 0.9rem; color: #cdd5c4; margin-top: 8px; line-height: 1.5; }
+
+    .channel-group { margin-bottom: 44px; }
+
+    .channel-group h2 {
+      font-family: var(--font-display);
+      letter-spacing: -0.02em;
+      font-size: 1.3rem;
+      margin: 0 0 6px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .channel-group .count {
+      font-family: var(--font-sans);
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: var(--forest);
+      background: var(--bg-tint);
+      border: 1px solid var(--line-tint);
+      padding: 3px 11px;
+      border-radius: 999px;
+    }
+
+    .channel-group .sub { font-size: 0.9rem; color: var(--text-muted); margin: 0 0 20px; }
+
+    .issue-tags { display: flex; flex-wrap: wrap; gap: 6px; margin: 12px 0 14px; }
+
+    .issue-tag {
+      font-size: 0.72rem;
+      font-weight: 600;
+      color: var(--chip-ink);
+      background: var(--chip-surface);
+      border: 1px solid var(--chip-line);
+      padding: 3px 10px;
+      border-radius: 999px;
+    }
+
+    .contact-line {
+      font-family: var(--font-mono);
+      font-size: 0.85rem;
+      background: var(--bg-ground);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 9px 12px;
+      margin: 4px 0 12px;
+      overflow-x: auto;
+      white-space: nowrap;
+    }

@@ -1,0 +1,71 @@
+{
+  "keywords": [
+    "arrest",
+    "warrant",
+    "detention",
+    "grounds",
+    "lawyer"
+  ],
+  "category": "arrest",
+  "jurisdiction": "federal",
+  "agency": [
+    "npf"
+  ],
+  "status": "approved",
+  "reviewer": "Content team (pre-review)",
+  "lastReviewed": "2026-10-29",
+  "nextReview": "2027-04-30",
+  "reviewNotes": "Drafted from sources; requires Nigerian lawyer review against the exact gazetted text before final sign-off. Section references checked against downloaded official texts on 2026-10-29; Nigerian lawyer review still required before publication.",
+  "changeHistory": [
+    {
+      "date": "2026-10-20",
+      "note": "Initial published draft",
+      "reviewer": "Content team"
+    }
+  ],
+  "relatedScenarios": [
+    "police-phone-unlock",
+    "officer-demanded-money"
+  ],
+  "id": "police-arrest-detention",
+  "title": "Can I be arrested without a warrant?",
+  "shortTitle": "Arrest & detention",
+  "icon": "🚓",
+  "question": "Officers are saying I must follow them to the station but nobody has told me why. What are my rights?",
+  "shortAnswer": "An arrest should be based on a lawful ground — an offence witnessed, a warrant, or statutory authority — and you are entitled to be told the reason at the point of arrest. If detained, you may ask the grounds and to communicate with a lawyer or family member.",
+  "legalExplanation": "The **Police Act, 2020** and the **ACJA, 2015** set out arrest and detention safeguards:\n- You must be told **the reason for the arrest** at the time it happens.\n- You have the right to **consult a lawyer** and to have someone informed of your detention.\n- Detention beyond the constitutional period without court approval is unlawful.",
+  "exceptions": "- **Warrantless arrests** are permitted where an offence is committed in the officer's presence or under specific statutory powers.\n- **Preventive detention** regimes have their own narrow procedures.",
+  "practicalOptions": "1. Ask calmly: **\"Am I under arrest? On what grounds?\"**\n2. If arrested, state that you want your **lawyer informed** and comply physically.\n3. Do not resist physically; note names, time and place.\n4. At the station, ask for the **charge or administrative bail** process.\n5. Contact the legal aid options in the help directory early.",
+  "whatToAvoid": "- Physical resistance — it creates separate offences and risk.\n- Signing statements you have not read or understood.\n- Offering or agreeing to pay anything to avoid the process.",
+  "whatToDocument": "- Time and place of arrest, officers' names/unit, vehicle plate\n- Grounds stated (or the refusal to state them)\n- Who was informed of your detention, and when",
+  "whatToDoAfter": "After release, write down everything while fresh and report any breach through the **verified complaint channels**; free legal support options are in the help directory.",
+  "sources": [
+    {
+      "sourceId": "constitution-1999",
+      "sections": [
+        "34",
+        "35"
+      ],
+      "notes": "s34 dignity; s35 personal liberty, right to silence, informed of grounds within 24 hours, brought to court, habeas corpus."
+    },
+    {
+      "sourceId": "nigeria-police-act-2020",
+      "sections": [
+        "44",
+        "86"
+      ],
+      "notes": "s44 recording of arrests; s86 arrest without warrant on reasonable suspicion to prevent an offence."
+    },
+    {
+      "sourceId": "acja-2015",
+      "sections": [
+        "6",
+        "7",
+        "8",
+        "9",
+        "10"
+      ],
+      "notes": "s6 notification of cause/rights incl. legal aid; s7 arrest in lieu prohibited; s8 humane treatment; s9 search of arrested suspect; s10 inventory."
+    }
+  ]
+}

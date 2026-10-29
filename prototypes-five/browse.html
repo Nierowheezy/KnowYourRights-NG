@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Browse by situation — KnowYourRights NG</title>
+  <meta name="description" content="Browse lawyer-reviewed roadside encounter scenarios by situation and category.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Geist:wght@700;800&display=swap" rel="stylesheet">
+  <script>try{document.documentElement.dataset.theme=localStorage.getItem("kyr-theme")||"system"}catch(e){document.documentElement.dataset.theme="system"}</script>
+  <link rel="stylesheet" href="theme.css">
+  <style>
+    .page-hero { padding: 64px 0 40px; }
+
+    .page-hero .search-sm { max-width: 560px; margin-top: 28px; }
+
+    .filters { margin: 24px 0 36px; }
+
+    .cat-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.76rem;
+      font-weight: 600;
+      color: var(--chip-ink);
+      letter-spacing: 0.01em;
+    }
+
+    .dot {
+      width: 7px; height: 7px; border-radius: 50%;
+      display: inline-block;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="announce">
+    <div class="container announce__inner">
+      <span class="pulse-dot"></span>
+      <span class="announce__label">Updated</span>
+      <span class="announce__title">Vehicle impoundment rules</span>
+      <span class="announce__meta">· FRSC and VIO scenarios re-verified for 2026</span>
+      <a href="scenario.html" class="announce__link">Read →</a>
+    </div>
+  </div>
+
+  <header class="header">
+    <div class="header__pill">
+      <a class="brand" href="index.html">
+        <svg width="28" height="28" viewBox="0 0 30 30" aria-hidden="true">
+          <rect width="30" height="30" rx="8" fill="#15300a"/>
+          <rect x="13.4" y="6.5" width="3.2" height="10.5" rx="1.6" fill="#c1ff72"/>
+          <circle cx="15" cy="21.4" r="1.9" fill="#c1ff72"/>
+        </svg>
+        <span class="brand__text">KnowYourRights NG</span>
+      </a>
+      <nav class="nav" aria-label="Main">
+        <a href="encounter.html" class="nav__link">Encounter mode</a>
+        <a href="browse.html" class="nav__link" aria-current="page">Browse</a>
+        <a href="agencies.html" class="nav__link">Agencies</a>
+        <a href="search.html" class="nav__link">Search</a>
+        <a href="help.html" class="nav__link">Help</a>
+        <a href="about.html" class="nav__link">About</a>
+      </nav>
+      <div class="header__actions">
+        <button class="theme-toggle" id="themeToggle" type="button" aria-label="Switch theme" title="Light / dark / system">
+          <svg class="ticon icon-sun" width="15" height="15" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="3" stroke="currentColor" stroke-width="1.3"/><path d="M8 1.5v1.4M8 13.1v1.4M14.5 8h-1.4M2.9 8H1.5M12.4 3.6l-1 1M4.6 11.4l-1 1M12.4 12.4l-1-1M4.6 4.6l-1-1" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg>
+          <svg class="ticon icon-moon" width="15" height="15" viewBox="0 0 16 16" fill="none"><path d="M13.5 9A5.6 5.6 0 0 1 7 2.6 5.7 5.7 0 1 0 8.9 14 5.7 5.7 0 0 1 13.5 9Z" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"/></svg>
+          <svg class="ticon icon-sys" width="15" height="15" viewBox="0 0 16 16" fill="none"><rect x="1.8" y="2.8" width="12.4" height="8.4" rx="1.4" stroke="currentColor" stroke-width="1.3"/><path d="M5.5 13.7h5M8 11.2v2.5" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg>
+        </button>
+        <a href="help.html" class="btn btn--primary btn--sm">Get help now</a>
+        <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="encounter.html" class="is-cta">Encounter mode — I need help now</a>
+      <a href="browse.html">Browse by situation</a>
+      <a href="agencies.html">Browse by agency</a>
+      <a href="search.html">Search</a>
+      <a href="help.html">Help directory</a>
+      <a href="about.html">About</a>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- Page hero -->
+    <section class="page-hero">
+      <div class="container">
+        <h1 class="display display--section anim">Browse by situation</h1>
+        <p class="lede anim" style="max-width:520px;margin-top:14px;animation-delay:.08s;">
+          Pick the scenario that matches what you're facing. Every guide is
+          lawyer-reviewed and linked to the law behind it.
+        </p>
+
+        <form class="search-sm anim" action="search.html" style="animation-delay:.16s;">
+          <svg width="16" height="16" viewBox="0 0 18 18" fill="none" style="color:var(--text-faint);flex-shrink:0;">
+            <circle cx="8" cy="8" r="5.25" stroke="currentColor" stroke-width="1.4"/>
+            <path d="M12.5 12.5 15.5 15.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
+          </svg>
+          <input class="search-sm__input" type="search" placeholder="Search in your own words — e.g. 'officer seized my key'">
+        </form>
+
+        <div class="chip-row chip-row--start filters anim" style="animation-delay:.24s;">
+          <a href="#" class="chip chip--active">All situations</a>
+          <a href="#" class="chip">Stop &amp; search</a>
+          <a href="#" class="chip">Documents</a>
+          <a href="#" class="chip">Payments &amp; fines</a>
+          <a href="#" class="chip">Impoundment</a>
+          <a href="#" class="chip">Arrest</a>
+          <a href="#" class="chip">Complaints</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Scenario grid -->
+    <section class="section--tight">
+      <div class="container">
+        <div class="card-grid card-grid--3">
+
+          <a href="scenario.html" class="card card--hover reveal">
+            <div class="badge-row" style="margin-bottom:14px;"><span class="badge-outline">🚓 Nigeria Police</span><span class="badge-outline badge-federal">Federal</span></div>
+            <h3 class="card__title">Can police search my car at a checkpoint?</h3>
+            <p class="card__desc">What officers may search, when a warrant matters, and how to decline politely while staying safe.</p>
+            <div class="card__foot"><span class="badge-lime">Reviewed · 2026</span><span class="card__meta">Stop &amp; search</span></div>
+          </a>
+
+          <a href="scenario.html" class="card card--hover reveal" style="transition-delay:.05s;">
+            <div class="badge-row" style="margin-bottom:14px;"><span class="badge-outline">🛣️ FRSC</span><span class="badge-outline badge-federal">Federal</span></div>
+            <h3 class="card__title">Can FRSC collect fines on the spot?</h3>
+            <p class="card__desc">When on-the-spot payment is lawful, what receipt must look like, and when to insist on process.</p>
+            <div class="card__foot"><span class="badge-lime">Reviewed · 2026</span><span class="card__meta">Payments</span></div>
+          </a>
+
+          <a href="scenario.html" class="card card--hover reveal" style="transition-delay:.1s;">
+            <div class="badge-row" style="margin-bottom:14px;"><span class="badge-outline">🚧 Lagos VIS / DVS</span><span class="badge-outline badge-state">Lagos</span></div>
+            <h3 class="card__title">When can VIO impound my vehicle?</h3>
+            <p class="card__desc">The narrow grounds for impoundment, your receipt rights, and how retrieval actually works.</p>
+            <div class="card__foot"><span class="badge-lime">Reviewed · 2026</span><span class="card__meta">Impoundment</span></div>
+          </a>
+
+          <a href="scenario.html" class="card card--hover reveal">
+            <div class="badge-row" style="margin-bottom:14px;"><span class="badge-outline">📱 Nigeria Police</span><span class="badge-outline badge-federal">Federal</span></div>
+            <h3 class="card__title">Must I unlock my phone if detained?</h3>
+            <p class="card__desc">Phones are private property. What the law requires before any search of your device.</p>
+            <div class="card__foot"><span class="badge-gray badge-warning" style="background:var(--warning-tint);border-color:var(--warn-line);color:var(--warning);">In review</span><span class="card__meta">Arrest</span></div>
+          </a>
+
+          <a href="scenario.html" class="card card--hover reveal" style="transition-delay:.05s;">
+            <div class="badge-row" style="margin-bottom:14px;"><span class="badge-outline">🚓 Nigeria Police</span><span class="badge-outline badge-federal">Federal</span></div>
+            <h3 class="card__title">Am I allowed to record the encounter?</h3>
+            <p class="card__desc">Open recording vs. discreet recording, safety first, and what to do with the footage afterwards.</p>
+            <div class="card__foot"><span class="badge-lime">Reviewed · 2026</span><span class="card__meta">Documentation</span></div>
+          </a>
+
+          <a href="scenario.html" class="card card--hover reveal" style="transition-delay:.1s;">
+            <div class="badge-row" style="margin-bottom:14px;"><span class="badge-outline">📦 Nigeria Customs</span><span class="badge-outline badge-federal">Federal</span></div>
+            <h3 class="card__title">Can customs officers stop me on the highway?</h3>
+            <p class="card__desc">Where customs jurisdiction actually begins and ends, and what to do when it doesn't apply to you.</p>
+            <div class="card__foot"><span class="badge-lime">Reviewed · 2025</span><span class="card__meta">Jurisdiction</span></div>
+          </a>
+
+          <a href="scenario.html" class="card card--hover reveal">
+            <div class="badge-row" style="margin-bottom:14px;"><span class="badge-outline">🚦 LASTMA</span><span class="badge-outline badge-state">Lagos</span></div>
+            <h3 class="card__title">Can LASTMA tow my car while I'm inside?</h3>
+            <p class="card__desc">Towing procedure, your right to move valuables, and the exact fees that are lawful.</p>
+            <div class="card__foot"><span class="badge-lime">Reviewed · 2026</span><span class="card__meta">Impoundment</span></div>
+          </a>
+
+          <a href="scenario.html" class="card card--hover reveal" style="transition-delay:.05s;">
+            <div class="badge-row" style="margin-bottom:14px;"><span class="badge-outline">📄 Multiple agencies</span><span class="badge-outline badge-federal">Federal</span></div>
+            <h3 class="card__title">Which documents must I carry while driving?</h3>
+            <p class="card__desc">Licence, insurance, ownership — what's legally required versus what's negotiated at the window.</p>
+            <div class="card__foot"><span class="badge-lime">Reviewed · 2026</span><span class="card__meta">Documents</span></div>
+          </a>
+
+          <a href="scenario.html" class="card card--hover reveal" style="transition-delay:.1s;">
+            <div class="badge-row" style="margin-bottom:14px;"><span class="badge-outline">⚖️ Any agency</span><span class="badge-outline badge-federal">Federal</span></div>
+            <h3 class="card__title">An officer demanded money. What now?</h3>
+            <p class="card__desc">Stay safe in the moment, document what happened, and exactly where to report it afterwards.</p>
+            <div class="card__foot"><span class="badge-lime">Reviewed · 2026</span><span class="card__meta">Complaints</span></div>
+          </a>
+
+          <!-- In-grid ad (336 × 280) -->
+          <div class="ad-slot ad-slot--rect-lg reveal" style="min-height:0;">
+          <span class="ad-slot__label">Advertisement</span>
+          <span class="ad-slot__hint">Ad space — supports the free guide</span>
+          <span class="ad-slot__size">336 × 280 / in-grid</span>
+        </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="section--tight">
+      <div class="container">
+        <div class="ad-slot ad-slot--leaderboard reveal">
+          <span class="ad-slot__label">Advertisement</span>
+          <span class="ad-slot__hint">Ad space — supports the free guide</span>
+          <span class="ad-slot__size">970 × 90 / responsive</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Recovery CTA -->
+    <section class="section--tight">
+      <div class="container">
+        <div class="callout callout--tint reveal" style="justify-content:space-between;flex-wrap:wrap;">
+          <div style="display:flex;align-items:center;gap:16px;flex-wrap:wrap;">
+            <strong style="font-size:1rem;">Can't find your exact situation?</strong>
+            <span>Try your own words — the search understands plain language.</span>
+          </div>
+          <a href="search.html" class="btn btn--primary btn--sm">Search the guide →</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div>
+          <a class="brand brand--footer" href="index.html">
+            <svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true">
+              <rect width="30" height="30" rx="8" fill="#2c3a1c"/>
+              <rect x="13.4" y="6.5" width="3.2" height="10.5" rx="1.6" fill="#c1ff72"/>
+              <circle cx="15" cy="21.4" r="1.9" fill="#c1ff72"/>
+            </svg>
+            <span class="brand__text">KnowYourRights NG</span>
+          </a>
+          <p class="footer__desc">Free, lawyer-reviewed guidance for roadside and related enforcement encounters in Nigeria. Sources-linked, safety-first, always free.</p>
+          <p class="footer__quote">"Not legal advice — accurate, reviewed information."</p>
+        </div>
+        <div class="footer__cols">
+          <div class="footer__col">
+            <h4>Guide</h4>
+            <ul>
+              <li><a href="encounter.html">Encounter mode</a></li>
+              <li><a href="browse.html">Browse situations</a></li>
+              <li><a href="agencies.html">By agency</a></li>
+              <li><a href="search.html">Search</a></li>
+            </ul>
+          </div>
+          <div class="footer__col">
+            <h4>Support</h4>
+            <ul>
+              <li><a href="help.html">Help directory</a></li>
+              <li><a href="scenario.html#feedback">Flag an issue</a></li>
+              <li><a href="about.html">How we review</a></li>
+              <li><a href="#">Corrections<span class="footer__soon">SOON</span></a></li>
+            </ul>
+          </div>
+          <div class="footer__col">
+            <h4>Trust</h4>
+            <ul>
+              <li><a href="about.html">Scope &amp; limitations</a></li>
+              <li><a href="about.html">Privacy</a></li>
+              <li><a href="about.html#disclaimer">Legal disclaimer</a></li>
+              <li><a href="#">Pidgin version<span class="footer__soon">SOON</span></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <div class="footer__socials">
+          <a href="#" class="social-dot" aria-label="X">
+            <svg width="15" height="15" viewBox="0 0 16 16" fill="currentColor"><path d="M9.5 6.9 15 .5h-1.6L8.7 5.9 5 .5H.7l5.8 8.2L.7 15.5h1.6l5.1-5.8 4 5.8h4.3L9.5 6.9Z"/></svg>
+          </a>
+          <a href="#" class="social-dot" aria-label="GitHub">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M8 .5a7.5 7.5 0 0 0-2.37 14.62c.37.07.5-.16.5-.36v-1.27c-2.08.45-2.52-.9-2.52-.9-.34-.87-.83-1.1-.83-1.1-.68-.46.05-.45.05-.45.75.05 1.14.77 1.14.77.67 1.15 1.75.82 2.18.63.07-.49.26-.82.48-1.01-1.67-.19-3.42-.83-3.42-3.71 0-.82.29-1.49.77-2.01-.08-.19-.34-.96.07-2 0 0 .63-.2 2.06.77a7.2 7.2 0 0 1 3.76 0c1.43-.97 2.06-.77 2.06-.77.41 1.04.15 1.81.07 2 .48.52.77 1.19.77 2.01 0 2.89-1.76 3.52-3.43 3.7.27.23.5.69.5 1.39V14.8c0 .2.14.44.51.36A7.5 7.5 0 0 0 8 .5Z"/></svg>
+          </a>
+          <a href="#" class="social-dot" aria-label="Instagram">
+            <svg width="15" height="15" viewBox="0 0 16 16" fill="none"><rect x="1.5" y="1.5" width="13" height="13" rx="4" stroke="currentColor" stroke-width="1.3"/><circle cx="8" cy="8" r="3" stroke="currentColor" stroke-width="1.3"/><circle cx="12" cy="4" r="0.9" fill="currentColor"/></svg>
+          </a>
+        </div>
+        <div class="footer__legal">
+          © 2026 KnowYourRights NG. All rights reserved.&nbsp;&nbsp;·&nbsp;&nbsp;Free &amp; anonymous — no accounts, no tracking.
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Dismissible mobile anchor ad (320 × 100) -->
+  <div class="ad-anchor" role="complementary" aria-label="Advertisement">
+    <button class="ad-anchor__close" type="button" aria-label="Close ad" onclick="this.parentElement.remove()">×</button>
+    <div class="ad-slot ad-slot--large-mobile">
+      <span class="ad-slot__label">Ad</span>
+      <span class="ad-slot__hint">320 × 100 — large mobile banner</span>
+    </div>
+  </div>
+
+  <script>
+    // Theme: cycles light -> dark -> system, persisted
+    const themeBtn = document.getElementById('themeToggle');
+    const order = ['light', 'dark', 'system'];
+    themeBtn.addEventListener('click', () => {
+      const cur = document.documentElement.dataset.theme || 'system';
+      const next = order[(order.indexOf(cur) + 1) % order.length];
+      document.documentElement.dataset.theme = next;
+      themeBtn.setAttribute('aria-label', 'Theme: ' + next);
+      try { localStorage.setItem('kyr-theme', next); } catch (e) {}
+    });
+
+    // Mobile menu
+    const navToggle = document.getElementById('navToggle');
+    const mobileMenu = document.getElementById('mobileMenu');
+    navToggle.addEventListener('click', () => {
+      const open = mobileMenu.classList.toggle('is-open');
+      navToggle.setAttribute('aria-expanded', open);
+    });
+
+    // Scroll reveal
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach((e) => {
+        if (e.isIntersecting) { e.target.classList.add('is-in'); io.unobserve(e.target); }
+      });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.reveal').forEach((el) => io.observe(el));
+  </script>
+</body>
+</html>

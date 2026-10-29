@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Search — KnowYourRights NG</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="theme.css">
+  <script defer src="theme-toggle.js"></script>
+</head>
+<body data-theme="system">
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand">
+        <svg class="brand-mark" width="36" height="36" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M2 17L12 22L22 17" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M2 12L12 17L22 12" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <div class="brand-name">
+          <span class="brand-main">KnowYourRights</span>
+          <span class="brand-suffix">NG</span>
+        </div>
+      </a>
+      <nav class="site-nav" aria-label="Main navigation">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="browse.html" class="nav-link">Browse</a>
+        <a href="search.html" class="nav-link nav-link--active">Search</a>
+        <a href="help.html" class="nav-link">Help</a>
+        <a href="about.html" class="nav-link">About</a>
+      </nav>
+      <div class="header-actions">
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme" title="Toggle theme">
+          <svg id="theme-icon" viewBox="0 0 24 24"><path d="M12 3c4.97 0 9 4.03 9 9s-4.03 9-9 9-9-4.03-9-9 4.03-9 9-9z"/><circle cx="12" cy="12" r="3"/></svg>
+        </button>
+        <a href="encounter.html" class="btn btn--primary">I need help now</a>
+      </div>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Open menu" aria-expanded="false">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" style="padding: var(--space-16) 0 var(--space-12); text-align: left;">
+      <div class="container hero-inner" style="max-width: none; text-align: left; margin: 0;">
+        <div class="hero-badge" style="margin-bottom: var(--space-6); display: inline-block;">
+          Search scenarios
+        </div>
+        <h1 class="hero-title" style="font-size: clamp(2rem, 4vw + 1rem, 3rem); margin-bottom: var(--space-4); text-align: left;">Search for guidance</h1>
+        <p class="hero-desc" style="margin-bottom: var(--space-8); text-align: left; max-width: none; margin-left: 0; margin-right: 0;">Type a question, situation, or agency name. Results show matching scenarios with key details.</p>
+        <div style="max-width: 640px;">
+          <form class="search-form" style="display: flex; gap: var(--space-3);">
+            <label for="search-input" class="visually-hidden">Search scenarios</label>
+            <input type="search" id="search-input" class="search-input" placeholder="e.g., police want my phone, FRSC stopped me, asked for money" style="flex: 1; padding: var(--space-4) var(--space-5); font-family: var(--font-body); font-size: 1rem; background: var(--color-surface); color: var(--color-text-primary); border: 2px solid var(--color-border); border-radius: var(--radius-xl); outline: none; transition: border-color 0.2s ease;">
+            <button type="submit" class="btn btn--primary btn--large" style="white-space: nowrap;">Search</button>
+          </form>
+          <p style="margin-top: var(--space-4); font-size: 0.875rem; color: var(--color-text-tertiary);">Try: &ldquo;officer phone&rdquo;, &ldquo;FRSC particulars&rdquo;, &ldquo;bribe&rdquo;, &ldquo;impounded&rdquo;</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="recent" aria-label="Popular searches" style="padding: var(--space-16) 0;">
+      <div class="container">
+        <div class="section-head">
+          <h2 class="section-title">Popular searches</h2>
+          <p class="section-desc">Common questions other users are looking for.</p>
+        </div>
+        <div class="category-grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
+          <a href="scenario.html?id=phone" class="category-card">
+            <div class="category-icon">&#128241;</div>
+            <h3>Phone search</h3>
+            <p>Can police search your phone without a warrant?</p>
+          </a>
+          <a href="scenario.html?id=bribe" class="category-card">
+            <div class="category-icon">&#128176;</div>
+            <h3>Asked for money</h3>
+            <p>How to handle bribe demands safely.</p>
+          </a>
+          <a href="scenario.html?id=frsc" class="category-card">
+            <div class="category-icon">&#128218;</div>
+            <h3>FRSC particulars</h3>
+            <p>Which documents FRSC can legally demand.</p>
+          </a>
+          <a href="scenario.html?id=impound" class="category-card">
+            <div class="category-icon">&#128662;</div>
+            <h3>Vehicle impounded</h3>
+            <p>Your rights and recovery process.</p>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <svg class="brand-mark" width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M2 17L12 22L22 17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M2 12L12 17L22 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <div class="brand-name">
+          <span class="brand-main">KnowYourRights</span>
+          <span class="brand-suffix">NG</span>
+        </div>
+        <p class="footer-tagline">Free, source-backed guidance for Nigerian roadside encounters.</p>
+      </div>
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <div class="footer-col">
+          <h3 class="footer-col-title">Guide</h3>
+          <a href="index.html" class="footer-link">Home</a>
+          <a href="browse.html" class="footer-link">Browse scenarios</a>
+          <a href="encounter.html" class="footer-link">Immediate help</a>
+        </div>
+        <div class="footer-col">
+          <h3 class="footer-col-title">Support</h3>
+          <a href="help.html" class="footer-link">Complaint channels</a>
+          <a href="#" class="footer-link">Legal aid</a>
+        </div>
+        <div class="footer-col">
+          <h3 class="footer-col-title">About</h3>
+          <a href="about.html" class="footer-link">Scope & review</a>
+          <a href="#" class="footer-link">Limitations</a>
+        </div>
+        <div class="footer-col">
+          <h3 class="footer-col-title">Legal</h3>
+          <a href="#" class="footer-link">Privacy Policy</a>
+          <a href="#" class="footer-link">Terms of Service</a>
+        </div>
+      </nav>
+      <div class="footer-legal">
+        <p class="footer-copy">&copy; 2026 KnowYourRights NG. All rights reserved.</p>
+        <p class="footer-disclaimer">KnowYourRights NG provides general legal information, not legal advice or representation. Source-backed &middot; Safety-first &middot; Free to use.</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
