@@ -216,8 +216,7 @@ img, svg { display: block; }
 }
 
 .announce__link {
-  margin-left: auto;
-  color: var(--lime);
+  margin-left: auto;  color: var(--lime);
   font-weight: 600;
   text-decoration: none;
   white-space: nowrap;
@@ -227,6 +226,100 @@ img, svg { display: block; }
 
 @media (max-width: 720px) {
   .announce__meta { display: none; }
+}
+
+/* ---------- Offline bar ---------- */
+.offline-bar {
+  background: var(--warning-tint);
+  border-bottom: 1px solid var(--warn-line);
+  color: var(--ink);
+  font-size: 0.84rem;
+}
+.offline-bar__inner {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  min-height: 44px;
+  flex-wrap: wrap;
+}
+.offline-bar__label {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--warning);
+  white-space: nowrap;
+}
+.offline-bar__text {
+  color: var(--ink);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  min-width: 0;
+}
+.offline-bar__link {
+  margin-left: auto;
+  color: var(--forest);
+  font-weight: 600;
+  text-decoration: none;
+  white-space: nowrap;
+}
+.offline-bar__link:hover { text-decoration: underline; }
+@media (max-width: 720px) {
+  .offline-bar__text {
+    white-space: normal;
+    overflow: visible;
+    text-overflow: initial;
+  }
+}
+
+/* ---------- PWA toasts ---------- */
+.pwa-toast {
+  position: fixed;
+  left: 50%;
+  bottom: 20px;
+  transform: translateX(-50%);
+  z-index: 200;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: 0 12px 30px -10px rgba(21,48,10,0.25);
+  font-size: 0.88rem;
+}
+.pwa-toast__inner {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: 12px 16px;
+  flex-wrap: wrap;
+}
+.pwa-toast__label {
+  font-weight: 700;
+  color: var(--forest);
+  white-space: nowrap;
+}
+.pwa-toast__text {
+  color: var(--text-muted);
+  white-space: nowrap;
+}
+.pwa-toast__actions {
+  margin-left: auto;
+  display: flex;
+  gap: 8px;
+}
+.pwa-toast--ready .pwa-toast__label { color: var(--success); }
+.pwa-toast--update { border-color: var(--warn-line); background: var(--warning-tint); }
+.pwa-toast--update .pwa-toast__label { color: var(--warning); }
+
+@media (max-width: 520px) {
+  .pwa-toast {
+    left: 16px;
+    right: 16px;
+    transform: none;
+    bottom: 12px;
+  }
+  .pwa-toast__inner { flex-wrap: wrap; }
+  .pwa-toast__actions { width: 100%; justify-content: flex-end; }
 }
 
 /* ---------- Header ---------- */

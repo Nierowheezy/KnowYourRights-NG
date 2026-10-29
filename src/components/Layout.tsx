@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import { Link, NavLink, Outlet, useLocation } from "react-router-dom";
 import { getAnnounce } from "../data/announce";
 import { getTheme, nextTheme, setTheme, type Theme } from "../lib/theme";
+import OfflineBar from "./OfflineBar";
+import PwaStatus from "./PwaStatus";
 
 const NAV = [
   { to: "/encounter", label: "Encounter mode" },
@@ -26,6 +28,17 @@ export default function Layout() {
 
   /* Scroll to top + rebuild the scroll-reveal observer on every route change */
   useEffect(() => {
+    if (location.hash) {
+      // give the DOM a tick to render the new route before scrolling
+      const id = location.hash.slice(1);
+      const el = document.getElementById(id);
+      if (el) {
+        setTimeout(() => {
+          el.scrollIntoView({ behavior: "smooth", block: "start" });
+        }, 50);
+        return;
+      }
+    }
     window.scrollTo(0, 0);
     const io = new IntersectionObserver((entries) => {
       entries.forEach((e) => {
@@ -34,7 +47,7 @@ export default function Layout() {
     }, { threshold: 0.12 });
     document.querySelectorAll(".reveal").forEach((el) => io.observe(el));
     return () => io.disconnect();
-  }, [location.pathname]);
+  }, [location.pathname, location.hash]);
 
   return (
     <>
@@ -53,6 +66,10 @@ export default function Layout() {
           </div>
         </div>
       )}
+
+      <OfflineBar />
+
+      <PwaStatus />
 
       <header className="header">
         <div className="header__pill">

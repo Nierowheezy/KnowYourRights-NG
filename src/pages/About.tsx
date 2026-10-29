@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import "../styles/about.css";
 import { PageHero, Breadcrumb, Reveal } from "../components/ui";
 import { listedScenarios, sourceVerifiedCount } from "../lib/content";
+import { RELEASE_LABEL } from "../lib/release";
 
 const AWAITING_CHECK = listedScenarios.length - sourceVerifiedCount;
 const LATEST_REVIEW = listedScenarios
@@ -16,6 +17,7 @@ const LATEST_REVIEW_LABEL = LATEST_REVIEW
 const TOC = [
   { id: "scope", label: "Scope & honesty" },
   { id: "review", label: "How we review" },
+  { id: "offline", label: "Offline & updates" },
   { id: "privacy", label: "Privacy" },
   { id: "corrections", label: "Corrections" },
   { id: "disclaimer", label: "Legal disclaimer" },
@@ -99,6 +101,37 @@ export default function About() {
                     <p>{step.desc}</p>
                   </Reveal>
                 ))}
+              </div>
+            </section>
+
+            {/* Offline */}
+            <section className="about-section" id="offline">
+              <Reveal as="h2">Offline &amp; updates</Reveal>
+              <Reveal as="p" className="sub">
+                The app ships as a single release. When you first visit, the service worker saves a copy for offline reading. The release is built {RELEASE_LABEL}.
+              </Reveal>
+
+              <div className="split-cards">
+                <div className="split-card reveal">
+                  <h3>What is saved</h3>
+                  <ul className="split-list">
+                    <li><span className="ico ico--ok">✓</span><span>The app shell and all published guides for the current release.</span></li>
+                    <li><span className="ico ico--ok">✓</span><span>No accounts or personal data are stored.</span></li>
+                    <li><span className="ico ico--ok">✓</span><span>Reading works without a network, but source links open only when online.</span></li>
+                  </ul>
+                </div>
+                <div className="split-card split-card--no reveal" style={{ transitionDelay: ".08s" }}>
+                  <h3>What updates mean</h3>
+                  <ul className="split-list">
+                    <li><span className="ico ico--no">✗</span><span>Updates are not silent. You are asked before a new release replaces legal content.</span></li>
+                    <li><span className="ico ico--no">✗</span><span>“Source check” is when a person compared a guide with the official text. The release date is when this copy was built. They are different.</span></li>
+                    <li><span className="ico ico--no">✗</span><span>The browser’s online/offline signal can be wrong on captive portals or flaky networks.</span></li>
+                  </ul>
+                </div>
+              </div>
+
+              <div className="callout callout--tint reveal" style={{ marginTop: 16 }}>
+                <strong>Neither date guarantees today’s law.</strong> Laws and phone numbers can change after a source check, and after a release is built. Use the release date to know which copy you are reading, and the source check date to know when the guidance was last compared with the official text.
               </div>
             </section>
 

@@ -3,6 +3,8 @@ import { Link, useParams } from "react-router-dom";
 import "../styles/scenario.css";
 import { AdSlot } from "../components/ui";
 import { agencies as agencyList, CATEGORY_LABEL, getReviewBadge, getScenarioById, getSourcesForScenario, isSourceVerified } from "../lib/content";
+import { useOnlineStatus } from "../hooks/useOnlineStatus";
+import { RELEASE_LABEL } from "../lib/release";
 import type { Scenario } from "../lib/schema";
 import NotFound from "./NotFound";
 
@@ -289,6 +291,18 @@ export default function Scenario() {
               <div className="review-row"><span className="k">Source check</span><span className="v">{formatDate(scenario.lastReviewed) || "—"}</span></div>
               <div className="review-row"><span className="k">Next check</span><span className="v">{formatDate(scenario.nextReview) || "—"}</span></div>
               <div className="review-row"><span className="k">Material changes</span><span className="v">{scenario.changeHistory.length} logged</span></div>
+              {(() => {
+                const online = useOnlineStatus();
+                if (online) return null;
+                return (
+                  <>
+                    <div className="review-row"><span className="k">Offline copy</span><span className="v">Release built {RELEASE_LABEL}</span></div>
+                    <p className="muted" style={{ fontSize: "0.75rem", marginTop: 8 }}>
+                      Source check is when the law was verified; the release date is when this copy was built.
+                    </p>
+                  </>
+                );
+              })()}
               <a href="#change-history" className="link-green" style={{ fontSize: "0.82rem", display: "inline-block", marginTop: 10 }}>See change history →</a>
             </div>
 

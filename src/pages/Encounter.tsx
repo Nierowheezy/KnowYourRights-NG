@@ -89,12 +89,11 @@ export default function Encounter() {
             Stay calm. <span className="mark-lime" style={{ borderRadius: 10 }}>You have rights.</span>
           </h1>
           <p className="lede anim" style={{ maxWidth: 560, marginTop: 14, animationDelay: ".12s" }}>
-            Six short steps for the moment you're stopped. Read them now —
-            or save this page for offline use before your next trip.
+            Six short steps for the moment you're stopped. Read them now — saves automatically after first visit.
           </p>
           <div className="badge-row anim" style={{ marginTop: 20, flexWrap: "wrap", animationDelay: ".18s" }}>
             <span className="badge-lime">✓ Reviewed · Oct 2026</span>
-            <span className="badge-outline">⤓ Save for offline</span>
+            <span className="badge-outline">Available offline after first visit</span>
             <span className="badge-outline">⎙ Print</span>
             <span className="badge-outline">🔗 Share</span>
           </div>

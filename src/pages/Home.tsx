@@ -177,13 +177,13 @@ export default function Home() {
             </Link>
 
             {/* Offline */}
-            <Link to="/about" className="bento-card reveal" style={{ transitionDelay: ".06s" }}>
+            <Link to="/about#offline" className="bento-card reveal" style={{ transitionDelay: ".06s" }}>
               <span className="bento-card__icon">
                 <IconCloudOff />
               </span>
               <h3 className="bento-card__title">Offline first</h3>
-              <p className="bento-card__desc">Save key scenarios before you travel. Zero bars at a checkpoint? The guidance still opens.</p>
-              <div className="mini-statute"><span style={{ fontWeight: 600 }}>{listedScenarios.length} scenarios cached</span><span className="badge-lime">✓ Ready</span></div>
+              <p className="bento-card__desc">Works after the first visit. No bars at a checkpoint? The current release still opens.</p>
+              <div className="mini-statute"><span style={{ fontWeight: 600 }}>Available after first visit</span><span className="badge-lime">Read how →</span></div>
               <span className="bento-card__cta" style={{ marginTop: 14 }}>How offline works →</span>
             </Link>
 
