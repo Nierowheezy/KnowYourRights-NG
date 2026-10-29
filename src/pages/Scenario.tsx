@@ -298,6 +298,9 @@ export default function Scenario() {
               <div className="review-row"><span className="k">Source check</span><span className="v">{formatDate(scenario.lastReviewed) || "—"}</span></div>
               <div className="review-row"><span className="k">Next check</span><span className="v">{formatDate(scenario.nextReview) || "—"}</span></div>
               <div className="review-row"><span className="k">Material changes</span><span className="v">{scenario.changeHistory.length} logged</span></div>
+              {scenario.changeHistory.length > 0 && (
+                <div className="review-row"><span className="k">Latest change</span><span className="v">{formatDate(scenario.changeHistory[scenario.changeHistory.length - 1].date)} · {scenario.changeHistory[scenario.changeHistory.length - 1].note.slice(0, 80)}{scenario.changeHistory[scenario.changeHistory.length - 1].note.length > 80 ? "…" : ""}</span></div>
+              )}
               {(() => {
                 const online = useOnlineStatus();
                 if (online) return null;

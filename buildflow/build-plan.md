@@ -42,7 +42,7 @@ If your first pass is just rough bullets, that is okay. Run `/overview` after fi
 - [x] 14. **Offline freshness indicators** - display cached content status and review dates
 - [x] 15. **Accessibility and low-bandwidth support** - provide readable layouts, keyboard navigation, accessible contrast, and lightweight loading
 - [x] 16. **Privacy-preserving feedback** - let users flag missing, confusing, or outdated guidance without collecting unnecessary personal data
-- [ ] 17. **Content history and corrections** - track material legal content changes and support corrections and rollback
+- [x] 17. **Content history and corrections** - track material legal content changes and support corrections and rollback
 - [ ] 18. **Usability testing** - validate search success, comprehension, navigation, and safety of guidance with target users
 - [ ] 19. **Zero-cost production deployment** - publish the reviewed static application on a suitable free hosting tier with HTTPS, build validation, content versioning, and deployment recovery; use the provider subdomain initially and introduce no paid service without explicit approval
 
