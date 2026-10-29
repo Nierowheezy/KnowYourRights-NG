@@ -6,9 +6,9 @@ import {
   agencies,
   formatReviewDate,
   getScenarioById,
-  isLawyerReviewed,
-  lawyerReviewedCount,
+  isSourceVerified,
   listedScenarios,
+  sourceVerifiedCount,
   sources,
 } from "../lib/content";
 
@@ -21,13 +21,13 @@ export interface AnnounceItem {
 }
 
 const VERIFIED_SOURCES = sources.filter((s) => s.currentStatusVerified).length;
-const AWAITING_REVIEW = listedScenarios.length - lawyerReviewedCount;
+const AWAITING_CHECK = listedScenarios.length - sourceVerifiedCount;
 
 export const ANNOUNCE: Record<string, AnnounceItem | null> = {
   "/": {
     label: "Live",
     title: `${listedScenarios.length} statute-linked guides`,
-    meta: `· ${lawyerReviewedCount} lawyer-reviewed · ${AWAITING_REVIEW} awaiting sign-off`,
+    meta: `· ${sourceVerifiedCount} source-verified · ${AWAITING_CHECK} awaiting source check`,
     link: "Browse →",
     href: "/browse",
   },
@@ -39,9 +39,9 @@ export const ANNOUNCE: Record<string, AnnounceItem | null> = {
   },
   "/browse": {
     label: "Review status",
-    title: "Every guide shows its lawyer-review state",
-    meta: `· ${lawyerReviewedCount} of ${listedScenarios.length} signed off`,
-    link: "How we review →",
+    title: "Every guide shows its source-check state",
+    meta: `· ${sourceVerifiedCount} of ${listedScenarios.length} checked against official text`,
+    link: "How we verify →",
     href: "/about#review",
   },
   "/agencies": {
@@ -68,7 +68,7 @@ export const ANNOUNCE: Record<string, AnnounceItem | null> = {
   "/about": {
     label: "Content status",
     title: `${listedScenarios.length} scenarios · ${VERIFIED_SOURCES}/${sources.length} source texts verified`,
-    meta: `· ${lawyerReviewedCount} lawyer-reviewed · ${AWAITING_REVIEW} awaiting sign-off`,
+    meta: `· ${sourceVerifiedCount} source-verified · ${AWAITING_CHECK} awaiting source check`,
     link: "See corrections →",
     href: "/about#corrections",
   },
@@ -79,21 +79,21 @@ function scenarioAnnounce(pathname: string): AnnounceItem | null {
   const scenario = id ? getScenarioById(id) : undefined;
   if (!scenario) return null;
 
-  if (isLawyerReviewed(scenario)) {
+  if (isSourceVerified(scenario)) {
     return {
-      label: "Lawyer reviewed",
-      title: `Signed off ${formatReviewDate(scenario.lastReviewed)}`,
-      meta: `· ${scenario.reviewer ?? "Named reviewer"}`,
-      link: "How we review →",
+      label: "Source-verified",
+      title: `Checked ${formatReviewDate(scenario.lastReviewed)}`,
+      meta: `· ${scenario.reviewer ?? "Content team"}`,
+      link: "How we verify →",
       href: "/about#review",
     };
   }
 
   return {
-    label: "In review",
-    title: "Awaiting Nigerian lawyer sign-off",
-    meta: `· Sources linked · last checked ${formatReviewDate(scenario.lastReviewed)}`,
-    link: "How we review →",
+    label: "Source check pending",
+    title: "Not yet checked against the official text",
+    meta: `· Sources linked · last touched ${formatReviewDate(scenario.lastReviewed)}`,
+    link: "How we verify →",
     href: "/about#review",
   };
 }

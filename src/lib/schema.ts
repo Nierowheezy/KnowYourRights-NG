@@ -52,6 +52,7 @@ export const ScenarioSchema = z.object({
   jurisdiction: Jurisdiction,
   agency: z.array(z.string()).default([]),
   status: ScenarioStatus.default("draft"),
+  /** Source-check owner. Never a lawyer claim: the model records source verification, not legal sign-off. */
   reviewer: z.string().optional(),
   lastReviewed: z.string().optional(),
   nextReview: z.string().optional(),

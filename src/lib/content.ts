@@ -16,9 +16,6 @@ export const CATEGORY_LABEL: Record<Scenario["category"], string> = {
   other: "Other",
 };
 
-/** Reviewers that indicate internal/pre-publication review rather than legal sign-off. */
-const PRE_REVIEW_REVIEWER = /pre-review|content team|pending|unreviewed|draft/i;
-
 export const sources: Source[] = (sourcesJson as unknown[]).map((s) => SourceSchema.parse(s));
 export const agencies: Agency[] = (agenciesJson as unknown[]).map((a) => AgencySchema.parse(a));
 export const supportChannels: SupportChannel[] = (supportJson as unknown[]).map((c) => SupportChannelSchema.parse(c));
@@ -42,17 +39,16 @@ export const allScenarios: Scenario[] = Object.values(scenarioModules)
   .map((s) => ScenarioSchema.parse(s));
 
 /**
- * A scenario is only lawyer-reviewed when it is approved *and* the named reviewer
- * is a legal reviewer. Internal "Content team (pre-review)" drafts do not count.
+ * A scenario is source-verified when it is published *and* a verification owner
+ * and check date are recorded. The check is against the official text on the
+ * issuing agency's portal, not a legal sign-off.
  */
-export function isLawyerReviewed(s: Scenario): boolean {
+export function isSourceVerified(s: Scenario): boolean {
   if (s.status !== "approved") return false;
-  const reviewer = s.reviewer?.trim();
-  if (!reviewer) return false;
-  return !PRE_REVIEW_REVIEWER.test(reviewer);
+  return Boolean(s.reviewer?.trim() && s.lastReviewed);
 }
 
-export const lawyerReviewedCount = listedScenarios.filter(isLawyerReviewed).length;
+export const sourceVerifiedCount = listedScenarios.filter(isSourceVerified).length;
 
 export function getScenarioById(id: string) {
   return allScenarios.find((s) => s.id === id);
@@ -125,9 +121,9 @@ export interface ReviewBadge {
 
 /** Single source of truth for how a scenario's review state is presented. */
 export function getReviewBadge(s: Scenario): ReviewBadge {
-  if (isLawyerReviewed(s)) return { label: "✓ Lawyer reviewed", tone: "ok" };
+  if (isSourceVerified(s)) return { label: "✓ Source-verified", tone: "ok" };
   if (s.status === "under-review") return { label: "In review", tone: "warn" };
-  if (s.status === "approved") return { label: "Awaiting lawyer review", tone: "warn" };
+  if (s.status === "approved") return { label: "Source check pending", tone: "warn" };
   if (s.status === "needs-revision") return { label: "Needs revision", tone: "warn" };
   return { label: "Draft", tone: "muted" };
 }

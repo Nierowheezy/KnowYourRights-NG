@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
 import "../styles/scenario.css";
 import { AdSlot } from "../components/ui";
-import { agencies as agencyList, CATEGORY_LABEL, getReviewBadge, getScenarioById, getSourcesForScenario, isLawyerReviewed } from "../lib/content";
+import { agencies as agencyList, CATEGORY_LABEL, getReviewBadge, getScenarioById, getSourcesForScenario, isSourceVerified } from "../lib/content";
 import type { Scenario } from "../lib/schema";
 import NotFound from "./NotFound";
 
@@ -127,7 +127,7 @@ export default function Scenario() {
   const related = scenario.relatedScenarios
     .map((rid) => getScenarioById(rid))
     .filter((s): s is Scenario => Boolean(s));
-  const reviewed = isLawyerReviewed(scenario);
+  const verified = isSourceVerified(scenario);
   const reviewBadge = getReviewBadge(scenario);
   const crumbLabel = CATEGORY_LABEL[scenario.category];
 
@@ -152,7 +152,7 @@ export default function Scenario() {
                 {scenario.jurisdiction === "federal" ? "Federal" : "State"}
               </span>
               <span className="badge-outline">{crumbLabel}</span>
-              {reviewed ? (
+              {verified ? (
                 <span className="badge-lime">{reviewBadge.label} · {formatDate(scenario.lastReviewed).split(" ").pop()}</span>
               ) : (
                 <span className="badge-gray" style={{ background: "var(--warning-tint)", borderColor: "var(--warn-line)", color: "var(--warning)" }}>{reviewBadge.label}</span>
@@ -233,10 +233,10 @@ export default function Scenario() {
                       <h3 className="card__title">{rel.title}</h3>
                       <p className="card__desc">{rel.shortAnswer.slice(0, 80)}…</p>
                       <div className="card__foot">
-                        {isLawyerReviewed(rel) ? (
+                        {isSourceVerified(rel) ? (
                           <span className="badge-lime">{formatDate(rel.lastReviewed).split(" ").pop()}</span>
                         ) : (
-                          <span className="badge-gray">In review</span>
+                          <span className="badge-gray">Source check pending</span>
                         )}
                         <span className="card__arrow">→</span>
                       </div>
@@ -284,10 +284,10 @@ export default function Scenario() {
                 <svg width="15" height="15" viewBox="0 0 18 18" fill="none" style={{ color: "var(--forest)" }}><circle cx="9" cy="9" r="7.5" stroke="currentColor" strokeWidth="1.3"/><path d="M9 5.5V9l2.5 1.5" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round"/></svg>
                 Review trail
               </h4>
-              <div className="review-row"><span className="k">Status</span><span className="v" style={reviewed ? { color: "var(--success)" } : { color: "var(--warning)" }}>{reviewed ? "✓ Lawyer reviewed" : reviewBadge.label}</span></div>
-              <div className="review-row"><span className="k">Reviewed by</span><span className="v">{scenario.reviewer ?? "—"}</span></div>
-              <div className="review-row"><span className="k">Last reviewed</span><span className="v">{formatDate(scenario.lastReviewed) || "—"}</span></div>
-              <div className="review-row"><span className="k">Next review</span><span className="v">{formatDate(scenario.nextReview) || "—"}</span></div>
+              <div className="review-row"><span className="k">Status</span><span className="v" style={verified ? { color: "var(--success)" } : { color: "var(--warning)" }}>{reviewBadge.label}</span></div>
+              <div className="review-row"><span className="k">Verified by</span><span className="v">{scenario.reviewer ?? "—"}</span></div>
+              <div className="review-row"><span className="k">Source check</span><span className="v">{formatDate(scenario.lastReviewed) || "—"}</span></div>
+              <div className="review-row"><span className="k">Next check</span><span className="v">{formatDate(scenario.nextReview) || "—"}</span></div>
               <div className="review-row"><span className="k">Material changes</span><span className="v">{scenario.changeHistory.length} logged</span></div>
               <a href="#change-history" className="link-green" style={{ fontSize: "0.82rem", display: "inline-block", marginTop: 10 }}>See change history →</a>
             </div>

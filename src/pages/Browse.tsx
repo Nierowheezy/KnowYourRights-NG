@@ -117,7 +117,8 @@ export default function Browse() {
           <p className="lede anim" style={{ maxWidth: 560, marginTop: 14, animationDelay: ".08s" }}>
             Pick the scenario that matches what you're facing. Every guide links to the
             primary law behind it. Entries marked <strong>In review</strong> or{" "}
-            <strong>Awaiting lawyer review</strong> have not yet been signed off by a Nigerian lawyer.
+            <strong>Source check pending</strong> have not yet been checked against the
+            official text on the issuing agency's portal.
           </p>
 
           <form className="search-sm anim" style={{ animationDelay: ".16s" }} onSubmit={(e) => e.preventDefault()}>

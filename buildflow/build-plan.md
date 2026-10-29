@@ -28,8 +28,8 @@ If your first pass is just rough bullets, that is okay. Run `/overview` after fi
 
 - [x] 1. **Legal content model** - define structured records for scenarios, legal sources, jurisdiction, review status, exceptions, and review dates
 - [x] 2. **Legal source register** - catalogue verified legislation, regulations, official guidance, and state-specific legal sources
-- [x] 3. **Scenario review workflow** - establish drafting, lawyer review, approval, publication, correction, and retirement of legal content
-- [ ] 4. **Initial scenario library** - publish lawyer-reviewed roadside encounter guides with source-backed explanations and safety-first next steps
+- [x] 3. **Scenario review workflow** - establish drafting, source verification, approval, publication, correction, and retirement of legal content
+- [ ] 4. **Initial scenario library** - publish source-verified roadside encounter guides with source-backed explanations and safety-first next steps
 - [x] 5. **Application shell** - build responsive navigation, homepage, scenario categories, and immediate guidance entry point
 - [x] 6. **Scenario detail pages** - display concise answers, legal explanations, exceptions, practical options, source links, and review dates
 - [x] 7. **Situation-based search** - search scenario titles, keywords, agencies, and plain-language questions
@@ -49,7 +49,7 @@ If your first pass is just rough bullets, that is okay. Run `/overview` after fi
 ## Post-MVP
 
 - [ ] 20. **Expanded agency coverage** - add more federal and state enforcement scenarios after legal verification
-- [ ] 21. **Language expansion** - provide legally reviewed Nigerian Pidgin and selected Nigerian language versions
+- [ ] 21. **Language expansion** - provide Nigerian Pidgin and selected Nigerian language versions checked against the same official sources
 - [ ] 22. **Legal freshness monitoring** - identify changes in legislation and official guidance that require scenario review
 - [ ] 23. **Search gap analysis** - use privacy-respecting aggregate feedback to identify unanswered questions
 - [ ] 24. **Expanded legal support directory** - add verified legal aid organisations and civil society resources

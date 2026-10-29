@@ -10,9 +10,9 @@ const SCEN = path.join(C, "scenarios");
 const STATUSES = new Set(["draft", "under-review", "approved", "needs-revision", "retired"]);
 const REVIEWED_STATUSES = new Set(["under-review", "approved", "needs-revision"]);
 const HISTORY_STATUSES = new Set(["under-review", "approved", "needs-revision", "retired"]);
-const PRE_REVIEW_REVIEWER = /pre-review|content team|pending|unreviewed|draft/i;
+/** Under the source-verification model, a reviewer field must not claim legal sign-off. */
+const LAWYER_CLAIM = /lawyer|barrister|solicitor|esq\.?\b|sign-?off/i;
 const DATE = /^\d{4}-\d{2}-\d{2}$/;
-
 const read = (p) => JSON.parse(fs.readFileSync(p, "utf8"));
 const sources = read(path.join(C, "sources.json"));
 const agencies = read(path.join(C, "agencies.json"));
@@ -71,13 +71,23 @@ for (const { file, data: s } of scenarios) {
     if (!isText(s.reviewNotes)) errors.push(`${file}: status=${s.status} requires reviewNotes`);
   }
 
+  if (isText(s.reviewer) && LAWYER_CLAIM.test(s.reviewer)) {
+    errors.push(`${file}: reviewer "${s.reviewer}" claims legal sign-off; use the source-check owner`);
+  }
+  if (isText(s.reviewNotes) && /lawyer review|signed off by/i.test(s.reviewNotes)) {
+    warn.push(`${file}: reviewNotes still references lawyer review`);
+  }
+
   if (s.status === "approved") {
     if (!isDate(s.nextReview)) errors.push(`${file}: status=approved requires nextReview as YYYY-MM-DD`);
     if (isDate(s.lastReviewed) && isDate(s.nextReview) && s.nextReview < s.lastReviewed) {
       errors.push(`${file}: nextReview must not be earlier than lastReviewed`);
     }
-    if (isText(s.reviewer) && PRE_REVIEW_REVIEWER.test(s.reviewer)) {
-      warn.push(`${file}: approved but reviewer is "${s.reviewer}" (awaiting lawyer sign-off)`);
+    for (const ref of s.sources || []) {
+      const src = sources.find((x) => x.id === ref.sourceId);
+      if (src && !src.currentStatusVerified) {
+        warn.push(`${file}: cites unverified source "${ref.sourceId}"`);
+      }
     }
   }
 
@@ -112,7 +122,7 @@ if (errors.length) {
   console.log("\nNo structural errors.");
 }
 if (warn.length) {
-  console.log("\nWarnings (expected until lawyer review):");
+  console.log("\nWarnings (source gaps to close):");
   warn.forEach((w) => console.log(" - " + w));
 }
 process.exit(errors.length ? 1 : 0);

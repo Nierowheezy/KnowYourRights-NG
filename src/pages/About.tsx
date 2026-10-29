@@ -1,9 +1,9 @@
 import { Link } from "react-router-dom";
 import "../styles/about.css";
 import { PageHero, Breadcrumb, Reveal } from "../components/ui";
-import { lawyerReviewedCount, listedScenarios } from "../lib/content";
+import { listedScenarios, sourceVerifiedCount } from "../lib/content";
 
-const AWAITING_REVIEW = listedScenarios.length - lawyerReviewedCount;
+const AWAITING_CHECK = listedScenarios.length - sourceVerifiedCount;
 const LATEST_REVIEW = listedScenarios
   .map((s) => s.lastReviewed)
   .filter((date): date is string => Boolean(date))
@@ -23,8 +23,8 @@ const TOC = [
 
 const PROCESS_STEPS = [
   { n: 1, title: "Drafted from sources", desc: "Researchers read the Act, regulation or official guidance and draft the scenario in plain language." },
-  { n: 2, title: "Legal check", desc: "A Nigerian lawyer checks every claim, the exceptions, and the practical options against the cited sources." },
-  { n: 3, title: "Sign-off & dated", desc: "Only scenarios signed off by a named Nigerian lawyer are labelled lawyer-reviewed. Entries awaiting sign-off say so openly." },
+  { n: 2, title: "Checked against the official text", desc: "Every citation is compared with the document published on the issuing agency's portal, and section numbers are corrected when the text disagrees." },
+  { n: 3, title: "Dated & labelled", desc: "Each guide shows when it was checked and who checked it. A guide is marked source-verified only after that check happens." },
   { n: 4, title: "Corrected openly", desc: "Material changes are checked against the sources and recorded in a dated change history." },
 ];
 
@@ -84,7 +84,7 @@ export default function About() {
             {/* Review process */}
             <section className="about-section" id="review">
               <Reveal as="h2">How every scenario gets reviewed</Reveal>
-              <Reveal as="p" className="sub">A guide is labelled lawyer-reviewed only after a Nigerian lawyer signs off. Review status, reviewer and dates are shown on every page.</Reveal>
+              <Reveal as="p" className="sub">Every guide is checked against the official text published by the issuing agency. Its check date and the remaining source gaps are shown on the page.</Reveal>
 
               <div className="process">
                 {PROCESS_STEPS.map((step) => (
@@ -141,9 +141,8 @@ export default function About() {
               <Reveal as="h2">Legal disclaimer</Reveal>
               <div className="fine-print reveal">
                 <strong>KnowYourRights NG is an information resource, not a law firm.</strong>
-                {" "}Content is checked against primary sources and labelled with its review status. An entry is
-                described as lawyer-reviewed only after a Nigerian lawyer has signed off; entries awaiting
-                sign-off are marked as such. It does not constitute legal advice and no lawyer–client
+                {" "}Content is checked against the official texts published by the issuing agencies and labelled with its source-check
+                status and date. A guide is never described as lawyer-reviewed. It does not constitute legal advice and no lawyer–client
                 relationship is created by using it. Laws change and enforcement practice varies by state
                 and agency; scenarios carry their last review date and should be read with it. For advice
                 on a specific matter, consult a qualified legal practitioner — the <Link to="/help" style={{ color: "var(--link)", fontWeight: 600 }}>help directory</Link> lists free and official options.
@@ -170,10 +169,10 @@ export default function About() {
                 <span style={{ color: "var(--text-muted)" }}>Scenarios</span><strong>{listedScenarios.length}</strong>
               </div>
               <div className="review-row" style={{ display: "flex", justifyContent: "space-between", fontSize: "0.84rem", padding: "7px 0" }}>
-                <span style={{ color: "var(--text-muted)" }}>Lawyer reviewed</span><strong>{lawyerReviewedCount}</strong>
+                <span style={{ color: "var(--text-muted)" }}>Source-verified</span><strong>{sourceVerifiedCount}</strong>
               </div>
               <div className="review-row" style={{ display: "flex", justifyContent: "space-between", fontSize: "0.84rem", padding: "7px 0" }}>
-                <span style={{ color: "var(--text-muted)" }}>Awaiting sign-off</span><strong>{AWAITING_REVIEW}</strong>
+                <span style={{ color: "var(--text-muted)" }}>Awaiting source check</span><strong>{AWAITING_CHECK}</strong>
               </div>
               <div className="review-row" style={{ display: "flex", justifyContent: "space-between", fontSize: "0.84rem", padding: "7px 0" }}>
                 <span style={{ color: "var(--text-muted)" }}>Last updated</span><strong>{LATEST_REVIEW_LABEL}</strong>

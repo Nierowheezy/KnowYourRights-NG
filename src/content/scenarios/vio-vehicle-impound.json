@@ -13,11 +13,16 @@
     "vio"
   ],
   "status": "approved",
-  "reviewer": "Content team (pre-review)",
+  "reviewer": "Content team (source check)",
   "lastReviewed": "2026-10-29",
   "nextReview": "2027-04-30",
-  "reviewNotes": "Drafted from sources; requires Nigerian lawyer review against the exact gazetted text before final sign-off. Section references checked against downloaded official texts on 2026-10-29; Nigerian lawyer review still required before publication.",
+  "reviewNotes": "Citations checked against the official texts downloaded from the issuing agency's portal on 2026-10-29. Source verification is not legal advice. Re-check before the next review date.",
   "changeHistory": [
+    {
+      "date": "2026-10-29",
+      "note": "Review model changed: status now records verification against official source texts, not lawyer sign-off.",
+      "reviewer": "Content team (source check)"
+    },
     {
       "date": "2026-10-20",
       "note": "Initial published draft",

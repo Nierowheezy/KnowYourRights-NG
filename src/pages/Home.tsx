@@ -13,9 +13,9 @@ import {
   getScenarioAgencyLabel,
   getScenarioById,
   getSourcesForScenario,
-  lawyerReviewedCount,
   listedScenarios,
   reviewYear,
+  sourceVerifiedCount,
   sources,
 } from "../lib/content";
 
@@ -37,7 +37,7 @@ const TABLE_ROWS = [...listedScenarios]
       sub: CATEGORY_LABEL[s.category],
       agency: getScenarioAgencyLabel(s),
       year: reviewYear(s.lastReviewed),
-      status: badge.tone === "ok" ? "Lawyer reviewed" : badge.label,
+      status: badge.label,
       warn: badge.tone !== "ok",
     };
   });
@@ -48,7 +48,7 @@ const MINI_AGENCIES = ["npf", "frsc", "lastma"].flatMap((id) => {
 });
 
 const VERIFIED_SOURCES = sources.filter((s) => s.currentStatusVerified).length;
-const AWAITING_REVIEW = listedScenarios.length - lawyerReviewedCount;
+const AWAITING_CHECK = listedScenarios.length - sourceVerifiedCount;
 
 const featured = getScenarioById("police-stop-search-car");
 const featuredSource = featured ? getSourcesForScenario(featured)[0] : undefined;
@@ -64,8 +64,8 @@ const TRUST_CARDS = [
   },
   {
     label: "Honest status",
-    title: "No anonymous “reviewed” badges",
-    body: `A guide is labelled lawyer-reviewed only when a named Nigerian lawyer has signed off. ${AWAITING_REVIEW} of ${listedScenarios.length} currently await sign-off and say so.`,
+    title: "No unverified “reviewed” badges",
+    body: `A guide is labelled source-verified only when its citations have been checked against the official text on the issuing agency's portal. ${AWAITING_CHECK} of ${listedScenarios.length} still await that check and say so.`,
   },
   {
     label: "Open corrections",
@@ -266,7 +266,7 @@ export default function Home() {
         <div className="container">
           <SectionHead
             title="Fresh, statute-linked guidance"
-            meta={`${lawyerReviewedCount} of ${listedScenarios.length} guides lawyer-reviewed · review status shown on every entry`}
+            meta={`${sourceVerifiedCount} of ${listedScenarios.length} guides source-verified · check dates shown on every entry`}
             aside={<Link to="/browse" className="link-green">View all →</Link>}
           />
 

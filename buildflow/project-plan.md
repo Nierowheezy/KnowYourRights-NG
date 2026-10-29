@@ -50,7 +50,7 @@ The platform is an educational legal-information resource. It must not encourage
 
 - Civil society organizations, rights advocates, and community groups that help people understand their rights.
 
-- Lawyers and legal reviewers who can verify content and identify gaps.
+- Lawyers and legal reviewers who answer specific legal questions readers raise.
 
 - The project owner, who maintains the software, research sources, content review process, and release process.
 
@@ -264,7 +264,7 @@ Legal accuracy is a core product requirement.
 
 Requirements:
 
-- Have a Nigerian lawyer review initial substantive scenarios before publication.
+- Check every scenario citation against the official text published by the issuing agency before publication.
 
 - Maintain a clear distinction between draft, under review, approved, and needs-revision content.
 
@@ -274,7 +274,7 @@ Requirements:
 
 - Re-review content when relevant laws, regulations, judgments, or official procedures change.
 
-- Provide a correction mechanism for users and legal reviewers.
+- Provide a correction mechanism for users and reviewers.
 
 - Keep a change history for material legal-content updates.
 
@@ -282,7 +282,7 @@ Requirements:
 
 - Do not use AI output as legal verification.
 
-- Do not label content as lawyer-reviewed unless that review has actually occurred.
+- Do not describe content as lawyer-reviewed; labels record source verification only.
 
 If a legal issue cannot be stated confidently from the available sources, the guide must say so and point users toward qualified legal assistance where appropriate.
 
@@ -472,7 +472,7 @@ Future AI requirements, if approved:
 
 - Avoid sending personal or sensitive incident details to external model providers.
 
-- Keep AI output clearly distinct from lawyer-reviewed source content.
+- Keep AI output clearly distinct from source-verified content.
 
 - Test for misleading, unsafe, and overconfident answers before release.
 
@@ -678,7 +678,7 @@ Maintain focused context documents so that content and legal rules can be update
 
 Recommended files:
 
-- `blueprint/context/legal-content-policy.md`: Content standards, legal review, publication status, corrections, and review cycles.
+- `blueprint/context/legal-content-policy.md`: Content standards, source review, publication status, corrections, and review cycles.
 
 - `blueprint/context/source-register.md`: Primary legislation, regulations, official sources, and verification notes.
 
@@ -700,7 +700,7 @@ These documents must distinguish verified legal positions from assumptions, unre
 
 ## 6. Monetize: How will this make money?\*\*
 
-No monetization is planned for v1. The core rights guide should remain free to access. The MVP should also avoid recurring operating costs by using free tools and hosting tiers wherever practical, without compromising legal review, privacy, accessibility, or safety.
+No monetization is planned for v1. The core rights guide should remain free to access. The MVP should also avoid recurring operating costs by using free tools and hosting tiers wherever practical, without compromising legal accuracy, privacy, accessibility, or safety.
 
 The first objective is to establish that users can find and understand reliable information, that the legal content is trustworthy, and that the platform can be maintained responsibly.
 
@@ -712,7 +712,7 @@ Potential later support models include:
 
 - Institutional sponsorship that does not control legal conclusions or user data.
 
-- Donations to support legal review, translation, hosting, and maintenance.
+- Donations to support source verification, translation, hosting, and maintenance.
 
 - Carefully governed partnerships with legal aid providers.
 
@@ -742,7 +742,7 @@ The initial navigation should provide:
 
 - **\*\*Get help:\*\*** Find official complaint channels and legal support.
 
-- **\*\*About this guide:\*\*** Explain scope, legal review, limitations, and corrections.
+- **\*\*About this guide:\*\*** Explain scope, the verification process, limitations, and corrections.
 
 ### Immediate-Encounter Mode\*\*
 
@@ -836,7 +836,7 @@ The initial MVP must be developed, tested, and launched using free tools and ser
 - Prefer local client-side search and version-controlled content over paid infrastructure.
 - Keep the core guide usable without accounts, paid integrations, location tracking, or incident submissions.
 - Check current free-tier limits, terms, build limits, bandwidth limits, and usage restrictions before deployment. Do not assume a free tier will remain unchanged indefinitely.
-- Treat legal review, internet access, electricity, and other external expenses as possible costs. Do not compromise legal accuracy or safety to maintain a zero-cost budget. Seek qualified volunteer or pro bono legal review where available, without describing content as lawyer-reviewed until review has actually happened.
+- Treat source checking, internet access, electricity, and other external expenses as possible costs. Do not compromise legal accuracy or safety to maintain a zero-cost budget. Check each citation against the official text on the issuing agency's portal, and never describe content as lawyer-reviewed.
 - Reassess spending only after usability testing provides evidence of public value and a clear reason to incur the cost.
 
 The zero-cost target is a launch constraint, not a guarantee that the project can operate indefinitely without any expense. If a required service becomes paid or exceeds its free limits, prefer a free alternative or defer the optional feature rather than silently introducing a recurring cost.
@@ -960,7 +960,7 @@ The following are outside the MVP unless explicitly approved later:
 
 - Publishing legal claims without traceable supporting sources.
 
-- Presenting AI-generated text as lawyer-reviewed content.
+- Presenting AI-generated text as source-verified without checking the official text.
 
 - Generating legal conclusions from unrestricted AI prompts.
 
@@ -980,7 +980,7 @@ The MVP is ready for public release when:
 
 - Users can find a relevant scenario through search or browsing.
 
-- The initial scenario set has been reviewed under the documented legal review process.
+- The initial scenario set has been checked under the documented source-verification process.
 
 - Every substantive legal claim has a traceable source or is explicitly marked as unresolved.
 
@@ -1018,7 +1018,7 @@ The MVP is ready for public release when:
 
 - A small usability test shows that users can locate and explain the meaning of relevant guidance without being coached.
 
-Initial success should be measured by answer-finding speed, comprehension, user trust, successful access on low-bandwidth connections, repeated use, and the quality of legal review. Page views alone are not sufficient evidence of impact.
+Initial success should be measured by answer-finding speed, comprehension, user trust, successful access on low-bandwidth connections, repeated use, and the quality of source verification. Page views alone are not sufficient evidence of impact.
 
 ## 11. Implementation Priorities\*\*
 
@@ -1032,7 +1032,7 @@ Build in the following order:
 
 4. Select the first 15 to 25 high-value scenarios based on user research.
 
-5. Draft and obtain legal review for the first scenarios.
+5. Draft and source-check the first scenarios.
 
 6. Set up the React, TypeScript, and Vite repository.
 

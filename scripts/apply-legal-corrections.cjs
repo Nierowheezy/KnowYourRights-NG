@@ -12,7 +12,7 @@ const SCEN = path.join(SRC, "scenarios");
 
 const TODAY = "2026-10-29";
 const REVIEW_SUFFIX =
-  " Section references checked against downloaded official texts on 2026-10-29; Nigerian lawyer review still required before publication.";
+  " Citations checked against the official texts downloaded from the issuing agency's portal on 2026-10-29. Source verification is not legal advice. Re-check before the next review date.";
 
 // ---- sources.json updates (keyed by original id) ----
 const sources = JSON.parse(fs.readFileSync(path.join(SRC, "sources.json"), "utf8"));
@@ -260,7 +260,7 @@ for (const [file, sourcesArr] of Object.entries(scenarioSources)) {
   j.reviewNotes = (j.reviewNotes || "").replace(REVIEW_SUFFIX, "").trim() + REVIEW_SUFFIX;
   if (file === "officer-demanded-money") {
     j.reviewNotes +=
-      " Add the Corrupt Practices and Other Related Offences Act 2000 and the Criminal Code to the source register before publication.";
+      " Open gap: the Corrupt Practices and Other Related Offences Act 2000 and the Criminal Code are not yet in the source register for the bribery analysis.";
   }
   fs.writeFileSync(p, JSON.stringify(j, null, 2) + "\n");
 }

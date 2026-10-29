@@ -12,7 +12,7 @@ People in Nigeria may not know what the law permits during encounters with polic
 
 - **Everyday road users** - Drivers, riders, commercial drivers, dispatch riders, public transport users, cyclists, and pedestrians needing quick answers.
 - **Civil society and advocates** - Groups helping people understand rights.
-- **Lawyers/legal reviewers** - Verify content and identify gaps.
+- **Lawyers/legal reviewers** - Answer specific legal questions readers raise.
 - **Project owner** - Maintains software, research, review process, and releases.
 
 Access is public and anonymous; no accounts required for core use.
@@ -23,8 +23,8 @@ In build-plan order:
 
 1. **Legal content model** - Define structured records for scenarios, legal sources, jurisdiction, review status, exceptions, and review dates
 2. **Legal source register** - Catalogue verified legislation, regulations, official guidance, and state-specific legal sources
-3. **Scenario review workflow** - Establish drafting, lawyer review, approval, publication, correction, and retirement of legal content
-4. **Initial scenario library** - Publish lawyer-reviewed roadside encounter guides with source-backed explanations and safety-first next steps
+3. **Scenario review workflow** - Establish drafting, source verification, approval, publication, correction, and retirement of legal content
+4. **Initial scenario library** - Publish source-verified roadside encounter guides with source-backed explanations and safety-first next steps
 5. **Application shell** - Build responsive navigation, homepage, scenario categories, and immediate guidance entry point
 6. **Scenario detail pages** - Display concise answers, legal explanations, exceptions, practical options, source links, and review dates
 7. **Situation-based search** - Search scenario titles, keywords, agencies, and plain-language questions
@@ -41,7 +41,7 @@ In build-plan order:
 18. **Usability testing** - Validate search success, comprehension, navigation, and safety of guidance with target users
 19. **Production deployment** - Configure static hosting, HTTPS, build validation, content versioning, and deployment recovery
 20. **Expanded agency coverage** - Add more federal and state enforcement scenarios after legal verification (Post-MVP)
-21. **Language expansion** - Provide legally reviewed Nigerian Pidgin and selected Nigerian language versions (Post-MVP)
+21. **Language expansion** - Provide Nigerian Pidgin and selected Nigerian language versions checked against the same official sources (Post-MVP)
 22. **Legal freshness monitoring** - Identify changes in legislation and official guidance that require scenario review (Post-MVP)
 23. **Search gap analysis** - Use privacy-respecting aggregate feedback to identify unanswered questions (Post-MVP)
 24. **Expanded legal support directory** - Add verified legal aid organisations and civil society resources (Post-MVP)
@@ -67,9 +67,9 @@ In build-plan order:
 - `jurisdiction` (enum: federal|state|other, + notes) - scope
 - `agency` (string[]) - relevant agencies
 - `status` (enum: draft|under-review|approved|needs-revision|retired)
-- `reviewer` (string) - who reviewed/process
-- `lastReviewed` (date) - last review date
-- `nextReview` (date) - review trigger/date
+- `reviewer` (string) - who checked the citations against the official text
+- `lastReviewed` (date) - date of the last source check
+- `nextReview` (date) - next scheduled source check
 - `reviewNotes` (string)
 - `changeHistory` (array) - material changes
 - `relatedScenarios` (string[]) - related scenario IDs
@@ -154,7 +154,7 @@ Not in v1. Core rights guide remains free. Potential later: grants, partnerships
 - `/search` - Search interface
 - `/scenario/[id]` - Scenario detail page
 - `/help` - Verified complaint channels and legal support
-- `/about` - Scope, legal review, limitations, corrections
+- `/about` - Scope, verification process, limitations, corrections
 
 **Principles:** Mobile-first, calm and clear for stressful situations, prioritize practical info, safety-first, offline indicators, accessible (contrast, keyboard nav, screen readers), no account required.
 
@@ -175,7 +175,7 @@ Not in v1. Core rights guide remains free. Potential later: grants, partnerships
 ## Open questions
 
 - **Stack specifics:** Confirm exact routing library, PWA plugin, and content schema location (src/content vs separate repo) during scaffolding.
-- **Legal review capacity:** Identify Nigerian lawyer(s) for review before publishing initial scenarios (required by plan).
+- **Source verification capacity:** Download and check the official text behind every citation before publishing a scenario. Legal questions raised by readers go to a lawyer, but the publication gate is source verification.
 - **Initial agency priority:** Confirm which state(s) to cover first (Lagos mentioned as example) beyond Police/FRSC.
 - **Content validation tooling:** Decide on schema validation approach and link-checking strategy.
 - **Feedback mechanism:** Design privacy-preserving feedback collection (anonymous) without backend if possible.

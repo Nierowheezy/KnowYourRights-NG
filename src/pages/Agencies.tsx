@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import "../styles/agencies.css";
 import { PageHero, AdSlot, AdAnchor, Reveal } from "../components/ui";
-import { agencies, getAgencyShortName, getScenariosForAgency, isLawyerReviewed } from "../lib/content";
+import { agencies, getAgencyShortName, getScenariosForAgency, isSourceVerified } from "../lib/content";
 import type { Agency } from "../lib/schema";
 
 interface AgencyCardData {
@@ -25,7 +25,7 @@ function jurisdictionLabel(agency: Agency): string {
 
 function toCard(agency: Agency): AgencyCardData {
   const scenarios = getScenariosForAgency(agency);
-  const reviewed = scenarios.filter(isLawyerReviewed).length;
+  const verified = scenarios.filter(isSourceVerified).length;
   const state = agency.jurisdiction === "state";
   return {
     agencyId: agency.id,
@@ -37,7 +37,7 @@ function toCard(agency: Agency): AgencyCardData {
     meta:
       scenarios.length === 0
         ? "No guides yet"
-        : `${scenarios.length} guide${scenarios.length === 1 ? "" : "s"}${reviewed ? ` · ${reviewed} reviewed` : ""}`,
+        : `${scenarios.length} guide${scenarios.length === 1 ? "" : "s"}${verified ? ` · ${verified} source-verified` : ""}`,
     state,
     count: scenarios.length,
   };
@@ -50,7 +50,7 @@ function AgencyCard({ card, delay }: { card: AgencyCardData; delay?: number }) {
         <span className="agency-abbr" style={{ background: "var(--chip-surface)", color: "var(--chip-ink)", border: "1px dashed var(--chip-line)" }}>{card.abbr}</span>
         <h3 className="card__title">{card.name}</h3>
         <p className="card__desc">{card.desc}</p>
-        <div className="card__foot"><span className="badge-gray">In legal review</span><span className="card__meta">{card.meta}</span></div>
+        <div className="card__foot"><span className="badge-gray">No guide yet</span><span className="card__meta">{card.meta}</span></div>
       </div>
     );
   }
@@ -139,7 +139,7 @@ export default function Agencies() {
         <div className="container">
           <div className="callout callout--tint reveal">
             <svg width="20" height="20" viewBox="0 0 20 20" fill="none" style={{ flexShrink: 0 }}><circle cx="10" cy="10" r="7.5" stroke="currentColor" strokeWidth="1.4"/><path d="M10 9v4M10 6.6v.2" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/></svg>
-            <span><strong>State rules can differ from federal rules.</strong> Each guide shows a federal or state badge and its lawyer-review status. Agency cards with no guides yet are still awaiting coverage.</span>
+            <span><strong>State rules can differ from federal rules.</strong> Each guide shows a federal or state badge and its source-check status. Agency cards with no guides yet are still awaiting coverage.</span>
           </div>
         </div>
       </section>

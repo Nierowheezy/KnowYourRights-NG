@@ -8,7 +8,7 @@ import {
   CATEGORY_LABEL,
   getReviewBadge,
   getScenarioAgencyLabel,
-  isLawyerReviewed,
+  isSourceVerified,
   listedScenarios,
 } from "../lib/content";
 import type { Scenario } from "../lib/schema";
@@ -19,7 +19,7 @@ const FILTERS: Array<{ label: string; match?: (s: Scenario) => boolean }> = [
   { label: "FRSC", match: (s) => s.agency.includes("frsc") },
   { label: "Lagos VIS / DVS", match: (s) => s.agency.includes("vio") },
   { label: "Customs", match: (s) => s.agency.includes("ncs") },
-  { label: "✓ Lawyer reviewed", match: isLawyerReviewed },
+  { label: "✓ Source-verified", match: isSourceVerified },
   { label: "Federal only", match: (s) => s.jurisdiction === "federal" },
 ];
 
@@ -54,7 +54,7 @@ function Result({ scenario, term }: { scenario: Scenario; term: string }) {
         ) : (
           <span className="badge-gray badge-warning" style={{ background: "var(--warning-tint)", borderColor: "var(--warn-line)", color: "var(--warning)" }}>{badge.label}</span>
         )}
-        {reviewedLabel && <span className="card__meta">Last reviewed {reviewedLabel}</span>}
+        {reviewedLabel && <span className="card__meta">Checked {reviewedLabel}</span>}
       </div>
     </Reveal>
   );

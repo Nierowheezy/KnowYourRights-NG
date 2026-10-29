@@ -7,7 +7,6 @@ const ROOT = path.resolve(__dirname, "..");
 const C = path.join(ROOT, "src", "content");
 const SCEN = path.join(C, "scenarios");
 
-const PRE_REVIEW_REVIEWER = /pre-review|content team|pending|unreviewed|draft/i;
 const TODAY = new Date().toISOString().slice(0, 10);
 
 const read = (p) => JSON.parse(fs.readFileSync(p, "utf8"));
@@ -19,12 +18,11 @@ const scenarios = fs
   .sort((a, b) => a.title.localeCompare(b.title));
 
 const isText = (value) => typeof value === "string" && value.trim().length > 0;
-const isLawyerReviewed = (s) =>
-  s.status === "approved" && isText(s.reviewer) && !PRE_REVIEW_REVIEWER.test(s.reviewer);
+const isSourceVerified = (s) => s.status === "approved" && isText(s.reviewer) && isText(s.lastReviewed);
 
-const reviewed = scenarios.filter(isLawyerReviewed);
+const verified = scenarios.filter(isSourceVerified);
 const awaiting = scenarios.filter(
-  (s) => s.status === "approved" && isText(s.reviewer) && PRE_REVIEW_REVIEWER.test(s.reviewer)
+  (s) => s.status === "approved" && !isSourceVerified(s)
 );
 const underReview = scenarios.filter((s) => s.status === "under-review");
 const needsRevision = scenarios.filter((s) => s.status === "needs-revision");
@@ -42,14 +40,18 @@ const missingMetadata = scenarios.filter((s) => {
 });
 
 const unverifiedSources = sources.filter((s) => !s.currentStatusVerified);
+const unverifiedIds = new Set(unverifiedSources.map((s) => s.id));
+const citingUnverifiedSources = scenarios.filter((s) =>
+  (s.sources || []).some((ref) => unverifiedIds.has(ref.sourceId))
+);
 
 function row(s, extra) {
   const parts = [
     `- **${s.title}** (${s.id})`,
     `status: ${s.status}`,
-    `reviewer: ${s.reviewer || "none"}`,
-    `last checked: ${s.lastReviewed || "none"}`,
-    s.nextReview ? `next review: ${s.nextReview}` : "",
+    `checked by: ${s.reviewer || "none"}`,
+    `checked: ${s.lastReviewed || "none"}`,
+    s.nextReview ? `next check: ${s.nextReview}` : "",
     extra ? extra : "",
   ].filter(Boolean);
   return parts.join(" | ");
@@ -59,21 +61,21 @@ console.log("# Content review queue");
 console.log("");
 console.log(`Generated: ${TODAY}`);
 console.log(
-  `Scenarios: ${scenarios.length} | lawyer-reviewed: ${reviewed.length} | awaiting sign-off: ${awaiting.length} | under review: ${underReview.length} | needs revision: ${needsRevision.length} | due: ${due.length}`
+  `Scenarios: ${scenarios.length} | source-verified: ${verified.length} | awaiting source check: ${awaiting.length} | under review: ${underReview.length} | needs revision: ${needsRevision.length} | due: ${due.length}`
 );
 if (drafts.length || retired.length) {
   console.log(`Draft: ${drafts.length} | retired: ${retired.length}`);
 }
 console.log("");
 
-console.log(`## Lawyer reviewed (${reviewed.length})`);
-if (reviewed.length === 0) console.log("- None");
-else reviewed.forEach((s) => console.log(row(s)));
+console.log(`## Source-verified (${verified.length})`);
+if (verified.length === 0) console.log("- None");
+else verified.forEach((s) => console.log(row(s)));
 console.log("");
 
-console.log(`## Awaiting lawyer sign-off (${awaiting.length})`);
+console.log(`## Awaiting source check (${awaiting.length})`);
 if (awaiting.length === 0) console.log("- None");
-else awaiting.forEach((s) => console.log(row(s, "published with pending label")));
+else awaiting.forEach((s) => console.log(row(s, "published with a pending label")));
 console.log("");
 
 console.log(`## Under review (${underReview.length})`);
@@ -86,7 +88,7 @@ if (needsRevision.length === 0) console.log("- None");
 else needsRevision.forEach((s) => console.log(row(s, s.reviewNotes)));
 console.log("");
 
-console.log(`## Due for review (${due.length})`);
+console.log(`## Due for re-check (${due.length})`);
 if (due.length === 0) console.log("- None");
 else due.forEach((s) => console.log(row(s, `due on ${s.nextReview}`)));
 console.log("");
@@ -101,5 +103,15 @@ if (unverifiedSources.length === 0) console.log("- None");
 else {
   unverifiedSources.forEach((s) => {
     console.log(`- **${s.title}** (${s.id}) | last accessed: ${s.lastAccessed || "unknown"}`);
+  });
+}
+console.log("");
+
+console.log(`## Scenarios citing an unverified source (${citingUnverifiedSources.length})`);
+if (citingUnverifiedSources.length === 0) console.log("- None");
+else {
+  citingUnverifiedSources.forEach((s) => {
+    const ids = (s.sources || []).map((r) => r.sourceId).filter((id) => unverifiedIds.has(id));
+    console.log(row(s, `cites ${[...new Set(ids)].join(", ")}`));
   });
 }
