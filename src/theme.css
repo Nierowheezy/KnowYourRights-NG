@@ -1538,9 +1538,10 @@ mark {
 }
 
 /* Low bandwidth mode */
-html[data-lowbw="1"] img.decorative,
-html[data-lowbw="1"] .reveal {
-  display: none !important;
+html[data-lowbw="1"] .bg-grid::before,
+html[data-lowbw="1"] .bg-glow::after,
+html[data-lowbw="1"] .footer {
+  background-image: none !important;
 }
 html[data-lowbw="1"] *, html[data-lowbw="1"] *::before, html[data-lowbw="1"] *::after {
   animation: none !important;

@@ -18,30 +18,24 @@ export default function Layout() {
   const location = useLocation();
   const [theme, setThemeState] = useState<Theme>(getTheme);
   const [menuOpen, setMenuOpen] = useState(false);
-  const [lowBw, setLowBw] = useState(() => {
-    try { return localStorage.getItem("kyr-lowbw") === "1"; } catch { return false; }
-  });
-  const [feedbackCount, setFeedbackCount] = useState(0);
 
   const announce = getAnnounce(location.pathname);
 
   useEffect(() => {
-    try { localStorage.setItem("kyr-lowbw", lowBw ? "1" : "0"); } catch {}
-    if (lowBw) document.documentElement.setAttribute("data-lowbw", "1");
-    else document.documentElement.removeAttribute("data-lowbw");
-  }, [lowBw]);
-
-  useEffect(() => {
-    const update = () => {
-      try {
-        const raw = localStorage.getItem("kyr-feedback-queue");
-        const arr = raw ? JSON.parse(raw) : [];
-        setFeedbackCount(arr.length);
-      } catch { setFeedbackCount(0); }
+    const apply = () => {
+      if (window.localStorage.getItem("kyr-lowbw") === "1") {
+        document.documentElement.setAttribute("data-lowbw", "1");
+      } else {
+        document.documentElement.removeAttribute("data-lowbw");
+      }
     };
-    update();
-    window.addEventListener("storage", update);
-    return () => window.removeEventListener("storage", update);
+    apply();
+    window.addEventListener("storage", apply);
+    window.addEventListener("kyr-preferences-changed", apply);
+    return () => {
+      window.removeEventListener("storage", apply);
+      window.removeEventListener("kyr-preferences-changed", apply);
+    };
   }, []);
   useEffect(() => {
     setTheme(theme);
@@ -120,34 +114,7 @@ export default function Layout() {
               <svg className="ticon icon-moon" width="15" height="15" viewBox="0 0 16 16" fill="none"><path d="M13.5 9A5.6 5.6 0 0 1 7 2.6 5.7 5.7 0 1 0 8.9 14 5.7 5.7 0 0 1 13.5 9Z" stroke="currentColor" strokeWidth="1.3" strokeLinejoin="round"/></svg>
               <svg className="ticon icon-sys" width="15" height="15" viewBox="0 0 16 16" fill="none"><rect x="1.8" y="2.8" width="12.4" height="8.4" rx="1.4" stroke="currentColor" strokeWidth="1.3"/><path d="M5.5 13.7h5M8 11.2v2.5" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round"/></svg>
             </button>
-            <button
-              className="btn btn--ghost btn--sm"
-              type="button"
-              aria-pressed={lowBw}
-              onClick={() => setLowBw(v => !v)}
-              title="Toggle low bandwidth mode"
-            >
-              {lowBw ? "Low bandwidth on" : "Low bandwidth off"}
-            </button>
-            <button
-              className="btn btn--ghost btn--sm"
-              type="button"
-              onClick={() => {
-                try {
-                  const raw = localStorage.getItem("kyr-feedback-queue");
-                  const data = raw ? JSON.parse(raw) : [];
-                  const blob = new Blob([JSON.stringify(data, null, 2)], { type: "application/json" });
-                  const url = URL.createObjectURL(blob);
-                  const a = document.createElement("a");
-                  a.href = url;
-                  a.download = "kyr-feedback.json";
-                  a.click();
-                  URL.revokeObjectURL(url);
-                } catch {}
-              }}
-            >
-              Export feedback {feedbackCount > 0 ? `(${feedbackCount})` : ""}
-            </button>
+            <Link to="/settings" className="btn btn--ghost btn--sm">Settings</Link>
             <Link to="/help" className="btn btn--primary btn--sm">Get help now</Link>
             <button
               className="nav-toggle"
@@ -166,6 +133,7 @@ export default function Layout() {
           <Link to="/search" onClick={() => setMenuOpen(false)}>Search</Link>
           <Link to="/help" onClick={() => setMenuOpen(false)}>Help directory</Link>
           <Link to="/about" onClick={() => setMenuOpen(false)}>About</Link>
+          <Link to="/settings" onClick={() => setMenuOpen(false)}>Settings</Link>
         </div>
       </header>
 
@@ -212,6 +180,7 @@ export default function Layout() {
                   <li><Link to="/about">Scope &amp; limitations</Link></li>
                   <li><Link to="/about">Privacy</Link></li>
                   <li><Link to="/about#disclaimer">Legal disclaimer</Link></li>
+                  <li><Link to="/settings">Settings</Link></li>
                   <li><a href="#">Pidgin version<span className="footer__soon">SOON</span></a></li>
                 </ul>
               </div>

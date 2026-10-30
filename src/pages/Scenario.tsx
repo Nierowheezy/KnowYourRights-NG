@@ -223,7 +223,9 @@ export default function Scenario() {
               </div>
             </div>
 
-            <FeedbackModal scenarioId={scenario.id} open={showFeedback} onClose={() => setShowFeedback(false)} />
+            {showFeedback && (
+              <FeedbackModal scenarioId={scenario.id} open onClose={() => setShowFeedback(false)} />
+            )}
 
             <ChangeHistory entries={scenario.changeHistory} />
 

@@ -10,6 +10,7 @@ import Agencies from './pages/Agencies'
 import Search from './pages/Search'
 import Help from './pages/Help'
 import About from './pages/About'
+import Settings from './pages/Settings'
 import Scenario from './pages/Scenario'
 import NotFound from './pages/NotFound'
 
@@ -25,6 +26,7 @@ createRoot(document.getElementById('root')!).render(
           <Route path="/search" element={<Search />} />
           <Route path="/help" element={<Help />} />
           <Route path="/about" element={<About />} />
+          <Route path="/settings" element={<Settings />} />
           <Route path="/scenario/:id" element={<Scenario />} />
           <Route path="*" element={<NotFound />} />
         </Route>
