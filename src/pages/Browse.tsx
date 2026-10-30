@@ -1,8 +1,9 @@
 import { useMemo, useState } from "react";
 import { Link, useSearchParams } from "react-router-dom";
 import "../styles/browse.css";
-import { AdSlot, AdAnchor } from "../components/ui";
+import { AdSlot, AdAnchor, Pagination } from "../components/ui";
 import { IconSearch } from "../components/icons";
+import { usePagination } from "../hooks/usePagination";
 import {
   CATEGORY_LABEL,
   getAgencyById,
@@ -84,6 +85,8 @@ function ScenarioCard({ card, delay }: { card: BrowseCard; delay?: number }) {
   );
 }
 
+const PAGE_SIZE = 12;
+
 export default function Browse() {
   const [activeFilter, setActiveFilter] = useState(0);
   const [query, setQuery] = useState("");
@@ -99,14 +102,26 @@ export default function Browse() {
     [agencyId]
   );
 
-  const visible = cards.filter((card) => {
-    const filter = FILTERS[activeFilter].category;
-    const filterOk = filter === null || card.categoryKey === filter;
-    const q = query.trim().toLowerCase();
-    const queryOk =
-      !q || `${card.title} ${card.desc} ${card.agency} ${card.category}`.toLowerCase().includes(q);
-    return filterOk && queryOk;
+  const visible = useMemo(() =>
+    cards.filter((card) => {
+      const filter = FILTERS[activeFilter].category;
+      const filterOk = filter === null || card.categoryKey === filter;
+      const q = query.trim().toLowerCase();
+      const queryOk =
+        !q || `${card.title} ${card.desc} ${card.agency} ${card.category}`.toLowerCase().includes(q);
+      return filterOk && queryOk;
+    }),
+    [cards, activeFilter, query]
+  );
+
+  const resetKey = `${agencyId ?? "all"}-${activeFilter}-${query}`;
+  const { page, totalPages, startIndex, endIndex, setPage } = usePagination({
+    totalItems: visible.length,
+    pageSize: PAGE_SIZE,
+    resetKey,
   });
+
+  const paged = visible.slice(startIndex, endIndex);
 
   return (
     <>
@@ -162,7 +177,7 @@ export default function Browse() {
           </p>
 
           <div className="card-grid card-grid--3">
-            {visible.map((card, i) => (
+            {paged.map((card, i) => (
               <ScenarioCard key={card.scenario.id} card={card} delay={(i % 3) * 0.05} />
             ))}
 
@@ -185,6 +200,19 @@ export default function Browse() {
             {/* In-grid ad (336 × 280) */}
             <AdSlot variant="rect-lg" size="336 × 280 / in-grid" reveal style={{ minHeight: 0 }} />
           </div>
+
+          {totalPages > 1 && (
+            <Pagination
+              page={page}
+              totalPages={totalPages}
+              onChange={setPage}
+              totalItems={visible.length}
+              startIndex={startIndex}
+              endIndex={endIndex}
+              itemLabel="guides"
+              ariaLabel="Browse guides pagination"
+            />
+          )}
         </div>
       </section>
 

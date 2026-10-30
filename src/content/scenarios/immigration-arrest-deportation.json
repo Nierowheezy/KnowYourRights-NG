@@ -1,0 +1,55 @@
+{
+  "id": "immigration-arrest-deportation",
+  "title": "Can immigration officers arrest me without a warrant?",
+  "shortTitle": "Immigration arrest powers",
+  "icon": "🛂",
+  "question": "Can an immigration officer arrest me without a warrant?",
+  "keywords": [
+    "immigration",
+    "arrest",
+    "warrant",
+    "deportation",
+    "detention",
+    "officer"
+  ],
+  "category": "arrest",
+  "shortAnswer": "Yes, immigration officers can arrest without a warrant in specific cases: prohibited immigrants, persons reasonably suspected of immigration offences, and certain categories notified by the Minister. You are entitled to be informed of the reason and to communicate with a lawyer or family.",
+  "legalExplanation": "The **Immigration Act, 2015** provides several warrantless arrest powers:\n- **Section 25(1)**: Persons in categories notified by the Minister may be arrested and detained by an immigration officer and deported forthwith.\n- **Section 31(4)**: Any person required or authorised by the Act to be detained may be arrested without warrant by an immigration officer authorised in writing by the Director of Immigration, or by any police officer.\n- **Section 92(3)**: Any police officer or immigration officer may arrest without warrant any person reasonably believed to have committed offences under sections 24(1) or 46(1) (prohibited immigrants, false documents).\n- **Regulation 19**: Senior immigration officers, aliens officers, customs officers, or police officers may arrest without warrant any alien found committing an offence or reasonably suspected of having committed an offence against the Regulations.\n\nDetained persons are deemed to be in legal custody (Regulation 31(4)).",
+  "exceptions": "- **Rank requirement**: Section 25(2) requires the arresting officer to be not below Assistant Immigration Officer.\n- **Written authorisation**: Section 31(4) requires written authorisation from the Director of Immigration for certain detentions.\n- **Prohibited immigrants**: Different procedures apply to those already subject to deportation orders.",
+  "practicalOptions": "1. **Ask calmly**: \"Am I under arrest? On what grounds?\"\n2. **Request the officer's authorisation** — for Section 31 arrests, they should have written authorisation from the Director of Immigration.\n3. **State that you want a lawyer informed** and comply physically.\n4. **Do not resist physically**; note names, time, and place.\n5. **Contact the Nigeria Immigration Service headquarters** or your embassy/consulate.",
+  "whatToAvoid": "- Physical resistance — creates separate offences.\n- Signing statements you have not read or understood.\n- Offering or agreeing to pay anything to avoid the process.",
+  "whatToDocument": "- Time and place of arrest, officers' names/rank, vehicle plate.\n- Grounds stated (or refusal to state them).\n- Whether written authorisation was shown.\n- Who was informed of your detention, and when.",
+  "whatToDoAfter": "After release, write down everything while fresh and report any breach through the **verified complaint channels** in the Help directory. Free legal support options are listed there.",
+  "sources": [
+    {
+      "sourceId": "nigeria-immigration-act",
+      "sections": [
+        "25",
+        "31",
+        "92",
+        "Regulation 19"
+      ],
+      "notes": "s25 Minister's notified categories arrest/deportation; s31 detention and arrest without warrant with DGI authorisation; s92 arrest for specific offences; Reg 19 arrest of aliens by senior officers."
+    }
+  ],
+  "jurisdiction": "federal",
+  "agency": [
+    "nis"
+  ],
+  "status": "approved",
+  "reviewer": "Content team (source check)",
+  "lastReviewed": "2026-10-29",
+  "nextReview": "2027-04-30",
+  "reviewNotes": "Citations checked against Immigration Act 2015 and Immigration Regulations as downloaded from official sources on 2026-10-29. Source verification is not legal advice.",
+  "changeHistory": [
+    {
+      "date": "2026-10-29",
+      "note": "Initial published draft based on Immigration Act 2015 sections 25, 31, 92 and Regulation 19.",
+      "reviewer": "Content team (source check)"
+    }
+  ],
+  "relatedScenarios": [
+    "immigration-document-check",
+    "police-arrest-detention"
+  ]
+}

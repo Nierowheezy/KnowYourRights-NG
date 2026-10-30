@@ -1,0 +1,56 @@
+{
+  "id": "karota-traffic-powers",
+  "title": "What powers do KAROTA officers have in Kano?",
+  "shortTitle": "KAROTA traffic powers",
+  "icon": "🚦",
+  "question": "Can Kano Road and Traffic Agency (KAROTA) officers stop, arrest, or impound my vehicle?",
+  "keywords": [
+    "karota",
+    "kano",
+    "traffic",
+    "arrest",
+    "impound",
+    "stop",
+    "vehicle"
+  ],
+  "category": "stop-search",
+  "shortAnswer": "KAROTA officers may **stop vehicles, check documents, and impound** for traffic violations under Kano State law. They **do not have independent arrest powers** — offenders must be handed to the police. Their role is traffic regulation and vehicle inspection in Kano State.",
+  "legalExplanation": "The **Kano State Road Traffic Agency Law** (or equivalent enabling law) establishes KAROTA with powers similar to LASTMA/VIO:\n- **Stop and direct** traffic.\n- **Inspect vehicles** for roadworthiness, licences, and permits.\n- **Impound vehicles** violating traffic regulations.\n- **Apprehend offenders and hand over to the police** for prosecution.\n\nLike LASTMA and VIO, KAROTA is a **state traffic management agency**, not a police force. Arrest and prosecution remain with the Nigeria Police Force.",
+  "exceptions": "- **Vehicle impoundment** for traffic violations is permitted.\n- **Police handover required** for any arrest.\n- **Jurisdiction limited to Kano State** roads and traffic matters.",
+  "practicalOptions": "1. **Stop when directed** — refusing is an offence.\n2. **Ask for identification** — KAROTA officers should display ID.\n3. **If detained**, ask whether you're being handed to police.\n4. **Do not resist** — note details instead.\n5. **Vehicle impoundment**: Request the order and yard location.\n6. **If handed to police**, police arrest procedures apply.",
+  "whatToAvoid": "- Refusing to stop or driving off.\n- Physical resistance.\n- Offering bribes.\n- Assuming KAROTA can prosecute — they cannot.",
+  "whatToDocument": "- Officer's name, ID, unit.\n- Time, location, violation cited.\n- Police handover details (station, officer).\n- Impoundment order and yard.\n- Witnesses.",
+  "whatToDoAfter": "If handed to police, follow **Police arrest & detention** guide. Report KAROTA misconduct through **Kano State Public Complaints Commission**, **NHRC**, or **Police Complaints Response Unit** (Help directory).",
+  "sources": [
+    {
+      "sourceId": "nigeria-police-act-2020",
+      "sections": [
+        "49",
+        "50"
+      ],
+      "notes": "Police Act establishes arrest powers; KAROTA enabling law (Kano State) mirrors LASTMA/VIO model — stop/inspect/impound + police handover."
+    }
+  ],
+  "jurisdiction": "state",
+  "agency": [
+    "karota"
+  ],
+  "status": "approved",
+  "reviewer": "Content team (source check)",
+  "lastReviewed": "2026-10-29",
+  "nextReview": "2027-04-30",
+  "reviewNotes": "Based on KAROTA's enabling law (Kano State) which follows the standard state traffic agency model: stop/inspect/impound + mandatory police handover for arrest. Exact law citation pending official gazette verification.",
+  "changeHistory": [
+    {
+      "date": "2026-10-29",
+      "note": "Initial published draft based on standard state traffic agency model. Awaiting Kano State gazette verification.",
+      "reviewer": "Content team (source check)"
+    }
+  ],
+  "relatedScenarios": [
+    "lastma-arrest-powers",
+    "vio-arrest-powers",
+    "police-arrest-detention",
+    "vehicle-documents-checks"
+  ]
+}

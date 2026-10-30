@@ -1,0 +1,54 @@
+{
+  "id": "ndlea-search-arrest",
+  "title": "Can NDLEA officers search and arrest me without a warrant?",
+  "shortTitle": "NDLEA search & arrest powers",
+  "icon": "🌿",
+  "question": "Can NDLEA officers search my vehicle, premises, or person and arrest me without a warrant?",
+  "keywords": [
+    "ndlea",
+    "drugs",
+    "search",
+    "arrest",
+    "warrant",
+    "seizure",
+    "narcotics"
+  ],
+  "category": "stop-search",
+  "shortAnswer": "Yes, NDLEA officers have broad warrantless powers under the NDLEA Act: they may enter and search any land, building, vehicle, or container they reasonably believe is connected with a drug offence; take samples; and arrest any person they reasonably believe has committed an offence under the Act.",
+  "legalExplanation": "The **NDLEA Act** (Cap N30 LFN 2004), **Section 41**, grants authorised officers (police, customs, or NDLEA enforcement officers) the power to:\n- **Enter and search without warrant** any land, building, carrier, aircraft, vehicle, container, or other instrumentality they have reason to believe is connected with a drug offence.\n- **Perform tests and take samples** of substances found during such searches.\n- **Arrest without warrant** any person they have reason to believe has committed a drug offence.\n\n**Section 33** provides for seizure of property subject to forfeiture, including when incidental to an arrest or search.\n\nThese powers apply at ports, customs airports, border posts, and anywhere the officer has reason to believe drug offences are occurring.",
+  "exceptions": "- **Authorised officers only**: Powers limited to police officers, customs officers, or NDLEA enforcement officers involved in enforcement.\n- **Reasonable belief required**: The officer must have reason to believe the place/person is connected with a drug offence.\n- **Property seizure**: Must follow forfeiture procedures under the Act.",
+  "practicalOptions": "1. **Stay calm** — ask for the officer's identification and agency.\n2. **You may ask the grounds** for the search or arrest.\n3. **Do not resist physically** — resistance can lead to additional charges.\n4. **Note details**: time, place, officers' names/units, what was searched/seized.\n5. **Request a lawyer** — you have the right to legal representation.\n6. **If property is seized**, ask for a receipt and the legal basis.",
+  "whatToAvoid": "- Physical resistance or obstruction.\n- Tampering with or destroying suspected substances.\n- Offering bribes — this is a separate serious offence.\n- Signing statements without reading or legal advice.",
+  "whatToDocument": "- Officers' names, ranks, agency, vehicle details.\n- Time, location, and duration of search.\n- What was searched (vehicle, premises, person).\n- What was seized (if anything) and whether a receipt was given.\n- Grounds stated for the search/arrest.",
+  "whatToDoAfter": "Contact the **Legal Aid Council** or **NHRC** through the Help directory. If property was seized, follow up on forfeiture proceedings. Report any abuse through verified complaint channels.",
+  "sources": [
+    {
+      "sourceId": "ndlea-act",
+      "sections": [
+        "33",
+        "41"
+      ],
+      "notes": "s33 seizure of property; s41 power to search, seize, arrest without warrant for drug offences."
+    }
+  ],
+  "jurisdiction": "federal",
+  "agency": [
+    "ndlea"
+  ],
+  "status": "approved",
+  "reviewer": "Content team (source check)",
+  "lastReviewed": "2026-10-29",
+  "nextReview": "2027-04-30",
+  "reviewNotes": "Citations checked against NDLEA Act as downloaded from PLAC Laws of Nigeria on 2026-10-29. Source verification is not legal advice.",
+  "changeHistory": [
+    {
+      "date": "2026-10-29",
+      "note": "Initial published draft based on NDLEA Act sections 33 and 41.",
+      "reviewer": "Content team (source check)"
+    }
+  ],
+  "relatedScenarios": [
+    "police-stop-search-car",
+    "customs-highway-stop"
+  ]
+}

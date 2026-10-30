@@ -1,0 +1,73 @@
+{
+  "id": "police-phone-privacy",
+  "title": "Can police force me to unlock my phone or give my password?",
+  "shortTitle": "Phone unlock & privacy",
+  "icon": "📱",
+  "question": "Can police force me to unlock my phone with my face, fingerprint, or password?",
+  "keywords": [
+    "police",
+    "phone",
+    "unlock",
+    "password",
+    "fingerprint",
+    "face id",
+    "privacy",
+    "search"
+  ],
+  "category": "documents",
+  "shortAnswer": "No law in Nigeria expressly compels you to unlock your phone or disclose your password. The Constitution (Section 37) guarantees privacy of your communications. Police may seize the phone as evidence with a warrant or reasonable grounds, but cannot force biometric unlock or password disclosure without a court order. You have the right to remain silent.",
+  "legalExplanation": "The **Constitution, Section 37** guarantees **privacy of citizens' homes, correspondence, telephone conversations, and telegraphic communications**.\n\n- **Section 35(3) Constitution**: Right to remain silent and not to be compelled to give evidence against yourself.\n- **ACJA Section 6(2)(b)**: Suspect must be informed of right to remain silent.\n- **Police Act Section 50**: Before search, officer must give **name, station, object of search, grounds**.\n- **Section 51**: Search must be **reasonable**, minimise embarrassment, seek cooperation.\n- **Section 52**: Search of arrested suspect — only for **danger, escape items, or evidence**.\n\n**No statutory power** compels password/biometric disclosure. A **court order** under the **Cybercrimes Act** or **Evidence Act** may compel production of a device, but **not the knowledge in your mind** (password). Biometrics (face/fingerprint) are legally contested — best to **disable biometrics** if you anticipate a stop.",
+  "exceptions": "- **Court order**: A judge may order production of the **device** (not necessarily the password).\n- **Cybercrimes Act 2015**: May allow law enforcement to require **service providers** to disclose data, not the suspect's password.\n- **Consent**: If you voluntarily unlock, you waive the objection.\n- **Emergency**: No general emergency exception for phone unlock.",
+  "practicalOptions": "1. **Politely decline**: \"I do not consent to a search of my phone. Am I free to go?\"\n2. **Disable biometrics** (face/fingerprint) before known checkpoints — use **PIN only**.\n3. **If seized**, ask for the **seizure receipt** and **legal basis** (warrant? grounds?).\n4. **Do not voluntarily unlock** — \"I invoke my right to privacy and silence.\"\n5. **Contact a lawyer** immediately.\n6. **Report coercion** (threats, force) to **NHRC**, **Police CRU**, **ICPC** (Help directory).",
+  "whatToAvoid": "- Voluntarily unlocking or giving password — waives your rights.\n- Enabling face/fingerprint unlock at checkpoints.\n- Lying about having a password.\n- Physical resistance — note the coercion instead.",
+  "whatToDocument": "- Officers' names, ranks, station.\n- Time, location.\n- Whether they had a warrant (ask to see it).\n- Stated grounds for phone seizure.\n- Any threats or force used to compel unlock.\n- Whether phone was returned, and when.\n- Witnesses.",
+  "whatToDoAfter": "If phone seized without warrant or consent, file complaint with **NHRC**, **Police CRU**, **ICPC** (Help directory). Seek legal advice on **Section 37 Constitution** enforcement. Free legal support via **Legal Aid Council**.",
+  "sources": [
+    {
+      "sourceId": "constitution-1999",
+      "sections": [
+        "35",
+        "37"
+      ],
+      "notes": "s35(3) right to silence; s37 privacy of communications."
+    },
+    {
+      "sourceId": "nigeria-police-act-2020",
+      "sections": [
+        "50",
+        "51",
+        "52"
+      ],
+      "notes": "s50 pre-search info; s51 conduct of search; s52 search of arrested suspect — limited to danger/escape/evidence."
+    },
+    {
+      "sourceId": "acja-2015",
+      "sections": [
+        "6"
+      ],
+      "notes": "s6 notification of rights including right to silence."
+    }
+  ],
+  "jurisdiction": "federal",
+  "agency": [
+    "npf"
+  ],
+  "status": "approved",
+  "reviewer": "Content team (source check)",
+  "lastReviewed": "2026-10-29",
+  "nextReview": "2027-04-30",
+  "reviewNotes": "Citations checked against Constitution 1999 (s35, s37), Police Act 2020 (s50-52), ACJA 2015 (s6) as downloaded from official sources on 2026-10-29. No law compels password/biometric disclosure. Source verification is not legal advice.",
+  "changeHistory": [
+    {
+      "date": "2026-10-29",
+      "note": "Initial published draft based on Constitution s35/s37, Police Act s50-52, ACJA s6.",
+      "reviewer": "Content team (source check)"
+    }
+  ],
+  "relatedScenarios": [
+    "police-phone-search-checkpoint",
+    "police-phone-unlock",
+    "police-record-encounter",
+    "police-bail-rights"
+  ]
+}

@@ -1,18 +1,23 @@
-import { StrictMode } from 'react'
+import { StrictMode, lazy } from 'react'
 import { createRoot } from 'react-dom/client'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import './index.css'
 import Layout from './components/Layout'
-import Home from './pages/Home'
-import Encounter from './pages/Encounter'
-import Browse from './pages/Browse'
-import Agencies from './pages/Agencies'
-import Search from './pages/Search'
-import Help from './pages/Help'
-import About from './pages/About'
-import Settings from './pages/Settings'
-import Scenario from './pages/Scenario'
-import NotFound from './pages/NotFound'
+
+/**
+ * Pages are split by route. The shared Layout suspends on a skeleton while a
+ * chunk loads, which keeps the first paint small on slow mobile connections.
+ */
+const Home = lazy(() => import('./pages/Home'))
+const Encounter = lazy(() => import('./pages/Encounter'))
+const Browse = lazy(() => import('./pages/Browse'))
+const Agencies = lazy(() => import('./pages/Agencies'))
+const Search = lazy(() => import('./pages/Search'))
+const Help = lazy(() => import('./pages/Help'))
+const About = lazy(() => import('./pages/About'))
+const Settings = lazy(() => import('./pages/Settings'))
+const Scenario = lazy(() => import('./pages/Scenario'))
+const NotFound = lazy(() => import('./pages/NotFound'))
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>

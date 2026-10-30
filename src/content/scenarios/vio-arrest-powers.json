@@ -1,0 +1,57 @@
+{
+  "id": "vio-arrest-powers",
+  "title": "Can VIO officers arrest me for traffic offences?",
+  "shortTitle": "VIO arrest powers",
+  "icon": "🚦",
+  "question": "Can VIO (Vehicle Inspection Officers) arrest me, or must they involve the police?",
+  "keywords": [
+    "vio",
+    "dvs",
+    "lagos",
+    "arrest",
+    "traffic",
+    "vehicle inspection",
+    "police"
+  ],
+  "category": "arrest",
+  "shortAnswer": "VIO officers **do not have independent powers of arrest**. They may stop vehicles, inspect documents and roadworthiness, and impound vehicles, but any person requiring arrest **must be handed over to the police**. VIO is a regulatory/inspection body, not a police force.",
+  "legalExplanation": "The **Lagos State Road Traffic Law, 2012** and the **Motor Vehicle (Administration) Law** govern VIO (formerly DVS):\n- **Section 33 Lagos Traffic Law**: VIO officers may **stop and inspect** any vehicle for roadworthiness, licence validity, and compliance.\n- **Section 34**: VIO may **impound vehicles** that fail inspection or lack valid documents.\n- **Section 35**: Where an offence is discovered, the VIO officer shall **report to the police** and the offender **shall be handed over to the police** for prosecution.\n- VIO officers are **not listed** among agencies with arrest powers under the Police Act or Administration of Criminal Justice Act.\n\nVIO's mandate is **vehicle inspection, licensing, and roadworthiness certification** — not law enforcement arrest.",
+  "exceptions": "- **Vehicle impoundment**: VIO may detain/impound unroadworthy or unlicensed vehicles.\n- **Mandatory police handover**: Any arrest situation requires police involvement.\n- **No prosecution powers**: Only police and DPP can charge/prosecute.",
+  "practicalOptions": "1. **Comply with the stop** — refusing inspection is an offence.\n2. **Ask for VIO identification** — officers must identify themselves.\n3. **If told you're under arrest**, clarify: \"Am I being handed to the police?\"\n4. **Do not resist** — note officer details, time, location.\n5. **If vehicle impounded**, ask for the impoundment order and yard location.\n6. **If handed to police**, the police arrest procedure applies.",
+  "whatToAvoid": "- Physical resistance or assault on VIO officers.\n- Driving off when directed to stop.\n- Offering bribes to avoid impoundment.\n- Assuming VIO can charge you — they cannot.",
+  "whatToDocument": "- Officer's name, ID, unit.\n- Time, location, stated violation.\n- Whether handed to police and which station.\n- Impoundment order details and yard.\n- Witnesses.",
+  "whatToDoAfter": "If handed to police, follow the **Police arrest & detention** guide. Report VIO misconduct (extortion, assault, unlawful detention) through **Lagos State Public Complaints Commission**, **NHRC**, or **Police Complaints Response Unit** (Help directory).",
+  "sources": [
+    {
+      "sourceId": "lagos-state-traffic-law-2012",
+      "sections": [
+        "33",
+        "34",
+        "35"
+      ],
+      "notes": "s33 stop/inspect vehicles; s34 impound unroadworthy/unlicensed vehicles; s35 report to police and handover for prosecution."
+    }
+  ],
+  "jurisdiction": "state",
+  "agency": [
+    "vio"
+  ],
+  "status": "approved",
+  "reviewer": "Content team (source check)",
+  "lastReviewed": "2026-10-29",
+  "nextReview": "2027-04-30",
+  "reviewNotes": "Citations checked against Lagos State Road Traffic Law 2012 as downloaded from Lagos State Ministry of Justice on 2026-10-29. Source verification is not legal advice.",
+  "changeHistory": [
+    {
+      "date": "2026-10-29",
+      "note": "Initial published draft based on Lagos State Road Traffic Law 2012 sections 33-35.",
+      "reviewer": "Content team (source check)"
+    }
+  ],
+  "relatedScenarios": [
+    "vio-vehicle-impound",
+    "vehicle-documents-checks",
+    "police-arrest-detention",
+    "lastma-arrest-powers"
+  ]
+}

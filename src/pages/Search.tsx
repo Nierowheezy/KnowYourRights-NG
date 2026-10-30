@@ -1,8 +1,9 @@
 import { useMemo, useState } from "react";
 import { Link } from "react-router-dom";
 import "../styles/search.css";
-import { AdSlot, AdAnchor, Reveal } from "../components/ui";
+import { AdSlot, AdAnchor, Reveal, Pagination } from "../components/ui";
 import { IconSearch } from "../components/icons";
+import { usePagination } from "../hooks/usePagination";
 import { searchScenarios } from "../lib/search";
 import {
   CATEGORY_LABEL,
@@ -60,6 +61,8 @@ function Result({ scenario, term }: { scenario: Scenario; term: string }) {
   );
 }
 
+const PAGE_SIZE = 10;
+
 export default function Search() {
   const [query, setQuery] = useState("");
   const [activeFilter, setActiveFilter] = useState(0);
@@ -81,6 +84,15 @@ export default function Search() {
       .filter((s) => s.title.toLowerCase().includes(term.toLowerCase()))
       .slice(0, 3);
   }, [term]);
+
+  const resetKey = `${query}-${activeFilter}`;
+  const { page, totalPages, startIndex, endIndex, setPage } = usePagination({
+    totalItems: results.length,
+    pageSize: PAGE_SIZE,
+    resetKey,
+  });
+
+  const paged = results.slice(startIndex, endIndex);
 
   return (
     <>
@@ -153,10 +165,23 @@ export default function Search() {
 
           {/* Results */}
           <div>
-            {results.map((scenario) => (
+            {paged.map((scenario) => (
               <Result key={scenario.id} scenario={scenario} term={term} />
             ))}
           </div>
+
+          {totalPages > 1 && (
+            <Pagination
+              page={page}
+              totalPages={totalPages}
+              onChange={setPage}
+              totalItems={results.length}
+              startIndex={startIndex}
+              endIndex={endIndex}
+              itemLabel="results"
+              ariaLabel="Search results pagination"
+            />
+          )}
 
           <AdSlot variant="inline" size="728 × 90 / in-feed" reveal />
 

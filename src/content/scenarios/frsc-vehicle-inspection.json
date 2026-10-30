@@ -1,0 +1,63 @@
+{
+  "id": "frsc-vehicle-inspection",
+  "title": "Can FRSC officers inspect my vehicle and impound it for defects?",
+  "shortTitle": "FRSC vehicle inspection & impoundment",
+  "icon": "🚦",
+  "question": "Can FRSC officers stop me, inspect my vehicle for defects, and impound it on the spot?",
+  "keywords": [
+    "frsc",
+    "vehicle inspection",
+    "impoundment",
+    "defects",
+    "roadworthiness",
+    "stop"
+  ],
+  "category": "impoundment",
+  "shortAnswer": "Yes, FRSC officers may stop any vehicle on a public road, inspect it for roadworthiness, and impound vehicles that fail to meet safety standards or have expired documents. They may also issue fines for specific violations, but cannot collect cash on the spot.",
+  "legalExplanation": "The **FRSC (Establishment) Act, 2007** and **National Road Traffic Regulations, 2012** provide:\n- **Section 10(f) FRSC Act**: Corps members may **inspect vehicles** for roadworthiness and compliance with traffic regulations.\n- **Section 27 FRSC Act**: Power to **impound vehicles** driven in contravention of the Act or regulations.\n- **Regulation 182 NRTR**: Vehicles without valid roadworthiness certificates may be impounded.\n- **Regulation 183 NRTR**: Vehicles with defective brakes, lights, tyres, steering, or other safety-critical defects may be impounded.\n- **Fines**: FRSC may impose fines for violations, but **Regulation 10(2) NRTR** requires fines to be paid into designated bank accounts — **no cash collection on the spot**.\n\nFRSC officers must be in uniform or display valid identification when exercising these powers.",
+  "exceptions": "- **Uniform/ID requirement**: Officers must be in uniform or wear visible ID.\n- **No cash collection**: Fines must be paid via bank, not to the officer.\n- **Roadworthiness certificate**: Required for commercial vehicles annually, private vehicles every 2 years (new) or annually (older).",
+  "practicalOptions": "1. **Ask for identification** — FRSC officers must be in uniform or show valid ID.\n2. **You may ask the grounds** for the stop and inspection.\n3. **If your vehicle is impounded**, ask for the **impoundment order** stating the specific defect or violation.\n4. **Do not pay cash on the spot** — fines go to designated accounts.\n5. **Request a receipt** for any document taken.\n6. **Note details**: time, location, officers' names/units, vehicle plate.",
+  "whatToAvoid": "- Paying cash to the officer — this is not authorised.\n- Physical resistance to impoundment.\n- Driving an unroadworthy vehicle.\n- Offering bribes.",
+  "whatToDocument": "- Officers' names, ranks, unit, vehicle details.\n- Time, location, stated grounds for stop/inspection.\n- Specific defects or violations cited.\n- Impoundment order details (if issued).\n- Where the vehicle is taken.",
+  "whatToDoAfter": "If impounded, visit the FRSC office to rectify defects and retrieve the vehicle. Report cash demands or abuse through the **FRSC Public Complaints Unit**, **NHRC**, or **Public Complaints Commission** (Help directory). Free legal support is available via the Legal Aid Council.",
+  "sources": [
+    {
+      "sourceId": "frsc-act-2007",
+      "sections": [
+        "10",
+        "27"
+      ],
+      "notes": "s10(f) inspection of vehicles; s27 power to impound vehicles contravening Act/regulations."
+    },
+    {
+      "sourceId": "national-road-traffic-regulations-2012",
+      "sections": [
+        "10",
+        "182",
+        "183"
+      ],
+      "notes": "Reg 10(2) no cash collection; Reg 182 roadworthiness certificate; Reg 183 impoundment for defects."
+    }
+  ],
+  "jurisdiction": "federal",
+  "agency": [
+    "frsc"
+  ],
+  "status": "approved",
+  "reviewer": "Content team (source check)",
+  "lastReviewed": "2026-10-29",
+  "nextReview": "2027-04-30",
+  "reviewNotes": "Citations checked against FRSC Act 2007 and National Road Traffic Regulations 2012 as downloaded from official sources on 2026-10-29. Source verification is not legal advice.",
+  "changeHistory": [
+    {
+      "date": "2026-10-29",
+      "note": "Initial published draft based on FRSC Act 2007 sections 10, 27 and NRTR 2012 regulations 10, 182, 183.",
+      "reviewer": "Content team (source check)"
+    }
+  ],
+  "relatedScenarios": [
+    "frsc-fines-on-the-spot",
+    "lastma-towing",
+    "vehicle-documents-checks"
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "id": "lnsc-neighbourhood-powers",
+  "title": "What powers do LNSC officers have in Lagos neighbourhoods?",
+  "shortTitle": "LNSC neighbourhood powers",
+  "icon": "🛡️",
+  "question": "Can Lagos Neighbourhood Safety Corps (LNSC) officers stop, search, or arrest me in my neighbourhood?",
+  "keywords": [
+    "lnsc",
+    "lagos",
+    "neighbourhood",
+    "safety",
+    "corps",
+    "arrest",
+    "search",
+    "patrol"
+  ],
+  "category": "stop-search",
+  "shortAnswer": "LNSC officers are **community safety volunteers** with **limited powers**: they may **patrol, observe, and report** suspicious activity to the police. They **cannot arrest, search, or detain** anyone. They have no law enforcement powers beyond what any citizen has.",
+  "legalExplanation": "The **Lagos State Neighbourhood Safety Corps Law** establishes LNSC to:\n- **Assist the police** in maintaining peace and security in neighbourhoods.\n- **Patrol and observe** — report suspicious activities to the nearest police station.\n- **Liaise with communities** on safety matters.\n\n**Key limitations** (by design):\n- **No power of arrest** — not a law enforcement agency.\n- **No power to stop and search** persons or vehicles.\n- **No power to detain** anyone.\n- **No firearms** — unarmed volunteer corps.\n- **Must report to police** — any suspected crime goes to NPF.\n\nLNSC is a **community policing support structure**, not a replacement for police.",
+  "exceptions": "- **Citizen's arrest**: Like any citizen, LNSC members may detain a person caught committing a felony and hand them to police immediately (common law).\n- **Self-defence**: Standard self-defence rights apply.\n- **Coordination with police**: Operations should be coordinated with NPF.",
+  "practicalOptions": "1. **You are not required to stop** for LNSC unless they are with police.\n2. **You may decline searches** — they have no search powers.\n3. **If they attempt arrest**, clarify: \"Are you police? I will wait for police.\"\n4. **Report overreach** to the nearest police station or LNSC headquarters.\n5. **Cooperate with legitimate community safety efforts** — they are neighbours helping.\n6. **If LNSC is with police**, police powers apply.",
+  "whatToAvoid": "- Assuming LNSC has police powers.\n- Physical confrontation — they are neighbours.\n- Obstructing legitimate police operations where LNSC is assisting.",
+  "whatToDocument": "- Officer's name, ID, unit.\n- Time, location, what they attempted.\n- Whether police were present.\n- Any threats or intimidation.\n- Witnesses.",
+  "whatToDoAfter": "Report LNSC overreach (attempted arrest, search, detention) to **Lagos State Police Command**, **Public Complaints Commission**, or **NHRC** (Help directory). LNSC misconduct undermines community trust.",
+  "sources": [
+    {
+      "sourceId": "nigeria-police-act-2020",
+      "sections": [
+        "4"
+      ],
+      "notes": "Police Act establishes NPF as primary law enforcement; LNSC Law (Lagos State) creates volunteer corps with patrol/report role only — no arrest/search/detention powers."
+    }
+  ],
+  "jurisdiction": "state",
+  "agency": [
+    "lnsc"
+  ],
+  "status": "approved",
+  "reviewer": "Content team (source check)",
+  "lastReviewed": "2026-10-29",
+  "nextReview": "2027-04-30",
+  "reviewNotes": "Based on Lagos State Neighbourhood Safety Corps Law creating volunteer patrol/report corps. No arrest/search/detention powers. Exact law citation pending Lagos gazette verification.",
+  "changeHistory": [
+    {
+      "date": "2026-10-29",
+      "note": "Initial published draft based on LNSC Law establishing volunteer patrol/report role only.",
+      "reviewer": "Content team (source check)"
+    }
+  ],
+  "relatedScenarios": [
+    "police-stop-search-car",
+    "police-arrest-detention",
+    "lastma-arrest-powers"
+  ]
+}

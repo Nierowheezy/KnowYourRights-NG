@@ -1,0 +1,53 @@
+{
+  "id": "immigration-document-check",
+  "title": "Can immigration officers check my documents?",
+  "shortTitle": "Immigration document check",
+  "icon": "🛂",
+  "question": "Can an immigration officer stop me and demand my passport or travel documents?",
+  "keywords": [
+    "immigration",
+    "passport",
+    "documents",
+    "check",
+    "officer",
+    "travel document"
+  ],
+  "category": "documents",
+  "shortAnswer": "Immigration officers may examine any person entering or leaving Nigeria and require production of travel documents. You must report for examination and furnish information they reasonably require. Refusal can lead to denial of entry or further action.",
+  "legalExplanation": "The **Immigration Act, 2015** establishes the powers of immigration officers:\n- **Section 2**: Every person entering or leaving Nigeria must report to an immigration officer for examination and furnish such information as the officer may reasonably require.\n- **Section 129(1)-(2)**: An immigration officer may require a person to declare and produce documents relevant to the examination, and the power to examine includes the power to search the person and their baggage.\n- **Section 129(3)**: Documents found on search may be detained for examination (not exceeding 7 days).\n\nThese powers apply at ports of entry and designated examination points.",
+  "exceptions": "- **Citizens of Nigeria**: Cannot be denied entry but must still submit to examination.\n- **Diplomatic immunity**: Persons entitled to immunity under international law are exempt from certain requirements.\n- **Women/girls**: Section 129(2) provides that search of a woman or girl must be conducted by a woman.",
+  "practicalOptions": "1. **Stay calm and comply** — produce your passport or travel document when asked.\n2. **Ask for identification** — the officer should identify themselves.\n3. **Do not hand over originals** unless required; show the document for inspection.\n4. **Note the officer's details** — name, rank, station if possible.\n5. **If detained**, ask for the reason and request to contact the Nigerian Immigration Service headquarters or your embassy.",
+  "whatToAvoid": "- Refusing to produce documents — this can lead to denial of entry or detention.\n- Offering money or gifts to avoid examination.\n- Physical resistance or aggression.",
+  "whatToDocument": "- Time, place, and point of entry/exit.\n- Officer's name, rank, and identification.\n- Documents requested and produced.\n- Any search conducted and by whom.\n- Duration of any detention.",
+  "whatToDoAfter": "If you believe your rights were violated, file a complaint through the **Nigeria Immigration Service Public Complaints Unit** or the **Public Complaints Commission**. Free legal support options are in the Help directory.",
+  "sources": [
+    {
+      "sourceId": "nigeria-immigration-act",
+      "sections": [
+        "2",
+        "129"
+      ],
+      "notes": "s2 duty to report for examination; s129 power to examine, require documents, search person and baggage, detain documents."
+    }
+  ],
+  "jurisdiction": "federal",
+  "agency": [
+    "nis"
+  ],
+  "status": "approved",
+  "reviewer": "Content team (source check)",
+  "lastReviewed": "2026-10-29",
+  "nextReview": "2027-04-30",
+  "reviewNotes": "Citations checked against the Immigration Act 2015 as downloaded from the official source on 2026-10-29. Source verification is not legal advice.",
+  "changeHistory": [
+    {
+      "date": "2026-10-29",
+      "note": "Initial published draft based on Immigration Act 2015 sections 2 and 129.",
+      "reviewer": "Content team (source check)"
+    }
+  ],
+  "relatedScenarios": [
+    "vehicle-documents-checks",
+    "police-stop-search-car"
+  ]
+}

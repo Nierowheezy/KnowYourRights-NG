@@ -1,0 +1,56 @@
+{
+  "id": "nscdc-infrastructure-powers",
+  "title": "Can NSCDC officers stop and search me at infrastructure sites?",
+  "shortTitle": "NSCDC infrastructure powers",
+  "icon": "🛡️",
+  "question": "Can NSCDC officers stop, search, or arrest me at power stations, pipelines, or other protected infrastructure?",
+  "keywords": [
+    "nscdc",
+    "civil defence",
+    "infrastructure",
+    "power",
+    "pipeline",
+    "vandalism",
+    "arrest",
+    "search"
+  ],
+  "category": "stop-search",
+  "shortAnswer": "NSCDC officers have **specific powers at protected infrastructure sites**: they may **enter and search premises** suspected of vandalism or illegal petroleum dealing, and **arrest with or without warrant** persons reasonably suspected of offences under the NSCDC Act. These powers are tied to **infrastructure protection**, not general policing.",
+  "legalExplanation": "The **NSCDC Act, 2003**, **Section 5-6** grants:\n- **Section 5(i)**: Enter and search **any premises** and **seize materials** suspected to have been used in **vandalisation** or suspected process of vandalisation.\n- **Section 5(ii)**: Enter and search premises of **suspected illegal dealers in petroleum products** or materials used by PHCN, NIPOST, NITEL, or other public utilities.\n- **Section 6(f)**: **Arrest with or without warrant**, detain, investigate, and institute proceedings via the **Attorney-General of the Federation** against persons reasonably suspected of:\n  - Criminal activity related to infrastructure\n  - Chemical poisoning, oil spillage, nuclear waste\n  - Industrial espionage or fraud\n  - Vandalisation of public infrastructure\n\nThese are **targeted infrastructure protection powers**, not general stop-and-search authority.",
+  "exceptions": "- **Infrastructure nexus required**: Powers tied to protection of federal/state/local government infrastructure.\n- **Reasonable suspicion**: Must have reasonable grounds to suspect an offence under the Act.\n- **AGF prosecution**: Legal proceedings must be in the name of the Attorney-General of the Federation.\n- **Not general policing**: Cannot stop/search/arrest for ordinary crimes unrelated to infrastructure.",
+  "practicalOptions": "1. **Ask for identification** — NSCDC officers should identify themselves.\n2. **Ask the infrastructure connection** — \"What protected infrastructure is this related to?\"\n3. **If at a pipeline/power station**, they have broader search powers there.\n4. **Do not resist physically** — note details.\n5. **Request a lawyer** and ask family be informed.\n6. **If property seized**, ask for receipt and legal basis.",
+  "whatToAvoid": "- Physical resistance.\n- Tampering with infrastructure.\n- Offering bribes.\n- Assuming they have general police powers — they don't.",
+  "whatToDocument": "- Officers' names, ranks, unit, vehicle.\n- Time, location, stated infrastructure connection.\n- What premises searched, what seized.\n- Receipt for seized items.\n- Whether AGF prosecution mentioned.\n- Witnesses.",
+  "whatToDoAfter": "Report NSCDC overreach (general policing outside infrastructure mandate) to **NHRC**, **Public Complaints Commission**, or **Police Complaints Response Unit** (Help directory). Seek legal support via Legal Aid Council.",
+  "sources": [
+    {
+      "sourceId": "nscdc-act",
+      "sections": [
+        "5",
+        "6"
+      ],
+      "notes": "s5(i)-(ii) enter/search/seize for vandalism and petroleum at infrastructure sites; s6(f) arrest with/without warrant for infrastructure-related offences, prosecute via AGF."
+    }
+  ],
+  "jurisdiction": "federal",
+  "agency": [
+    "nscdc"
+  ],
+  "status": "approved",
+  "reviewer": "Content team (source check)",
+  "lastReviewed": "2026-10-29",
+  "nextReview": "2027-04-30",
+  "reviewNotes": "Citations checked against NSCDC Act 2003 as downloaded from PLAC Laws of Nigeria on 2026-10-29. Powers are infrastructure-specific, not general policing.",
+  "changeHistory": [
+    {
+      "date": "2026-10-29",
+      "note": "Initial published draft based on NSCDC Act 2003 sections 5 and 6.",
+      "reviewer": "Content team (source check)"
+    }
+  ],
+  "relatedScenarios": [
+    "nscdc-vandalism-arrest",
+    "police-stop-search-car",
+    "customs-search-seizure"
+  ]
+}

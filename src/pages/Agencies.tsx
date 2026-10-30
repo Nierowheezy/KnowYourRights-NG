@@ -43,11 +43,16 @@ function toCard(agency: Agency): AgencyCardData {
   };
 }
 
+const WIDE_ABBR_AGENCIES = new Set(["nscdc", "ndlea", "lastma", "karota"]);
+
 function AgencyCard({ card, delay }: { card: AgencyCardData; delay?: number }) {
+  const wideAbbr = WIDE_ABBR_AGENCIES.has(card.agencyId);
+  const abbrClass = `agency-abbr${card.state ? " agency-abbr--state" : ""}${wideAbbr ? " agency-abbr--wide" : ""}`;
+
   if (card.count === 0) {
     return (
       <div className="card reveal" style={{ transitionDelay: `${delay}s`, borderStyle: "dashed", opacity: 0.75 }}>
-        <span className="agency-abbr" style={{ background: "var(--chip-surface)", color: "var(--chip-ink)", border: "1px dashed var(--chip-line)" }}>{card.abbr}</span>
+        <span className={abbrClass} style={{ background: "var(--chip-surface)", color: "var(--chip-ink)", border: "1px dashed var(--chip-line)" }}>{card.abbr}</span>
         <h3 className="card__title">{card.name}</h3>
         <p className="card__desc">{card.desc}</p>
         <div className="card__foot"><span className="badge-gray">No guide yet</span><span className="card__meta">{card.meta}</span></div>
@@ -60,7 +65,7 @@ function AgencyCard({ card, delay }: { card: AgencyCardData; delay?: number }) {
       className="card card--hover reveal"
       style={delay ? { transitionDelay: `${delay}s` } : undefined}
     >
-      <span className={`agency-abbr${card.state ? " agency-abbr--state" : ""}`}>{card.abbr}</span>
+      <span className={abbrClass}>{card.abbr}</span>
       <h3 className="card__title">{card.name}</h3>
       <p className="card__desc">{card.desc}</p>
       <div className="card__foot">

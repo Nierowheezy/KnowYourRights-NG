@@ -1,0 +1,56 @@
+{
+  "id": "ndlea-premises-search",
+  "title": "Can NDLEA search my house or premises without a warrant?",
+  "shortTitle": "NDLEA premises search powers",
+  "icon": "🌿",
+  "question": "Can NDLEA officers enter and search my home or premises without a warrant?",
+  "keywords": [
+    "ndlea",
+    "drugs",
+    "search",
+    "premises",
+    "house",
+    "warrant",
+    "narcotics",
+    "raid"
+  ],
+  "category": "stop-search",
+  "shortAnswer": "Yes, under the **NDLEA Act Section 41**, authorised officers may **without warrant, enter and search any land, building, carrier, vehicle, or container** they have **reason to believe is connected with a drug offence**. This includes residential premises if there is reasonable belief of a drug offence connection.",
+  "legalExplanation": "The **NDLEA Act (Cap N30 LFN 2004), Section 41(1)** grants authorised officers (police, customs, or NDLEA enforcement officers) the power to:\n- **Enter and search without warrant** any **land, building, carrier, aircraft, vehicle, container, or any other instrumentality** they have **reason to believe is connected with the commission of an offence under the Act**.\n- **Perform tests and take samples** of substances found.\n- **Arrest without warrant** any person they have reason to believe has committed a drug offence.\n\n**Section 33** provides for seizure of property subject to forfeiture.\n\nThe key phrase is **\"reason to believe is connected with the commission of an offence under this Act\"** — this is a **reasonable suspicion standard**, not mere speculation. The premises must have a nexus to drug offences.",
+  "exceptions": "- **Authorised officers only**: Police, customs, or NDLEA enforcement officers.\n- **Reason to believe required**: Not arbitrary — must be based on intelligence, observation, or investigation.\n- **Nexus to drug offence**: Premises must be connected to drug trafficking, production, storage, etc.\n- **Procedural safeguards**: Seized property follows forfeiture procedures; arrests follow criminal procedure.",
+  "practicalOptions": "1. **Ask for identification** and **authorisation** — they should be NDLEA, police, or customs.\n2. **You may ask the grounds**: \"What drug offence do you believe is connected to this premises?\"\n3. **Do not resist physically** — obstruction is an offence.\n4. **Observe the search** — note what areas are searched, what is taken.\n5. **Request a receipt** for any items seized.\n6. **Contact a lawyer immediately** — drug offences carry severe penalties.",
+  "whatToAvoid": "- Physical resistance or obstruction.\n- Destroying or concealing suspected substances.\n- Offering bribes — separate serious offence.\n- Signing statements without legal advice.",
+  "whatToDocument": "- Officers' names, ranks, agency, vehicle.\n- Time, location, stated grounds (what drug offence suspected).\n- Areas searched, items seized.\n- Receipt details for seized items.\n- Witnesses present.",
+  "whatToDoAfter": "Contact **Legal Aid Council** or private lawyer immediately — drug offences are serious. Report abuse (search without reasonable grounds, excessive force) to **NHRC**, **Public Complaints Commission**, or **Police Complaints Response Unit** (Help directory).",
+  "sources": [
+    {
+      "sourceId": "ndlea-act",
+      "sections": [
+        "33",
+        "41"
+      ],
+      "notes": "s33 seizure/forfeiture; s41(1) enter/search without warrant any land/building/vehicle/container connected with drug offence; arrest without warrant."
+    }
+  ],
+  "jurisdiction": "federal",
+  "agency": [
+    "ndlea"
+  ],
+  "status": "approved",
+  "reviewer": "Content team (source check)",
+  "lastReviewed": "2026-10-29",
+  "nextReview": "2027-04-30",
+  "reviewNotes": "Citations checked against NDLEA Act as downloaded from PLAC Laws of Nigeria on 2026-10-29. Section 41 grants broad warrantless entry/search for premises connected to drug offences.",
+  "changeHistory": [
+    {
+      "date": "2026-10-29",
+      "note": "Initial published draft based on NDLEA Act sections 33 and 41.",
+      "reviewer": "Content team (source check)"
+    }
+  ],
+  "relatedScenarios": [
+    "ndlea-search-arrest",
+    "police-stop-search-car",
+    "nscdc-infrastructure-powers"
+  ]
+}

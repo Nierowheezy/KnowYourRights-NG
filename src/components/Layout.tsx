@@ -1,7 +1,9 @@
-import { useEffect, useState } from "react";
+import { Suspense, useEffect, useState } from "react";
 import { Link, NavLink, Outlet, useLocation } from "react-router-dom";
 import { getAnnounce } from "../data/announce";
 import { getTheme, nextTheme, setTheme, type Theme } from "../lib/theme";
+import { LogoMark } from "./Logo";
+import { PageSkeleton } from "./ui";
 import OfflineBar from "./OfflineBar";
 import PwaStatus from "./PwaStatus";
 
@@ -90,11 +92,7 @@ export default function Layout() {
       <header className="header">
         <div className="header__pill">
           <Link className="brand" to="/">
-            <svg width="28" height="28" viewBox="0 0 30 30" aria-hidden="true">
-              <rect width="30" height="30" rx="8" fill="#15300a"/>
-              <rect x="13.4" y="6.5" width="3.2" height="10.5" rx="1.6" fill="#c1ff72"/>
-              <circle cx="15" cy="21.4" r="1.9" fill="#c1ff72"/>
-            </svg>
+            <LogoMark size={30} />
             <span className="brand__text">KnowYourRights NG</span>
           </Link>
           <nav className="nav" aria-label="Main">
@@ -138,7 +136,9 @@ export default function Layout() {
       </header>
 
       <main id="main-content">
-        <Outlet />
+        <Suspense fallback={<PageSkeleton />}>
+          <Outlet />
+        </Suspense>
       </main>
 
       <footer className="footer">
@@ -146,11 +146,7 @@ export default function Layout() {
           <div className="footer__grid">
             <div>
               <Link className="brand brand--footer" to="/">
-                <svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true">
-                  <rect width="30" height="30" rx="8" fill="#2c3a1c"/>
-                  <rect x="13.4" y="6.5" width="3.2" height="10.5" rx="1.6" fill="#c1ff72"/>
-                  <circle cx="15" cy="21.4" r="1.9" fill="#c1ff72"/>
-                </svg>
+                <LogoMark size={32} />
                 <span className="brand__text">KnowYourRights NG</span>
               </Link>
               <p className="footer__desc">Free, source-linked guidance for roadside and related enforcement encounters in Nigeria. Every entry shows its review status. Safety-first, always free.</p>

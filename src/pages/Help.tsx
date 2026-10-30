@@ -1,5 +1,6 @@
 import "../styles/help.css";
-import { PageHero, AdSlot, AdAnchor, Reveal } from "../components/ui";
+import { PageHero, AdSlot, AdAnchor, Reveal, Pagination } from "../components/ui";
+import { usePagination } from "../hooks/usePagination";
 import { isSupportVerified, supportChannels } from "../lib/content";
 import type { SupportChannel, SupportContact } from "../lib/schema";
 
@@ -57,11 +58,33 @@ function ChannelCard({ channel, delay }: { channel: SupportChannel; delay?: numb
   );
 }
 
+const PAGE_SIZE = 9;
+
 export default function Help() {
   const published = supportChannels.filter((c) => isSupportVerified(c));
   const emergencies = published.filter((c) => c.type === "emergency");
   const complaints = published.filter((c) => c.type === "complaints");
   const legal = published.filter((c) => c.type === "legal-aid" || c.type === "civil-society");
+
+  const complaintsResetKey = `complaints-${complaints.length}`;
+  const {
+    page: complaintsPage,
+    totalPages: complaintsTotalPages,
+    startIndex: complaintsStart,
+    endIndex: complaintsEnd,
+    setPage: setComplaintsPage,
+  } = usePagination({ totalItems: complaints.length, pageSize: PAGE_SIZE, resetKey: complaintsResetKey });
+  const pagedComplaints = complaints.slice(complaintsStart, complaintsEnd);
+
+  const legalResetKey = `legal-${legal.length}`;
+  const {
+    page: legalPage,
+    totalPages: legalTotalPages,
+    startIndex: legalStart,
+    endIndex: legalEnd,
+    setPage: setLegalPage,
+  } = usePagination({ totalItems: legal.length, pageSize: PAGE_SIZE, resetKey: legalResetKey });
+  const pagedLegal = legal.slice(legalStart, legalEnd);
 
   return (
     <>
@@ -114,10 +137,22 @@ export default function Help() {
               <h2>Complaint channels <span className="count">{complaints.length} listed</span></h2>
               <p className="sub">When your rights were breached and you want it on record.</p>
               <div className="card-grid card-grid--3">
-                {complaints.map((channel, i) => (
+                {pagedComplaints.map((channel, i) => (
                   <ChannelCard key={channel.id} channel={channel} delay={(i % 3) * 0.05} />
                 ))}
               </div>
+              {complaintsTotalPages > 1 && (
+                <Pagination
+                  page={complaintsPage}
+                  totalPages={complaintsTotalPages}
+                  onChange={setComplaintsPage}
+                  totalItems={complaints.length}
+                  startIndex={complaintsStart}
+                  endIndex={complaintsEnd}
+                  itemLabel="channels"
+                  ariaLabel="Complaint channels pagination"
+                />
+              )}
             </Reveal>
           ) : (
             <Reveal className="channel-group">
@@ -130,10 +165,22 @@ export default function Help() {
               <h2>Free legal support <span className="count">{legal.length} listed</span></h2>
               <p className="sub">When you need a lawyer, not just a complaint.</p>
               <div className="card-grid card-grid--3">
-                {legal.map((channel, i) => (
+                {pagedLegal.map((channel, i) => (
                   <ChannelCard key={channel.id} channel={channel} delay={(i % 3) * 0.05} />
                 ))}
               </div>
+              {legalTotalPages > 1 && (
+                <Pagination
+                  page={legalPage}
+                  totalPages={legalTotalPages}
+                  onChange={setLegalPage}
+                  totalItems={legal.length}
+                  startIndex={legalStart}
+                  endIndex={legalEnd}
+                  itemLabel="channels"
+                  ariaLabel="Legal support channels pagination"
+                />
+              )}
             </Reveal>
           ) : (
             <Reveal className="channel-group">

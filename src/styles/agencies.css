@@ -16,6 +16,12 @@
       margin-bottom: 16px;
     }
 
+    .agency-abbr--wide {
+      width: auto;
+      padding: 0 14px;
+      min-width: 56px;
+    }
+
     .agency-abbr--state { background: var(--forest); color: #fff; }
 
     .section-label {

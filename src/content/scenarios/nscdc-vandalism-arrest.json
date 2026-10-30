@@ -1,0 +1,54 @@
+{
+  "id": "nscdc-vandalism-arrest",
+  "title": "Can NSCDC officers arrest me for vandalism or infrastructure protection?",
+  "shortTitle": "NSCDC arrest powers",
+  "icon": "🛡️",
+  "question": "Can NSCDC officers arrest me without a warrant for suspected vandalism or infrastructure-related offences?",
+  "keywords": [
+    "nscdc",
+    "civil defence",
+    "vandalism",
+    "arrest",
+    "warrant",
+    "infrastructure",
+    "petroleum"
+  ],
+  "category": "arrest",
+  "shortAnswer": "Yes, NSCDC officers have warrantless arrest powers for offences under the NSCDC Act: they may arrest with or without a warrant any person reasonably suspected of committing an offence under the Act, including vandalism of public infrastructure, illegal petroleum dealing, and related crimes.",
+  "legalExplanation": "The **NSCDC Act, 2003**, **Section 6(f)**, empowers the Corps to:\n- **Arrest with or without a warrant**, detain, investigate, and institute legal proceedings through the Attorney-General of the Federation against any person reasonably suspected to have committed an offence under the Act.\n- This covers criminal activity, chemical poisoning/oil spillage/nuclear waste, industrial espionage/fraud, and vandalisation of public infrastructure.\n\n**Section 5(i)-(ii)** also grants powers to **enter and search premises** and **seize materials** suspected to have been used in vandalisation or suspected process of vandalisation, and to enter and search premises of suspected illegal dealers in petroleum products or materials used by public utilities (PHCN, NIPOST, NITEL, etc.).",
+  "exceptions": "- **Reasonable suspicion required**: The officer must have reasonable grounds to suspect the person committed an offence under the Act.\n- **Legal proceedings**: Must be instituted in the name of the Attorney-General of the Federation.\n- **Infrastructure focus**: Powers are tied to protection of federal, state, and local government infrastructure.",
+  "practicalOptions": "1. **Ask for identification** — NSCDC officers should identify themselves.\n2. **Ask the grounds** for suspicion and arrest.\n3. **Do not resist physically** — note details instead.\n4. **Request a lawyer** and ask that family be informed.\n5. **If premises are searched**, note what areas were searched and what was seized.",
+  "whatToAvoid": "- Physical resistance or obstruction of officers.\n- Tampering with infrastructure or evidence.\n- Offering bribes.\n- Signing statements without legal advice.",
+  "whatToDocument": "- Officers' names, ranks, unit, vehicle details.\n- Time, place, and stated grounds for arrest/search.\n- What premises were searched and what was seized.\n- Whether a receipt was given for seized items.\n- Who was informed of your detention.",
+  "whatToDoAfter": "Report any abuse through the **NHRC** or **Public Complaints Commission** (both in Help directory). Seek free legal support from the Legal Aid Council. Document everything while fresh.",
+  "sources": [
+    {
+      "sourceId": "nscdc-act",
+      "sections": [
+        "5",
+        "6"
+      ],
+      "notes": "s5(i)-(ii) enter/search/seize for vandalism and petroleum; s6(f) arrest with/without warrant, detain, investigate, prosecute via AGF."
+    }
+  ],
+  "jurisdiction": "federal",
+  "agency": [
+    "nscdc"
+  ],
+  "status": "approved",
+  "reviewer": "Content team (source check)",
+  "lastReviewed": "2026-10-29",
+  "nextReview": "2027-04-30",
+  "reviewNotes": "Citations checked against NSCDC Act 2003 as downloaded from PLAC Laws of Nigeria on 2026-10-29. Source verification is not legal advice.",
+  "changeHistory": [
+    {
+      "date": "2026-10-29",
+      "note": "Initial published draft based on NSCDC Act 2003 sections 5 and 6.",
+      "reviewer": "Content team (source check)"
+    }
+  ],
+  "relatedScenarios": [
+    "police-arrest-detention",
+    "customs-highway-stop"
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "id": "lastma-arrest-powers",
+  "title": "Can LASTMA officers arrest me or must they hand me to police?",
+  "shortTitle": "LASTMA arrest powers",
+  "icon": "🚦",
+  "question": "Can LASTMA officers arrest me for traffic offences, or must they hand me over to the police?",
+  "keywords": [
+    "lastma",
+    "lagos",
+    "arrest",
+    "traffic",
+    "offence",
+    "police",
+    "handover"
+  ],
+  "category": "arrest",
+  "shortAnswer": "LASTMA officers do **not** have independent powers of arrest for traffic offences. They may **stop, direct, and detain** a vehicle/driver for traffic violations, but must **hand over** any person requiring arrest to the Nigeria Police Force. Only the police can effect a formal arrest.",
+  "legalExplanation": "The **Lagos State Road Traffic Law, 2012** establishes LASTMA's powers:\n- **Section 29**: LASTMA officials may **stop and direct** any vehicle, **inspect licences/permits**, and **detain a vehicle** driven in contravention of the Law.\n- **Section 30**: Where a person commits an offence under the Law, the LASTMA official shall **apprehend the offender and hand them over to the nearest police station** for prosecution.\n- **Section 31**: Obstructing a LASTMA official is an offence, but the official must still hand over to police.\n\nLASTMA is a **traffic management authority**, not a police force. Their role is regulation, direction, and detention of vehicles — not arrest and prosecution.",
+  "exceptions": "- **Vehicle detention**: LASTMA may detain/impound vehicles for traffic violations (e.g., no roadworthiness, one-way, parking offences).\n- **Handover mandatory**: Any person needing arrest **must** be handed to the police.\n- **No prosecution powers**: LASTMA cannot charge or prosecute; only the police and DPP can.",
+  "practicalOptions": "1. **Comply with directions** to stop — refusing is an offence.\n2. **Ask for identification** — LASTMA officials must identify themselves.\n3. **If detained**, you may ask: \"Am I being handed to the police? On what charge?\"\n4. **Do not resist** — note the official's details, time, location.\n5. **If handed to police**, the police arrest procedure applies (see Police arrest guide).\n6. **Vehicle impoundment**: Ask for the impoundment order and where the vehicle is taken.",
+  "whatToAvoid": "- Physical resistance or assault on LASTMA officials.\n- Driving off when directed to stop.\n- Offering bribes to avoid impoundment/handover.\n- Assuming LASTMA can charge you — they cannot.",
+  "whatToDocument": "- Official's name, ID number, unit.\n- Time, location, stated violation.\n- Whether you were handed to police and which station.\n- Vehicle impoundment details (yard, order reference).\n- Witnesses.",
+  "whatToDoAfter": "If handed to police, follow the **Police arrest & detention** guide. Report LASTMA misconduct (extortion, assault, unlawful detention) through the **Lagos State Public Complaints Commission**, **NHRC**, or **Police Complaints Response Unit** (Help directory).",
+  "sources": [
+    {
+      "sourceId": "lagos-state-traffic-law-2012",
+      "sections": [
+        "29",
+        "30",
+        "31"
+      ],
+      "notes": "s29 stop/direct/inspect/detain vehicle; s30 apprehend and hand over to police; s31 obstruction offence."
+    }
+  ],
+  "jurisdiction": "state",
+  "agency": [
+    "lastma"
+  ],
+  "status": "approved",
+  "reviewer": "Content team (source check)",
+  "lastReviewed": "2026-10-29",
+  "nextReview": "2027-04-30",
+  "reviewNotes": "Citations checked against Lagos State Road Traffic Law 2012 as downloaded from Lagos State Ministry of Justice on 2026-10-29. Source verification is not legal advice.",
+  "changeHistory": [
+    {
+      "date": "2026-10-29",
+      "note": "Initial published draft based on Lagos State Road Traffic Law 2012 sections 29-31.",
+      "reviewer": "Content team (source check)"
+    }
+  ],
+  "relatedScenarios": [
+    "lastma-towing",
+    "police-arrest-detention",
+    "officer-demanded-money"
+  ]
+}

@@ -1,0 +1,70 @@
+{
+  "id": "police-bail-rights",
+  "title": "What are my bail rights at the police station?",
+  "shortTitle": "Police bail rights",
+  "icon": "🚓",
+  "question": "I'm at the police station. What are my bail rights? Can they demand money for bail?",
+  "keywords": [
+    "police",
+    "bail",
+    "station",
+    "money",
+    "rights",
+    "administrative bail",
+    "court bail"
+  ],
+  "category": "arrest",
+  "shortAnswer": "**Bail at the police station (administrative bail) is free**. The police **cannot demand money** for bail. You have a constitutional right to bail for most offences, and the police must either charge you to court or release you on bail within the constitutional time limit (24–48 hours). Only a court can set monetary bail conditions.",
+  "legalExplanation": "The **Constitution (Section 35)**, **Police Act 2020**, and **ACJA 2015** protect bail rights:\n- **Section 35(1) Constitution**: Right to personal liberty — detention only as permitted by law.\n- **Section 35(4) Constitution**: If arrested, you must be brought before a court **within 24 hours** (or 48 hours if court is >40km away).\n- **Section 35(5) Constitution**: If not tried within **2 months** (summary) or **3 months** (capital), you are entitled to **bail**.\n- **Police Act Section 62**: **Release on bail** of suspect arrested without warrant — police **may release on bail** (free) pending investigation.\n- **ACJA Section 16**: **Administrative bail** by police — **no money** shall be demanded or taken as condition for bail.\n- **ACJA Section 17**: If police refuse bail, suspect may apply to **Magistrate** for bail.\n\n**Bail is free** — any demand for money is **corruption** and an offence under the ICPC Act and Police Act.",
+  "exceptions": "- **Capital offences** (murder, armed robbery, treason): Bail discretion is with the **High Court**, not police.\n- **Serious offences**: Police may refuse administrative bail; you must apply to court.\n- **Flight risk/tampering**: Court may impose conditions (sureties, deposit) — but **police cannot**.\n- **Non-Nigerians**: Immigration status may affect bail but constitutional rights still apply.",
+  "practicalOptions": "1. **Ask for bail** — state clearly: \"I want to be released on administrative bail.\"\n2. **Refuse to pay** — \"Bail is free under the law. I will not pay.\"\n3. **Request the DPO/COP** if the officer insists on payment.\n4. **If refused bail**, ask to be **charged to court** immediately (constitutional right).\n5. **Contact a lawyer** or the **Legal Aid Council** (Help directory).\n6. **Document the demand** — officer's name, amount, witnesses.",
+  "whatToAvoid": "- Paying money for bail — it's corruption, not a legal requirement.\n- Signing an undertaking you don't understand.\n- Admitting guilt to get bail.\n- Staying silent about the demand — report it.",
+  "whatToDocument": "- Officer's name, rank, station.\n- Date, time of bail request and any money demand.\n- Exact words: what was demanded, by whom.\n- Whether you were charged to court or released.\n- Witnesses (other detainees, visitors).",
+  "whatToDoAfter": "Report bail extortion to **Police Complaints Response Unit (CRU)**, **ICPC**, **NHRC**, or **Public Complaints Commission** (Help directory). If charged to court, your lawyer applies for court bail. Free legal support via Legal Aid Council.",
+  "sources": [
+    {
+      "sourceId": "constitution-1999",
+      "sections": [
+        "35"
+      ],
+      "notes": "s35(1) personal liberty; s35(4) 24/48hr court appearance; s35(5) bail entitlement if not tried timely."
+    },
+    {
+      "sourceId": "nigeria-police-act-2020",
+      "sections": [
+        "62"
+      ],
+      "notes": "s62 release on bail of suspect arrested without warrant — police may release on bail."
+    },
+    {
+      "sourceId": "acja-2015",
+      "sections": [
+        "16",
+        "17"
+      ],
+      "notes": "s16 administrative bail by police — no money demanded; s17 application to magistrate if police refuse."
+    }
+  ],
+  "jurisdiction": "federal",
+  "agency": [
+    "npf"
+  ],
+  "status": "approved",
+  "reviewer": "Content team (source check)",
+  "lastReviewed": "2026-10-29",
+  "nextReview": "2027-04-30",
+  "reviewNotes": "Citations checked against Constitution 1999 (s35), Police Act 2020 (s62), ACJA 2015 (s16-17) as downloaded from official sources on 2026-10-29. Bail is free — any money demand is corruption.",
+  "changeHistory": [
+    {
+      "date": "2026-10-29",
+      "note": "Initial published draft based on Constitution s35, Police Act s62, ACJA s16-17.",
+      "reviewer": "Content team (source check)"
+    }
+  ],
+  "relatedScenarios": [
+    "police-arrest-detention",
+    "police-phone-unlock",
+    "icpc-corruption-reporting",
+    "officer-demanded-money"
+  ]
+}

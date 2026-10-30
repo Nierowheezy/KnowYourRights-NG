@@ -1,0 +1,58 @@
+{
+  "id": "customs-search-seizure",
+  "title": "Can Customs officers search my vehicle and seize goods on the highway?",
+  "shortTitle": "Customs highway search & seizure",
+  "icon": "🛃",
+  "question": "Can Customs officers stop my vehicle on the highway, search it, and seize goods without a warrant?",
+  "keywords": [
+    "customs",
+    "ncs",
+    "highway",
+    "search",
+    "seizure",
+    "vehicle",
+    "goods",
+    "warrant"
+  ],
+  "category": "stop-search",
+  "shortAnswer": "Customs officers have broad powers under the Customs Act to patrol highways, stop and search vehicles, and seize goods suspected of being smuggled or uncustomed. They may enter and search any vehicle or premises where they have reasonable cause to suspect uncustomed goods.",
+  "legalExplanation": "The **Customs and Excise Management Act (CEMA)** and **Nigeria Customs Service Act, 2023** grant extensive powers:\n- **Patrol and search**: Customs officers may patrol freely and stop, search, and detain any vehicle on highways or elsewhere where they have reasonable cause to suspect uncustomed or prohibited goods.\n- **Entry and search**: Officers may enter and search any premises, vehicle, or container where they have reasonable cause to believe uncustomed goods are kept.\n- **Seizure**: Goods liable to forfeiture may be seized. The officer must issue a seizure notice.\n- **Arrest**: Officers may arrest without warrant any person found committing an offence against customs laws.\n\nThese powers extend beyond ports and borders to highways and inland areas where smuggling is suspected.",
+  "exceptions": "- **Reasonable cause required**: Officers must have reasonable cause to suspect uncustomed/prohibited goods.\n- **Seizure procedures**: Must follow statutory notice and forfeiture procedures.\n- **Prohibited goods**: Certain goods (e.g., narcotics, weapons) have additional seizure regimes.",
+  "practicalOptions": "1. **Stay calm** — ask for the officer's identification and Customs ID.\n2. **You may ask the grounds** for the stop and search.\n3. **Do not resist physically** — obstruction is an offence.\n4. **If goods are seized**, demand a **seizure notice** (Customs Form) detailing what was seized and the legal basis.\n5. **Note details**: time, location, officers' names/units, vehicle plate.\n6. **You have the right to challenge** the seizure through the Customs appeals process or courts.",
+  "whatToAvoid": "- Physical resistance or fleeing.\n- Concealing or destroying goods.\n- Offering bribes — customs corruption is a serious offence.\n- Signing documents you don't understand.",
+  "whatToDocument": "- Officers' names, ranks, station, vehicle details.\n- Time, location, stated grounds for stop/search.\n- What was searched and what (if anything) was seized.\n- Seizure notice details (if issued).\n- Witnesses present.",
+  "whatToDoAfter": "If goods were seized, you may **appeal to the Comptroller-General** within the statutory period or **challenge in court**. Report abuse through the **Public Complaints Commission** or **NHRC** (Help directory). Free legal support is available via the Legal Aid Council.",
+  "sources": [
+    {
+      "sourceId": "nigeria-customs-service-act-2023",
+      "sections": [
+        "147",
+        "148",
+        "149",
+        "150"
+      ],
+      "notes": "Customs Act powers: patrol, stop/search vehicles, entry/search premises, seizure procedures, arrest. CEMA sections incorporated."
+    }
+  ],
+  "jurisdiction": "federal",
+  "agency": [
+    "ncs"
+  ],
+  "status": "approved",
+  "reviewer": "Content team (source check)",
+  "lastReviewed": "2026-10-29",
+  "nextReview": "2027-04-30",
+  "reviewNotes": "Citations checked against Nigeria Customs Service Act 2023 as downloaded from official source on 2026-10-29. Source verification is not legal advice.",
+  "changeHistory": [
+    {
+      "date": "2026-10-29",
+      "note": "Initial published draft based on Customs Act/NCS Act 2023 patrol, search, seizure, and arrest powers.",
+      "reviewer": "Content team (source check)"
+    }
+  ],
+  "relatedScenarios": [
+    "customs-highway-stop",
+    "police-stop-search-car",
+    "ndlea-search-arrest"
+  ]
+}
