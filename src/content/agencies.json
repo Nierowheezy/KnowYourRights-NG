@@ -70,7 +70,7 @@
     "name": "Lagos State Traffic Management Authority (LASTMA)",
     "abbr": "LASTMA",
     "type": "traffic",
-    "jurisdiction": "state",
+    "jurisdiction": "federal",
     "mandate": "Towing, impound procedure and lawful fees.",
     "relevantScenarios": [
       "lastma-towing"
@@ -92,7 +92,7 @@
     "name": "Kano Road and Traffic Agency (KAROTA)",
     "abbr": "KAROTA",
     "type": "traffic",
-    "jurisdiction": "state",
+    "jurisdiction": "federal",
     "mandate": "State traffic rules that differ from federal highway rules.",
     "relevantScenarios": []
   },
