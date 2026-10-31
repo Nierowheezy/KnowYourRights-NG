@@ -1,0 +1,45 @@
+{
+  "id": "frsc-act-29-repeal-of-previous-act",
+  "title": "Repeal of previous Act",
+  "shortTitle": "Repeal of previous Act",
+  "icon": "🚗",
+  "question": "What does FRSC Act 2007 section 29 say about repeal of previous act?",
+  "keywords": [
+    "repeal",
+    "previous",
+    "act"
+  ],
+  "category": "documents",
+  "shortAnswer": "FRSC Act 2007 s.29 — Repeals FRSC Act Cap 141 LFN 1990; regulations remain until new ones made.",
+  "legalExplanation": "**Section 29 of the Federal Road Safety Commission (Establishment) Act, 2007** provides:\n\nRepeals FRSC Act Cap 141 LFN 1990; regulations remain until new ones made\n\nThis Act established the FRSC with responsibility for road safety management, traffic regulation, driver licensing, vehicle inspection, and accident prevention on federal highways.",
+  "exceptions": "",
+  "practicalOptions": "Carry valid driver's licence, vehicle licence, proof of ownership, insurance. Obey speed limits and traffic signs. Do not drink and drive. Stop at checkpoints. Note officer details if fined.",
+  "whatToAvoid": "Do not drive without licence, exceed speed limit, drink and drive, use forged documents, overload vehicle, bribe officers.",
+  "whatToDocument": "Officer name, unit, vehicle plate, time, location, fine amount, receipt, photos of documents/vehicle.",
+  "whatToDoAfter": "Pay fine at designated bank (not to officer). Keep receipt. Contest in court if wrong. Report misconduct to FRSC HQ or PCR Unit.",
+  "sources": [
+    {
+      "sourceId": "frsc-act-2007",
+      "sections": [
+        "s.29"
+      ]
+    }
+  ],
+  "jurisdiction": "federal",
+  "agency": [
+    "frsc"
+  ],
+  "status": "under-review",
+  "reviewer": "Auto-generated",
+  "lastReviewed": "2026-10-31",
+  "nextReview": "",
+  "reviewNotes": "Auto-generated from FRSC Act 2007 s.29. Needs plain-language review and verification against official gazette.",
+  "changeHistory": [
+    {
+      "date": "2026-10-31",
+      "note": "Auto-generated from FRSC Act 2007 PDF",
+      "reviewer": "Auto-generated"
+    }
+  ],
+  "relatedScenarios": []
+}

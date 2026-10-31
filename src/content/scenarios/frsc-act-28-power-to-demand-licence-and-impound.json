@@ -1,0 +1,47 @@
+{
+  "id": "frsc-act-28-power-to-demand-licence-and-impound",
+  "title": "Power to demand licence and impound",
+  "shortTitle": "Power to demand licence and impound",
+  "icon": "🚗",
+  "question": "What does FRSC Act 2007 section 28 say about power to demand licence and impound?",
+  "keywords": [
+    "power",
+    "demand",
+    "licence",
+    "and",
+    "impound"
+  ],
+  "category": "documents",
+  "shortAnswer": "FRSC Act 2007 s.28 — May demand licence, retain it, issue temporary permit; impound vehicle for offences.",
+  "legalExplanation": "**Section 28 of the Federal Road Safety Commission (Establishment) Act, 2007** provides:\n\nMay demand licence, retain it, issue temporary permit; impound vehicle for offences\n\nThis Act established the FRSC with responsibility for road safety management, traffic regulation, driver licensing, vehicle inspection, and accident prevention on federal highways.",
+  "exceptions": "",
+  "practicalOptions": "Carry valid driver's licence, vehicle licence, proof of ownership, insurance. Obey speed limits and traffic signs. Do not drink and drive. Stop at checkpoints. Note officer details if fined.",
+  "whatToAvoid": "Do not drive without licence, exceed speed limit, drink and drive, use forged documents, overload vehicle, bribe officers.",
+  "whatToDocument": "Officer name, unit, vehicle plate, time, location, fine amount, receipt, photos of documents/vehicle.",
+  "whatToDoAfter": "Pay fine at designated bank (not to officer). Keep receipt. Contest in court if wrong. Report misconduct to FRSC HQ or PCR Unit.",
+  "sources": [
+    {
+      "sourceId": "frsc-act-2007",
+      "sections": [
+        "s.28"
+      ]
+    }
+  ],
+  "jurisdiction": "federal",
+  "agency": [
+    "frsc"
+  ],
+  "status": "under-review",
+  "reviewer": "Auto-generated",
+  "lastReviewed": "2026-10-31",
+  "nextReview": "",
+  "reviewNotes": "Auto-generated from FRSC Act 2007 s.28. Needs plain-language review and verification against official gazette.",
+  "changeHistory": [
+    {
+      "date": "2026-10-31",
+      "note": "Auto-generated from FRSC Act 2007 PDF",
+      "reviewer": "Auto-generated"
+    }
+  ],
+  "relatedScenarios": []
+}
