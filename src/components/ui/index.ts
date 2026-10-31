@@ -7,3 +7,4 @@ export { CtaSplit } from "./CtaSplit";
 export { Pagination, pageWindow } from "./Pagination";
 export { Skeleton, SkeletonText, SkeletonCard, SkeletonGrid, PageSkeleton } from "./Skeleton";
 export { Spinner } from "./Spinner";
+export { SearchBox } from "./SearchBox";

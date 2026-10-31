@@ -691,6 +691,7 @@ img, svg { display: block; }
   font-weight: 500;
   text-decoration: none;
   white-space: nowrap;
+  cursor: pointer;
   transition: background 150ms ease, border-color 150ms ease, color 150ms ease;
 }
 

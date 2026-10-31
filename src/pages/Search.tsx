@@ -1,10 +1,10 @@
 import { useMemo, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import "../styles/search.css";
-import { AdSlot, AdAnchor, Reveal, Pagination } from "../components/ui";
+import { AdSlot, AdAnchor, Reveal, Pagination, SearchBox } from "../components/ui";
 import { IconSearch } from "../components/icons";
 import { usePagination } from "../hooks/usePagination";
-import { searchScenarios } from "../lib/search";
+import { searchScenarios, tokenizeQuery } from "../lib/search";
 import { scrollToElement } from "../lib/scroll";
 import {
   CATEGORY_LABEL,
@@ -40,13 +40,17 @@ const FILTERS: Array<{ label: string; match?: (s: Scenario) => boolean }> = [
   { label: "Federal only", match: (s: Scenario) => s.jurisdiction === "federal" },
 ];
 
-/** Wraps every case-insensitive occurrence of `term` in a <mark>. */
-function highlight(text: string, term: string) {
-  if (!term) return text;
-  const escaped = term.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
-  const parts = text.split(new RegExp(`(${escaped})`, "gi"));
+/** Wraps every case-insensitive occurrence of any query token in a <mark>. */
+function highlight(text: string, terms: string[]) {
+  const needles = [...new Set(terms.filter((term) => term.length > 1))];
+  if (needles.length === 0) return text;
+  const pattern = needles
+    .sort((a, b) => b.length - a.length)
+    .map((term) => term.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"))
+    .join("|");
+  const parts = text.split(new RegExp(`(${pattern})`, "gi"));
   return parts.map((part, i) =>
-    part.toLowerCase() === term.toLowerCase() ? <mark key={i}>{part}</mark> : part
+    needles.includes(part.toLowerCase()) ? <mark key={i}>{part}</mark> : part
   );
 }
 
@@ -71,7 +75,7 @@ function sortResults(results: Scenario[], sort: SortKey): Scenario[] {
   }
 }
 
-function Result({ scenario, term }: { scenario: Scenario; term: string }) {
+function Result({ scenario, terms }: { scenario: Scenario; terms: string[] }) {
   const snippet = scenario.shortAnswer.length > 190 ? `${scenario.shortAnswer.slice(0, 190).trimEnd()}…` : scenario.shortAnswer;
   const reviewed = scenario.lastReviewed ? new Date(scenario.lastReviewed) : null;
   const reviewedLabel = reviewed ? reviewed.toLocaleDateString("en-GB", { day: "numeric", month: "short", year: "numeric" }) : "";
@@ -80,8 +84,8 @@ function Result({ scenario, term }: { scenario: Scenario; term: string }) {
   return (
     <Reveal as="article" className="result">
       <div className="result__crumb">{CATEGORY_LABEL[scenario.category]} · {getScenarioAgencyLabel(scenario)}</div>
-      <h3 className="result__title"><Link to={`/scenario/${scenario.id}`}>{highlight(scenario.title, term)}</Link></h3>
-      <p className="result__snippet">{highlight(snippet, term)}</p>
+      <h3 className="result__title"><Link to={`/scenario/${scenario.id}`}>{highlight(scenario.title, terms)}</Link></h3>
+      <p className="result__snippet">{highlight(snippet, terms)}</p>
       <div className="badge-row">
         <span className={`badge-outline ${scenario.jurisdiction === "federal" ? "badge-federal" : "badge-state"}`}>
           {scenario.jurisdiction === "federal" ? "Federal" : "State"}
@@ -107,28 +111,28 @@ export default function Search() {
   const [focused, setFocused] = useState(false);
   const resultsRef = useRef<HTMLDivElement>(null);
 
-  const term = useMemo(() => {
-    const tokens = query.trim().split(/\s+/);
-    return tokens.length ? tokens[tokens.length - 1] : "";
-  }, [query]);
+  const trimmedQuery = query.trim();
+
+  /** The tokens actually searched for, reused for highlighting. */
+  const terms = useMemo(() => tokenizeQuery(trimmedQuery), [trimmedQuery]);
+
+  /** Unfiltered, relevance-ranked matches; filters and sort apply on top. */
+  const matched = useMemo(
+    () => (trimmedQuery ? searchScenarios(trimmedQuery) : listedScenarios),
+    [trimmedQuery]
+  );
 
   const results = useMemo(() => {
-    const base = query.trim() ? searchScenarios(query) : listedScenarios;
     const filter = FILTERS[activeFilter].match;
-    const filtered = filter ? base.filter(filter) : base;
+    const filtered = filter ? matched.filter(filter) : matched;
     return sortResults(filtered, sort);
-  }, [query, activeFilter, sort]);
+  }, [matched, activeFilter, sort]);
 
-  const suggestions = useMemo(() => {
-    if (!term) return [];
-    return listedScenarios
-      .filter((s) => s.title.toLowerCase().includes(term.toLowerCase()))
-      .slice(0, 3);
-  }, [term]);
+  const suggestions = useMemo(() => matched.slice(0, 3), [matched]);
 
-  const showSuggestions = focused && term.length > 0;
+  const showSuggestions = focused && trimmedQuery.length > 0;
 
-  const resetKey = `${query}-${activeFilter}-${sort}`;
+  const resetKey = `${trimmedQuery}-${activeFilter}-${sort}`;
   const { page, totalPages, startIndex, endIndex, setPage } = usePagination({
     totalItems: results.length,
     pageSize: PAGE_SIZE,
@@ -153,33 +157,28 @@ export default function Search() {
       <section className="search-stage">
         <div className="container">
           <div className="search-box anim">
-            <div className="search-box__field">
-              <IconSearch style={{ color: "var(--forest)", flexShrink: 0 }} />
-              <input
-                className="search-box__query"
-                type="search"
-                value={query}
-                onChange={(e) => {
-                  setQuery(e.target.value);
-                  setFocused(true);
-                }}
-                onFocus={() => setFocused(true)}
-                onBlur={() => setFocused(false)}
-                onKeyDown={(e) => {
-                  if (e.key === "Enter") {
-                    e.preventDefault();
-                    jumpToResults();
-                  }
-                  if (e.key === "Escape") setFocused(false);
-                }}
-                placeholder="Ask in plain language — e.g. can police search my phone"
-                aria-label="Search the guide"
-                aria-expanded={showSuggestions}
-                aria-controls="search-suggestions"
-                autoComplete="off"
-              />
-              <span className="badge-lime" aria-live="polite">{results.length} matches</span>
-            </div>
+            <SearchBox
+              value={query}
+              onChange={(v) => {
+                setQuery(v);
+                setFocused(true);
+              }}
+              placeholder="Ask in plain language — e.g. can police search my phone"
+              variant="large"
+              showCount={results.length}
+              ariaLabel="Search the guide"
+              onFocus={() => setFocused(true)}
+              onBlur={() => setFocused(false)}
+              onKeyDown={(e) => {
+                if (e.key === "Enter") {
+                  e.preventDefault();
+                  jumpToResults();
+                }
+                if (e.key === "Escape") setFocused(false);
+              }}
+              ariaExpanded={showSuggestions}
+              ariaControls="search-suggestions"
+            />
 
             {showSuggestions && (
               <div
@@ -197,7 +196,7 @@ export default function Search() {
                       <IconSearch width={15} height={15} style={{ color: "var(--text-faint)", flexShrink: 0 }} />
                     )}
                     <span className="suggestion__q">
-                      <Link to={`/scenario/${s.id}`}>{highlight(s.title, term)}</Link>
+                      <Link to={`/scenario/${s.id}`}>{highlight(s.title, terms)}</Link>
                     </span>
                     <span className="suggestion__meta">{CATEGORY_LABEL[s.category]}{i === 0 ? " · top match" : ""}</span>
                   </div>
@@ -205,7 +204,7 @@ export default function Search() {
                 {suggestions.length === 0 && (
                   <div className="suggestion" role="option" aria-selected={false}>
                     <IconSearch width={15} height={15} style={{ color: "var(--text-faint)", flexShrink: 0 }} />
-                    <span className="suggestion__q">No title match — press Enter to see full-text results</span>
+                    <span className="suggestion__q">No guide mentions "{trimmedQuery}" yet — try fewer or different words</span>
                   </div>
                 )}
                 <button type="button" className="suggestion suggestion--action" onClick={jumpToResults}>
@@ -238,8 +237,8 @@ export default function Search() {
 
           <Reveal className="results-head">
             <span className="muted" style={{ fontSize: "0.85rem" }} aria-live="polite">
-              {query.trim()
-                ? <>{results.length} matches for "<strong style={{ color: "var(--text)" }}>{term}</strong>"</>
+              {trimmedQuery
+                ? <>{results.length} matches for "<strong style={{ color: "var(--text)" }}>{trimmedQuery}</strong>"</>
                 : <>{results.length} scenarios</>}
             </span>
             <label className="sort-field">
@@ -255,7 +254,7 @@ export default function Search() {
           {/* Results */}
           <div ref={resultsRef}>
             {paged.map((scenario) => (
-              <Result key={scenario.id} scenario={scenario} term={term} />
+              <Result key={scenario.id} scenario={scenario} terms={terms} />
             ))}
           </div>
 
@@ -275,12 +274,12 @@ export default function Search() {
           <AdSlot variant="inline" size="728 × 90 / in-feed" reveal />
 
           {/* No-result recovery */}
-          {query.trim() && results.length === 0 && (
+          {trimmedQuery && results.length === 0 && (
             <section style={{ padding: "48px 0 12px" }}>
               <div className="recovery reveal">
                 <h3 className="display display--compact" style={{ fontSize: "1.3rem" }}>Looking for something else?</h3>
                 <p className="lede" style={{ fontSize: "0.92rem", margin: "10px auto 20px", maxWidth: 420 }}>
-                  No exact match for "<strong>{query}</strong>" — but these related situations might cover it.
+                  No exact match for "<strong>{trimmedQuery}</strong>" — but these related situations might cover it.
                 </p>
                 <div className="chip-row" style={{ justifyContent: "center" }}>
                   <Link to="/browse" className="chip">Browse all situations</Link>

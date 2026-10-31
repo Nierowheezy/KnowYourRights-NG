@@ -1,8 +1,7 @@
 import { useMemo, useRef, useState } from "react";
 import { Link, useSearchParams } from "react-router-dom";
 import "../styles/browse.css";
-import { AdSlot, AdAnchor, Pagination } from "../components/ui";
-import { IconSearch } from "../components/icons";
+import { AdSlot, AdAnchor, Pagination, SearchBox } from "../components/ui";
 import { usePagination } from "../hooks/usePagination";
 import { scrollToElement } from "../lib/scroll";
 import {
@@ -201,20 +200,18 @@ export default function Browse() {
             official text on the issuing agency's portal.
           </p>
 
-          <form className="search-sm anim" style={{ animationDelay: ".16s" }} onSubmit={(e) => e.preventDefault()} role="search">
-            <IconSearch width={16} height={16} style={{ color: "var(--text-faint)", flexShrink: 0 }} />
-            <input
-              className="search-sm__input"
-              type="search"
-              placeholder="Search in your own words — e.g. 'officer seized my key'"
+          <div className="anim" style={{ animationDelay: ".16s" }}>
+            <SearchBox
               value={query}
-              onChange={(e) => {
-                setQuery(e.target.value);
+              onChange={(v) => {
+                setQuery(v);
                 setFiltersOpen(true);
               }}
-              aria-label="Search guides"
+              placeholder="Search in your own words — e.g. 'officer seized my key'"
+              variant="small"
+              ariaLabel="Search guides"
             />
-          </form>
+          </div>
 
           <div className="browse-toolbar anim" style={{ animationDelay: ".22s" }}>
             <button
