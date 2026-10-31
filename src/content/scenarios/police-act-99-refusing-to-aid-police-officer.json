@@ -1,0 +1,46 @@
+{
+  "id": "police-act-99-refusing-to-aid-police-officer",
+  "title": "Refusing to aid police officer",
+  "shortTitle": "Refusing to aid police officer",
+  "icon": "⚖️",
+  "question": "What does Police Act 2020 section 99 say about refusing to aid police officer?",
+  "keywords": [
+    "refusing",
+    "aid",
+    "police",
+    "officer"
+  ],
+  "category": "complaints",
+  "shortAnswer": "Police Act 2020 s.99 — Offence to refuse aid to assaulted officer.",
+  "legalExplanation": "**Section 99 of the Nigeria Police Act 2020** provides:\n\nOffence to refuse aid to assaulted officer\n\nThis section is part of the Police Act 2020 which replaced the old Police Act Cap P19 LFN 2004. It aims to provide a more efficient police service based on accountability, human rights protection, and community partnership.",
+  "exceptions": "",
+  "practicalOptions": "Stay calm. Ask \"Am I under arrest?\" and \"What for?\". Do not resist. Ask for lawyer. Note officer name/number. Demand court within 24 hours or release.",
+  "whatToAvoid": "Do not run, bribe, argue aggressively, delete phone data, or sign statements without lawyer.",
+  "whatToDocument": "Officer name, rank, station, vehicle plate, time, location, witnesses, injuries, phone/video if safe.",
+  "whatToDoAfter": "Get lawyer. File complaint at PCR Unit (0800-727-3727). Demand court within 24h or release. Document injuries medically.",
+  "sources": [
+    {
+      "sourceId": "nigeria-police-act-2020",
+      "sections": [
+        "s.99"
+      ]
+    }
+  ],
+  "jurisdiction": "federal",
+  "agency": [
+    "npf"
+  ],
+  "status": "under-review",
+  "reviewer": "Auto-generated",
+  "lastReviewed": "2026-10-31",
+  "nextReview": "",
+  "reviewNotes": "Auto-generated from Police Act 2020 s.99. Needs plain-language review and verification against official gazette.",
+  "changeHistory": [
+    {
+      "date": "2026-10-31",
+      "note": "Auto-generated from Police Act 2020 PDF",
+      "reviewer": "Auto-generated"
+    }
+  ],
+  "relatedScenarios": []
+}

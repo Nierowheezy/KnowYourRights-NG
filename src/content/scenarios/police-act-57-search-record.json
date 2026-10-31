@@ -1,0 +1,44 @@
+{
+  "id": "police-act-57-search-record",
+  "title": "Search record",
+  "shortTitle": "Search record",
+  "icon": "⚖️",
+  "question": "What does Police Act 2020 section 57 say about search record?",
+  "keywords": [
+    "search",
+    "record"
+  ],
+  "category": "stop-search",
+  "shortAnswer": "Police Act 2020 s.57 — Record kept; copy to person; details of items found.",
+  "legalExplanation": "**Section 57 of the Nigeria Police Act 2020** provides:\n\nRecord kept; copy to person; details of items found\n\nThis section is part of the Police Act 2020 which replaced the old Police Act Cap P19 LFN 2004. It aims to provide a more efficient police service based on accountability, human rights protection, and community partnership.",
+  "exceptions": "",
+  "practicalOptions": "Stay calm. Ask \"Am I under arrest?\" and \"What for?\". Do not resist. Ask for lawyer. Note officer name/number. Demand court within 24 hours or release.",
+  "whatToAvoid": "Do not run, bribe, argue aggressively, delete phone data, or sign statements without lawyer.",
+  "whatToDocument": "Officer name, rank, station, vehicle plate, time, location, witnesses, injuries, phone/video if safe.",
+  "whatToDoAfter": "Get lawyer. File complaint at PCR Unit (0800-727-3727). Demand court within 24h or release. Document injuries medically.",
+  "sources": [
+    {
+      "sourceId": "nigeria-police-act-2020",
+      "sections": [
+        "s.57"
+      ]
+    }
+  ],
+  "jurisdiction": "federal",
+  "agency": [
+    "npf"
+  ],
+  "status": "under-review",
+  "reviewer": "Auto-generated",
+  "lastReviewed": "2026-10-31",
+  "nextReview": "",
+  "reviewNotes": "Auto-generated from Police Act 2020 s.57. Needs plain-language review and verification against official gazette.",
+  "changeHistory": [
+    {
+      "date": "2026-10-31",
+      "note": "Auto-generated from Police Act 2020 PDF",
+      "reviewer": "Auto-generated"
+    }
+  ],
+  "relatedScenarios": []
+}

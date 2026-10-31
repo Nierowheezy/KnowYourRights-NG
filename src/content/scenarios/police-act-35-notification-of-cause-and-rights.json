@@ -1,0 +1,46 @@
+{
+  "id": "police-act-35-notification-of-cause-and-rights",
+  "title": "Notification of cause and rights",
+  "shortTitle": "Notification of cause and rights",
+  "icon": "⚖️",
+  "question": "What does Police Act 2020 section 35 say about notification of cause and rights?",
+  "keywords": [
+    "notification",
+    "cause",
+    "and",
+    "rights"
+  ],
+  "category": "arrest",
+  "shortAnswer": "Police Act 2020 s.35 — Must inform reason for arrest; rights to silence, lawyer, free legal aid; notify next-of-kin.",
+  "legalExplanation": "**Section 35 of the Nigeria Police Act 2020** provides:\n\nMust inform reason for arrest; rights to silence, lawyer, free legal aid; notify next-of-kin\n\nThis section is part of the Police Act 2020 which replaced the old Police Act Cap P19 LFN 2004. It aims to provide a more efficient police service based on accountability, human rights protection, and community partnership.",
+  "exceptions": "",
+  "practicalOptions": "Stay calm. Ask \"Am I under arrest?\" and \"What for?\". Do not resist. Ask for lawyer. Note officer name/number. Demand court within 24 hours or release.",
+  "whatToAvoid": "Do not run, bribe, argue aggressively, delete phone data, or sign statements without lawyer.",
+  "whatToDocument": "Officer name, rank, station, vehicle plate, time, location, witnesses, injuries, phone/video if safe.",
+  "whatToDoAfter": "Get lawyer. File complaint at PCR Unit (0800-727-3727). Demand court within 24h or release. Document injuries medically.",
+  "sources": [
+    {
+      "sourceId": "nigeria-police-act-2020",
+      "sections": [
+        "s.35"
+      ]
+    }
+  ],
+  "jurisdiction": "federal",
+  "agency": [
+    "npf"
+  ],
+  "status": "under-review",
+  "reviewer": "Auto-generated",
+  "lastReviewed": "2026-10-31",
+  "nextReview": "",
+  "reviewNotes": "Auto-generated from Police Act 2020 s.35. Needs plain-language review and verification against official gazette.",
+  "changeHistory": [
+    {
+      "date": "2026-10-31",
+      "note": "Auto-generated from Police Act 2020 PDF",
+      "reviewer": "Auto-generated"
+    }
+  ],
+  "relatedScenarios": []
+}

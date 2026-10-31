@@ -1,0 +1,45 @@
+{
+  "id": "police-act-96-offences-by-police-officer",
+  "title": "Offences by police officer",
+  "shortTitle": "Offences by police officer",
+  "icon": "⚖️",
+  "question": "What does Police Act 2020 section 96 say about offences by police officer?",
+  "keywords": [
+    "offences",
+    "police",
+    "officer"
+  ],
+  "category": "complaints",
+  "shortAnswer": "Police Act 2020 s.96 — Police officer offences: disobedience, neglect, corruption, assault, drunk on duty.",
+  "legalExplanation": "**Section 96 of the Nigeria Police Act 2020** provides:\n\nPolice officer offences: disobedience, neglect, corruption, assault, drunk on duty\n\nThis section is part of the Police Act 2020 which replaced the old Police Act Cap P19 LFN 2004. It aims to provide a more efficient police service based on accountability, human rights protection, and community partnership.",
+  "exceptions": "",
+  "practicalOptions": "Stay calm. Ask \"Am I under arrest?\" and \"What for?\". Do not resist. Ask for lawyer. Note officer name/number. Demand court within 24 hours or release.",
+  "whatToAvoid": "Do not run, bribe, argue aggressively, delete phone data, or sign statements without lawyer.",
+  "whatToDocument": "Officer name, rank, station, vehicle plate, time, location, witnesses, injuries, phone/video if safe.",
+  "whatToDoAfter": "Get lawyer. File complaint at PCR Unit (0800-727-3727). Demand court within 24h or release. Document injuries medically.",
+  "sources": [
+    {
+      "sourceId": "nigeria-police-act-2020",
+      "sections": [
+        "s.96"
+      ]
+    }
+  ],
+  "jurisdiction": "federal",
+  "agency": [
+    "npf"
+  ],
+  "status": "under-review",
+  "reviewer": "Auto-generated",
+  "lastReviewed": "2026-10-31",
+  "nextReview": "",
+  "reviewNotes": "Auto-generated from Police Act 2020 s.96. Needs plain-language review and verification against official gazette.",
+  "changeHistory": [
+    {
+      "date": "2026-10-31",
+      "note": "Auto-generated from Police Act 2020 PDF",
+      "reviewer": "Auto-generated"
+    }
+  ],
+  "relatedScenarios": []
+}
