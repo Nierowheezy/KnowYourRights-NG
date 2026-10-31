@@ -104,8 +104,8 @@ export function IconMic(props: SVGProps<SVGSVGElement>) {
 export function IconMicOff(props: SVGProps<SVGSVGElement>) {
   return (
     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true" {...props}>
-      <path d="M15 10a3 3 0 0 0-4.24-2.83M9 18V7a3 3 0 0 1 5.12-2" stroke="currentColor" strokeWidth="1.5" strokeLinejoin="round"/>
-      <path d="M17 3 7 13M7 3l10 10M19 10a7 7 0 0 1-14 0m12.5 7.5-5-5M9 13h6v3" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+      <rect x="8" y="8" width="8" height="8" rx="1.5" stroke="currentColor" strokeWidth="1.5"/>
+      <path d="M12 14a3 3 0 0 0 3-3V6a3 3 0 0 0-6 0v5a3 3 0 0 0 3 3Z" stroke="currentColor" strokeWidth="1.5" strokeLinejoin="round"/>
     </svg>
   );
 }
