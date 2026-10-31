@@ -1,0 +1,45 @@
+{
+  "id": "nigeria-immigration-act-50-offences-and-penalties",
+  "title": "Offences and penalties",
+  "shortTitle": "Offences and penalties",
+  "icon": "⚖️",
+  "question": "What does Nigeria Immigration Act section 50 say about offences and penalties?",
+  "keywords": [
+    "offences",
+    "and",
+    "penalties"
+  ],
+  "category": "arrest",
+  "shortAnswer": "Nigeria Immigration Act s.50 — Offences: illegal entry, overstaying, forged documents, employing illegals; penalties: fine/imprisonment/deportation.",
+  "legalExplanation": "**Section 50 of the Nigeria Immigration Act** provides:\n\nOffences: illegal entry, overstaying, forged documents, employing illegals; penalties: fine/imprisonment/deportation\n\nThis provision empowers Nigeria Immigration Act officers with specific powers and duties.",
+  "exceptions": "",
+  "practicalOptions": "Stay calm. Know your rights. Ask for identification. Do not resist. Ask for lawyer. Document everything.",
+  "whatToAvoid": "Do not run, bribe, resist, destroy evidence, or sign without lawyer.",
+  "whatToDocument": "Officer name, agency, badge, vehicle, time, location, witnesses, injuries, photos/video.",
+  "whatToDoAfter": "Get lawyer. File complaint with agency complaints unit or ICPC/PCR. Demand court within 24h. Document injuries.",
+  "sources": [
+    {
+      "sourceId": "nigeria-immigration-act",
+      "sections": [
+        "s.50"
+      ]
+    }
+  ],
+  "jurisdiction": "federal",
+  "agency": [
+    "nis"
+  ],
+  "status": "under-review",
+  "reviewer": "Auto-generated",
+  "lastReviewed": "2026-10-31",
+  "nextReview": "",
+  "reviewNotes": "Auto-generated from Nigeria Immigration Act s.50. Needs plain-language review and verification against official gazette.",
+  "changeHistory": [
+    {
+      "date": "2026-10-31",
+      "note": "Auto-generated from Nigeria Immigration Act PDF",
+      "reviewer": "Auto-generated"
+    }
+  ],
+  "relatedScenarios": []
+}

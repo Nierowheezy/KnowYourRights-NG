@@ -1,0 +1,45 @@
+{
+  "id": "nscdc-act-9-private-guard-companies",
+  "title": "Private guard companies",
+  "shortTitle": "Private guard companies",
+  "icon": "⚖️",
+  "question": "What does Nscdc Act section 9 say about private guard companies?",
+  "keywords": [
+    "private",
+    "guard",
+    "companies"
+  ],
+  "category": "documents",
+  "shortAnswer": "Nscdc Act s.9 — Licensing, regulation, supervision of private guard companies; register maintained.",
+  "legalExplanation": "**Section 9 of the Nscdc Act** provides:\n\nLicensing, regulation, supervision of private guard companies; register maintained\n\nThis provision empowers Nscdc Act officers with specific powers and duties.",
+  "exceptions": "",
+  "practicalOptions": "Stay calm. Know your rights. Ask for identification. Do not resist. Ask for lawyer. Document everything.",
+  "whatToAvoid": "Do not run, bribe, resist, destroy evidence, or sign without lawyer.",
+  "whatToDocument": "Officer name, agency, badge, vehicle, time, location, witnesses, injuries, photos/video.",
+  "whatToDoAfter": "Get lawyer. File complaint with agency complaints unit or ICPC/PCR. Demand court within 24h. Document injuries.",
+  "sources": [
+    {
+      "sourceId": "nscdc-act",
+      "sections": [
+        "s.9"
+      ]
+    }
+  ],
+  "jurisdiction": "federal",
+  "agency": [
+    "nscdc"
+  ],
+  "status": "under-review",
+  "reviewer": "Auto-generated",
+  "lastReviewed": "2026-10-31",
+  "nextReview": "",
+  "reviewNotes": "Auto-generated from Nscdc Act s.9. Needs plain-language review and verification against official gazette.",
+  "changeHistory": [
+    {
+      "date": "2026-10-31",
+      "note": "Auto-generated from Nscdc Act PDF",
+      "reviewer": "Auto-generated"
+    }
+  ],
+  "relatedScenarios": []
+}

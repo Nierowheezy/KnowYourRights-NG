@@ -1,0 +1,45 @@
+{
+  "id": "ndlea-act-30-arrest-by-private-person",
+  "title": "Arrest by private person",
+  "shortTitle": "Arrest by private person",
+  "icon": "⚖️",
+  "question": "What does Ndlea Act section 30 say about arrest by private person?",
+  "keywords": [
+    "arrest",
+    "private",
+    "person"
+  ],
+  "category": "arrest",
+  "shortAnswer": "Ndlea Act s.30 — Private person may arrest for drug offence in presence; hand to NDLEA/police.",
+  "legalExplanation": "**Section 30 of the Ndlea Act** provides:\n\nPrivate person may arrest for drug offence in presence; hand to NDLEA/police\n\nThis provision empowers Ndlea Act officers with specific powers and duties.",
+  "exceptions": "",
+  "practicalOptions": "Stay calm. Know your rights. Ask for identification. Do not resist. Ask for lawyer. Document everything.",
+  "whatToAvoid": "Do not run, bribe, resist, destroy evidence, or sign without lawyer.",
+  "whatToDocument": "Officer name, agency, badge, vehicle, time, location, witnesses, injuries, photos/video.",
+  "whatToDoAfter": "Get lawyer. File complaint with agency complaints unit or ICPC/PCR. Demand court within 24h. Document injuries.",
+  "sources": [
+    {
+      "sourceId": "ndlea-act",
+      "sections": [
+        "s.30"
+      ]
+    }
+  ],
+  "jurisdiction": "federal",
+  "agency": [
+    "ndlea"
+  ],
+  "status": "under-review",
+  "reviewer": "Auto-generated",
+  "lastReviewed": "2026-10-31",
+  "nextReview": "",
+  "reviewNotes": "Auto-generated from Ndlea Act s.30. Needs plain-language review and verification against official gazette.",
+  "changeHistory": [
+    {
+      "date": "2026-10-31",
+      "note": "Auto-generated from Ndlea Act PDF",
+      "reviewer": "Auto-generated"
+    }
+  ],
+  "relatedScenarios": []
+}

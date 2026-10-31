@@ -1,0 +1,45 @@
+{
+  "id": "acja-2015-147-search-of-female-suspect",
+  "title": "Search of female suspect",
+  "shortTitle": "Search of female suspect",
+  "icon": "⚖️",
+  "question": "What does Acja 2015 section 147 say about search of female suspect?",
+  "keywords": [
+    "search",
+    "female",
+    "suspect"
+  ],
+  "category": "stop-search",
+  "shortAnswer": "Acja 2015 s.147 — Female searched by female officer/medical practitioner; decency observed.",
+  "legalExplanation": "**Section 147 of the Acja 2015** provides:\n\nFemale searched by female officer/medical practitioner; decency observed\n\nThis provision empowers Acja 2015 officers with specific powers and duties.",
+  "exceptions": "",
+  "practicalOptions": "Stay calm. Know your rights. Ask for identification. Do not resist. Ask for lawyer. Document everything.",
+  "whatToAvoid": "Do not run, bribe, resist, destroy evidence, or sign without lawyer.",
+  "whatToDocument": "Officer name, agency, badge, vehicle, time, location, witnesses, injuries, photos/video.",
+  "whatToDoAfter": "Get lawyer. File complaint with agency complaints unit or ICPC/PCR. Demand court within 24h. Document injuries.",
+  "sources": [
+    {
+      "sourceId": "acja-2015",
+      "sections": [
+        "s.147"
+      ]
+    }
+  ],
+  "jurisdiction": "federal",
+  "agency": [
+    "npf"
+  ],
+  "status": "under-review",
+  "reviewer": "Auto-generated",
+  "lastReviewed": "2026-10-31",
+  "nextReview": "",
+  "reviewNotes": "Auto-generated from Acja 2015 s.147. Needs plain-language review and verification against official gazette.",
+  "changeHistory": [
+    {
+      "date": "2026-10-31",
+      "note": "Auto-generated from Acja 2015 PDF",
+      "reviewer": "Auto-generated"
+    }
+  ],
+  "relatedScenarios": []
+}

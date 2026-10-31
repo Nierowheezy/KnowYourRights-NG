@@ -1,0 +1,45 @@
+{
+  "id": "nigeria-immigration-act-46-detention-and-deportation",
+  "title": "Detention and deportation",
+  "shortTitle": "Detention and deportation",
+  "icon": "⚖️",
+  "question": "What does Nigeria Immigration Act section 46 say about detention and deportation?",
+  "keywords": [
+    "detention",
+    "and",
+    "deportation"
+  ],
+  "category": "arrest",
+  "shortAnswer": "Nigeria Immigration Act s.46 — Detain prohibited immigrants; deport within reasonable time; right to appeal; humane treatment.",
+  "legalExplanation": "**Section 46 of the Nigeria Immigration Act** provides:\n\nDetain prohibited immigrants; deport within reasonable time; right to appeal; humane treatment\n\nThis provision empowers Nigeria Immigration Act officers with specific powers and duties.",
+  "exceptions": "",
+  "practicalOptions": "Stay calm. Know your rights. Ask for identification. Do not resist. Ask for lawyer. Document everything.",
+  "whatToAvoid": "Do not run, bribe, resist, destroy evidence, or sign without lawyer.",
+  "whatToDocument": "Officer name, agency, badge, vehicle, time, location, witnesses, injuries, photos/video.",
+  "whatToDoAfter": "Get lawyer. File complaint with agency complaints unit or ICPC/PCR. Demand court within 24h. Document injuries.",
+  "sources": [
+    {
+      "sourceId": "nigeria-immigration-act",
+      "sections": [
+        "s.46"
+      ]
+    }
+  ],
+  "jurisdiction": "federal",
+  "agency": [
+    "nis"
+  ],
+  "status": "under-review",
+  "reviewer": "Auto-generated",
+  "lastReviewed": "2026-10-31",
+  "nextReview": "",
+  "reviewNotes": "Auto-generated from Nigeria Immigration Act s.46. Needs plain-language review and verification against official gazette.",
+  "changeHistory": [
+    {
+      "date": "2026-10-31",
+      "note": "Auto-generated from Nigeria Immigration Act PDF",
+      "reviewer": "Auto-generated"
+    }
+  ],
+  "relatedScenarios": []
+}

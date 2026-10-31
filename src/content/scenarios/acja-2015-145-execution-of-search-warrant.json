@@ -1,0 +1,45 @@
+{
+  "id": "acja-2015-145-execution-of-search-warrant",
+  "title": "Execution of search warrant",
+  "shortTitle": "Execution of search warrant",
+  "icon": "⚖️",
+  "question": "What does Acja 2015 section 145 say about execution of search warrant?",
+  "keywords": [
+    "execution",
+    "search",
+    "warrant"
+  ],
+  "category": "stop-search",
+  "shortAnswer": "Acja 2015 s.145 — Daytime; announce authority; produce warrant; list seized items; receipt.",
+  "legalExplanation": "**Section 145 of the Acja 2015** provides:\n\nDaytime; announce authority; produce warrant; list seized items; receipt\n\nThis provision empowers Acja 2015 officers with specific powers and duties.",
+  "exceptions": "",
+  "practicalOptions": "Stay calm. Know your rights. Ask for identification. Do not resist. Ask for lawyer. Document everything.",
+  "whatToAvoid": "Do not run, bribe, resist, destroy evidence, or sign without lawyer.",
+  "whatToDocument": "Officer name, agency, badge, vehicle, time, location, witnesses, injuries, photos/video.",
+  "whatToDoAfter": "Get lawyer. File complaint with agency complaints unit or ICPC/PCR. Demand court within 24h. Document injuries.",
+  "sources": [
+    {
+      "sourceId": "acja-2015",
+      "sections": [
+        "s.145"
+      ]
+    }
+  ],
+  "jurisdiction": "federal",
+  "agency": [
+    "npf"
+  ],
+  "status": "under-review",
+  "reviewer": "Auto-generated",
+  "lastReviewed": "2026-10-31",
+  "nextReview": "",
+  "reviewNotes": "Auto-generated from Acja 2015 s.145. Needs plain-language review and verification against official gazette.",
+  "changeHistory": [
+    {
+      "date": "2026-10-31",
+      "note": "Auto-generated from Acja 2015 PDF",
+      "reviewer": "Auto-generated"
+    }
+  ],
+  "relatedScenarios": []
+}

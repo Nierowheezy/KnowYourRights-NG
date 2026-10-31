@@ -1,0 +1,44 @@
+{
+  "id": "nigeria-customs-service-act-2023-47-goods-declarations",
+  "title": "Goods declarations",
+  "shortTitle": "Goods declarations",
+  "icon": "⚖️",
+  "question": "What does Nigeria Customs Service Act 2023 section 47 say about goods declarations?",
+  "keywords": [
+    "goods",
+    "declarations"
+  ],
+  "category": "documents",
+  "shortAnswer": "Nigeria Customs Service Act 2023 s.47 — Must declare goods on prescribed form; details of goods, value, origin, classification.",
+  "legalExplanation": "**Section 47 of the Nigeria Customs Service Act 2023** provides:\n\nMust declare goods on prescribed form; details of goods, value, origin, classification\n\nThis provision empowers Nigeria Customs Service Act 2023 officers with specific powers and duties.",
+  "exceptions": "",
+  "practicalOptions": "Stay calm. Know your rights. Ask for identification. Do not resist. Ask for lawyer. Document everything.",
+  "whatToAvoid": "Do not run, bribe, resist, destroy evidence, or sign without lawyer.",
+  "whatToDocument": "Officer name, agency, badge, vehicle, time, location, witnesses, injuries, photos/video.",
+  "whatToDoAfter": "Get lawyer. File complaint with agency complaints unit or ICPC/PCR. Demand court within 24h. Document injuries.",
+  "sources": [
+    {
+      "sourceId": "nigeria-customs-service-act-2023",
+      "sections": [
+        "s.47"
+      ]
+    }
+  ],
+  "jurisdiction": "federal",
+  "agency": [
+    "ncs"
+  ],
+  "status": "under-review",
+  "reviewer": "Auto-generated",
+  "lastReviewed": "2026-10-31",
+  "nextReview": "",
+  "reviewNotes": "Auto-generated from Nigeria Customs Service Act 2023 s.47. Needs plain-language review and verification against official gazette.",
+  "changeHistory": [
+    {
+      "date": "2026-10-31",
+      "note": "Auto-generated from Nigeria Customs Service Act 2023 PDF",
+      "reviewer": "Auto-generated"
+    }
+  ],
+  "relatedScenarios": []
+}

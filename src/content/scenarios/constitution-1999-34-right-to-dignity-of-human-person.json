@@ -1,0 +1,46 @@
+{
+  "id": "constitution-1999-34-right-to-dignity-of-human-person",
+  "title": "Right to dignity of human person",
+  "shortTitle": "Right to dignity of human person",
+  "icon": "⚖️",
+  "question": "What does Constitution 1999 section 34 say about right to dignity of human person?",
+  "keywords": [
+    "right",
+    "dignity",
+    "human",
+    "person"
+  ],
+  "category": "complaints",
+  "shortAnswer": "Constitution 1999 s.34 — No torture, inhuman/degrading treatment; no slavery/forced labour.",
+  "legalExplanation": "**Section 34 of the Constitution 1999** provides:\n\nNo torture, inhuman/degrading treatment; no slavery/forced labour\n\nThis provision empowers Constitution 1999 officers with specific powers and duties.",
+  "exceptions": "",
+  "practicalOptions": "Stay calm. Know your rights. Ask for identification. Do not resist. Ask for lawyer. Document everything.",
+  "whatToAvoid": "Do not run, bribe, resist, destroy evidence, or sign without lawyer.",
+  "whatToDocument": "Officer name, agency, badge, vehicle, time, location, witnesses, injuries, photos/video.",
+  "whatToDoAfter": "Get lawyer. File complaint with agency complaints unit or ICPC/PCR. Demand court within 24h. Document injuries.",
+  "sources": [
+    {
+      "sourceId": "constitution-1999",
+      "sections": [
+        "s.34"
+      ]
+    }
+  ],
+  "jurisdiction": "federal",
+  "agency": [
+    "npf"
+  ],
+  "status": "under-review",
+  "reviewer": "Auto-generated",
+  "lastReviewed": "2026-10-31",
+  "nextReview": "",
+  "reviewNotes": "Auto-generated from Constitution 1999 s.34. Needs plain-language review and verification against official gazette.",
+  "changeHistory": [
+    {
+      "date": "2026-10-31",
+      "note": "Auto-generated from Constitution 1999 PDF",
+      "reviewer": "Auto-generated"
+    }
+  ],
+  "relatedScenarios": []
+}

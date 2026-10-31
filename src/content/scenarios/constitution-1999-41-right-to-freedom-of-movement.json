@@ -1,0 +1,45 @@
+{
+  "id": "constitution-1999-41-right-to-freedom-of-movement",
+  "title": "Right to freedom of movement",
+  "shortTitle": "Right to freedom of movement",
+  "icon": "⚖️",
+  "question": "What does Constitution 1999 section 41 say about right to freedom of movement?",
+  "keywords": [
+    "right",
+    "freedom",
+    "movement"
+  ],
+  "category": "complaints",
+  "shortAnswer": "Constitution 1999 s.41 — Right to move freely, reside anywhere in Nigeria; no expulsion from Nigeria.",
+  "legalExplanation": "**Section 41 of the Constitution 1999** provides:\n\nRight to move freely, reside anywhere in Nigeria; no expulsion from Nigeria\n\nThis provision empowers Constitution 1999 officers with specific powers and duties.",
+  "exceptions": "",
+  "practicalOptions": "Stay calm. Know your rights. Ask for identification. Do not resist. Ask for lawyer. Document everything.",
+  "whatToAvoid": "Do not run, bribe, resist, destroy evidence, or sign without lawyer.",
+  "whatToDocument": "Officer name, agency, badge, vehicle, time, location, witnesses, injuries, photos/video.",
+  "whatToDoAfter": "Get lawyer. File complaint with agency complaints unit or ICPC/PCR. Demand court within 24h. Document injuries.",
+  "sources": [
+    {
+      "sourceId": "constitution-1999",
+      "sections": [
+        "s.41"
+      ]
+    }
+  ],
+  "jurisdiction": "federal",
+  "agency": [
+    "npf"
+  ],
+  "status": "under-review",
+  "reviewer": "Auto-generated",
+  "lastReviewed": "2026-10-31",
+  "nextReview": "",
+  "reviewNotes": "Auto-generated from Constitution 1999 s.41. Needs plain-language review and verification against official gazette.",
+  "changeHistory": [
+    {
+      "date": "2026-10-31",
+      "note": "Auto-generated from Constitution 1999 PDF",
+      "reviewer": "Auto-generated"
+    }
+  ],
+  "relatedScenarios": []
+}

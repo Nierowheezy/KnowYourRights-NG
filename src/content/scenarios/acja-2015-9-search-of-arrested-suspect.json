@@ -1,0 +1,45 @@
+{
+  "id": "acja-2015-9-search-of-arrested-suspect",
+  "title": "Search of arrested suspect",
+  "shortTitle": "Search of arrested suspect",
+  "icon": "⚖️",
+  "question": "What does Acja 2015 section 9 say about search of arrested suspect?",
+  "keywords": [
+    "search",
+    "arrested",
+    "suspect"
+  ],
+  "category": "stop-search",
+  "shortAnswer": "Acja 2015 s.9 — May search arrested person; seize items related to offence; inventory; receipt given.",
+  "legalExplanation": "**Section 9 of the Acja 2015** provides:\n\nMay search arrested person; seize items related to offence; inventory; receipt given\n\nThis provision empowers Acja 2015 officers with specific powers and duties.",
+  "exceptions": "",
+  "practicalOptions": "Stay calm. Know your rights. Ask for identification. Do not resist. Ask for lawyer. Document everything.",
+  "whatToAvoid": "Do not run, bribe, resist, destroy evidence, or sign without lawyer.",
+  "whatToDocument": "Officer name, agency, badge, vehicle, time, location, witnesses, injuries, photos/video.",
+  "whatToDoAfter": "Get lawyer. File complaint with agency complaints unit or ICPC/PCR. Demand court within 24h. Document injuries.",
+  "sources": [
+    {
+      "sourceId": "acja-2015",
+      "sections": [
+        "s.9"
+      ]
+    }
+  ],
+  "jurisdiction": "federal",
+  "agency": [
+    "npf"
+  ],
+  "status": "under-review",
+  "reviewer": "Auto-generated",
+  "lastReviewed": "2026-10-31",
+  "nextReview": "",
+  "reviewNotes": "Auto-generated from Acja 2015 s.9. Needs plain-language review and verification against official gazette.",
+  "changeHistory": [
+    {
+      "date": "2026-10-31",
+      "note": "Auto-generated from Acja 2015 PDF",
+      "reviewer": "Auto-generated"
+    }
+  ],
+  "relatedScenarios": []
+}

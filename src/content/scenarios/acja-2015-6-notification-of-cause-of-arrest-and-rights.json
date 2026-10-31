@@ -1,0 +1,47 @@
+{
+  "id": "acja-2015-6-notification-of-cause-of-arrest-and-rights",
+  "title": "Notification of cause of arrest and rights",
+  "shortTitle": "Notification of cause of arrest and rights",
+  "icon": "⚖️",
+  "question": "What does Acja 2015 section 6 say about notification of cause of arrest and rights?",
+  "keywords": [
+    "notification",
+    "cause",
+    "arrest",
+    "and",
+    "rights"
+  ],
+  "category": "arrest",
+  "shortAnswer": "Acja 2015 s.6 — Must inform reason for arrest; rights: silence, lawyer, free legal aid, inform next-of-kin.",
+  "legalExplanation": "**Section 6 of the Acja 2015** provides:\n\nMust inform reason for arrest; rights: silence, lawyer, free legal aid, inform next-of-kin\n\nThis provision empowers Acja 2015 officers with specific powers and duties.",
+  "exceptions": "",
+  "practicalOptions": "Stay calm. Know your rights. Ask for identification. Do not resist. Ask for lawyer. Document everything.",
+  "whatToAvoid": "Do not run, bribe, resist, destroy evidence, or sign without lawyer.",
+  "whatToDocument": "Officer name, agency, badge, vehicle, time, location, witnesses, injuries, photos/video.",
+  "whatToDoAfter": "Get lawyer. File complaint with agency complaints unit or ICPC/PCR. Demand court within 24h. Document injuries.",
+  "sources": [
+    {
+      "sourceId": "acja-2015",
+      "sections": [
+        "s.6"
+      ]
+    }
+  ],
+  "jurisdiction": "federal",
+  "agency": [
+    "npf"
+  ],
+  "status": "under-review",
+  "reviewer": "Auto-generated",
+  "lastReviewed": "2026-10-31",
+  "nextReview": "",
+  "reviewNotes": "Auto-generated from Acja 2015 s.6. Needs plain-language review and verification against official gazette.",
+  "changeHistory": [
+    {
+      "date": "2026-10-31",
+      "note": "Auto-generated from Acja 2015 PDF",
+      "reviewer": "Auto-generated"
+    }
+  ],
+  "relatedScenarios": []
+}

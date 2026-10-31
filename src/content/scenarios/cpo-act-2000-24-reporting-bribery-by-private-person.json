@@ -1,0 +1,46 @@
+{
+  "id": "cpo-act-2000-24-reporting-bribery-by-private-person",
+  "title": "Reporting bribery by private person",
+  "shortTitle": "Reporting bribery by private person",
+  "icon": "⚖️",
+  "question": "What does Cpo Act 2000 section 24 say about reporting bribery by private person?",
+  "keywords": [
+    "reporting",
+    "bribery",
+    "private",
+    "person"
+  ],
+  "category": "complaints",
+  "shortAnswer": "Cpo Act 2000 s.24 — Any person may report bribery to ICPC; protection for whistleblowers.",
+  "legalExplanation": "**Section 24 of the Cpo Act 2000** provides:\n\nAny person may report bribery to ICPC; protection for whistleblowers\n\nThis provision empowers Cpo Act 2000 officers with specific powers and duties.",
+  "exceptions": "",
+  "practicalOptions": "Stay calm. Know your rights. Ask for identification. Do not resist. Ask for lawyer. Document everything.",
+  "whatToAvoid": "Do not run, bribe, resist, destroy evidence, or sign without lawyer.",
+  "whatToDocument": "Officer name, agency, badge, vehicle, time, location, witnesses, injuries, photos/video.",
+  "whatToDoAfter": "Get lawyer. File complaint with agency complaints unit or ICPC/PCR. Demand court within 24h. Document injuries.",
+  "sources": [
+    {
+      "sourceId": "cpo-act-2000",
+      "sections": [
+        "s.24"
+      ]
+    }
+  ],
+  "jurisdiction": "federal",
+  "agency": [
+    "icpc"
+  ],
+  "status": "under-review",
+  "reviewer": "Auto-generated",
+  "lastReviewed": "2026-10-31",
+  "nextReview": "",
+  "reviewNotes": "Auto-generated from Cpo Act 2000 s.24. Needs plain-language review and verification against official gazette.",
+  "changeHistory": [
+    {
+      "date": "2026-10-31",
+      "note": "Auto-generated from Cpo Act 2000 PDF",
+      "reviewer": "Auto-generated"
+    }
+  ],
+  "relatedScenarios": []
+}

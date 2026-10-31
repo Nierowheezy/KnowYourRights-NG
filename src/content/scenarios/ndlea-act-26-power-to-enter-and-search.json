@@ -1,0 +1,46 @@
+{
+  "id": "ndlea-act-26-power-to-enter-and-search",
+  "title": "Power to enter and search",
+  "shortTitle": "Power to enter and search",
+  "icon": "⚖️",
+  "question": "What does Ndlea Act section 26 say about power to enter and search?",
+  "keywords": [
+    "power",
+    "enter",
+    "and",
+    "search"
+  ],
+  "category": "stop-search",
+  "shortAnswer": "Ndlea Act s.26 — May enter any land/building/vehicle/vessel on reasonable suspicion of drug offence; break open if refused.",
+  "legalExplanation": "**Section 26 of the Ndlea Act** provides:\n\nMay enter any land/building/vehicle/vessel on reasonable suspicion of drug offence; break open if refused\n\nThis provision empowers Ndlea Act officers with specific powers and duties.",
+  "exceptions": "",
+  "practicalOptions": "Stay calm. Know your rights. Ask for identification. Do not resist. Ask for lawyer. Document everything.",
+  "whatToAvoid": "Do not run, bribe, resist, destroy evidence, or sign without lawyer.",
+  "whatToDocument": "Officer name, agency, badge, vehicle, time, location, witnesses, injuries, photos/video.",
+  "whatToDoAfter": "Get lawyer. File complaint with agency complaints unit or ICPC/PCR. Demand court within 24h. Document injuries.",
+  "sources": [
+    {
+      "sourceId": "ndlea-act",
+      "sections": [
+        "s.26"
+      ]
+    }
+  ],
+  "jurisdiction": "federal",
+  "agency": [
+    "ndlea"
+  ],
+  "status": "under-review",
+  "reviewer": "Auto-generated",
+  "lastReviewed": "2026-10-31",
+  "nextReview": "",
+  "reviewNotes": "Auto-generated from Ndlea Act s.26. Needs plain-language review and verification against official gazette.",
+  "changeHistory": [
+    {
+      "date": "2026-10-31",
+      "note": "Auto-generated from Ndlea Act PDF",
+      "reviewer": "Auto-generated"
+    }
+  ],
+  "relatedScenarios": []
+}

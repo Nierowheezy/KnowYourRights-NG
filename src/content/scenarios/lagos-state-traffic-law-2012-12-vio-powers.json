@@ -1,0 +1,44 @@
+{
+  "id": "lagos-state-traffic-law-2012-12-vio-powers",
+  "title": "VIO powers",
+  "shortTitle": "VIO powers",
+  "icon": "⚖️",
+  "question": "What does Lagos State Traffic Law 2012 section 12 say about vio powers?",
+  "keywords": [
+    "vio",
+    "powers"
+  ],
+  "category": "stop-search",
+  "shortAnswer": "Lagos State Traffic Law 2012 s.12 — VIO may stop vehicles, inspect documents, check roadworthiness, arrest offenders.",
+  "legalExplanation": "**Section 12 of the Lagos State Traffic Law 2012** provides:\n\nVIO may stop vehicles, inspect documents, check roadworthiness, arrest offenders\n\nThis provision empowers Lagos State Traffic Law 2012 officers with specific powers and duties.",
+  "exceptions": "",
+  "practicalOptions": "Stay calm. Know your rights. Ask for identification. Do not resist. Ask for lawyer. Document everything.",
+  "whatToAvoid": "Do not run, bribe, resist, destroy evidence, or sign without lawyer.",
+  "whatToDocument": "Officer name, agency, badge, vehicle, time, location, witnesses, injuries, photos/video.",
+  "whatToDoAfter": "Get lawyer. File complaint with agency complaints unit or ICPC/PCR. Demand court within 24h. Document injuries.",
+  "sources": [
+    {
+      "sourceId": "lagos-state-traffic-law-2012",
+      "sections": [
+        "s.12"
+      ]
+    }
+  ],
+  "jurisdiction": "federal",
+  "agency": [
+    "lastma"
+  ],
+  "status": "under-review",
+  "reviewer": "Auto-generated",
+  "lastReviewed": "2026-10-31",
+  "nextReview": "",
+  "reviewNotes": "Auto-generated from Lagos State Traffic Law 2012 s.12. Needs plain-language review and verification against official gazette.",
+  "changeHistory": [
+    {
+      "date": "2026-10-31",
+      "note": "Auto-generated from Lagos State Traffic Law 2012 PDF",
+      "reviewer": "Auto-generated"
+    }
+  ],
+  "relatedScenarios": []
+}

@@ -1,0 +1,44 @@
+{
+  "id": "nscdc-act-5-powers-of-officers",
+  "title": "Powers of officers",
+  "shortTitle": "Powers of officers",
+  "icon": "⚖️",
+  "question": "What does Nscdc Act section 5 say about powers of officers?",
+  "keywords": [
+    "powers",
+    "officers"
+  ],
+  "category": "stop-search",
+  "shortAnswer": "Nscdc Act s.5 — Arrest without warrant for infrastructure offences; search premises/vehicles; demand documents; patrol highways; protect pipelines/power.",
+  "legalExplanation": "**Section 5 of the Nscdc Act** provides:\n\nArrest without warrant for infrastructure offences; search premises/vehicles; demand documents; patrol highways; protect pipelines/power\n\nThis provision empowers Nscdc Act officers with specific powers and duties.",
+  "exceptions": "",
+  "practicalOptions": "Stay calm. Know your rights. Ask for identification. Do not resist. Ask for lawyer. Document everything.",
+  "whatToAvoid": "Do not run, bribe, resist, destroy evidence, or sign without lawyer.",
+  "whatToDocument": "Officer name, agency, badge, vehicle, time, location, witnesses, injuries, photos/video.",
+  "whatToDoAfter": "Get lawyer. File complaint with agency complaints unit or ICPC/PCR. Demand court within 24h. Document injuries.",
+  "sources": [
+    {
+      "sourceId": "nscdc-act",
+      "sections": [
+        "s.5"
+      ]
+    }
+  ],
+  "jurisdiction": "federal",
+  "agency": [
+    "nscdc"
+  ],
+  "status": "under-review",
+  "reviewer": "Auto-generated",
+  "lastReviewed": "2026-10-31",
+  "nextReview": "",
+  "reviewNotes": "Auto-generated from Nscdc Act s.5. Needs plain-language review and verification against official gazette.",
+  "changeHistory": [
+    {
+      "date": "2026-10-31",
+      "note": "Auto-generated from Nscdc Act PDF",
+      "reviewer": "Auto-generated"
+    }
+  ],
+  "relatedScenarios": []
+}

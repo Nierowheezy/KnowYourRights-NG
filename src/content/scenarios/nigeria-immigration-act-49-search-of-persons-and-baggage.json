@@ -1,0 +1,46 @@
+{
+  "id": "nigeria-immigration-act-49-search-of-persons-and-baggage",
+  "title": "Search of persons and baggage",
+  "shortTitle": "Search of persons and baggage",
+  "icon": "⚖️",
+  "question": "What does Nigeria Immigration Act section 49 say about search of persons and baggage?",
+  "keywords": [
+    "search",
+    "persons",
+    "and",
+    "baggage"
+  ],
+  "category": "stop-search",
+  "shortAnswer": "Nigeria Immigration Act s.49 — May search persons/baggage on reasonable suspicion of immigration offence; female by female officer.",
+  "legalExplanation": "**Section 49 of the Nigeria Immigration Act** provides:\n\nMay search persons/baggage on reasonable suspicion of immigration offence; female by female officer\n\nThis provision empowers Nigeria Immigration Act officers with specific powers and duties.",
+  "exceptions": "",
+  "practicalOptions": "Stay calm. Know your rights. Ask for identification. Do not resist. Ask for lawyer. Document everything.",
+  "whatToAvoid": "Do not run, bribe, resist, destroy evidence, or sign without lawyer.",
+  "whatToDocument": "Officer name, agency, badge, vehicle, time, location, witnesses, injuries, photos/video.",
+  "whatToDoAfter": "Get lawyer. File complaint with agency complaints unit or ICPC/PCR. Demand court within 24h. Document injuries.",
+  "sources": [
+    {
+      "sourceId": "nigeria-immigration-act",
+      "sections": [
+        "s.49"
+      ]
+    }
+  ],
+  "jurisdiction": "federal",
+  "agency": [
+    "nis"
+  ],
+  "status": "under-review",
+  "reviewer": "Auto-generated",
+  "lastReviewed": "2026-10-31",
+  "nextReview": "",
+  "reviewNotes": "Auto-generated from Nigeria Immigration Act s.49. Needs plain-language review and verification against official gazette.",
+  "changeHistory": [
+    {
+      "date": "2026-10-31",
+      "note": "Auto-generated from Nigeria Immigration Act PDF",
+      "reviewer": "Auto-generated"
+    }
+  ],
+  "relatedScenarios": []
+}

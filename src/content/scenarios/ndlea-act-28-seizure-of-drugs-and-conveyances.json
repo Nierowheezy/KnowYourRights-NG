@@ -1,0 +1,46 @@
+{
+  "id": "ndlea-act-28-seizure-of-drugs-and-conveyances",
+  "title": "Seizure of drugs and conveyances",
+  "shortTitle": "Seizure of drugs and conveyances",
+  "icon": "⚖️",
+  "question": "What does Ndlea Act section 28 say about seizure of drugs and conveyances?",
+  "keywords": [
+    "seizure",
+    "drugs",
+    "and",
+    "conveyances"
+  ],
+  "category": "stop-search",
+  "shortAnswer": "Ndlea Act s.28 — May seize drugs, precursors, conveyances, assets used in drug trafficking; issue seizure notice.",
+  "legalExplanation": "**Section 28 of the Ndlea Act** provides:\n\nMay seize drugs, precursors, conveyances, assets used in drug trafficking; issue seizure notice\n\nThis provision empowers Ndlea Act officers with specific powers and duties.",
+  "exceptions": "",
+  "practicalOptions": "Stay calm. Know your rights. Ask for identification. Do not resist. Ask for lawyer. Document everything.",
+  "whatToAvoid": "Do not run, bribe, resist, destroy evidence, or sign without lawyer.",
+  "whatToDocument": "Officer name, agency, badge, vehicle, time, location, witnesses, injuries, photos/video.",
+  "whatToDoAfter": "Get lawyer. File complaint with agency complaints unit or ICPC/PCR. Demand court within 24h. Document injuries.",
+  "sources": [
+    {
+      "sourceId": "ndlea-act",
+      "sections": [
+        "s.28"
+      ]
+    }
+  ],
+  "jurisdiction": "federal",
+  "agency": [
+    "ndlea"
+  ],
+  "status": "under-review",
+  "reviewer": "Auto-generated",
+  "lastReviewed": "2026-10-31",
+  "nextReview": "",
+  "reviewNotes": "Auto-generated from Ndlea Act s.28. Needs plain-language review and verification against official gazette.",
+  "changeHistory": [
+    {
+      "date": "2026-10-31",
+      "note": "Auto-generated from Ndlea Act PDF",
+      "reviewer": "Auto-generated"
+    }
+  ],
+  "relatedScenarios": []
+}

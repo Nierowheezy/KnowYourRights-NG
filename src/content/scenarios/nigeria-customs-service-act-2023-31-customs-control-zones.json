@@ -1,0 +1,45 @@
+{
+  "id": "nigeria-customs-service-act-2023-31-customs-control-zones",
+  "title": "Customs control zones",
+  "shortTitle": "Customs control zones",
+  "icon": "⚖️",
+  "question": "What does Nigeria Customs Service Act 2023 section 31 say about customs control zones?",
+  "keywords": [
+    "customs",
+    "control",
+    "zones"
+  ],
+  "category": "stop-search",
+  "shortAnswer": "Nigeria Customs Service Act 2023 s.31 — Designated zones (airports, seaports, borders, warehouses) where customs has full control; search without warrant.",
+  "legalExplanation": "**Section 31 of the Nigeria Customs Service Act 2023** provides:\n\nDesignated zones (airports, seaports, borders, warehouses) where customs has full control; search without warrant\n\nThis provision empowers Nigeria Customs Service Act 2023 officers with specific powers and duties.",
+  "exceptions": "",
+  "practicalOptions": "Stay calm. Know your rights. Ask for identification. Do not resist. Ask for lawyer. Document everything.",
+  "whatToAvoid": "Do not run, bribe, resist, destroy evidence, or sign without lawyer.",
+  "whatToDocument": "Officer name, agency, badge, vehicle, time, location, witnesses, injuries, photos/video.",
+  "whatToDoAfter": "Get lawyer. File complaint with agency complaints unit or ICPC/PCR. Demand court within 24h. Document injuries.",
+  "sources": [
+    {
+      "sourceId": "nigeria-customs-service-act-2023",
+      "sections": [
+        "s.31"
+      ]
+    }
+  ],
+  "jurisdiction": "federal",
+  "agency": [
+    "ncs"
+  ],
+  "status": "under-review",
+  "reviewer": "Auto-generated",
+  "lastReviewed": "2026-10-31",
+  "nextReview": "",
+  "reviewNotes": "Auto-generated from Nigeria Customs Service Act 2023 s.31. Needs plain-language review and verification against official gazette.",
+  "changeHistory": [
+    {
+      "date": "2026-10-31",
+      "note": "Auto-generated from Nigeria Customs Service Act 2023 PDF",
+      "reviewer": "Auto-generated"
+    }
+  ],
+  "relatedScenarios": []
+}

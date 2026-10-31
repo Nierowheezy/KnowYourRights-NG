@@ -1,0 +1,45 @@
+{
+  "id": "constitution-1999-40-right-to-peaceful-assembly",
+  "title": "Right to peaceful assembly",
+  "shortTitle": "Right to peaceful assembly",
+  "icon": "⚖️",
+  "question": "What does Constitution 1999 section 40 say about right to peaceful assembly?",
+  "keywords": [
+    "right",
+    "peaceful",
+    "assembly"
+  ],
+  "category": "complaints",
+  "shortAnswer": "Constitution 1999 s.40 — Right to assemble freely, form/join associations, trade unions, political parties.",
+  "legalExplanation": "**Section 40 of the Constitution 1999** provides:\n\nRight to assemble freely, form/join associations, trade unions, political parties\n\nThis provision empowers Constitution 1999 officers with specific powers and duties.",
+  "exceptions": "",
+  "practicalOptions": "Stay calm. Know your rights. Ask for identification. Do not resist. Ask for lawyer. Document everything.",
+  "whatToAvoid": "Do not run, bribe, resist, destroy evidence, or sign without lawyer.",
+  "whatToDocument": "Officer name, agency, badge, vehicle, time, location, witnesses, injuries, photos/video.",
+  "whatToDoAfter": "Get lawyer. File complaint with agency complaints unit or ICPC/PCR. Demand court within 24h. Document injuries.",
+  "sources": [
+    {
+      "sourceId": "constitution-1999",
+      "sections": [
+        "s.40"
+      ]
+    }
+  ],
+  "jurisdiction": "federal",
+  "agency": [
+    "npf"
+  ],
+  "status": "under-review",
+  "reviewer": "Auto-generated",
+  "lastReviewed": "2026-10-31",
+  "nextReview": "",
+  "reviewNotes": "Auto-generated from Constitution 1999 s.40. Needs plain-language review and verification against official gazette.",
+  "changeHistory": [
+    {
+      "date": "2026-10-31",
+      "note": "Auto-generated from Constitution 1999 PDF",
+      "reviewer": "Auto-generated"
+    }
+  ],
+  "relatedScenarios": []
+}

@@ -1,0 +1,44 @@
+{
+  "id": "cpo-act-2000-25-protection-of-informants",
+  "title": "Protection of informants",
+  "shortTitle": "Protection of informants",
+  "icon": "⚖️",
+  "question": "What does Cpo Act 2000 section 25 say about protection of informants?",
+  "keywords": [
+    "protection",
+    "informants"
+  ],
+  "category": "complaints",
+  "shortAnswer": "Cpo Act 2000 s.25 — Identity of informants protected; no victimization; confidential handling.",
+  "legalExplanation": "**Section 25 of the Cpo Act 2000** provides:\n\nIdentity of informants protected; no victimization; confidential handling\n\nThis provision empowers Cpo Act 2000 officers with specific powers and duties.",
+  "exceptions": "",
+  "practicalOptions": "Stay calm. Know your rights. Ask for identification. Do not resist. Ask for lawyer. Document everything.",
+  "whatToAvoid": "Do not run, bribe, resist, destroy evidence, or sign without lawyer.",
+  "whatToDocument": "Officer name, agency, badge, vehicle, time, location, witnesses, injuries, photos/video.",
+  "whatToDoAfter": "Get lawyer. File complaint with agency complaints unit or ICPC/PCR. Demand court within 24h. Document injuries.",
+  "sources": [
+    {
+      "sourceId": "cpo-act-2000",
+      "sections": [
+        "s.25"
+      ]
+    }
+  ],
+  "jurisdiction": "federal",
+  "agency": [
+    "icpc"
+  ],
+  "status": "under-review",
+  "reviewer": "Auto-generated",
+  "lastReviewed": "2026-10-31",
+  "nextReview": "",
+  "reviewNotes": "Auto-generated from Cpo Act 2000 s.25. Needs plain-language review and verification against official gazette.",
+  "changeHistory": [
+    {
+      "date": "2026-10-31",
+      "note": "Auto-generated from Cpo Act 2000 PDF",
+      "reviewer": "Auto-generated"
+    }
+  ],
+  "relatedScenarios": []
+}

@@ -1,0 +1,45 @@
+{
+  "id": "cpo-act-2000-23-duty-to-report-bribery",
+  "title": "Duty to report bribery",
+  "shortTitle": "Duty to report bribery",
+  "icon": "⚖️",
+  "question": "What does Cpo Act 2000 section 23 say about duty to report bribery?",
+  "keywords": [
+    "duty",
+    "report",
+    "bribery"
+  ],
+  "category": "complaints",
+  "shortAnswer": "Cpo Act 2000 s.23 — Public officer must report bribe offer to ICPC within 24h; failure is offence.",
+  "legalExplanation": "**Section 23 of the Cpo Act 2000** provides:\n\nPublic officer must report bribe offer to ICPC within 24h; failure is offence\n\nThis provision empowers Cpo Act 2000 officers with specific powers and duties.",
+  "exceptions": "",
+  "practicalOptions": "Stay calm. Know your rights. Ask for identification. Do not resist. Ask for lawyer. Document everything.",
+  "whatToAvoid": "Do not run, bribe, resist, destroy evidence, or sign without lawyer.",
+  "whatToDocument": "Officer name, agency, badge, vehicle, time, location, witnesses, injuries, photos/video.",
+  "whatToDoAfter": "Get lawyer. File complaint with agency complaints unit or ICPC/PCR. Demand court within 24h. Document injuries.",
+  "sources": [
+    {
+      "sourceId": "cpo-act-2000",
+      "sections": [
+        "s.23"
+      ]
+    }
+  ],
+  "jurisdiction": "federal",
+  "agency": [
+    "icpc"
+  ],
+  "status": "under-review",
+  "reviewer": "Auto-generated",
+  "lastReviewed": "2026-10-31",
+  "nextReview": "",
+  "reviewNotes": "Auto-generated from Cpo Act 2000 s.23. Needs plain-language review and verification against official gazette.",
+  "changeHistory": [
+    {
+      "date": "2026-10-31",
+      "note": "Auto-generated from Cpo Act 2000 PDF",
+      "reviewer": "Auto-generated"
+    }
+  ],
+  "relatedScenarios": []
+}

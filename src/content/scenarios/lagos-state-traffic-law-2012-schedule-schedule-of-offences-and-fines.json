@@ -1,0 +1,46 @@
+{
+  "id": "lagos-state-traffic-law-2012-schedule-schedule-of-offences-and-fines",
+  "title": "Schedule of offences and fines",
+  "shortTitle": "Schedule of offences and fines",
+  "icon": "⚖️",
+  "question": "What does Lagos State Traffic Law 2012 section Schedule say about schedule of offences and fines?",
+  "keywords": [
+    "schedule",
+    "offences",
+    "and",
+    "fines"
+  ],
+  "category": "payments",
+  "shortAnswer": "Lagos State Traffic Law 2012 s.Schedule — Fines: one-way N50,000; BRT lane N20,000; no licence N20,000; roadworthiness N20,000; phone driving N4,000; seatbelt N2,000; speed limit N20,000.",
+  "legalExplanation": "**Section Schedule of the Lagos State Traffic Law 2012** provides:\n\nFines: one-way N50,000; BRT lane N20,000; no licence N20,000; roadworthiness N20,000; phone driving N4,000; seatbelt N2,000; speed limit N20,000\n\nThis provision empowers Lagos State Traffic Law 2012 officers with specific powers and duties.",
+  "exceptions": "",
+  "practicalOptions": "Stay calm. Know your rights. Ask for identification. Do not resist. Ask for lawyer. Document everything.",
+  "whatToAvoid": "Do not run, bribe, resist, destroy evidence, or sign without lawyer.",
+  "whatToDocument": "Officer name, agency, badge, vehicle, time, location, witnesses, injuries, photos/video.",
+  "whatToDoAfter": "Get lawyer. File complaint with agency complaints unit or ICPC/PCR. Demand court within 24h. Document injuries.",
+  "sources": [
+    {
+      "sourceId": "lagos-state-traffic-law-2012",
+      "sections": [
+        "s.Schedule"
+      ]
+    }
+  ],
+  "jurisdiction": "federal",
+  "agency": [
+    "lastma"
+  ],
+  "status": "under-review",
+  "reviewer": "Auto-generated",
+  "lastReviewed": "2026-10-31",
+  "nextReview": "",
+  "reviewNotes": "Auto-generated from Lagos State Traffic Law 2012 s.Schedule. Needs plain-language review and verification against official gazette.",
+  "changeHistory": [
+    {
+      "date": "2026-10-31",
+      "note": "Auto-generated from Lagos State Traffic Law 2012 PDF",
+      "reviewer": "Auto-generated"
+    }
+  ],
+  "relatedScenarios": []
+}

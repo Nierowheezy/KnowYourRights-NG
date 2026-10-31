@@ -1,0 +1,45 @@
+{
+  "id": "nscdc-act-3-establishment-and-duties",
+  "title": "Establishment and duties",
+  "shortTitle": "Establishment and duties",
+  "icon": "⚖️",
+  "question": "What does Nscdc Act section 3 say about establishment and duties?",
+  "keywords": [
+    "establishment",
+    "and",
+    "duties"
+  ],
+  "category": "documents",
+  "shortAnswer": "Nscdc Act s.3 — NSCDC established; duties: protect infrastructure, prevent crime, maintain peace, assist police, private guard licensing.",
+  "legalExplanation": "**Section 3 of the Nscdc Act** provides:\n\nNSCDC established; duties: protect infrastructure, prevent crime, maintain peace, assist police, private guard licensing\n\nThis provision empowers Nscdc Act officers with specific powers and duties.",
+  "exceptions": "",
+  "practicalOptions": "Stay calm. Know your rights. Ask for identification. Do not resist. Ask for lawyer. Document everything.",
+  "whatToAvoid": "Do not run, bribe, resist, destroy evidence, or sign without lawyer.",
+  "whatToDocument": "Officer name, agency, badge, vehicle, time, location, witnesses, injuries, photos/video.",
+  "whatToDoAfter": "Get lawyer. File complaint with agency complaints unit or ICPC/PCR. Demand court within 24h. Document injuries.",
+  "sources": [
+    {
+      "sourceId": "nscdc-act",
+      "sections": [
+        "s.3"
+      ]
+    }
+  ],
+  "jurisdiction": "federal",
+  "agency": [
+    "nscdc"
+  ],
+  "status": "under-review",
+  "reviewer": "Auto-generated",
+  "lastReviewed": "2026-10-31",
+  "nextReview": "",
+  "reviewNotes": "Auto-generated from Nscdc Act s.3. Needs plain-language review and verification against official gazette.",
+  "changeHistory": [
+    {
+      "date": "2026-10-31",
+      "note": "Auto-generated from Nscdc Act PDF",
+      "reviewer": "Auto-generated"
+    }
+  ],
+  "relatedScenarios": []
+}

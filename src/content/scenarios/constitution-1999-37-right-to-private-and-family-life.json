@@ -1,0 +1,47 @@
+{
+  "id": "constitution-1999-37-right-to-private-and-family-life",
+  "title": "Right to private and family life",
+  "shortTitle": "Right to private and family life",
+  "icon": "⚖️",
+  "question": "What does Constitution 1999 section 37 say about right to private and family life?",
+  "keywords": [
+    "right",
+    "private",
+    "and",
+    "family",
+    "life"
+  ],
+  "category": "complaints",
+  "shortAnswer": "Constitution 1999 s.37 — Privacy of citizens, homes, correspondence, telephone conversations protected.",
+  "legalExplanation": "**Section 37 of the Constitution 1999** provides:\n\nPrivacy of citizens, homes, correspondence, telephone conversations protected\n\nThis provision empowers Constitution 1999 officers with specific powers and duties.",
+  "exceptions": "",
+  "practicalOptions": "Stay calm. Know your rights. Ask for identification. Do not resist. Ask for lawyer. Document everything.",
+  "whatToAvoid": "Do not run, bribe, resist, destroy evidence, or sign without lawyer.",
+  "whatToDocument": "Officer name, agency, badge, vehicle, time, location, witnesses, injuries, photos/video.",
+  "whatToDoAfter": "Get lawyer. File complaint with agency complaints unit or ICPC/PCR. Demand court within 24h. Document injuries.",
+  "sources": [
+    {
+      "sourceId": "constitution-1999",
+      "sections": [
+        "s.37"
+      ]
+    }
+  ],
+  "jurisdiction": "federal",
+  "agency": [
+    "npf"
+  ],
+  "status": "under-review",
+  "reviewer": "Auto-generated",
+  "lastReviewed": "2026-10-31",
+  "nextReview": "",
+  "reviewNotes": "Auto-generated from Constitution 1999 s.37. Needs plain-language review and verification against official gazette.",
+  "changeHistory": [
+    {
+      "date": "2026-10-31",
+      "note": "Auto-generated from Constitution 1999 PDF",
+      "reviewer": "Auto-generated"
+    }
+  ],
+  "relatedScenarios": []
+}
