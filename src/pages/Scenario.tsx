@@ -217,7 +217,7 @@ export default function Scenario() {
               <p className="muted" style={{ margin: 0, fontSize: "0.85rem", lineHeight: 1.6, flex: "1 1 320px" }}>
                 In-app feedback is not connected yet. When a source check changes this guidance, the update is recorded in the change history above.
               </p>
-              <div style={{ marginLeft: "auto", display: "flex", gap: 8 }}>
+              <div style={{ marginLeft: "auto", display: "flex", gap: 8, flexWrap: "wrap" }}>
                 <button className="chip" type="button" onClick={() => setShowFeedback(true)}>Flag this guide</button>
                 <Link to="/help" className="chip">Official complaint channels</Link>
               </div>

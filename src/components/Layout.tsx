@@ -43,7 +43,15 @@ export default function Layout() {
     setTheme(theme);
   }, [theme]);
 
-  /* Scroll to top + rebuild the scroll-reveal observer on every route change */
+  /*
+   * Scroll handling + scroll-reveal.
+   *
+   * Pages filter, sort and paginate *after* mount, so cards are added to the
+   * DOM long after the route change. Observing only the elements present at
+   * mount left every new card stuck at `opacity: 0` (the "data disappears"
+   * bug). A MutationObserver keeps watching the main landmark and registers
+   * any `.reveal` node added later, so content is always visible.
+   */
   useEffect(() => {
     if (location.hash) {
       // give the DOM a tick to render the new route before scrolling
@@ -53,17 +61,47 @@ export default function Layout() {
         setTimeout(() => {
           el.scrollIntoView({ behavior: "smooth", block: "start" });
         }, 50);
-        return;
       }
+    } else {
+      window.scrollTo(0, 0);
     }
-    window.scrollTo(0, 0);
-    const io = new IntersectionObserver((entries) => {
-      entries.forEach((e) => {
-        if (e.isIntersecting) { e.target.classList.add("is-in"); io.unobserve(e.target); }
-      });
-    }, { threshold: 0.12 });
-    document.querySelectorAll(".reveal").forEach((el) => io.observe(el));
-    return () => io.disconnect();
+
+    const io = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((e) => {
+          if (e.isIntersecting) {
+            e.target.classList.add("is-in");
+            io.unobserve(e.target);
+          }
+        });
+      },
+      { threshold: 0.05, rootMargin: "0px 0px -4% 0px" }
+    );
+
+    const observeWithin = (root: ParentNode) => {
+      root.querySelectorAll?.(".reveal:not(.is-in)").forEach((el) => io.observe(el));
+    };
+
+    const main = document.getElementById("main-content") ?? document.body;
+    observeWithin(main);
+
+    const mo = new MutationObserver((mutations) => {
+      for (const mutation of mutations) {
+        mutation.addedNodes.forEach((node) => {
+          if (!(node instanceof HTMLElement)) return;
+          if (node.classList.contains("reveal") && !node.classList.contains("is-in")) {
+            io.observe(node);
+          }
+          observeWithin(node);
+        });
+      }
+    });
+    mo.observe(main, { childList: true, subtree: true });
+
+    return () => {
+      io.disconnect();
+      mo.disconnect();
+    };
   }, [location.pathname, location.hash]);
 
   return (

@@ -1,28 +1,32 @@
     .page-hero { padding: 64px 0 32px; }
 
+    /*
+     * One uniform tile for every agency. The font size is chosen so the
+     * longest acronyms (KAROTA, LASTMA, NSCDC) still fit the 46px square;
+     * that keeps every card's badge exactly the same size.
+     */
     .agency-abbr {
       display: inline-flex;
       align-items: center;
       justify-content: center;
       width: 46px;
       height: 46px;
+      padding: 0 4px;
       border-radius: 12px;
       background: var(--forest-deep);
       color: var(--lime);
       font-family: var(--font-display);
       font-weight: 800;
-      font-size: 0.85rem;
-      letter-spacing: -0.03em;
+      font-size: 0.7rem;
+      line-height: 1;
+      letter-spacing: -0.04em;
+      white-space: nowrap;
       margin-bottom: 16px;
     }
 
-    .agency-abbr--wide {
-      width: auto;
-      padding: 0 14px;
-      min-width: 56px;
-    }
-
-    .agency-abbr--state { background: var(--forest); color: #fff; }
+    /* State agencies keep the same tile treatment: jurisdiction is conveyed
+       by the badge on the card, not by a differently sized acronym tile. */
+    .agency-abbr--state { background: var(--forest-deep); color: var(--lime); }
 
     .section-label {
       display: flex;

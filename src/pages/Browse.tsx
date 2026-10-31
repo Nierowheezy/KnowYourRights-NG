@@ -1,20 +1,23 @@
-import { useMemo, useState } from "react";
+import { useMemo, useRef, useState } from "react";
 import { Link, useSearchParams } from "react-router-dom";
 import "../styles/browse.css";
 import { AdSlot, AdAnchor, Pagination } from "../components/ui";
 import { IconSearch } from "../components/icons";
 import { usePagination } from "../hooks/usePagination";
+import { scrollToElement } from "../lib/scroll";
 import {
   CATEGORY_LABEL,
+  agencies,
   getAgencyById,
   getAgencyName,
+  getAgencyShortName,
   getReviewBadge,
   listedScenarios,
   reviewYear,
 } from "../lib/content";
 import type { Scenario } from "../lib/schema";
 
-const FILTERS: Array<{ label: string; category: Scenario["category"] | null }> = [
+const CATEGORY_FILTERS: Array<{ label: string; category: Scenario["category"] | null }> = [
   { label: "All situations", category: null },
   { label: "Stop & search", category: "stop-search" },
   { label: "Documents", category: "documents" },
@@ -24,6 +27,17 @@ const FILTERS: Array<{ label: string; category: Scenario["category"] | null }> =
   { label: "Complaints", category: "complaints" },
   { label: "Other", category: "other" },
 ];
+
+type SortKey = "newest" | "title" | "agency" | "category";
+
+const SORTS: Array<{ value: SortKey; label: string }> = [
+  { value: "newest", label: "Recently reviewed" },
+  { value: "title", label: "Title A–Z" },
+  { value: "agency", label: "Agency" },
+  { value: "category", label: "Situation type" },
+];
+
+const CATEGORY_VALUES = new Set(CATEGORY_FILTERS.map((f) => f.category).filter(Boolean) as string[]);
 
 interface BrowseCard {
   scenario: Scenario;
@@ -57,6 +71,25 @@ function toCard(s: Scenario): BrowseCard {
   };
 }
 
+function sortCards(cards: BrowseCard[], sort: SortKey): BrowseCard[] {
+  const copy = [...cards];
+  switch (sort) {
+    case "title":
+      return copy.sort((a, b) => a.title.localeCompare(b.title));
+    case "agency":
+      return copy.sort((a, b) => a.agency.localeCompare(b.agency) || a.title.localeCompare(b.title));
+    case "category":
+      return copy.sort((a, b) => a.category.localeCompare(b.category) || a.title.localeCompare(b.title));
+    case "newest":
+    default:
+      return copy.sort(
+        (a, b) =>
+          (b.scenario.lastReviewed ?? "").localeCompare(a.scenario.lastReviewed ?? "") ||
+          a.title.localeCompare(b.title)
+      );
+  }
+}
+
 const WARN_BADGE = {
   background: "var(--warning-tint)",
   borderColor: "var(--warn-line)",
@@ -88,33 +121,43 @@ function ScenarioCard({ card, delay }: { card: BrowseCard; delay?: number }) {
 const PAGE_SIZE = 12;
 
 export default function Browse() {
-  const [activeFilter, setActiveFilter] = useState(0);
   const [query, setQuery] = useState("");
-  const [params] = useSearchParams();
+  const [filtersOpen, setFiltersOpen] = useState(false);
+  const [params, setParams] = useSearchParams();
+  const gridRef = useRef<HTMLDivElement>(null);
+
   const agencyId = params.get("agency");
+  const rawCategory = params.get("category");
+  const category = rawCategory && CATEGORY_VALUES.has(rawCategory)
+    ? (rawCategory as Scenario["category"])
+    : null;
+  const rawSort = params.get("sort");
+  const sort: SortKey = SORTS.some((s) => s.value === rawSort) ? (rawSort as SortKey) : "newest";
+
   const agency = agencyId ? getAgencyById(agencyId) : undefined;
 
   const cards = useMemo(
     () =>
       listedScenarios
         .filter((s) => !agencyId || s.agency.includes(agencyId))
+        .filter((s) => !category || s.category === category)
         .map(toCard),
-    [agencyId]
+    [agencyId, category]
   );
 
-  const visible = useMemo(() =>
-    cards.filter((card) => {
-      const filter = FILTERS[activeFilter].category;
-      const filterOk = filter === null || card.categoryKey === filter;
-      const q = query.trim().toLowerCase();
-      const queryOk =
-        !q || `${card.title} ${card.desc} ${card.agency} ${card.category}`.toLowerCase().includes(q);
-      return filterOk && queryOk;
-    }),
-    [cards, activeFilter, query]
-  );
+  const visible = useMemo(() => {
+    const q = query.trim().toLowerCase();
+    const filtered = q
+      ? cards.filter((card) =>
+          `${card.title} ${card.desc} ${card.agency} ${card.category} ${card.scenario.keywords.join(" ")}`
+            .toLowerCase()
+            .includes(q)
+        )
+      : cards;
+    return sortCards(filtered, sort);
+  }, [cards, query, sort]);
 
-  const resetKey = `${agencyId ?? "all"}-${activeFilter}-${query}`;
+  const resetKey = `${agencyId ?? "all"}-${category ?? "all"}-${query}-${sort}`;
   const { page, totalPages, startIndex, endIndex, setPage } = usePagination({
     totalItems: visible.length,
     pageSize: PAGE_SIZE,
@@ -122,6 +165,28 @@ export default function Browse() {
   });
 
   const paged = visible.slice(startIndex, endIndex);
+
+  const activeCount = (agencyId ? 1 : 0) + (category ? 1 : 0);
+  const showFilters = filtersOpen || activeCount > 0;
+
+  function updateParams(patch: Record<string, string | null>) {
+    const next = new URLSearchParams(params);
+    for (const [key, value] of Object.entries(patch)) {
+      if (value) next.set(key, value);
+      else next.delete(key);
+    }
+    setParams(next, { replace: true });
+  }
+
+  function clearFilters() {
+    setQuery("");
+    updateParams({ agency: null, category: null });
+  }
+
+  function goToPage(next: number) {
+    setPage(next);
+    scrollToElement(gridRef.current);
+  }
 
   return (
     <>
@@ -136,34 +201,109 @@ export default function Browse() {
             official text on the issuing agency's portal.
           </p>
 
-          <form className="search-sm anim" style={{ animationDelay: ".16s" }} onSubmit={(e) => e.preventDefault()}>
+          <form className="search-sm anim" style={{ animationDelay: ".16s" }} onSubmit={(e) => e.preventDefault()} role="search">
             <IconSearch width={16} height={16} style={{ color: "var(--text-faint)", flexShrink: 0 }} />
             <input
               className="search-sm__input"
               type="search"
               placeholder="Search in your own words — e.g. 'officer seized my key'"
               value={query}
-              onChange={(e) => setQuery(e.target.value)}
+              onChange={(e) => {
+                setQuery(e.target.value);
+                setFiltersOpen(true);
+              }}
+              aria-label="Search guides"
             />
           </form>
 
-          <div className="chip-row chip-row--start filters anim" style={{ animationDelay: ".24s" }}>
-            {FILTERS.map((filter, i) => (
-              <a
-                key={filter.label}
-                href="#"
-                className={`chip${i === activeFilter ? " chip--active" : ""}`}
-                onClick={(e) => { e.preventDefault(); setActiveFilter(i); }}
+          <div className="browse-toolbar anim" style={{ animationDelay: ".22s" }}>
+            <button
+              type="button"
+              className={`btn btn--soft btn--sm filter-toggle${showFilters ? " is-open" : ""}`}
+              onClick={() => setFiltersOpen((open) => !open)}
+              aria-expanded={showFilters}
+              aria-controls="browse-filters"
+            >
+              <svg width="15" height="15" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                <path d="M2 3.5h12M4.5 8h7M6.5 12.5h3" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" />
+              </svg>
+              Filters
+              {activeCount > 0 && <span className="filter-toggle__count">{activeCount}</span>}
+            </button>
+
+            <label className="sort-field">
+              <span>Sort</span>
+              <select
+                value={sort}
+                onChange={(e) => updateParams({ sort: e.target.value === "newest" ? null : e.target.value })}
+                aria-label="Sort guides"
               >
-                {filter.label}
-              </a>
-            ))}
+                {SORTS.map((option) => (
+                  <option key={option.value} value={option.value}>{option.label}</option>
+                ))}
+              </select>
+            </label>
+
+            {(activeCount > 0 || query) && (
+              <button type="button" className="link-green toolbar-clear" onClick={clearFilters}>
+                Clear all
+              </button>
+            )}
           </div>
+
+          {showFilters && (
+            <div className="filter-panel is-in" id="browse-filters">
+              <div className="filter-group">
+                <span className="filter-group__label">Agency</span>
+                <div className="chip-row chip-row--start">
+                  <button
+                    type="button"
+                    className={`chip${!agencyId ? " chip--active" : ""}`}
+                    onClick={() => updateParams({ agency: null })}
+                    aria-pressed={!agencyId}
+                  >
+                    All agencies
+                  </button>
+                  {agencies.map((a) => (
+                    <button
+                      key={a.id}
+                      type="button"
+                      className={`chip${agencyId === a.id ? " chip--active" : ""}`}
+                      onClick={() => updateParams({ agency: a.id })}
+                      aria-pressed={agencyId === a.id}
+                      title={a.name}
+                    >
+                      {getAgencyShortName(a)}
+                    </button>
+                  ))}
+                </div>
+              </div>
+
+              <div className="filter-group">
+                <span className="filter-group__label">Situation</span>
+                <div className="chip-row chip-row--start">
+                  {CATEGORY_FILTERS.map((filter) => (
+                    <button
+                      key={filter.label}
+                      type="button"
+                      className={`chip${category === filter.category ? " chip--active" : ""}`}
+                      onClick={() => updateParams({ category: filter.category })}
+                      aria-pressed={category === filter.category}
+                    >
+                      {filter.label}
+                    </button>
+                  ))}
+                </div>
+              </div>
+            </div>
+          )}
 
           {agency && (
             <div className="callout callout--tint anim" style={{ marginTop: 18, animationDelay: ".3s" }}>
               <span>Showing guidance for <strong>{agency.name}</strong>.</span>
-              <Link to="/browse" className="link-green">Clear agency filter →</Link>
+              <button type="button" className="link-green" onClick={() => updateParams({ agency: null })}>
+                Clear agency filter →
+              </button>
             </div>
           )}
         </div>
@@ -171,9 +311,10 @@ export default function Browse() {
 
       {/* Scenario grid */}
       <section className="section--tight">
-        <div className="container">
-          <p className="muted" style={{ fontSize: "0.85rem", marginBottom: 18 }}>
+        <div className="container" ref={gridRef}>
+          <p className="muted" style={{ fontSize: "0.85rem", marginBottom: 18 }} aria-live="polite">
             {visible.length} of {cards.length} guide{cards.length === 1 ? "" : "s"}
+            {query.trim() && <> for “{query.trim()}”</>}
           </p>
 
           <div className="card-grid card-grid--3">
@@ -190,9 +331,9 @@ export default function Browse() {
                     : "Try another word, clear the filters, or search the guide in your own words."}
                 </p>
                 <div className="card__foot">
-                  <Link to={agency ? "/browse" : "/search"} className="link-green">
-                    {agency ? "Browse every situation →" : "Search the guide →"}
-                  </Link>
+                  <button type="button" className="link-green" onClick={clearFilters}>
+                    Clear all filters →
+                  </button>
                 </div>
               </div>
             )}
@@ -205,7 +346,7 @@ export default function Browse() {
             <Pagination
               page={page}
               totalPages={totalPages}
-              onChange={setPage}
+              onChange={goToPage}
               totalItems={visible.length}
               startIndex={startIndex}
               endIndex={endIndex}

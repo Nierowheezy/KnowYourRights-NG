@@ -43,11 +43,8 @@ function toCard(agency: Agency): AgencyCardData {
   };
 }
 
-const WIDE_ABBR_AGENCIES = new Set(["nscdc", "ndlea", "lastma", "karota"]);
-
 function AgencyCard({ card, delay }: { card: AgencyCardData; delay?: number }) {
-  const wideAbbr = WIDE_ABBR_AGENCIES.has(card.agencyId);
-  const abbrClass = `agency-abbr${card.state ? " agency-abbr--state" : ""}${wideAbbr ? " agency-abbr--wide" : ""}`;
+  const abbrClass = `agency-abbr${card.state ? " agency-abbr--state" : ""}`;
 
   if (card.count === 0) {
     return (
