@@ -667,6 +667,9 @@ img, svg { display: block; }
 
 .search-sm__input::placeholder { color: var(--text-faint); }
 
+.search-sm__input:focus,
+.search-sm__input:active { outline: none; }
+
 /* ---------- Chips ---------- */
 
 .chip-row {

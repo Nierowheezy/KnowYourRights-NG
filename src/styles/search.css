@@ -26,6 +26,9 @@
       flex: 1;
       white-space: nowrap;
       overflow: hidden;
+      border: none;
+      outline: none;
+      background: transparent;
     }
 
     .suggestions {
