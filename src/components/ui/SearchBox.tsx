@@ -168,6 +168,11 @@ export function SearchBox({
   const isConfirming = voiceState === "confirming";
   const isVoiceActive = isListening || isConfirming;
 
+  const pulseStyle = isListening ? {
+    animation: "pulse 1.2s ease-in-out infinite",
+    boxShadow: "0 0 0 2px var(--error-tint)",
+  } : {};
+
   return (
     <div className={`${fieldClass} ${className}`}>
       <IconSearch
@@ -224,6 +229,7 @@ export function SearchBox({
           cursor: "pointer",
           marginLeft: 8,
           transition: "background 150ms ease, border-color 150ms ease",
+          ...pulseStyle,
         }}
       >
         {isListening ? (
