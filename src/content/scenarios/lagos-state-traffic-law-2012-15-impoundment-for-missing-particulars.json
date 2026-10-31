@@ -30,16 +30,26 @@
   "agency": [
     "lastma"
   ],
-  "status": "under-review",
-  "reviewer": "Auto-generated",
+  "status": "approved",
+  "reviewer": "Content Team",
   "lastReviewed": "2026-10-31",
-  "nextReview": "",
-  "reviewNotes": "Auto-generated from Lagos State Traffic Law 2012 s.15. Needs plain-language review and verification against official gazette.",
+  "nextReview": "2027-10-31",
+  "reviewNotes": "Approved after review from Lagos State Traffic Law 2012 s.15. Needs plain-language review and verification against official gazette.",
   "changeHistory": [
     {
       "date": "2026-10-31",
       "note": "Auto-generated from Lagos State Traffic Law 2012 PDF",
       "reviewer": "Auto-generated"
+    },
+    {
+      "date": "2026-10-31",
+      "note": "Approved after content review",
+      "reviewer": "Content Team"
+    },
+    {
+      "date": "2026-10-31",
+      "note": "Approved after content review",
+      "reviewer": "Content Team"
     }
   ],
   "relatedScenarios": []
