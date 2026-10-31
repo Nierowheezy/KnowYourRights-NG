@@ -661,7 +661,7 @@ img, svg { display: block; }
   outline: none;
   background: transparent;
   font-family: var(--font-sans);
-  font-size: 0.95rem;
+  font-size: 1rem;
   color: var(--text);
 }
 
@@ -2026,10 +2026,19 @@ html:not([data-theme]) .icon-sys { display: block; }
 
 .toolbar-clear {
   background: none;
-  border: none;
-  padding: 0;
+  border: 1px solid var(--line);
+  padding: 6px 12px;
+  border-radius: var(--radius);
   cursor: pointer;
   font-family: var(--font-sans);
+  font-weight: 600;
+  color: var(--link);
+  transition: background 150ms ease, border-color 150ms ease;
+}
+
+.toolbar-clear:hover {
+  background: var(--bg-tint);
+  border-color: var(--line-strong);
 }
 
 .filter-panel {
