@@ -168,10 +168,20 @@ export function SearchBox({
   const isConfirming = voiceState === "confirming";
   const isVoiceActive = isListening || isConfirming;
 
-  const pulseStyle = isListening ? {
+  const listeningStyle = isListening ? {
     animation: "pulse 1.2s ease-in-out infinite",
-    boxShadow: "0 0 0 2px var(--error-tint)",
+    boxShadow: "0 0 0 2px var(--forest)",
   } : {};
+
+  const waveBarStyle = (delay: number) => ({
+    width: 3,
+    height: 16,
+    borderRadius: 2,
+    background: "var(--forest)",
+    animation: `wave 0.8s ease-in-out infinite`,
+    animationDelay: `${delay}s`,
+    opacity: 0.8,
+  });
 
   return (
     <div className={`${fieldClass} ${className}`}>
@@ -210,36 +220,47 @@ export function SearchBox({
           {showCount ?? 0} matches
         </span>
       )}
-      <button
-        type="button"
-        aria-label={isListening ? "Stop listening" : isConfirming ? "Voice ready" : "Search by voice"}
-        onClick={isListening ? stopListening : isConfirming ? cancelVoice : startListening}
-        title={isListening ? "Stop listening" : isConfirming ? "Cancel" : "Speak to search"}
-        className="search-voice"
-        style={{
-          display: "inline-flex",
-          alignItems: "center",
-          justifyContent: "center",
-          width: variant === "large" ? 36 : 28,
-          height: variant === "large" ? 36 : 28,
-          borderRadius: "999px",
-          border: "1px solid var(--line)",
-          background: isListening ? "var(--error-tint)" : isConfirming ? "var(--forest)" : "var(--surface)",
-          color: isListening || isConfirming ? "#fff" : "var(--text)",
-          cursor: "pointer",
-          marginLeft: 8,
-          transition: "background 150ms ease, border-color 150ms ease",
-          ...pulseStyle,
-        }}
-      >
-        {isListening ? (
-          <IconMicOff width={variant === "large" ? 18 : 14} height={variant === "large" ? 18 : 14} />
-        ) : isConfirming ? (
-          <IconCheck width={variant === "large" ? 18 : 14} height={variant === "large" ? 18 : 14} />
-        ) : (
-          <IconMic width={variant === "large" ? 18 : 14} height={variant === "large" ? 18 : 14} />
+      <div style={{ display: "inline-flex", alignItems: "center", gap: 6 }}>
+        {isListening && (
+          <div style={{ display: "flex", alignItems: "center", gap: 2, height: 20 }}>
+            <div style={waveBarStyle(0)} />
+            <div style={waveBarStyle(0.1)} />
+            <div style={waveBarStyle(0.2)} />
+            <div style={waveBarStyle(0.1)} />
+            <div style={waveBarStyle(0)} />
+          </div>
         )}
-      </button>
+        <button
+          type="button"
+          aria-label={isListening ? "Stop listening" : isConfirming ? "Voice ready" : "Search by voice"}
+          onClick={isListening ? stopListening : isConfirming ? cancelVoice : startListening}
+          title={isListening ? "Stop listening" : isConfirming ? "Cancel" : "Speak to search"}
+          className="search-voice"
+          style={{
+            display: "inline-flex",
+            alignItems: "center",
+            justifyContent: "center",
+            width: variant === "large" ? 36 : 28,
+            height: variant === "large" ? 36 : 28,
+            borderRadius: "999px",
+            border: "1px solid var(--line)",
+            background: isListening ? "var(--forest)" : isConfirming ? "var(--forest)" : "var(--surface)",
+            color: isListening || isConfirming ? "#fff" : "var(--text)",
+            cursor: "pointer",
+            marginLeft: 0,
+            transition: "background 150ms ease, border-color 150ms ease",
+            ...listeningStyle,
+          }}
+        >
+          {isListening ? (
+            <IconMicOff width={variant === "large" ? 18 : 14} height={variant === "large" ? 18 : 14} />
+          ) : isConfirming ? (
+            <IconCheck width={variant === "large" ? 18 : 14} height={variant === "large" ? 18 : 14} />
+          ) : (
+            <IconMic width={variant === "large" ? 18 : 14} height={variant === "large" ? 18 : 14} />
+          )}
+        </button>
+      </div>
       {isConfirming && (
         <div style={{ display: "flex", gap: 6, marginLeft: 6 }}>
           <button

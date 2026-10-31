@@ -1281,9 +1281,20 @@ mark {
 }
 
 @keyframes pulse {
-  0%   { box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.5); }
-  70%  { box-shadow: 0 0 0 10px rgba(239, 68, 68, 0); }
-  100% { box-shadow: 0 0 0 0 rgba(239, 68, 68, 0); }
+  0%   { box-shadow: 0 0 0 0 rgba(46, 100, 23, 0.4); }
+  70%  { box-shadow: 0 0 0 10px rgba(46, 100, 23, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(46, 100, 23, 0); }
+}
+
+@keyframes wave {
+  0%, 100% {
+    transform: scaleY(0.4);
+    opacity: 0.6;
+  }
+  50% {
+    transform: scaleY(1);
+    opacity: 1;
+  }
 }
 
 @keyframes float {
