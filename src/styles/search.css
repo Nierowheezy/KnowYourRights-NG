@@ -11,7 +11,7 @@
       align-items: center;
       gap: 12px;
       background: var(--surface);
-      border: none;
+      border: 2px solid var(--forest);
       border-radius: var(--radius-lg);
       padding: 18px 20px;
       box-shadow: 0 12px 30px -12px rgba(46, 100, 23, 0.25);
@@ -126,6 +126,15 @@ input.search-box__query {
   padding: 0;
   white-space: normal;
   overflow: visible;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+input.search-box__query:focus,
+input.search-box__query:focus-visible {
+  border: 0;
+  outline: 0;
+  box-shadow: none;
 }
 input.search-box__query::placeholder { color: var(--text-faint); font-weight: 500; }
 .search-box__field:focus-within .caret { display: none; }
