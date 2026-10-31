@@ -11,7 +11,7 @@
       align-items: center;
       gap: 12px;
       background: var(--surface);
-      border: 2px solid var(--forest);
+      border: none;
       border-radius: var(--radius-lg);
       padding: 18px 20px;
       box-shadow: 0 12px 30px -12px rgba(46, 100, 23, 0.25);
