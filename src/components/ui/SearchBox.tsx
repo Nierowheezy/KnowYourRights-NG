@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState, type ChangeEvent, type KeyboardEvent } from "react";
+import { forwardRef, useEffect, useImperativeHandle, useRef, useState, type ChangeEvent, type KeyboardEvent } from "react";
 import { IconSearch, IconMic, IconMicOff, IconCheck, IconX } from "../icons";
 
 type Variant = "large" | "small";
@@ -18,6 +18,10 @@ interface SearchBoxProps {
   onKeyDown?: (e: KeyboardEvent<HTMLInputElement>) => void;
   ariaExpanded?: boolean;
   ariaControls?: string;
+}
+
+export interface SearchBoxHandle {
+  startListening: () => void;
 }
 
 declare global {
@@ -56,7 +60,7 @@ interface SpeechRecognitionAlternative {
   transcript: string;
 }
 
-export function SearchBox({
+const SearchBox = forwardRef<SearchBoxHandle, SearchBoxProps>(({
   value,
   onChange,
   placeholder = "Search the guide",
@@ -69,15 +73,22 @@ export function SearchBox({
   onKeyDown,
   ariaExpanded,
   ariaControls,
-}: SearchBoxProps) {
+}, ref) => {
   const [voiceState, setVoiceState] = useState<VoiceState>("idle");
   const [voiceDraft, setVoiceDraft] = useState("");
   const [inputValue, setInputValue] = useState(value);
   const recognitionRef = useRef<SpeechRecognition | null>(null);
 
-  useEffect(() => {
-    if (voiceState === "idle") setInputValue(value);
-  }, [value, voiceState]);
+  useImperativeHandle(ref, () => ({
+    startListening: () => {
+      const rec = recognitionRef.current;
+      if (!rec || voiceState !== "idle") return;
+      setVoiceDraft("");
+      setInputValue("");
+      rec.start();
+      setVoiceState("listening");
+    },
+  }));
 
   useEffect(() => {
     const SpeechRecognitionCtor =
@@ -307,4 +318,6 @@ export function SearchBox({
       )}
     </div>
   );
-}
+});
+SearchBox.displayName = "SearchBox";
+export { SearchBox };

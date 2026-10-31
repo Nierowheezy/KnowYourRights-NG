@@ -1331,6 +1331,58 @@ mark {
   100% { opacity: 0; }
 }
 
+/* Floating Voice FAB — Whispr Flow style */
+@keyframes voiceFabPulse {
+  0%   { box-shadow: 0 0 0 0 rgba(46, 100, 23, 0.5); }
+  70%  { box-shadow: 0 0 0 14px rgba(46, 100, 23, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(46, 100, 23, 0); }
+}
+@keyframes voiceFabRing {
+  0%   { transform: scale(1); opacity: 0.6; }
+  100% { transform: scale(1.6); opacity: 0; }
+}
+
+.voice-fab {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  border: none;
+  background: var(--forest);
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 24px -8px rgba(46, 100, 23, 0.5);
+  z-index: 1000;
+  transition: transform 150ms ease, box-shadow 150ms ease;
+}
+.voice-fab:hover { transform: scale(1.05); }
+.voice-fab:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 3px var(--forest), 0 0 0 6px var(--surface);
+}
+.voice-fab__pulse {
+  position: absolute;
+  inset: -4px;
+  border-radius: 50%;
+  border: 2px solid var(--forest);
+  opacity: 0;
+  animation: voiceFabRing 1.8s ease-out infinite;
+}
+.voice-fab--active {
+  background: var(--warning);
+  animation: voiceFabPulse 1.5s ease-in-out infinite;
+}
+.voice-fab--active .voice-fab__pulse { display: none; }
+
+@media (max-width: 480px) {
+  .voice-fab { right: 16px; bottom: 16px; width: 52px; height: 52px; }
+}
+
 /* Entrance animations (above the fold) */
 .anim {
   animation: fadeUp 0.7s cubic-bezier(0.2, 0.7, 0.2, 1) both;

@@ -1,7 +1,8 @@
-import { useMemo, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import "../styles/search.css";
 import { AdSlot, AdAnchor, Reveal, Pagination, SearchBox } from "../components/ui";
+import type { SearchBoxHandle } from "../components/ui/SearchBox";
 import { IconSearch } from "../components/icons";
 import { usePagination } from "../hooks/usePagination";
 import { searchScenarios, tokenizeQuery } from "../lib/search";
@@ -151,6 +152,16 @@ export default function Search() {
     scrollToElement(resultsRef.current);
   }
 
+  const searchBoxRef = useRef<SearchBoxHandle | null>(null);
+
+  useEffect(() => {
+    const voiceTrigger = sessionStorage.getItem("kyr-voice-search");
+    if (voiceTrigger === "1") {
+      sessionStorage.removeItem("kyr-voice-search");
+      setTimeout(() => searchBoxRef.current?.startListening?.(), 300);
+    }
+  }, []);
+
   return (
     <>
       {/* Search stage with live suggestions */}
@@ -158,6 +169,7 @@ export default function Search() {
         <div className="container">
           <div className="search-box anim">
             <SearchBox
+              ref={searchBoxRef}
               value={query}
               onChange={(v) => {
                 setQuery(v);

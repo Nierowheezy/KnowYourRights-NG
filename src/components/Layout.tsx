@@ -1,11 +1,12 @@
 import { Suspense, useEffect, useState } from "react";
-import { Link, NavLink, Outlet, useLocation } from "react-router-dom";
+import { Link, NavLink, Outlet, useLocation, useNavigate } from "react-router-dom";
 import { getAnnounce } from "../data/announce";
 import { getTheme, nextTheme, setTheme, type Theme } from "../lib/theme";
 import { LogoMark } from "./Logo";
 import { PageSkeleton } from "./ui";
 import OfflineBar from "./OfflineBar";
 import PwaStatus from "./PwaStatus";
+import { IconMic } from "./icons";
 
 const NAV = [
   { to: "/encounter", label: "Encounter mode" },
@@ -18,8 +19,10 @@ const NAV = [
 
 export default function Layout() {
   const location = useLocation();
+  const navigate = useNavigate();
   const [theme, setThemeState] = useState<Theme>(getTheme);
   const [menuOpen, setMenuOpen] = useState(false);
+  const [voiceActive, setVoiceActive] = useState(false);
 
   const announce = getAnnounce(location.pathname);
 
@@ -43,18 +46,8 @@ export default function Layout() {
     setTheme(theme);
   }, [theme]);
 
-  /*
-   * Scroll handling + scroll-reveal.
-   *
-   * Pages filter, sort and paginate *after* mount, so cards are added to the
-   * DOM long after the route change. Observing only the elements present at
-   * mount left every new card stuck at `opacity: 0` (the "data disappears"
-   * bug). A MutationObserver keeps watching the main landmark and registers
-   * any `.reveal` node added later, so content is always visible.
-   */
   useEffect(() => {
     if (location.hash) {
-      // give the DOM a tick to render the new route before scrolling
       const id = location.hash.slice(1);
       const el = document.getElementById(id);
       if (el) {
@@ -103,6 +96,13 @@ export default function Layout() {
       mo.disconnect();
     };
   }, [location.pathname, location.hash]);
+
+  const openVoiceSearch = () => {
+    sessionStorage.setItem("kyr-voice-search", "1");
+    navigate("/search");
+    setVoiceActive(true);
+    setTimeout(() => setVoiceActive(false), 300);
+  };
 
   return (
     <>
@@ -211,7 +211,7 @@ export default function Layout() {
               <div className="footer__col">
                 <h4>Trust</h4>
                 <ul>
-                  <li><Link to="/about">Scope &amp; limitations</Link></li>
+                  <li><Link to="/about">Scope & limitations</Link></li>
                   <li><Link to="/about">Privacy</Link></li>
                   <li><Link to="/about#disclaimer">Legal disclaimer</Link></li>
                   <li><Link to="/settings">Settings</Link></li>
@@ -233,11 +233,22 @@ export default function Layout() {
               </a>
             </div>
             <div className="footer__legal">
-              © 2026 KnowYourRights NG. All rights reserved.&nbsp;&nbsp;·&nbsp;&nbsp;Free &amp; anonymous — no accounts, no tracking.
+              © 2026 KnowYourRights NG. All rights reserved.&nbsp;&nbsp;·&nbsp;&nbsp;Free & anonymous — no accounts, no tracking.
             </div>
           </div>
         </div>
       </footer>
+
+      {/* Floating Voice Search — Whispr Flow style */}
+      <button
+        className={`voice-fab${voiceActive ? " voice-fab--active" : ""}`}
+        onClick={openVoiceSearch}
+        aria-label="Voice search — tap and speak"
+        title="Voice search (tap, then speak)"
+      >
+        <IconMic width={24} height={24} />
+        <span className="voice-fab__pulse" aria-hidden="true"></span>
+      </button>
     </>
   );
 }
