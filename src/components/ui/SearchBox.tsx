@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState, type ChangeEvent, type KeyboardEvent } from "react";
-import { IconSearch, IconMic, IconMicOff, IconCheck, IconX } from "../icons";
+import { IconSearch, IconMic, IconMicOff } from "../icons";
 
 type Variant = "large" | "small";
 
@@ -69,13 +69,7 @@ export function SearchBox({
   ariaControls,
 }: SearchBoxProps) {
   const [listening, setListening] = useState(false);
-  const [voiceDraft, setVoiceDraft] = useState("");
-  const [inputValue, setInputValue] = useState(value);
   const recognitionRef = useRef<SpeechRecognition | null>(null);
-
-  useEffect(() => {
-    if (!listening) setInputValue(value);
-  }, [value, listening]);
 
   useEffect(() => {
     const SpeechRecognitionCtor =
@@ -90,47 +84,27 @@ export function SearchBox({
       let transcript = "";
       for (let i = 0; i < ev.results.length; i++) {
         transcript += ev.results[i][0].transcript;
-        if (ev.results[i].isFinal) {
-          // keep building
-        }
       }
-      setVoiceDraft(transcript);
-      setInputValue(transcript);
+      if (ev.results[ev.results.length - 1].isFinal) {
+        onChange(transcript.trim());
+      }
     };
     rec.onerror = () => setListening(false);
     rec.onend = () => setListening(false);
     recognitionRef.current = rec;
     return () => rec.stop();
-  }, []);
+  }, [onChange]);
 
-  const startListening = () => {
+  const toggleListening = () => {
     const rec = recognitionRef.current;
     if (!rec) return;
-    setVoiceDraft("");
-    setInputValue("");
-    rec.start();
-    setListening(true);
-  };
-
-  const stopListening = () => {
-    const rec = recognitionRef.current;
-    if (!rec) return;
-    rec.stop();
-    setListening(false);
-  };
-
-  const confirmVoice = () => {
-    stopListening();
-    if (voiceDraft.trim()) {
-      onChange(voiceDraft.trim());
+    if (listening) {
+      rec.stop();
+      setListening(false);
+    } else {
+      rec.start();
+      setListening(true);
     }
-    setVoiceDraft("");
-  };
-
-  const cancelVoice = () => {
-    stopListening();
-    setVoiceDraft("");
-    setInputValue(value);
   };
 
   const handleKeyDown = (e: KeyboardEvent<HTMLInputElement>) => {
@@ -154,16 +128,9 @@ export function SearchBox({
       <input
         className={inputClass}
         type="search"
-        value={listening ? inputValue : value}
-        onChange={(e: ChangeEvent<HTMLInputElement>) => {
-          const v = e.target.value;
-          if (listening) {
-            setInputValue(v);
-          } else {
-            onChange(v);
-          }
-        }}
-        placeholder={listening ? "Listening…" : placeholder}
+        value={value}
+        onChange={(e: ChangeEvent<HTMLInputElement>) => onChange(e.target.value)}
+        placeholder={placeholder}
         aria-label={ariaLabel}
         aria-expanded={ariaExpanded}
         aria-controls={ariaControls}
@@ -183,7 +150,7 @@ export function SearchBox({
       <button
         type="button"
         aria-label={listening ? "Stop voice input" : "Search by voice"}
-        onClick={listening ? stopListening : startListening}
+        onClick={toggleListening}
         title={listening ? "Stop listening" : "Speak to search"}
         className="search-voice"
         style={{
@@ -194,7 +161,7 @@ export function SearchBox({
           height: variant === "large" ? 36 : 28,
           borderRadius: "999px",
           border: "1px solid var(--line)",
-          background: listening ? "var(--warning-tint)" : "var(--surface)",
+          background: listening ? "var(--surface)" : "var(--surface)",
           color: "var(--text)",
           cursor: "pointer",
           marginLeft: 8,
@@ -206,50 +173,6 @@ export function SearchBox({
           <IconMic width={variant === "large" ? 18 : 14} height={variant === "large" ? 18 : 14} />
         )}
       </button>
-      {listening && (
-        <div style={{ display: "flex", gap: 6, marginLeft: 6 }}>
-          <button
-            type="button"
-            aria-label="Cancel voice input"
-            onClick={cancelVoice}
-            style={{
-              display: "inline-flex",
-              alignItems: "center",
-              justifyContent: "center",
-              width: variant === "large" ? 32 : 24,
-              height: variant === "large" ? 32 : 24,
-              borderRadius: "999px",
-              border: "1px solid var(--line)",
-              background: "var(--surface)",
-              color: "var(--text)",
-              cursor: "pointer",
-            }}
-            title="Cancel"
-          >
-            <IconX width={variant === "large" ? 16 : 12} height={variant === "large" ? 16 : 12} />
-          </button>
-          <button
-            type="button"
-            aria-label="Confirm voice input"
-            onClick={confirmVoice}
-            style={{
-              display: "inline-flex",
-              alignItems: "center",
-              justifyContent: "center",
-              width: variant === "large" ? 32 : 24,
-              height: variant === "large" ? 32 : 24,
-              borderRadius: "999px",
-              border: "1px solid var(--forest)",
-              background: "var(--forest)",
-              color: "#fff",
-              cursor: "pointer",
-            }}
-            title="Confirm"
-          >
-            <IconCheck width={variant === "large" ? 16 : 12} height={variant === "large" ? 16 : 12} />
-          </button>
-        </div>
-      )}
     </div>
   );
 }

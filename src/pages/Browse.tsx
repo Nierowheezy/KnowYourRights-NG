@@ -1,7 +1,7 @@
 import { useMemo, useRef, useState } from "react";
 import { Link, useSearchParams } from "react-router-dom";
 import "../styles/browse.css";
-import { AdSlot, AdAnchor, Pagination, SearchBox } from "../components/ui";
+import { AdSlot, AdAnchor, Pagination } from "../components/ui";
 import { usePagination } from "../hooks/usePagination";
 import { scrollToElement } from "../lib/scroll";
 import {
@@ -201,16 +201,7 @@ export default function Browse() {
           </p>
 
           <div className="anim" style={{ animationDelay: ".16s" }}>
-            <SearchBox
-              value={query}
-              onChange={(v) => {
-                setQuery(v);
-                setFiltersOpen(true);
-              }}
-              placeholder="Search in your own words — e.g. 'officer seized my key'"
-              variant="small"
-              ariaLabel="Search guides"
-            />
+            {/* Search removed from Browse – use Search page for free-text */}
           </div>
 
           <div className="browse-toolbar anim" style={{ animationDelay: ".22s" }}>
