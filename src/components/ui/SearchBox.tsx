@@ -101,17 +101,12 @@ const SearchBox = forwardRef<SearchBoxHandle, SearchBoxProps>(({
     rec.lang = "en-NG";
     rec.onresult = (ev: SpeechRecognitionEvent) => {
       let transcript = "";
-      let isFinal = false;
       for (let i = 0; i < ev.results.length; i++) {
         transcript += ev.results[i][0].transcript;
-        if (ev.results[i].isFinal) isFinal = true;
       }
       setVoiceDraft(transcript);
       setInputValue(transcript);
-      if (isFinal) {
-        rec.stop();
-        setVoiceState("confirming");
-      }
+      // Do NOT auto-stop on isFinal - keep listening until user clicks mic again
     };
     rec.onerror = () => {
       setVoiceState("idle");
@@ -119,6 +114,7 @@ const SearchBox = forwardRef<SearchBoxHandle, SearchBoxProps>(({
       setInputValue(value);
     };
     rec.onend = () => {
+      // Only clean up if we're not intentionally stopping
       if (voiceState === "listening" && !voiceDraft.trim()) {
         setVoiceState("idle");
         setInputValue(value);
