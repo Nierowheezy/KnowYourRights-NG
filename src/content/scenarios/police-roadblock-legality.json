@@ -1,0 +1,66 @@
+{
+  "status": "approved",
+  "reviewer": "Content team (source check)",
+  "lastReviewed": "2026-10-31",
+  "nextReview": "2027-04-30",
+  "reviewNotes": "Citations checked against the official text downloaded from the issuing agency's portal. Source verification is not legal advice. Re-check before the next review date.",
+  "changeHistory": [
+    {
+      "date": "2026-10-31",
+      "note": "Added during full-coverage content expansion across the available statutes.",
+      "reviewer": "Content team (source check)"
+    }
+  ],
+  "jurisdiction": "federal",
+  "agency": [
+    "npf"
+  ],
+  "relatedScenarios": [
+    "police-stop-search-car",
+    "police-checkpoint-documents",
+    "officer-demanded-money",
+    "police-record-encounter"
+  ],
+  "keywords": [
+    "police",
+    "roadblock",
+    "checkpoint",
+    "stop",
+    "search",
+    "movement",
+    "highway"
+  ],
+  "id": "police-roadblock-legality",
+  "title": "Are police roadblocks and checkpoints legal?",
+  "shortTitle": "Roadblocks and checkpoints",
+  "icon": "🚧",
+  "question": "There is a police roadblock ahead and officers are stopping every car. Is that lawful?",
+  "category": "stop-search",
+  "shortAnswer": "Police may stop vehicles for a lawful purpose such as preventing crime, enforcing traffic law, or conducting a search on stated grounds. A roadblock is not a licence to demand money or search everyone without reason. Ask for the purpose, cooperate with lawful checks, and refuse unlawful demands politely.",
+  "legalExplanation": "The **Constitution, section 41** guarantees freedom of movement, subject to lawful restrictions.\n\nThe **Nigeria Police Act, 2020** gives officers power to stop and search where there are grounds (ss 49–50). Before a search, the officer must explain the object and the grounds or authorisation (s 50(3)). A search record must be made (ss 56–57). The Act also requires officers to treat people with dignity and not to use their powers oppressively.\n\nA checkpoint becomes unlawful where it is used as a general toll point, where officers have no lawful purpose, or where searches are arbitrary. Traffic enforcement powers sit alongside road traffic legislation, not outside it.",
+  "exceptions": "- **Emergency or security operation:** police may set up temporary controls for a specific, stated security purpose.\n- **Traffic offence:** an officer may stop you for a suspected traffic violation.\n- **Reasonable suspicion:** a search may be based on specific grounds, not a blanket \"everyone is searched\" policy.",
+  "practicalOptions": "1. Slow down and stop safely.\n2. Ask: **\"Officer, what is the purpose of this checkpoint?\"**\n3. If searched, ask for the object, grounds and the **National Search Record** copy.\n4. Keep your documents ready but do not hand over your phone unlocked.\n5. Note the location, officers and any demand for payment.",
+  "whatToAvoid": "- Driving through or around a roadblock.\n- Arguing aggressively or recording officers in a way that provokes confrontation.\n- Paying cash without a written notice or receipt.",
+  "whatToDocument": "- Location and time.\n- Officers' names/numbers and unit.\n- Stated purpose of the checkpoint.\n- Whether a search record was offered.\n- Any demand for money and what it was for.",
+  "whatToDoAfter": "Report extortion or unlawful roadblocks to the **Police Complaints Response Unit**, the **Public Complaints Commission**, or the **NHRC**. Persistent reports help identify problem units.",
+  "sources": [
+    {
+      "sourceId": "nigeria-police-act-2020",
+      "sections": [
+        "49",
+        "50",
+        "51",
+        "56",
+        "57"
+      ],
+      "notes": "ss49-51 stop/search powers and safeguards; ss56-57 search records."
+    },
+    {
+      "sourceId": "constitution-1999",
+      "sections": [
+        "41"
+      ],
+      "notes": "s41 freedom of movement."
+    }
+  ]
+}

@@ -1,0 +1,65 @@
+{
+  "status": "approved",
+  "reviewer": "Content team (source check)",
+  "lastReviewed": "2026-10-31",
+  "nextReview": "2027-04-30",
+  "reviewNotes": "Citations checked against the official text downloaded from the issuing agency's portal. Source verification is not legal advice. Re-check before the next review date.",
+  "changeHistory": [
+    {
+      "date": "2026-10-31",
+      "note": "Added during full-coverage content expansion across the available statutes.",
+      "reviewer": "Content team (source check)"
+    }
+  ],
+  "jurisdiction": "federal",
+  "agency": [
+    "ncs"
+  ],
+  "relatedScenarios": [
+    "customs-search-powers",
+    "customs-seizure-receipt",
+    "police-arrest-without-warrant",
+    "police-detention-24-hours"
+  ],
+  "keywords": [
+    "customs",
+    "arrest",
+    "smuggling",
+    "detention",
+    "police",
+    "ncs"
+  ],
+  "id": "customs-arrest-powers",
+  "title": "Can customs officers arrest me?",
+  "shortTitle": "Customs arrest powers",
+  "icon": "🚔",
+  "question": "A customs officer says I am under arrest for smuggling. Can customs arrest me, or must they call the police?",
+  "category": "arrest",
+  "shortAnswer": "Customs officers may arrest for customs offences because the Act gives them the powers of police officers for enforcing customs law. Their arrest power is tied to the Act, so they should state the customs offence alleged. For unrelated ordinary crimes, the Nigeria Police Force remains the primary agency.",
+  "legalExplanation": "The **Nigeria Customs Service Act, 2023, section 6** provides that, for the purpose of carrying out or enforcing the Act, all customs officers have the same powers, authorities and privileges given by law to police officers.\n\nThat includes arrest and detention where a customs offence is suspected. **Section 168** separately gives the Service power to detain, arrest or seize importation or exportation that infringes intellectual property rights. **Section 245** provides for seizure and detention of goods liable to forfeiture.\n\nThe power is not unlimited: it must be exercised **for the purpose of the Act**, and the officer should identify the customs offence involved. The Constitution's protections — personal liberty (s 35), dignity (s 34) and fair hearing (s 36) — continue to apply.",
+  "exceptions": "- **Non-customs offence:** an unrelated crime should normally be handled by the police, though customs may detain briefly and hand over.\n- **Goods in transit:** a customs detention may relate to the goods rather than the traveller.\n- **Voluntary appearance:** where no arrest is necessary, the officer may require you to attend an office or produce documents instead.",
+  "practicalOptions": "1. Ask: **\"What customs offence am I being arrested for?\"**\n2. Ask for the officer's name, number and command.\n3. Ask to contact a lawyer or family member.\n4. Do not resist physically; note the time and place.\n5. Ask where you are being taken and what happens next.",
+  "whatToAvoid": "- Offering money to be released.\n- Signing statements without reading them.\n- Assuming customs can arrest for any offence at all.",
+  "whatToDocument": "- Customs offence alleged.\n- Officer names/numbers and command.\n- Time and place of arrest.\n- Where you were taken.\n- Any documents or goods seized.",
+  "whatToDoAfter": "Ask for the case file reference and contact a lawyer. If the arrest was for a non-customs matter or was abusive, report it to the **Nigeria Customs Service** and the **Public Complaints Commission**.",
+  "sources": [
+    {
+      "sourceId": "nigeria-customs-service-act-2023",
+      "sections": [
+        "6",
+        "168",
+        "245"
+      ],
+      "notes": "s6 customs officers have police powers for enforcing the Act; s168 IPR detain/arrest/seize; s245 detention and forfeiture of goods."
+    },
+    {
+      "sourceId": "constitution-1999",
+      "sections": [
+        "34",
+        "35",
+        "36"
+      ],
+      "notes": "s34 dignity; s35 personal liberty and court limits; s36 fair hearing."
+    }
+  ]
+}

@@ -1,0 +1,70 @@
+{
+  "status": "approved",
+  "reviewer": "Content team (source check)",
+  "lastReviewed": "2026-10-31",
+  "nextReview": "2027-04-30",
+  "reviewNotes": "Citations checked against the official text downloaded from the issuing agency's portal. Source verification is not legal advice. Re-check before the next review date.",
+  "changeHistory": [
+    {
+      "date": "2026-10-31",
+      "note": "Added during full-coverage content expansion across the available statutes.",
+      "reviewer": "Content team (source check)"
+    }
+  ],
+  "jurisdiction": "federal",
+  "agency": [
+    "icpc"
+  ],
+  "relatedScenarios": [
+    "icpc-corruption-reporting",
+    "icpc-invitation-summons",
+    "criminal-code-bribery",
+    "officer-demanded-money"
+  ],
+  "keywords": [
+    "icpc",
+    "bribe",
+    "gratification",
+    "report",
+    "corruption",
+    "whistleblower",
+    "cpo"
+  ],
+  "id": "icpc-report-bribe",
+  "title": "How do I report a bribe to the ICPC?",
+  "shortTitle": "Reporting bribery",
+  "icon": "📞",
+  "question": "An official asked me for money. Can I report it, and what protection do I have?",
+  "category": "complaints",
+  "shortAnswer": "Yes. Asking for or receiving gratification is an offence, and there is a statutory duty to report bribery transactions. You can report orally or in writing to an ICPC officer. The Act protects the identity of informers, and you should keep evidence such as messages, receipts or recordings made lawfully.",
+  "legalExplanation": "The **Corrupt Practices and Other Related Offences Act, 2000**:\n- **Section 8** makes it an offence for a person to corruptly ask for, receive or obtain property or a benefit for a public officer's act, omission, favour or disfavour.\n- **Section 9** makes it an offence to corruptly give, promise or offer such a benefit.\n- **Section 18** deals with bribery of a public officer, and **section 19** with a public officer using their office for corrupt advantage.\n- **Section 23** imposes a **duty to report** bribery transactions.\n- **Section 27** allows a report to be made orally or in writing to an officer of the Commission.\n- **Section 64** protects informers and information.\n\nThe **Criminal Code Act** also criminalises official corruption in states that apply it (ss 98, 98A and 98B).",
+  "exceptions": "- **Lawful fees:** a published, official fee paid through the proper channel is not a bribe.\n- **Entrapment concerns:** a report should describe what happened truthfully; the Commission handles the investigation.\n- **Civil claims:** reporting does not prevent a separate civil claim, but take advice before acting.",
+  "practicalOptions": "1. Note the date, place, official's name and what was demanded.\n2. Keep any messages, receipts or documents.\n3. Report to the **ICPC** orally or in writing (s 27).\n4. Ask for a report reference and the informer-protection arrangements.\n5. Do not pay unless necessary for your immediate safety; if you do, record it.",
+  "whatToAvoid": "- Paying and then destroying the evidence.\n- Making a false report.\n- Confronting the official alone.",
+  "whatToDocument": "- What was demanded and by whom.\n- Exact words or messages.\n- Date, time and place.\n- Any payment made and evidence.\n- Report reference.",
+  "whatToDoAfter": "Follow up with the ICPC using your reference. If you fear retaliation, tell the Commission and keep a record of any threats.",
+  "sources": [
+    {
+      "sourceId": "cpo-act-2000",
+      "sections": [
+        "8",
+        "9",
+        "18",
+        "19",
+        "23",
+        "27",
+        "64"
+      ],
+      "notes": "ss8-9 accepting/giving gratification; ss18-19 bribery and abuse of office; s23 duty to report; s27 report to the Commission; s64 protection of informers."
+    },
+    {
+      "sourceId": "criminal-code-act",
+      "sections": [
+        "98",
+        "98A",
+        "98B"
+      ],
+      "notes": "official corruption offences in states applying the Criminal Code."
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "status": "approved",
+  "reviewer": "Content team (source check)",
+  "lastReviewed": "2026-10-31",
+  "nextReview": "2027-04-30",
+  "reviewNotes": "Citations checked against the official text downloaded from the issuing agency's portal. Source verification is not legal advice. Re-check before the next review date.",
+  "changeHistory": [
+    {
+      "date": "2026-10-31",
+      "note": "Added during full-coverage content expansion across the available statutes.",
+      "reviewer": "Content team (source check)"
+    }
+  ],
+  "jurisdiction": "federal",
+  "agency": [
+    "frsc"
+  ],
+  "relatedScenarios": [
+    "vehicle-documents-checks",
+    "frsc-driver-licence-demand",
+    "frsc-fines-on-the-spot",
+    "frsc-arrest-towing"
+  ],
+  "keywords": [
+    "frsc",
+    "vehicle papers",
+    "roadworthiness",
+    "insurance",
+    "registration",
+    "licence",
+    "particulars"
+  ],
+  "id": "frsc-roadworthiness-certificate",
+  "title": "What vehicle papers can FRSC check?",
+  "shortTitle": "Vehicle papers FRSC can check",
+  "icon": "📄",
+  "question": "What documents must I show when FRSC stops my vehicle, and what happens if one is missing?",
+  "category": "documents",
+  "shortAnswer": "FRSC may check your driver's licence, vehicle licence, registration, insurance and certificate of roadworthiness. Missing or expired documents can attract a fine or a notice of offence. Ask which document is deficient, request the notice, and avoid paying cash without a receipt.",
+  "legalExplanation": "The **FRSC Act 2007** gives the Corps responsibility for road safety and the power to enforce traffic offences (s 10). **Section 28** allows officers to demand and retain vehicle documents to secure compliance.\n\nThe **National Road Traffic Regulations, 2012** require:\n- vehicle registration and number plates (regs 2–7 and 36–39);\n- a vehicle licence, displayed as required (regs 22 and 26);\n- storage and provision of vehicle particulars (reg 18);\n- a certificate of roadworthiness (reg 142).\n\nA missing document is a regulatory offence, not a criminal arrest situation in ordinary cases. The officer should identify the specific deficiency and issue the appropriate notice.",
+  "exceptions": "- **New vehicle:** temporary or dealer documents may apply; ask what is required.\n- **Document stolen or lost:** a police report and replacement application may be relevant.\n- **Roadworthiness:** the certificate must be current; an expired certificate is a valid ground for enforcement.",
+  "practicalOptions": "1. Ask: **\"Which document is missing or expired?\"**\n2. Show the documents you have; keep the originals where possible.\n3. Request the **notice of offence** and the amount.\n4. Pay only through an official channel and keep the receipt.\n5. Ask how to challenge the notice if you believe it is wrong.",
+  "whatToAvoid": "- Using forged or altered documents.\n- Paying an officer cash with no receipt.\n- Driving away before the check is completed.",
+  "whatToDocument": "- Documents checked and the alleged deficiency.\n- Notice of offence and receipt.\n- Officer name/number and location.\n- Any court date or payment reference.",
+  "whatToDoAfter": "Renew or replace the document promptly. If the notice was wrong, follow the challenge process on the notice or contact the FRSC command.",
+  "sources": [
+    {
+      "sourceId": "frsc-act-2007",
+      "sections": [
+        "10",
+        "28"
+      ],
+      "notes": "s10 functions and enforcement; s28 document retention and notice."
+    },
+    {
+      "sourceId": "national-road-traffic-regulations-2012",
+      "sections": [
+        "18",
+        "22",
+        "26",
+        "36",
+        "37",
+        "142"
+      ],
+      "notes": "vehicle particulars, licence display, number plates and roadworthiness certificate."
+    }
+  ]
+}

@@ -1,0 +1,75 @@
+{
+  "status": "approved",
+  "reviewer": "Content team (source check)",
+  "lastReviewed": "2026-10-31",
+  "nextReview": "2027-04-30",
+  "reviewNotes": "Citations checked against the official text downloaded from the issuing agency's portal. Source verification is not legal advice. Re-check before the next review date.",
+  "changeHistory": [
+    {
+      "date": "2026-10-31",
+      "note": "Added during full-coverage content expansion across the available statutes.",
+      "reviewer": "Content team (source check)"
+    }
+  ],
+  "jurisdiction": "federal",
+  "agency": [
+    "npf"
+  ],
+  "relatedScenarios": [
+    "police-arrest-detention",
+    "police-record-encounter",
+    "police-right-to-silence",
+    "officer-demanded-money"
+  ],
+  "keywords": [
+    "police",
+    "force",
+    "arrest",
+    "handcuffs",
+    "assault",
+    "torture",
+    "dignity"
+  ],
+  "id": "police-use-of-force",
+  "title": "How much force can police use during an arrest?",
+  "shortTitle": "Force during arrest",
+  "icon": "🚨",
+  "question": "Police grabbed, slapped or handcuffed me roughly during an arrest. What force is lawful?",
+  "category": "arrest",
+  "shortAnswer": "Police may use only the force reasonably necessary to make a lawful arrest or prevent escape. They must not use unnecessary restraint, torture, or cruel and degrading treatment. Handcuffs and similar restraints should be used only where necessary. Excessive force can be reported and challenged.",
+  "legalExplanation": "The **Constitution, section 34** prohibits torture and inhuman or degrading treatment, and **section 35** protects personal liberty.\n\nUnder the **Nigeria Police Act, 2020**:\n- An arrest must be made with reasonable force and without unnecessary restraint (ss 32–34).\n- The officer must inform the suspect of the cause of arrest and their rights (s 35).\n- An arrested suspect must be treated humanely (s 37).\n\nThe **ACJA 2015** prohibits handcuffing or restraining a suspect except where necessary (s 5) and requires humane treatment (s 8). Force that goes beyond what is necessary can amount to assault, and serious cases can be prosecuted.",
+  "exceptions": "- **Resistance or escape:** reasonable force may be used to overcome resistance or prevent escape.\n- **Danger to officers or others:** proportionate force may be used to prevent imminent harm.\n- **Handcuffs:** may be justified where there is a real risk of violence or escape, but not as routine punishment.",
+  "practicalOptions": "1. Do not fight back — that can escalate the situation and create a separate offence.\n2. Say clearly: **\"I am not resisting. Please tell me why I am being arrested.\"**\n3. Ask for medical attention if you are injured.\n4. Note the officers' names/numbers and any witnesses.\n5. Photograph injuries as soon as it is safe to do so and get a medical report.",
+  "whatToAvoid": "- Struggling or grabbing an officer's weapon.\n- Insulting or threatening officers.\n- Delaying medical treatment to argue.",
+  "whatToDocument": "- Officers involved and their numbers.\n- What force was used and when.\n- Injuries and photographs.\n- Medical report and treatment records.\n- Witness names and contact details.",
+  "whatToDoAfter": "Report excessive force to the **Police Complaints Response Unit**, the **National Human Rights Commission**, or the **Public Complaints Commission**. A lawyer can advise on a civil claim or criminal complaint.",
+  "sources": [
+    {
+      "sourceId": "nigeria-police-act-2020",
+      "sections": [
+        "32",
+        "33",
+        "34",
+        "35",
+        "37"
+      ],
+      "notes": "ss32-34 arrest and restraint; s35 notification; s37 humane treatment."
+    },
+    {
+      "sourceId": "constitution-1999",
+      "sections": [
+        "34",
+        "35"
+      ],
+      "notes": "s34 dignity and freedom from torture; s35 personal liberty."
+    },
+    {
+      "sourceId": "acja-2015",
+      "sections": [
+        "5",
+        "8"
+      ],
+      "notes": "s5 restraint only where necessary; s8 humane treatment."
+    }
+  ]
+}

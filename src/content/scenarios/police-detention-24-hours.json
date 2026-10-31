@@ -1,0 +1,75 @@
+{
+  "status": "approved",
+  "reviewer": "Content team (source check)",
+  "lastReviewed": "2026-10-31",
+  "nextReview": "2027-04-30",
+  "reviewNotes": "Citations checked against the official text downloaded from the issuing agency's portal. Source verification is not legal advice. Re-check before the next review date.",
+  "changeHistory": [
+    {
+      "date": "2026-10-31",
+      "note": "Added during full-coverage content expansion across the available statutes.",
+      "reviewer": "Content team (source check)"
+    }
+  ],
+  "jurisdiction": "federal",
+  "agency": [
+    "npf"
+  ],
+  "relatedScenarios": [
+    "police-arrest-detention",
+    "police-bail-rights",
+    "acja-arrest-in-lieu",
+    "police-statement-caution"
+  ],
+  "keywords": [
+    "police",
+    "detention",
+    "24 hours",
+    "48 hours",
+    "court",
+    "bail",
+    "custody"
+  ],
+  "id": "police-detention-24-hours",
+  "title": "How long can police detain me before taking me to court?",
+  "shortTitle": "Detention time limits",
+  "icon": "⏱️",
+  "question": "Police have held me at the station for hours. How long can they keep me before a court sees me?",
+  "category": "arrest",
+  "shortAnswer": "For an offence not punishable by death, the Constitution requires that you be brought before a court within 24 hours of arrest (48 hours where a court is not reasonably accessible). Police must also consider bail where they cannot get you to court within 24 hours. Detention beyond those limits without lawful justification is unlawful.",
+  "legalExplanation": "The **Constitution, section 35(5)** requires an arrested or detained person to be brought before a court within **24 hours** (or **48 hours** where a court of competent jurisdiction is not located within a 40-kilometre radius or is not in session), and to be released unconditionally or on bail if the court is not satisfied that detention is justified.\n\nUnder the **Nigeria Police Act, 2020**:\n- An arrested suspect must be taken immediately to a police station (s 43).\n- Where a suspect is held without a warrant for a non-capital offence and cannot be brought to court within 24 hours, the officer in charge must release them on bail (s 62).\n- If the offence is capital, the suspect may be detained and referred for legal advice, but must still be taken to court within a reasonable time (s 62(3)).\n- A suspect detained beyond 24 hours for a non-capital offence may apply to court for release (s 64).\n\nThe **ACJA 2015** (ss 30–34) repeats the limits, requires a custody record, and makes unexplained delay a ground for release.",
+  "exceptions": "- **Capital offences** such as murder may justify longer detention, but court must still be involved promptly.\n- **Court not accessible:** the Constitution allows up to 48 hours in the limited circumstances in s 35(5)(b).\n- **Your own conduct:** delay caused by your refusal to give a name or address can affect the timeline, but does not authorise indefinite detention.",
+  "practicalOptions": "1. Ask the officer in charge: **\"What offence am I being held for, and when will I be taken to court?\"**\n2. Ask for the **custody record** and the time of arrest.\n3. Ask whether bail is available at the station. Bail for non-capital offences is normally free.\n4. If the limit passes, tell the station officer that you are requesting release and note the time.\n5. Contact a lawyer, family member, or the Legal Aid Council.",
+  "whatToAvoid": "- Signing a statement just to secure release without understanding it.\n- Paying \"bail\" money to an officer without a receipt or court process.\n- Waiting silently past the limit without asking for release.",
+  "whatToDocument": "- Exact time and date of arrest.\n- Station and officer in charge.\n- Offence alleged and any charge sheet.\n- Requests for bail and responses.\n- Time of release or court appearance.",
+  "whatToDoAfter": "If you were held beyond the limit without justification, report it and seek legal advice. A court can order release and may award compensation for unlawful detention.",
+  "sources": [
+    {
+      "sourceId": "constitution-1999",
+      "sections": [
+        "35"
+      ],
+      "notes": "s35 personal liberty, 24/48-hour court limits, bail and release."
+    },
+    {
+      "sourceId": "nigeria-police-act-2020",
+      "sections": [
+        "43",
+        "62",
+        "64"
+      ],
+      "notes": "s43 immediate station delivery; s62 station bail and capital exception; s64 remedy for detention beyond 24 hours."
+    },
+    {
+      "sourceId": "acja-2015",
+      "sections": [
+        "30",
+        "31",
+        "32",
+        "33",
+        "34"
+      ],
+      "notes": "Part 2 detention time limits, custody records and release."
+    }
+  ]
+}

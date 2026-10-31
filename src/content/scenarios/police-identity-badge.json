@@ -1,0 +1,58 @@
+{
+  "status": "approved",
+  "reviewer": "Content team (source check)",
+  "lastReviewed": "2026-10-31",
+  "nextReview": "2027-04-30",
+  "reviewNotes": "Citations checked against the official text downloaded from the issuing agency's portal. Source verification is not legal advice. Re-check before the next review date.",
+  "changeHistory": [
+    {
+      "date": "2026-10-31",
+      "note": "Added during full-coverage content expansion across the available statutes.",
+      "reviewer": "Content team (source check)"
+    }
+  ],
+  "jurisdiction": "federal",
+  "agency": [
+    "npf"
+  ],
+  "relatedScenarios": [
+    "police-stop-search-car",
+    "police-checkpoint-documents",
+    "police-record-encounter",
+    "officer-demanded-money"
+  ],
+  "keywords": [
+    "police",
+    "identification",
+    "id card",
+    "uniform",
+    "plain clothes",
+    "search",
+    "badge"
+  ],
+  "id": "police-identity-badge",
+  "title": "Must a police officer show identification before searching me?",
+  "shortTitle": "Police identification",
+  "icon": "🪪",
+  "question": "An officer in plain clothes wants to search me but will not show any ID. What does the law say?",
+  "category": "stop-search",
+  "shortAnswer": "Before a stop and search, a police officer must be in uniform or visibly wear a valid police identity card, and must give their name, station, the object of the search and the grounds for it. If an officer refuses to identify themselves, you may ask to see a supervisor or the station, and you should record what happened.",
+  "legalExplanation": "The **Nigeria Police Act, 2020, section 50(4)** provides that, for a police officer to exercise the power to stop and search, the officer **shall be in uniform or wear visibly a valid police identity card**.\n\n**Section 50(3)** requires the officer, before searching a detained person or vehicle, to give:\n- their name and the name of the police station to which they are attached;\n- the object of the search; and\n- the grounds or authorisation for undertaking the search.\n\n**Section 51** requires reasonable efforts to minimise embarrassment and seeks the person's cooperation. **Sections 56–57** require a written search record and a copy for the person searched or the vehicle driver.",
+  "exceptions": "- **Urgent operational situations:** an officer may need to act immediately, but identification should follow as soon as practicable.\n- **Arrest:** a plain-clothes officer making an arrest should still identify themselves and state the cause of arrest.\n- **Undercover operations:** these are exceptional and subject to internal authorisation; they do not remove the need for a lawful basis.",
+  "practicalOptions": "1. Ask politely: **\"Please show me your identity card and tell me your station.\"**\n2. Ask for the object and grounds of the search.\n3. If the officer refuses, ask to speak to a supervisor or accompany them to a station.\n4. Do not physically resist; record the officer's description and any vehicle number.\n5. Ask for the search record copy.",
+  "whatToAvoid": "- Handing over your phone or property to an unidentified person.\n- Assuming every plain-clothes officer is fake — verify through the station.\n- Escalating into a physical confrontation.",
+  "whatToDocument": "- Officer's name, number, station and description.\n- Whether an identity card or uniform was shown.\n- Object and grounds of the search.\n- Search record or refusal.\n- Time, place and witnesses.",
+  "whatToDoAfter": "Report an officer who refused to identify themselves to the **Police Complaints Response Unit** or the **Public Complaints Commission**.",
+  "sources": [
+    {
+      "sourceId": "nigeria-police-act-2020",
+      "sections": [
+        "50",
+        "51",
+        "56",
+        "57"
+      ],
+      "notes": "s50(3) name, station, object and grounds; s50(4) uniform or visible identity card; s51 conduct of search; ss56-57 search record."
+    }
+  ]
+}

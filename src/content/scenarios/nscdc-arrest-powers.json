@@ -1,0 +1,62 @@
+{
+  "status": "approved",
+  "reviewer": "Content team (source check)",
+  "lastReviewed": "2026-10-31",
+  "nextReview": "2027-04-30",
+  "reviewNotes": "Citations checked against the official text downloaded from the issuing agency's portal. Source verification is not legal advice. Re-check before the next review date.",
+  "changeHistory": [
+    {
+      "date": "2026-10-31",
+      "note": "Added during full-coverage content expansion across the available statutes.",
+      "reviewer": "Content team (source check)"
+    }
+  ],
+  "jurisdiction": "federal",
+  "agency": [
+    "nscdc"
+  ],
+  "relatedScenarios": [
+    "nscdc-vandalism-arrest",
+    "nscdc-infrastructure-powers",
+    "nscdc-search-premises",
+    "police-arrest-without-warrant"
+  ],
+  "keywords": [
+    "nscdc",
+    "civil defence",
+    "arrest",
+    "detention",
+    "vandalism",
+    "prosecution"
+  ],
+  "id": "nscdc-arrest-powers",
+  "title": "Can NSCDC officers arrest me?",
+  "shortTitle": "NSCDC arrest powers",
+  "icon": "🛡️",
+  "question": "NSCDC officers say they are arresting me. What powers does the Civil Defence Corps actually have?",
+  "category": "arrest",
+  "shortAnswer": "NSCDC has statutory power to arrest with or without a warrant, detain, investigate and prosecute for offences under its Act and the activities listed in it, such as vandalism, pipeline damage and certain public-order offences. It is not a general replacement for the police, and an arrest should be tied to a listed offence.",
+  "legalExplanation": "The **Nigeria Security and Civil Defence Corps Act, 2003, section 3(1)(f)** gives the Corps power to **arrest with or without a warrant, detain, investigate and institute legal proceedings** in the name of the Attorney-General of the Federation against a person reasonably suspected of an offence under the Act or involvement in:\n- criminal activity;\n- chemical poisoning, oil spillage, nuclear waste or poisoning;\n- industrial espionage or fraud;\n- activity aimed at frustrating a government programme or policy;\n- riot, civil disorder, revolt, strike or religious unrest;\n- vandalisation of power transmission lines, oil pipelines, NIPOST cables, water board pipes or equipment.\n\nThe same section gives the Corps power to enter and search premises and seize materials suspected of being used in vandalisation (s 3(1)(e)). Those powers are tied to the Corps' statutory mandate.",
+  "exceptions": "- **Ordinary crime:** the police remain the primary agency; NSCDC should hand over matters outside its mandate.\n- **Private guard regulation:** NSCDC also supervises private guard companies (s 3(1)(c)–(d)), which is a regulatory role.\n- **Emergency support:** much of the Corps' work is rescue, emergency and infrastructure protection rather than routine policing.",
+  "practicalOptions": "1. Ask: **\"Which offence under the NSCDC Act am I being arrested for?\"**\n2. Ask for the officer's name, number and command.\n3. Ask to contact a lawyer or family member.\n4. Do not resist physically; record the time and place.\n5. Ask where you are being taken and for the case reference.",
+  "whatToAvoid": "- Assuming NSCDC has the same general powers as the police.\n- Paying money to secure release.\n- Signing a statement without reading it.",
+  "whatToDocument": "- Offence alleged and section relied on.\n- Officer names/numbers and command.\n- Time and place.\n- Where you were taken.\n- Any property seized.",
+  "whatToDoAfter": "Ask for the case file and contact a lawyer. If the arrest falls outside the Corps' mandate, report it to the **NSCDC** and the **Public Complaints Commission**.",
+  "sources": [
+    {
+      "sourceId": "nscdc-act",
+      "sections": [
+        "3"
+      ],
+      "notes": "s3(1)(e) entry, search and seizure for vandalisation; s3(1)(f) arrest with or without warrant, detention, investigation and prosecution for listed offences."
+    },
+    {
+      "sourceId": "constitution-1999",
+      "sections": [
+        "35",
+        "36"
+      ],
+      "notes": "s35 personal liberty; s36 fair hearing."
+    }
+  ]
+}

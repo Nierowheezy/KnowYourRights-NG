@@ -1,0 +1,62 @@
+{
+  "status": "approved",
+  "reviewer": "Content team (source check)",
+  "lastReviewed": "2026-10-31",
+  "nextReview": "2027-04-30",
+  "reviewNotes": "Citations checked against the official text downloaded from the issuing agency's portal. Source verification is not legal advice. Re-check before the next review date.",
+  "changeHistory": [
+    {
+      "date": "2026-10-31",
+      "note": "Added during full-coverage content expansion across the available statutes.",
+      "reviewer": "Content team (source check)"
+    }
+  ],
+  "jurisdiction": "federal",
+  "agency": [
+    "nscdc"
+  ],
+  "relatedScenarios": [
+    "nscdc-arrest-powers",
+    "nscdc-infrastructure-powers",
+    "nscdc-vandalism-arrest",
+    "police-search-home-warrant"
+  ],
+  "keywords": [
+    "nscdc",
+    "search",
+    "premises",
+    "vandalism",
+    "pipeline",
+    "seizure",
+    "warrant"
+  ],
+  "id": "nscdc-search-premises",
+  "title": "Can NSCDC search my premises?",
+  "shortTitle": "NSCDC premises searches",
+  "icon": "🏭",
+  "question": "NSCDC officers want to enter and search my shop or compound. What must they show?",
+  "category": "stop-search",
+  "shortAnswer": "NSCDC may enter and search premises and seize materials suspected of being used in vandalisation, or premises of a suspected illegal dealer in petroleum products or public-utility materials. The search must be connected to that mandate, and the officer should identify themselves and the reason. The Constitution's privacy protection still applies.",
+  "legalExplanation": "The **NSCDC Act, 2003, section 3(1)(e)** gives the Corps power to:\n- enter and search any premises and seize any material suspected to have been used in vandalisation or in the process of vandalisation;\n- enter and search premises of a suspected illegal dealer in petroleum products, or of materials used by the Power Holding Company, postal services, telecommunications or any other public utility or infrastructure.\n\nThat power is limited to the Corps' infrastructure-protection and related mandate. **Section 37 of the Constitution** protects the privacy of homes, and a search should be conducted lawfully, with the officer identifying themselves and explaining the purpose.",
+  "exceptions": "- **Consent:** you may allow entry, but consent should be voluntary and can be withdrawn.\n- **Emergency:** immediate entry may be justified to prevent destruction of evidence or danger.\n- **Private guard companies:** NSCDC also has inspection powers over private guard company premises under s 3(1)(c).",
+  "practicalOptions": "1. Ask the officer to identify themselves and state the purpose.\n2. Ask what material or offence the search relates to.\n3. Ask for any warrant or written authorisation.\n4. Do not resist physically; say clearly if you do not consent.\n5. Ask for a receipt or inventory for anything seized.",
+  "whatToAvoid": "- Signing a consent form you do not understand.\n- Physically blocking officers.\n- Letting items be taken without a record.",
+  "whatToDocument": "- Officer names/numbers and command.\n- Purpose stated.\n- Warrant or authorisation, if any.\n- Items seized and any receipt.\n- Damage caused.",
+  "whatToDoAfter": "If the search was outside the Corps' mandate or property was taken without a record, report it to the **NSCDC** and the **Public Complaints Commission**. A lawyer can advise on return of property.",
+  "sources": [
+    {
+      "sourceId": "nscdc-act",
+      "sections": [
+        "3"
+      ],
+      "notes": "s3(1)(c)-(e) inspection of private guard companies; entry, search and seizure for vandalisation and illegal petroleum/public-utility dealing."
+    },
+    {
+      "sourceId": "constitution-1999",
+      "sections": [
+        "37"
+      ],
+      "notes": "s37 privacy of homes and premises."
+    }
+  ]
+}

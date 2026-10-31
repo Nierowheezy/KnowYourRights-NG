@@ -1,0 +1,67 @@
+{
+  "status": "approved",
+  "reviewer": "Content team (source check)",
+  "lastReviewed": "2026-10-31",
+  "nextReview": "2027-04-30",
+  "reviewNotes": "Citations checked against the official text downloaded from the issuing agency's portal. Source verification is not legal advice. Re-check before the next review date.",
+  "changeHistory": [
+    {
+      "date": "2026-10-31",
+      "note": "Added during full-coverage content expansion across the available statutes.",
+      "reviewer": "Content team (source check)"
+    }
+  ],
+  "jurisdiction": "federal",
+  "agency": [
+    "icpc"
+  ],
+  "relatedScenarios": [
+    "icpc-corruption-reporting",
+    "icpc-report-bribe",
+    "criminal-code-bribery",
+    "acja-legal-aid"
+  ],
+  "keywords": [
+    "icpc",
+    "invitation",
+    "summons",
+    "investigation",
+    "lawyer",
+    "corruption",
+    "cpo"
+  ],
+  "id": "icpc-invitation-summons",
+  "title": "ICPC invited me for questioning. What are my rights?",
+  "shortTitle": "ICPC invitations",
+  "icon": "📨",
+  "question": "I received an ICPC invitation or summons. Must I attend, and can I bring a lawyer?",
+  "category": "complaints",
+  "shortAnswer": "An ICPC invitation should identify the officer and the matter being investigated. You should attend, but you may bring a lawyer, ask for the allegation in writing, and decline to answer questions until you have advice. ICPC investigators have police powers when investigating corruption cases.",
+  "legalExplanation": "The **Corrupt Practices and Other Related Offences Act, 2000**:\n- **Section 4(5)** requires an officer, when discharging their duties, to declare their office and produce evidence of identity on demand.\n- **Section 5** gives an officer investigating or prosecuting corruption all the powers and immunities of a police officer under the Police Act.\n- **Section 27** allows the Commission to investigate reports.\n- **Section 28** gives officers power to examine persons.\n- **Section 29** allows the Commission to issue a summons to a person complained against or believed to have information.\n\nA summons is a lawful process, but it does not remove your constitutional rights: **section 36** guarantees fair hearing, and **section 35(2)** protects the right to remain silent and to consult a lawyer before answering questions.",
+  "exceptions": "- **Arrest:** an invitation is not an arrest, but refusing a lawful summons can lead to further process.\n- **Urgent investigation:** the Commission may need to act quickly, but you can still ask for the allegation and legal advice.\n- **Documents:** you may be required to produce specific documents; ask for the request in writing.",
+  "practicalOptions": "1. Ask for the invitation in writing, with the officer's name and the matter.\n2. Attend with a lawyer if possible.\n3. Ask for the allegation and any documents you are required to produce.\n4. State clearly if you are exercising your right to silence pending advice.\n5. Get a record of the interview and any documents you submit.",
+  "whatToAvoid": "- Ignoring a lawful summons.\n- Signing a statement you have not read.\n- Attending alone if you can bring a lawyer or trusted person.",
+  "whatToDocument": "- Invitation or summons.\n- Officer name/number and identity card.\n- Allegation and documents requested.\n- Interview record.\n- Any requests for legal representation.",
+  "whatToDoAfter": "Keep all documents and follow your lawyer's advice. If an officer refused to identify themselves or acted abusively, report it to the **ICPC** and the **Public Complaints Commission**.",
+  "sources": [
+    {
+      "sourceId": "cpo-act-2000",
+      "sections": [
+        "4",
+        "5",
+        "27",
+        "28",
+        "29"
+      ],
+      "notes": "s4(5) identity on demand; s5 police powers for corruption investigations; s27 investigation of reports; s28 examination of persons; s29 summons."
+    },
+    {
+      "sourceId": "constitution-1999",
+      "sections": [
+        "35",
+        "36"
+      ],
+      "notes": "s35(2) silence and consultation; s36 fair hearing."
+    }
+  ]
+}

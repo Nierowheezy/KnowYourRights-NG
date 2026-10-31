@@ -1,0 +1,76 @@
+{
+  "status": "approved",
+  "reviewer": "Content team (source check)",
+  "lastReviewed": "2026-10-31",
+  "nextReview": "2027-04-30",
+  "reviewNotes": "Citations checked against the official text downloaded from the issuing agency's portal. Source verification is not legal advice. Re-check before the next review date.",
+  "changeHistory": [
+    {
+      "date": "2026-10-31",
+      "note": "Added during full-coverage content expansion across the available statutes.",
+      "reviewer": "Content team (source check)"
+    }
+  ],
+  "jurisdiction": "federal",
+  "agency": [
+    "npf"
+  ],
+  "relatedScenarios": [
+    "police-phone-search-checkpoint",
+    "police-arrest-detention",
+    "police-seize-phone-evidence",
+    "police-record-encounter"
+  ],
+  "keywords": [
+    "police",
+    "house",
+    "home",
+    "search",
+    "warrant",
+    "premises",
+    "privacy"
+  ],
+  "id": "police-search-home-warrant",
+  "title": "Can police search my house without a warrant?",
+  "shortTitle": "Home searches and warrants",
+  "icon": "🏠",
+  "question": "Police say they want to search my house. Do they need a warrant, and what must it show?",
+  "category": "stop-search",
+  "shortAnswer": "A search warrant is normally required before police search your home. The warrant must be applied for in writing and under oath, identify the premises and what is being searched for, and be produced to the occupier with a copy. Warrantless entry is limited to narrow situations such as consent, hot pursuit, or an emergency.",
+  "legalExplanation": "The **Constitution, section 37** protects the privacy of citizens' homes, correspondence, telephone conversations and telegraphic communications.\n\nUnder the **Nigeria Police Act, 2020**:\n- A search warrant is unlawful unless it complies with **section 58** — the application must state the grounds, the law, the premises and the article or person sought, and must be made in writing under oath.\n- A warrant authorises **one entry only** and must specify the premises, date, law and applicant (s 58(4)–(5)).\n- On entry, the officer must identify themselves, produce the warrant and supply a copy to the occupier (s 59(4)).\n- The officer must endorse on the warrant whether the items sought were found and what else was seized (s 59(6)).\n\nThe **Administration of Criminal Justice Act, 2015** (Part 18, ss 144–151) also governs search warrants, including the requirement for reasonable grounds and the manner of execution.",
+  "exceptions": "- **Consent:** you may allow entry, but consent should be clear and voluntary. You can withdraw it.\n- **Arrest inside:** police may enter premises to arrest a suspect where the law permits (Police Act s 55).\n- **Emergency:** immediate entry may be justified to prevent serious harm or destruction of evidence.\n- **Items in plain view:** an officer lawfully present may seize obvious evidence.",
+  "practicalOptions": "1. Ask to see the **warrant** before entry. Check the address, date, offences and items listed.\n2. Ask for a **copy** of the warrant.\n3. If there is no warrant, ask the officer to state the legal basis and whether they are relying on consent.\n4. Do not physically resist. Say clearly if you do not consent, and note the officer's response.\n5. Ask for a **receipt or inventory** for anything removed.",
+  "whatToAvoid": "- Signing a consent form you do not understand.\n- Physically blocking or assaulting officers.\n- Assuming a warrant for one address covers another.",
+  "whatToDocument": "- Whether a warrant was shown, and its number/date.\n- Names and numbers of officers.\n- Items searched for and items seized.\n- Inventory or receipt, or the refusal to provide one.\n- Any damage caused.",
+  "whatToDoAfter": "Report an unlawful search to the **Police Complaints Response Unit**, the **Public Complaints Commission**, or the **National Human Rights Commission**. A lawyer can advise on recovery of seized property and civil remedies.",
+  "sources": [
+    {
+      "sourceId": "nigeria-police-act-2020",
+      "sections": [
+        "55",
+        "58",
+        "59"
+      ],
+      "notes": "s55 search of place entered by suspect; s58 warrant requirements; s59 execution, identification and copy to occupier."
+    },
+    {
+      "sourceId": "constitution-1999",
+      "sections": [
+        "37"
+      ],
+      "notes": "s37 privacy of homes and communications."
+    },
+    {
+      "sourceId": "acja-2015",
+      "sections": [
+        "144",
+        "145",
+        "146",
+        "147",
+        "148",
+        "151"
+      ],
+      "notes": "Part 18 search warrants: grounds, form, execution and safeguards."
+    }
+  ]
+}

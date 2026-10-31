@@ -1,0 +1,58 @@
+{
+  "status": "approved",
+  "reviewer": "Content team (source check)",
+  "lastReviewed": "2026-10-31",
+  "nextReview": "2027-04-30",
+  "reviewNotes": "Citations checked against the official text downloaded from the issuing agency's portal. Source verification is not legal advice. Re-check before the next review date.",
+  "changeHistory": [
+    {
+      "date": "2026-10-31",
+      "note": "Added during full-coverage content expansion across the available statutes.",
+      "reviewer": "Content team (source check)"
+    }
+  ],
+  "jurisdiction": "federal",
+  "agency": [
+    "lastma"
+  ],
+  "relatedScenarios": [
+    "lastma-towing",
+    "lastma-arrest-powers",
+    "vio-vehicle-impound",
+    "karota-impound-release"
+  ],
+  "keywords": [
+    "lastma",
+    "lagos",
+    "impound",
+    "tow",
+    "storage fee",
+    "vehicle park",
+    "release"
+  ],
+  "id": "lastma-impound-fees",
+  "title": "Can LASTMA impound my car and charge storage fees?",
+  "shortTitle": "LASTMA impoundment and fees",
+  "icon": "🅿️",
+  "question": "LASTMA towed my car and says I must pay towing and storage fees. What does the Lagos law require?",
+  "category": "impoundment",
+  "shortAnswer": "LASTMA may remove or impound a vehicle for traffic or parking violations under the Lagos State Road Traffic Law. The vehicle should be taken to a vehicle park, and you are entitled to know the reason, the yard location, the prescribed fees and the release procedure. Demand a receipt for every payment.",
+  "legalExplanation": "The **Lagos State Road Traffic Law, 2012**:\n- **Section 8** deals with stationary or abandoned vehicles and removal/towing.\n- **Section 15** allows a police officer or vehicle inspection officer to impound a vehicle without the prescribed particulars.\n- **Section 16** provides for release within **24 hours** on showing the required particulars, and for release within **two weeks** on payment of prescribed fees.\n- **Section 17** deals with unclaimed vehicles.\n- **Schedules I and II** prescribe towing and storage charges.\n\nA lawful impoundment should be documented with the reason, the park and the applicable fee. Arbitrary fees or private arrangements are not authorised by the law.",
+  "exceptions": "- **Obstruction:** a vehicle causing danger or obstruction may be removed promptly.\n- **Missing particulars:** impoundment may be tied to missing documents; producing them can support release.\n- **Unclaimed vehicles:** after the statutory period, the authority may deal with the vehicle under s 17.",
+  "practicalOptions": "1. Ask: **\"What violation is alleged, and where is the vehicle being taken?\"**\n2. Request the impoundment/towing record and the fee schedule.\n3. Produce the required vehicle particulars as soon as possible.\n4. Pay only at the official park or designated channel and keep the receipt.\n5. Note the officer, time and location.",
+  "whatToAvoid": "- Paying cash to an individual without an official receipt.\n- Leaving without the vehicle's location and a record.\n- Assuming the vehicle is lost — follow the release process.",
+  "whatToDocument": "- Violation alleged and officer details.\n- Impoundment/towing record.\n- Vehicle park location.\n- Fees charged and receipts.\n- Particulars produced for release.",
+  "whatToDoAfter": "If the fees are unclear or the vehicle is not released after compliance, complain to **LASTMA**, the **Lagos State Public Complaints Commission**, or the **NHRC**.",
+  "sources": [
+    {
+      "sourceId": "lagos-state-traffic-law-2012",
+      "sections": [
+        "8",
+        "15",
+        "16",
+        "17"
+      ],
+      "notes": "s8 removal/towing; s15 impound for missing particulars; s16 release within 24 hours/two weeks; s17 unclaimed vehicles; Schedules I-II fees."
+    }
+  ]
+}

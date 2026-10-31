@@ -1,0 +1,69 @@
+{
+  "status": "approved",
+  "reviewer": "Content team (source check)",
+  "lastReviewed": "2026-10-31",
+  "nextReview": "2027-04-30",
+  "reviewNotes": "Citations checked against the official text downloaded from the issuing agency's portal. Source verification is not legal advice. Re-check before the next review date.",
+  "changeHistory": [
+    {
+      "date": "2026-10-31",
+      "note": "Added during full-coverage content expansion across the available statutes.",
+      "reviewer": "Content team (source check)"
+    }
+  ],
+  "jurisdiction": "federal",
+  "agency": [
+    "npf"
+  ],
+  "relatedScenarios": [
+    "police-statement-caution",
+    "police-right-to-silence",
+    "police-detention-24-hours",
+    "police-arrest-detention"
+  ],
+  "keywords": [
+    "lawyer",
+    "legal aid",
+    "counsel",
+    "police station",
+    "detention",
+    "rights"
+  ],
+  "id": "acja-legal-aid",
+  "title": "Do I have a right to a lawyer at the police station?",
+  "shortTitle": "Lawyer and legal aid",
+  "icon": "⚖️",
+  "question": "I cannot afford a lawyer. Can I still get legal help while I am detained?",
+  "category": "arrest",
+  "shortAnswer": "Yes. You have the right to consult a lawyer, and if you cannot afford one you can ask for the Legal Aid Council. A statement may be taken in the presence of your lawyer, a Legal Aid officer, a justice of the peace, or another person of your choice. Ask the station to record your request for legal help.",
+  "legalExplanation": "The **Constitution** guarantees fair hearing and the right to defend yourself in person or through a legal practitioner (s 36), and **section 46** provides for legal aid.\n\nThe **Police Act 2020, section 60(2)** allows a suspect's statement to be taken in the presence of a legal practitioner of the suspect's choice, a Legal Aid Council officer, a civil society official, a justice of the peace, or another person of the suspect's choice.\n\nThe **ACJA 2015, section 6** requires that a suspect be informed of the right to legal representation and legal aid. If you cannot afford a lawyer, the state is expected to provide legal aid in qualifying cases.",
+  "exceptions": "- **Legal aid eligibility:** the Legal Aid Council assesses eligibility, but you can still request assistance.\n- **Urgent interviews:** police may proceed with administrative steps, but you can insist that a statement wait until you have access to advice.\n- **Serious offences:** courts are more likely to require legal representation.",
+  "practicalOptions": "1. Say: **\"I want to speak to a lawyer before making any statement.\"**\n2. Ask the station to contact the **Legal Aid Council of Nigeria**.\n3. Ask to call a family member or trusted person.\n4. Write down the name of the officer who receives your request.\n5. Do not sign anything until you have advice or fully understand it.",
+  "whatToAvoid": "- Assuming you must pay before you can ask for a lawyer.\n- Letting an officer discourage you from requesting legal aid.\n- Signing a statement while waiting for advice.",
+  "whatToDocument": "- When and to whom you requested a lawyer.\n- The response you received.\n- Any delay before legal help arrived.\n- Names of officers present.",
+  "whatToDoAfter": "If legal access was refused or delayed, report it to the **Legal Aid Council**, the **NHRC**, or the **Police Complaints Response Unit**.",
+  "sources": [
+    {
+      "sourceId": "constitution-1999",
+      "sections": [
+        "36",
+        "46"
+      ],
+      "notes": "s36 fair hearing and legal representation; s46 legal aid."
+    },
+    {
+      "sourceId": "nigeria-police-act-2020",
+      "sections": [
+        "60"
+      ],
+      "notes": "s60(2) statement may be taken in presence of lawyer, legal aid, JP or person of choice."
+    },
+    {
+      "sourceId": "acja-2015",
+      "sections": [
+        "6"
+      ],
+      "notes": "s6 notification of right to legal representation and legal aid."
+    }
+  ]
+}

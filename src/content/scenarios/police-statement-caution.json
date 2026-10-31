@@ -1,0 +1,72 @@
+{
+  "status": "approved",
+  "reviewer": "Content team (source check)",
+  "lastReviewed": "2026-10-31",
+  "nextReview": "2027-04-30",
+  "reviewNotes": "Citations checked against the official text downloaded from the issuing agency's portal. Source verification is not legal advice. Re-check before the next review date.",
+  "changeHistory": [
+    {
+      "date": "2026-10-31",
+      "note": "Added during full-coverage content expansion across the available statutes.",
+      "reviewer": "Content team (source check)"
+    }
+  ],
+  "jurisdiction": "federal",
+  "agency": [
+    "npf"
+  ],
+  "relatedScenarios": [
+    "police-right-to-silence",
+    "acja-legal-aid",
+    "police-arrest-detention",
+    "police-bail-rights"
+  ],
+  "keywords": [
+    "police",
+    "statement",
+    "caution",
+    "lawyer",
+    "silence",
+    "interpreter",
+    "sign"
+  ],
+  "id": "police-statement-caution",
+  "title": "Must I write a statement at the police station?",
+  "shortTitle": "Statements and caution",
+  "icon": "✍️",
+  "question": "Police want me to write a statement. Am I obliged to, and can I have a lawyer present?",
+  "category": "arrest",
+  "shortAnswer": "You are not obliged to make a statement. If you choose to make one, it must be voluntary, and it may be taken in the presence of your lawyer, a Legal Aid officer, a justice of the peace, or another person of your choice. Never sign a statement you have not read and understood, and never sign under threat or inducement.",
+  "legalExplanation": "The **Constitution, section 35(2)** gives every arrested or detained person the right to remain silent or to avoid answering questions until after consultation with a legal practitioner or another person of their choice.\n\nUnder the **Nigeria Police Act, 2020, section 60**:\n- A suspect's statement shall be taken **if the suspect wishes to make one** — it is not compulsory.\n- The statement may be taken in the presence of a legal practitioner of the suspect's choice, a Legal Aid Council officer, a civil society official, a justice of the peace, or another person of the suspect's choice.\n- Where the suspect does not understand English, an **interpreter** must record and read over the statement, and the suspect must endorse it.\n- The suspect must endorse the statement with full particulars.\n\nThe **ACJA 2015** (ss 6 and 17) also requires that suspects be informed of their rights and that statements be taken in a manner that is fair and voluntary.",
+  "exceptions": "- **Identification details:** you may be required to give your name and address in limited circumstances (Police Act s 61).\n- **Court order or statutory duty:** some regulatory offences require specific information, but this is not a general duty to answer every question.\n- **Voluntary explanation:** you may choose to explain your side; make sure it is accurate and recorded in your own words.",
+  "practicalOptions": "1. Say politely: **\"I wish to remain silent until I speak to a lawyer.\"**\n2. If you choose to write, ask for the **caution** to be read and for a copy of the statement.\n3. Ask for your lawyer, a Legal Aid officer, or a trusted person to be present.\n4. Read every page before signing; ask for corrections to be initialled.\n5. If you do not understand English, insist on an interpreter and check the recorded translation.",
+  "whatToAvoid": "- Signing a blank or partly blank statement.\n- Signing after threats, promises of release, or promises that \"it is just a formality\".\n- Writing a statement you cannot read or did not say.",
+  "whatToDocument": "- Whether you were cautioned and what you were told.\n- Who was present when the statement was taken.\n- Whether an interpreter was used.\n- A copy of the statement, if allowed.\n- Any pressure, threat or inducement.",
+  "whatToDoAfter": "Tell your lawyer or Legal Aid immediately if a statement was obtained improperly. A statement obtained by force, threat or inducement can be challenged in court.",
+  "sources": [
+    {
+      "sourceId": "constitution-1999",
+      "sections": [
+        "35",
+        "36"
+      ],
+      "notes": "s35(2) right to silence and consultation; s36 fair hearing."
+    },
+    {
+      "sourceId": "nigeria-police-act-2020",
+      "sections": [
+        "60",
+        "61"
+      ],
+      "notes": "s60 voluntary statement, presence of lawyer/legal aid/JP, interpreter; s61 name and address."
+    },
+    {
+      "sourceId": "acja-2015",
+      "sections": [
+        "6",
+        "17"
+      ],
+      "notes": "s6 notification of rights; s17 statement-taking safeguards."
+    }
+  ]
+}

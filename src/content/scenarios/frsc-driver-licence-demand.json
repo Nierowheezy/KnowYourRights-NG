@@ -1,0 +1,63 @@
+{
+  "status": "approved",
+  "reviewer": "Content team (source check)",
+  "lastReviewed": "2026-10-31",
+  "nextReview": "2027-04-30",
+  "reviewNotes": "Citations checked against the official text downloaded from the issuing agency's portal. Source verification is not legal advice. Re-check before the next review date.",
+  "changeHistory": [
+    {
+      "date": "2026-10-31",
+      "note": "Added during full-coverage content expansion across the available statutes.",
+      "reviewer": "Content team (source check)"
+    }
+  ],
+  "jurisdiction": "federal",
+  "agency": [
+    "frsc"
+  ],
+  "relatedScenarios": [
+    "frsc-fines-on-the-spot",
+    "vehicle-documents-checks",
+    "frsc-roadworthiness-certificate",
+    "police-checkpoint-documents"
+  ],
+  "keywords": [
+    "frsc",
+    "driver licence",
+    "retain",
+    "documents",
+    "offence sheet",
+    "checkpoint"
+  ],
+  "id": "frsc-driver-licence-demand",
+  "title": "Can FRSC take my driver's licence at a checkpoint?",
+  "shortTitle": "FRSC and your licence",
+  "icon": "🪪",
+  "question": "An FRSC officer wants to keep my driver's licence after stopping me. Is that allowed?",
+  "category": "documents",
+  "shortAnswer": "FRSC may demand and retain your driving licence or vehicle documents to secure compliance with a traffic offence, but the officer must issue a notice of offence sheet showing the seizure and tell you where to reclaim the document. The licence must be returned when you pay the fine or appear in court.",
+  "legalExplanation": "The **Federal Road Safety Commission (Establishment) Act, 2007, section 28** allows a member of the Corps to demand and retain a driving licence and/or vehicle documents for a traffic offence in order to secure compliance with payment of a fine or appearance in court. On payment or appearance, the document must be returned forthwith.\n\nWhere a licence is retained, the officer must issue a **notice of offence sheet** indicating the seizure and inform the driver of the office where the licence may be reclaimed (s 28(2)).\n\nThe **National Road Traffic Regulations, 2012** also require drivers to possess and produce a valid licence (regs 54 and 67).",
+  "exceptions": "- **No offence:** retention is not justified where no traffic offence is identified.\n- **Return on compliance:** the document must be returned once the fine is paid or court appearance is secured.\n- **Court process:** if you dispute the offence, the notice should explain how to challenge it.",
+  "practicalOptions": "1. Ask which **offence** is alleged and request the **notice of offence sheet**.\n2. Check that the notice records the licence seizure and the reclaim office.\n3. Ask for a receipt or reference number for any payment.\n4. Keep a photograph of the notice and the licence.\n5. If no notice is given, ask the officer to record the retention in writing.",
+  "whatToAvoid": "- Handing over your licence without a notice.\n- Paying cash without a receipt.\n- Assuming the licence is permanently forfeited.",
+  "whatToDocument": "- Officer name/number and patrol location.\n- Offence alleged.\n- Notice of offence sheet and reclaim office.\n- Payment receipt or court date.\n- Licence details.",
+  "whatToDoAfter": "If the licence is not returned after compliance, complain to the **FRSC** command or the **Public Complaints Commission**.",
+  "sources": [
+    {
+      "sourceId": "frsc-act-2007",
+      "sections": [
+        "10",
+        "28"
+      ],
+      "notes": "s10 functions and arrest/prosecution powers; s28 demand/retention of licence and notice of offence."
+    },
+    {
+      "sourceId": "national-road-traffic-regulations-2012",
+      "sections": [
+        "54",
+        "67"
+      ],
+      "notes": "production and possession of a valid driver's licence."
+    }
+  ]
+}

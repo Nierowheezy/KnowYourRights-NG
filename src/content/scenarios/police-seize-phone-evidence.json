@@ -1,0 +1,72 @@
+{
+  "status": "approved",
+  "reviewer": "Content team (source check)",
+  "lastReviewed": "2026-10-31",
+  "nextReview": "2027-04-30",
+  "reviewNotes": "Citations checked against the official text downloaded from the issuing agency's portal. Source verification is not legal advice. Re-check before the next review date.",
+  "changeHistory": [
+    {
+      "date": "2026-10-31",
+      "note": "Added during full-coverage content expansion across the available statutes.",
+      "reviewer": "Content team (source check)"
+    }
+  ],
+  "jurisdiction": "federal",
+  "agency": [
+    "npf"
+  ],
+  "relatedScenarios": [
+    "police-phone-privacy",
+    "police-phone-unlock",
+    "police-phone-search-checkpoint",
+    "police-search-home-warrant"
+  ],
+  "keywords": [
+    "police",
+    "phone",
+    "seize",
+    "evidence",
+    "inventory",
+    "receipt",
+    "privacy"
+  ],
+  "id": "police-seize-phone-evidence",
+  "title": "Can police seize my phone as evidence?",
+  "shortTitle": "Phone seizure as evidence",
+  "icon": "📵",
+  "question": "Police say they are taking my phone as evidence. Can they do that, and what should I get in writing?",
+  "category": "documents",
+  "shortAnswer": "Police may seize a phone where they have a warrant or reasonable grounds to believe it is evidence of an offence. Seizure does not automatically authorise them to force you to unlock it or to browse its contents. Ask for an inventory or receipt, record the phone's details, and seek legal advice if it is not returned.",
+  "legalExplanation": "The **Constitution, section 37** protects the privacy of correspondence and communications.\n\nThe **Nigeria Police Act, 2020**:\n- **Section 46** requires an inventory of the property of an arrested suspect.\n- **Section 52** allows search of an arrested suspect where there are reasonable grounds.\n- **Section 58** sets the requirements for a search warrant.\n\nThe **ACJA 2015** (ss 9–10) requires that a search of an arrested suspect be conducted with dignity and that an inventory of property be prepared. A phone is property; if it is taken, you are entitled to a record of what was taken, by whom, and why. Access to the contents is a separate privacy question and generally requires consent, a warrant, or another lawful basis.",
+  "exceptions": "- **Emergency:** immediate seizure may be justified to prevent destruction of evidence.\n- **Plain view:** if the phone is visibly connected to the offence, seizure may be lawful.\n- **Consent:** you may agree to hand it over, but consent should be voluntary and recorded.",
+  "practicalOptions": "1. Ask: **\"Are you seizing the phone, and under what authority?\"**\n2. Note the make, model, IMEI and condition.\n3. Ask for an **inventory or receipt** signed by the officer.\n4. Do not volunteer your password or unlock the phone.\n5. Ask when and where you can collect it.",
+  "whatToAvoid": "- Handing over an unlocked phone.\n- Deleting data or messages once officers have asked for the phone — that can create a separate problem.\n- Leaving without any record of the seizure.",
+  "whatToDocument": "- Officer names/numbers and station.\n- Phone details and condition.\n- Reason given for seizure.\n- Inventory/receipt or refusal.\n- Any request for your password.",
+  "whatToDoAfter": "If the phone is not returned or was accessed without lawful authority, report it and seek legal advice. Keep the inventory and any messages about the seizure.",
+  "sources": [
+    {
+      "sourceId": "nigeria-police-act-2020",
+      "sections": [
+        "46",
+        "52",
+        "58"
+      ],
+      "notes": "s46 inventory of arrested suspect's property; s52 search of arrested suspect; s58 search warrant."
+    },
+    {
+      "sourceId": "acja-2015",
+      "sections": [
+        "9",
+        "10"
+      ],
+      "notes": "s9 search of arrested suspect; s10 inventory of property."
+    },
+    {
+      "sourceId": "constitution-1999",
+      "sections": [
+        "37"
+      ],
+      "notes": "s37 privacy of communications."
+    }
+  ]
+}

@@ -1,0 +1,67 @@
+{
+  "status": "approved",
+  "reviewer": "Content team (source check)",
+  "lastReviewed": "2026-10-31",
+  "nextReview": "2027-04-30",
+  "reviewNotes": "Citations checked against the official text downloaded from the issuing agency's portal. Source verification is not legal advice. Re-check before the next review date.",
+  "changeHistory": [
+    {
+      "date": "2026-10-31",
+      "note": "Added during full-coverage content expansion across the available statutes.",
+      "reviewer": "Content team (source check)"
+    }
+  ],
+  "jurisdiction": "federal",
+  "agency": [
+    "npf"
+  ],
+  "relatedScenarios": [
+    "police-stop-search-car",
+    "police-search-home-warrant",
+    "police-seize-phone-evidence",
+    "police-identity-badge"
+  ],
+  "keywords": [
+    "police",
+    "consent",
+    "search",
+    "bag",
+    "voluntary",
+    "withdraw",
+    "record"
+  ],
+  "id": "police-consent-search",
+  "title": "Can I consent to a police search?",
+  "shortTitle": "Consent searches",
+  "icon": "🤝",
+  "question": "Police asked to search my bag and I said yes. Can I change my mind, and what should I know?",
+  "category": "stop-search",
+  "shortAnswer": "You can agree to a search, but consent must be voluntary. You can withdraw consent at any time, and the officer must then rely on a lawful power to search or stop. Consent does not remove the need for a search record, and you should not sign a consent form you do not understand.",
+  "legalExplanation": "The **Nigeria Police Act, 2020** gives officers power to stop and search on stated grounds (ss 49–50). A search based on consent is different from a search based on statutory power: consent must be given freely, without threats or pressure.\n\n**Section 50(3)** requires the officer to explain the object and grounds of the search. **Sections 56–57** require a written search record and a copy to the person searched. **Section 58** sets the requirements for a search warrant for premises.\n\n**Section 37 of the Constitution** protects privacy, so a search without consent or lawful authority can be challenged.",
+  "exceptions": "- **Lawful search power:** an officer may still search if the statutory grounds exist, even if you refuse consent.\n- **Arrest:** a search of an arrested suspect may be permitted under s 52.\n- **Emergency:** immediate action may be justified to prevent destruction of evidence or danger.",
+  "practicalOptions": "1. Ask what the officer is looking for and why.\n2. If you consent, say clearly what you are consenting to.\n3. If you change your mind, say: **\"I withdraw my consent.\"**\n4. Ask for the search record and a copy.\n5. Do not sign a consent form you have not read.",
+  "whatToAvoid": "- Signing a broad consent form under pressure.\n- Assuming consent is permanent.\n- Physically resisting an officer who has independent lawful grounds.",
+  "whatToDocument": "- What you consented to and when.\n- Whether you withdrew consent.\n- Officer details and grounds stated.\n- Search record or refusal.\n- Items taken.",
+  "whatToDoAfter": "If a search went beyond your consent or was abusive, report it to the **Police Complaints Response Unit** and keep any record.",
+  "sources": [
+    {
+      "sourceId": "nigeria-police-act-2020",
+      "sections": [
+        "49",
+        "50",
+        "52",
+        "56",
+        "57",
+        "58"
+      ],
+      "notes": "ss49-50 stop/search grounds and explanation; s52 search of arrested suspect; ss56-57 search record; s58 search warrant."
+    },
+    {
+      "sourceId": "constitution-1999",
+      "sections": [
+        "37"
+      ],
+      "notes": "s37 privacy."
+    }
+  ]
+}

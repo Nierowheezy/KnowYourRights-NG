@@ -1,0 +1,60 @@
+{
+  "status": "approved",
+  "reviewer": "Content team (source check)",
+  "lastReviewed": "2026-10-31",
+  "nextReview": "2027-04-30",
+  "reviewNotes": "Citations checked against the official text downloaded from the issuing agency's portal. Source verification is not legal advice. Re-check before the next review date.",
+  "changeHistory": [
+    {
+      "date": "2026-10-31",
+      "note": "Added during full-coverage content expansion across the available statutes.",
+      "reviewer": "Content team (source check)"
+    }
+  ],
+  "jurisdiction": "federal",
+  "agency": [
+    "ncs"
+  ],
+  "relatedScenarios": [
+    "customs-search-powers",
+    "customs-seizure-receipt",
+    "customs-highway-stop",
+    "immigration-document-check"
+  ],
+  "keywords": [
+    "customs",
+    "declaration",
+    "travel",
+    "goods",
+    "duty",
+    "airport",
+    "import"
+  ],
+  "id": "customs-traveller-declaration",
+  "title": "Must I declare goods to customs when I travel?",
+  "shortTitle": "Traveller declarations",
+  "icon": "🧳",
+  "question": "I am travelling into Nigeria with goods and cash. What must I declare, and what happens if I don't?",
+  "category": "documents",
+  "shortAnswer": "Travellers must report goods and make a truthful customs declaration. False or incomplete declarations can lead to seizure, a fine or prosecution. Declare what you are carrying, keep receipts, and ask for the official assessment and receipt for any duty paid.",
+  "legalExplanation": "The **Nigeria Customs Service Act, 2023**:\n- **Section 46** imposes a reporting obligation on the importation and exportation of goods.\n- **Section 47** requires a goods declaration, and **section 48** sets out what it must contain.\n- **Section 49** allows amendment of a declaration, subject to the Act.\n- **Section 55** allows goods to be prohibited or restricted from import or export.\n- **Section 228** creates offences for falsifying, concealing or using false statements or documents to deprive the Service of lawful duties.\n\nA declaration is a legal document. Signing an incomplete or false declaration exposes the traveller to seizure and penalties, even where the goods themselves are otherwise lawful.",
+  "exceptions": "- **Personal effects:** travellers may have allowances for personal items; check the current customs schedule.\n- **Transit goods:** goods moving under a transit procedure follow different rules.\n- **Diplomatic exemptions:** certain officials and diplomatic goods have exemptions under the law.",
+  "practicalOptions": "1. Fill in the declaration accurately and keep a copy.\n2. Keep receipts for high-value goods.\n3. Ask an officer if you are unsure whether an item must be declared.\n4. Pay duty through the official channel and keep the receipt.\n5. If goods are detained, ask for the reason and a record.",
+  "whatToAvoid": "- Concealing goods or under-declaring value.\n- Signing a declaration prepared by someone else without reading it.\n- Paying cash to an officer instead of the official channel.",
+  "whatToDocument": "- Copy of your declaration.\n- Receipts for goods and duty paid.\n- Officer details and any assessment.\n- Seizure record, if applicable.",
+  "whatToDoAfter": "If you believe an assessment was wrong, follow the review or appeal process on the notice. Keep every document and seek advice before signing any settlement.",
+  "sources": [
+    {
+      "sourceId": "nigeria-customs-service-act-2023",
+      "sections": [
+        "46",
+        "47",
+        "48",
+        "49",
+        "55",
+        "228"
+      ],
+      "notes": "ss46-49 reporting obligation, declaration content and amendment; s55 prohibited and restricted goods; s228 false statement and concealment offences."
+    }
+  ]
+}

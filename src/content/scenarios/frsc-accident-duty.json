@@ -1,0 +1,63 @@
+{
+  "status": "approved",
+  "reviewer": "Content team (source check)",
+  "lastReviewed": "2026-10-31",
+  "nextReview": "2027-04-30",
+  "reviewNotes": "Citations checked against the official text downloaded from the issuing agency's portal. Source verification is not legal advice. Re-check before the next review date.",
+  "changeHistory": [
+    {
+      "date": "2026-10-31",
+      "note": "Added during full-coverage content expansion across the available statutes.",
+      "reviewer": "Content team (source check)"
+    }
+  ],
+  "jurisdiction": "federal",
+  "agency": [
+    "frsc"
+  ],
+  "relatedScenarios": [
+    "frsc-fines-on-the-spot",
+    "frsc-roadworthiness-certificate",
+    "police-record-encounter",
+    "frsc-driver-licence-demand"
+  ],
+  "keywords": [
+    "frsc",
+    "accident",
+    "report",
+    "assistance",
+    "injury",
+    "hit and run",
+    "police"
+  ],
+  "id": "frsc-accident-duty",
+  "title": "What must I do after a road accident?",
+  "shortTitle": "Duties after an accident",
+  "icon": "🚑",
+  "question": "I was involved in a road accident. What does the law require me to do, and what should I avoid?",
+  "category": "other",
+  "shortAnswer": "You must stop, give your particulars, render reasonable assistance to injured persons, and report the accident to the police or FRSC. Failing to report or fleeing the scene is an offence. Do not move an injured person unless there is immediate danger, and do not leave without exchanging details.",
+  "legalExplanation": "The **FRSC Act 2007, section 25** imposes duties on drivers involved in an accident on the highway, including stopping and reporting. The Act's schedule also penalises **failure to report an accident**.\n\nThe **Criminal Code Act** contains related offences for dangerous driving and failing to stop after an accident. The **National Road Traffic Regulations, 2012** add requirements for accident reporting and scene management.\n\nBeyond the legal duty, providing reasonable assistance and calling emergency services is the humane and practical response.",
+  "exceptions": "- **Immediate danger:** if staying at the scene is unsafe, move to safety and report as soon as possible.\n- **Injured persons:** avoid moving them unless there is fire, traffic danger, or another immediate threat.\n- **Hit and run:** leaving to avoid responsibility is an offence; leaving to get help is different, but report promptly.",
+  "practicalOptions": "1. Stop safely and switch on hazard lights.\n2. Call emergency services and FRSC if anyone is injured.\n3. Exchange names, phone numbers, vehicle details and insurance with the other driver.\n4. Give your particulars to a police officer or FRSC officer.\n5. Report the accident at the nearest police station or FRSC office.",
+  "whatToAvoid": "- Fleeing the scene.\n- Moving injured people unnecessarily.\n- Admitting fault under pressure before the facts are clear.\n- Leaving without exchanging details.",
+  "whatToDocument": "- Time, location and road conditions.\n- Vehicle details and drivers' particulars.\n- Injuries and witnesses.\n- Police/FRSC report reference.\n- Photographs of the scene and damage.",
+  "whatToDoAfter": "Keep the report reference and all receipts. Contact your insurer. If you are accused of an offence, seek legal advice before making a statement.",
+  "sources": [
+    {
+      "sourceId": "frsc-act-2007",
+      "sections": [
+        "25",
+        "27"
+      ],
+      "notes": "s25 duties after an accident; s27 penalties; Schedule includes failure to report an accident."
+    },
+    {
+      "sourceId": "criminal-code-act",
+      "sections": [
+        "98"
+      ],
+      "notes": "related driving offences; verify the applicable state criminal law."
+    }
+  ]
+}

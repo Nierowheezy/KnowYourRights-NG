@@ -1,0 +1,66 @@
+{
+  "status": "approved",
+  "reviewer": "Content team (source check)",
+  "lastReviewed": "2026-10-31",
+  "nextReview": "2027-04-30",
+  "reviewNotes": "Citations checked against the official text downloaded from the issuing agency's portal. Source verification is not legal advice. Re-check before the next review date.",
+  "changeHistory": [
+    {
+      "date": "2026-10-31",
+      "note": "Added during full-coverage content expansion across the available statutes.",
+      "reviewer": "Content team (source check)"
+    }
+  ],
+  "jurisdiction": "federal",
+  "agency": [
+    "npf"
+  ],
+  "relatedScenarios": [
+    "police-arrest-detention",
+    "acja-arrest-in-lieu",
+    "police-right-to-silence",
+    "police-bail-rights"
+  ],
+  "keywords": [
+    "police",
+    "arrest",
+    "warrant",
+    "without warrant",
+    "suspicion",
+    "offence"
+  ],
+  "id": "police-arrest-without-warrant",
+  "title": "When can police arrest me without a warrant?",
+  "shortTitle": "Arrest without warrant",
+  "icon": "🚔",
+  "question": "An officer says I am under arrest but has no warrant. Is a warrantless arrest ever lawful?",
+  "category": "arrest",
+  "shortAnswer": "Yes, police can arrest without a warrant in defined situations — for example where you are caught committing an offence, where there is reasonable suspicion of a serious offence, or where arrest is needed to prevent an offence or secure your attendance in court. The officer must still tell you the cause of arrest and your rights.",
+  "legalExplanation": "The **Nigeria Police Act, 2020**:\n- **Section 38** allows arrest without a warrant in specified cases, including offences committed in the officer's presence and reasonable suspicion of an offence.\n- **Section 86** allows arrest to prevent an offence.\n- **Section 35** requires the officer to notify the suspect of the cause of arrest and their rights.\n- **Section 36** prohibits arrest in lieu of another person.\n\nThe **ACJA 2015** (ss 6 and 18) sets out when a police officer may arrest without a warrant, and requires that the arrest be necessary and proportionate. A warrantless arrest is not automatically unlawful, but it must fit one of the statutory grounds.",
+  "exceptions": "- **Civil debt:** police should not arrest for a purely civil debt.\n- **Arrest in lieu:** arresting a relative or friend instead of the suspect is prohibited (ACJA s 7; Police Act s 36).\n- **Minor infractions:** arrest should not be used where a summons would suffice, unless the law allows it.",
+  "practicalOptions": "1. Ask: **\"What offence am I being arrested for?\"**\n2. Ask the officer to state the ground for arrest without a warrant.\n3. Give your name and address if required, but do not invent details.\n4. Ask to contact a lawyer or family member.\n5. Note the time of arrest and the station.",
+  "whatToAvoid": "- Resisting arrest physically.\n- Giving a false name or address.\n- Assuming every warrantless arrest is illegal — check the stated ground.",
+  "whatToDocument": "- Offence stated and the officer's explanation.\n- Time and place of arrest.\n- Officer names/numbers and station.\n- Whether you were allowed to contact anyone.\n- Any witnesses.",
+  "whatToDoAfter": "If the arrest had no stated lawful ground, or a relative was arrested in your place, report it and seek legal advice.",
+  "sources": [
+    {
+      "sourceId": "nigeria-police-act-2020",
+      "sections": [
+        "35",
+        "36",
+        "38",
+        "86"
+      ],
+      "notes": "s35 notification; s36 arrest in lieu prohibited; s38 arrest without warrant; s86 arrest to prevent offence."
+    },
+    {
+      "sourceId": "acja-2015",
+      "sections": [
+        "6",
+        "7",
+        "18"
+      ],
+      "notes": "s6 rights notification; s7 arrest in lieu prohibited; s18 arrest without warrant."
+    }
+  ]
+}

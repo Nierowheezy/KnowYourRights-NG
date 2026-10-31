@@ -1,0 +1,76 @@
+{
+  "status": "approved",
+  "reviewer": "Content team (source check)",
+  "lastReviewed": "2026-10-31",
+  "nextReview": "2027-04-30",
+  "reviewNotes": "Citations checked against the official text downloaded from the issuing agency's portal. Source verification is not legal advice. Re-check before the next review date.",
+  "changeHistory": [
+    {
+      "date": "2026-10-31",
+      "note": "Added during full-coverage content expansion across the available statutes.",
+      "reviewer": "Content team (source check)"
+    }
+  ],
+  "jurisdiction": "federal",
+  "agency": [
+    "npf"
+  ],
+  "relatedScenarios": [
+    "police-stop-search-car",
+    "police-phone-search-checkpoint",
+    "vehicle-documents-checks",
+    "police-record-encounter"
+  ],
+  "keywords": [
+    "police",
+    "checkpoint",
+    "id",
+    "documents",
+    "vehicle",
+    "papers",
+    "stop",
+    "search"
+  ],
+  "id": "police-checkpoint-documents",
+  "title": "What documents can police demand at a checkpoint?",
+  "shortTitle": "Checkpoint document demands",
+  "icon": "🪪",
+  "question": "Police at a checkpoint ask for my ID, vehicle papers and my phone. What am I legally required to show?",
+  "category": "documents",
+  "shortAnswer": "Police may ask you to identify yourself and may inspect vehicle documents during a lawful stop. They cannot demand your phone password or browse your phone. Ask the reason for the stop, show the documents the law actually requires, and ask for a search record if you or your vehicle are searched.",
+  "legalExplanation": "The **Nigeria Police Act, 2020** allows an officer to stop and search a person or vehicle for a stated object and on stated grounds (ss 49–50). Before a search, the officer must tell you the object of the search and the grounds or authorisation for it (s 50(3)). A written **National Search Record** must be made and a copy given to you or the driver (ss 56–57).\n- Section 61 allows arrest only where a person suspected of a summary offence refuses to give a name or address, or gives a false one.\n- The **Constitution, section 41** protects freedom of movement, and **section 35** protects personal liberty.\n- A general demand for \"ID\" has no blanket statutory basis; the demand must connect to a lawful purpose such as driving, a search, or an offence being investigated.\n- Vehicle particulars, a driver's licence and insurance may be checked where you are driving, because road traffic law requires them.",
+  "exceptions": "- **Driving:** you must produce your driver's licence and vehicle documents when lawfully required.\n- **A lawful search:** the officer may require you to open a bag or boot, but must state the object and grounds and record the search.\n- **Arrest:** if you are arrested, the officer must tell you the cause and your rights (Police Act s 35).",
+  "practicalOptions": "1. Pull over safely and stay calm. Ask: **\"Officer, what is the reason for this stop?\"**\n2. Show the documents the law requires for the situation — not your phone unlocked.\n3. If a search is proposed, ask for the **object and grounds**, then request the **National Search Record** copy.\n4. If you are told to unlock your phone, politely decline and ask for the legal basis or a court order.\n5. Note the officer's name, number, station and the time and place.",
+  "whatToAvoid": "- Handing over an unlocked phone or revealing passwords.\n- Paying cash with no receipt or written notice.\n- Refusing to identify yourself where a law genuinely requires it.",
+  "whatToDocument": "- Officer names, numbers and station.\n- Reason given for the stop.\n- Documents requested and shown.\n- Search record, notice or receipt (or the refusal to give one).\n- Time, location and witnesses.",
+  "whatToDoAfter": "If a search was not recorded, or documents were seized without a receipt, report it to the station's complaint desk, the **Police Complaints Response Unit**, or the **Public Complaints Commission** (see the Help directory).",
+  "sources": [
+    {
+      "sourceId": "nigeria-police-act-2020",
+      "sections": [
+        "49",
+        "50",
+        "51",
+        "56",
+        "57",
+        "61"
+      ],
+      "notes": "ss49-51 stop and search and conduct; s50 pre-search explanation; ss56-57 National Search Record; s61 name/address arrest power."
+    },
+    {
+      "sourceId": "constitution-1999",
+      "sections": [
+        "35",
+        "41"
+      ],
+      "notes": "s35 personal liberty; s41 freedom of movement."
+    },
+    {
+      "sourceId": "acja-2015",
+      "sections": [
+        "6"
+      ],
+      "notes": "s6 notification of cause of arrest and rights."
+    }
+  ]
+}

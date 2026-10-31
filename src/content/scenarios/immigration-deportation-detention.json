@@ -1,0 +1,67 @@
+{
+  "status": "approved",
+  "reviewer": "Content team (source check)",
+  "lastReviewed": "2026-10-31",
+  "nextReview": "2027-04-30",
+  "reviewNotes": "Citations checked against the official text downloaded from the issuing agency's portal. Source verification is not legal advice. Re-check before the next review date.",
+  "changeHistory": [
+    {
+      "date": "2026-10-31",
+      "note": "Added during full-coverage content expansion across the available statutes.",
+      "reviewer": "Content team (source check)"
+    }
+  ],
+  "jurisdiction": "federal",
+  "agency": [
+    "nis"
+  ],
+  "relatedScenarios": [
+    "immigration-entry-refusal",
+    "immigration-offences",
+    "immigration-arrest-deportation",
+    "police-detention-24-hours"
+  ],
+  "keywords": [
+    "immigration",
+    "deportation",
+    "detention",
+    "removal",
+    "overstay",
+    "nis"
+  ],
+  "id": "immigration-deportation-detention",
+  "title": "Can immigration detain or deport me?",
+  "shortTitle": "Deportation and detention",
+  "icon": "✈️",
+  "question": "Immigration says I will be deported and detained until then. What does the law allow?",
+  "category": "arrest",
+  "shortAnswer": "The Immigration Act allows deportation in specified cases and detention pending removal or deportation. A deportation order must have a legal basis, and detention must be authorised under the Act. You should be told the ground, given access to a lawyer and your embassy, and the detention should not be indefinite.",
+  "legalExplanation": "The **Immigration Act, 2015**:\n- **Section 19** provides for deportation orders in special cases.\n- **Section 20** allows a court to recommend deportation on conviction.\n- **Section 21** deals with removal of persons subject to deportation orders.\n- **Section 22** provides for detention of persons liable to deportation.\n- **Section 31** sets general provisions for detained persons, including the places of detention and the power to arrest without warrant.\n- **Section 45** provides for detention in lieu of deportation.\n\nDetention under the Act is administrative but remains subject to the Constitution. **Section 35** protects personal liberty, and a person held under immigration powers should still be able to challenge the lawfulness of the detention in court.",
+  "exceptions": "- **Court-ordered deportation:** a court recommendation on conviction follows a judicial process.\n- **Pending removal:** detention may be authorised while arrangements for removal are made.\n- **National security:** special cases may justify deportation, but the order must still identify the legal ground.",
+  "practicalOptions": "1. Ask for the **written order or notice** and the legal ground.\n2. Ask to contact your embassy, a lawyer and your family.\n3. Keep a record of the date and place of detention.\n4. Ask for an interpreter if you need one.\n5. Ask what the removal arrangements are and when they will happen.",
+  "whatToAvoid": "- Signing documents in a language you do not understand.\n- Paying an agent for \"release\" without an official process.\n- Waiting indefinitely without asking for a review.",
+  "whatToDocument": "- Detention order or notice.\n- Ground stated.\n- Dates and places of detention.\n- Requests to contact a lawyer or embassy.\n- Names of officers.",
+  "whatToDoAfter": "Contact your embassy and a lawyer urgently. A lawyer can apply to court to challenge unlawful detention and seek release or bail.",
+  "sources": [
+    {
+      "sourceId": "nigeria-immigration-act",
+      "sections": [
+        "19",
+        "20",
+        "21",
+        "22",
+        "31",
+        "45"
+      ],
+      "notes": "ss19-22 deportation orders, removal and detention; s31 general provisions for detained persons; s45 detention in lieu of deportation."
+    },
+    {
+      "sourceId": "constitution-1999",
+      "sections": [
+        "35",
+        "36"
+      ],
+      "notes": "s35 personal liberty; s36 fair hearing."
+    }
+  ]
+}

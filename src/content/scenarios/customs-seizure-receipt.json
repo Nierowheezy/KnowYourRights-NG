@@ -1,0 +1,58 @@
+{
+  "status": "approved",
+  "reviewer": "Content team (source check)",
+  "lastReviewed": "2026-10-31",
+  "nextReview": "2027-04-30",
+  "reviewNotes": "Citations checked against the official text downloaded from the issuing agency's portal. Source verification is not legal advice. Re-check before the next review date.",
+  "changeHistory": [
+    {
+      "date": "2026-10-31",
+      "note": "Added during full-coverage content expansion across the available statutes.",
+      "reviewer": "Content team (source check)"
+    }
+  ],
+  "jurisdiction": "federal",
+  "agency": [
+    "ncs"
+  ],
+  "relatedScenarios": [
+    "customs-search-powers",
+    "customs-traveller-declaration",
+    "customs-arrest-powers",
+    "customs-highway-stop"
+  ],
+  "keywords": [
+    "customs",
+    "seizure",
+    "forfeiture",
+    "goods",
+    "receipt",
+    "inventory",
+    "detention"
+  ],
+  "id": "customs-seizure-receipt",
+  "title": "Customs seized my goods. What record should I get?",
+  "shortTitle": "Customs seizure records",
+  "icon": "📦",
+  "question": "Customs officers took my goods and say they are forfeited. What does the law require them to do?",
+  "category": "impoundment",
+  "shortAnswer": "Customs may seize or detain anything they have reasonable grounds to believe is liable to forfeiture. The goods must be delivered into the Service's care and dealt with under the Act while forfeiture is determined. Ask for a written inventory of what was taken, the legal basis, and the office handling the forfeiture.",
+  "legalExplanation": "The **Nigeria Customs Service Act, 2023, section 245** provides that an authorised officer may at any time **seize or detain anything liable to forfeiture** under the customs and excise laws where there are reasonable grounds to believe it is liable to forfeiture.\n\nAnything seized must be delivered into the care of the Service without delay and dealt with under the Act pending a determination on forfeiture or disposal (s 245(2)). Proceedings for condemnation of the goods as forfeited are governed by the Act and its Schedule (s 245(3)).\n\nA seizure is therefore not the same as a final conviction. The Act provides a process for determining forfeiture, and the owner should be told what is happening to the goods.",
+  "exceptions": "- **Perishable goods:** the Service may need to deal with goods that cannot safely be stored.\n- **Prohibited goods:** some goods are prohibited outright and may be disposed of under the Act.\n- **Criminal proceedings:** seizure may run alongside a prosecution; the two processes are separate.",
+  "practicalOptions": "1. Ask: **\"What is the legal basis for the seizure, and which office is handling it?\"**\n2. Ask for a written list of the goods, quantities and condition.\n3. Note the officer's name, number and command.\n4. Ask for the seizure/detention reference and the forfeiture procedure.\n5. Keep copies of your import documents, receipts and declarations.",
+  "whatToAvoid": "- Signing a document you have not read.\n- Paying an unofficial \"settlement\" to recover goods.\n- Leaving without any record of what was taken.",
+  "whatToDocument": "- Goods seized and quantities.\n- Officer details and command.\n- Seizure/detention reference.\n- Legal basis stated.\n- Import documents and receipts.",
+  "whatToDoAfter": "Follow the forfeiture or appeal process in the notice. If no record was given, complain to the **Nigeria Customs Service** and the **Public Complaints Commission**. A lawyer can advise on challenging a condemnation order.",
+  "sources": [
+    {
+      "sourceId": "nigeria-customs-service-act-2023",
+      "sections": [
+        "6",
+        "168",
+        "245",
+        "252"
+      ],
+      "notes": "s6 police powers for enforcement; s168 IPR detain/arrest/seize; s245 seizure, detention and forfeiture; s252 protection of officers acting on reasonable grounds."
+    }
+  ]
+}

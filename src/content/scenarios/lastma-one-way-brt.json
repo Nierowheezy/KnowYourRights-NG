@@ -1,0 +1,56 @@
+{
+  "status": "approved",
+  "reviewer": "Content team (source check)",
+  "lastReviewed": "2026-10-31",
+  "nextReview": "2027-04-30",
+  "reviewNotes": "Citations checked against the official text downloaded from the issuing agency's portal. Source verification is not legal advice. Re-check before the next review date.",
+  "changeHistory": [
+    {
+      "date": "2026-10-31",
+      "note": "Added during full-coverage content expansion across the available statutes.",
+      "reviewer": "Content team (source check)"
+    }
+  ],
+  "jurisdiction": "federal",
+  "agency": [
+    "lastma"
+  ],
+  "relatedScenarios": [
+    "lastma-impound-fees",
+    "lastma-arrest-powers",
+    "lastma-towing",
+    "vio-roadworthiness-stop"
+  ],
+  "keywords": [
+    "lastma",
+    "lagos",
+    "brt",
+    "one way",
+    "traffic",
+    "fine",
+    "impound",
+    "route"
+  ],
+  "id": "lastma-one-way-brt",
+  "title": "What happens if I drive in a BRT lane or against traffic?",
+  "shortTitle": "One-way and BRT violations",
+  "icon": "🚌",
+  "question": "I accidentally drove in a BRT corridor or the wrong way. Can LASTMA fine or impound my vehicle?",
+  "category": "payments",
+  "shortAnswer": "Driving in a BRT corridor, against traffic, or in a prohibited direction is an offence under the Lagos State Road Traffic Law. Penalties include fines and, in some cases, impoundment. The officer should state the offence and issue the prescribed notice; pay only through official channels and keep the receipt.",
+  "legalExplanation": "The **Lagos State Road Traffic Law, 2012** creates offences for route violations, driving in a prohibited direction, illegal U-turns and use of the BRT corridor. The schedule to the Law prescribes penalties, and **section 22** allows arrest without warrant for certain traffic offences.\n\nEnforcement should identify the specific offence and follow the statutory penalty. A roadside demand that is not tied to the schedule or a written notice is not the lawful process.",
+  "exceptions": "- **Diversion or emergency:** official diversions or emergency instructions may justify otherwise prohibited movement.\n- **Signage:** unclear or missing signage may be relevant to a challenge.\n- **Commercial route rules:** special route rules apply to commercial vehicles.",
+  "practicalOptions": "1. Stop when directed and ask which **offence** is alleged.\n2. Request the **notice** with the prescribed fine.\n3. Pay through the official channel and keep the receipt.\n4. If signage was unclear, note it and photograph the location.\n5. Ask about the challenge process.",
+  "whatToAvoid": "- Driving away from the officer.\n- Paying cash without a receipt.\n- Ignoring the notice and missing the deadline.",
+  "whatToDocument": "- Location and signage.\n- Offence alleged.\n- Notice and receipt.\n- Officer details.\n- Any court date.",
+  "whatToDoAfter": "If the penalty was not documented, complain to LASTMA or the Lagos State Public Complaints Commission.",
+  "sources": [
+    {
+      "sourceId": "lagos-state-traffic-law-2012",
+      "sections": [
+        "22"
+      ],
+      "notes": "s22 arrest without warrant for traffic offences; Schedule prescribes route, one-way and BRT penalties."
+    }
+  ]
+}

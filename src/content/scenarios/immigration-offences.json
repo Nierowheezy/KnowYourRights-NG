@@ -1,0 +1,56 @@
+{
+  "status": "approved",
+  "reviewer": "Content team (source check)",
+  "lastReviewed": "2026-10-31",
+  "nextReview": "2027-04-30",
+  "reviewNotes": "Citations checked against the official text downloaded from the issuing agency's portal. Source verification is not legal advice. Re-check before the next review date.",
+  "changeHistory": [
+    {
+      "date": "2026-10-31",
+      "note": "Added during full-coverage content expansion across the available statutes.",
+      "reviewer": "Content team (source check)"
+    }
+  ],
+  "jurisdiction": "federal",
+  "agency": [
+    "nis"
+  ],
+  "relatedScenarios": [
+    "immigration-document-check",
+    "immigration-entry-refusal",
+    "immigration-deportation-detention",
+    "immigration-arrest-deportation"
+  ],
+  "keywords": [
+    "immigration",
+    "offence",
+    "overstay",
+    "visa",
+    "false information",
+    "arrest",
+    "nis"
+  ],
+  "id": "immigration-offences",
+  "title": "What immigration offences can I be arrested for?",
+  "shortTitle": "Immigration offences",
+  "icon": "📕",
+  "question": "I overstayed my visa or gave wrong information at the border. Can I be arrested?",
+  "category": "arrest",
+  "shortAnswer": "Yes. Overstaying, breaching visa conditions, making false statements, failing to produce required documents, and using forged travel documents are offences under the Immigration Act. A police or immigration officer may arrest without warrant for certain immigration offences.",
+  "legalExplanation": "The **Immigration Act, 2015, section 46** creates offences for:\n- entering or remaining in Nigeria in breach of a refusal of admission or a condition (s 46(1));\n- knowingly harbouring a person who has committed such an offence (s 46(2));\n- making a false return, statement or representation to an immigration officer;\n- refusing or failing to produce a required document or information, or obstructing an officer;\n- altering, using or possessing a forged or altered passport or travel document (s 46(3)).\n\n**Section 48** sets penalties and allows a police officer or immigration officer to **arrest without warrant** a person reasonably believed to have committed an offence under s 24(1) or s 46(1).",
+  "exceptions": "- **Innocent error:** a genuine mistake may be resolved administratively, but it is still worth getting advice.\n- **Document later produced:** if the issue is a missing document, producing it promptly may prevent escalation.\n- **Citizenship:** a citizen cannot be treated as an illegal immigrant.",
+  "practicalOptions": "1. Ask what offence is alleged and under which section.\n2. Provide the documents you have and explain any error.\n3. Ask to contact a lawyer or your embassy.\n4. Do not sign a statement you do not understand.\n5. Ask for a written notice of any decision.",
+  "whatToAvoid": "- Using a forged or altered document.\n- Lying to an immigration officer.\n- Paying an agent to \"fix\" a status without an official process.",
+  "whatToDocument": "- Offence alleged and section.\n- Officer details and port or command.\n- Documents produced.\n- Any statement you made.\n- Time and place of arrest.",
+  "whatToDoAfter": "Contact a lawyer immediately. Immigration offences can affect your status, so keep every document and do not agree to a settlement without advice.",
+  "sources": [
+    {
+      "sourceId": "nigeria-immigration-act",
+      "sections": [
+        "46",
+        "48"
+      ],
+      "notes": "s46 immigration offences including overstay, false statements, failure to produce documents and forged documents; s48 penalties and arrest without warrant."
+    }
+  ]
+}

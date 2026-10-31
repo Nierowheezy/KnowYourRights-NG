@@ -1,0 +1,71 @@
+{
+  "status": "approved",
+  "reviewer": "Content team (source check)",
+  "lastReviewed": "2026-10-31",
+  "nextReview": "2027-04-30",
+  "reviewNotes": "Citations checked against the official text downloaded from the issuing agency's portal. Source verification is not legal advice. Re-check before the next review date.",
+  "changeHistory": [
+    {
+      "date": "2026-10-31",
+      "note": "Added during full-coverage content expansion across the available statutes.",
+      "reviewer": "Content team (source check)"
+    }
+  ],
+  "jurisdiction": "federal",
+  "agency": [
+    "npf"
+  ],
+  "relatedScenarios": [
+    "police-statement-caution",
+    "acja-legal-aid",
+    "police-arrest-detention",
+    "police-use-of-force"
+  ],
+  "keywords": [
+    "police",
+    "silence",
+    "questions",
+    "interview",
+    "admission",
+    "lawyer",
+    "caution"
+  ],
+  "id": "police-right-to-silence",
+  "title": "Do I have to answer police questions?",
+  "shortTitle": "Right to remain silent",
+  "icon": "🤐",
+  "question": "Police keep asking me questions. If I refuse to answer, will that be treated as an admission?",
+  "category": "arrest",
+  "shortAnswer": "You have the right to remain silent and to avoid answering questions until you have consulted a lawyer or another person of your choice. Silence is not an admission of guilt. You may still be required to give your name and address in limited circumstances, and anything you do say may be used in evidence.",
+  "legalExplanation": "The **Constitution, section 35(2)** provides that a person who is arrested or detained has the right to remain silent or to avoid answering any question until after consultation with a legal practitioner or any other person of their choice.\n\n**Section 36** guarantees fair hearing, including the right to defend yourself in person or through a lawyer.\n\nThe **ACJA 2015** (s 6) requires that a suspect be informed of the right to remain silent and the consequences of not doing so. The **Police Act 2020** (s 60) makes a statement voluntary — you are not obliged to make one.",
+  "exceptions": "- **Name and address:** police may require these in the limited circumstances in Police Act s 61.\n- **Regulatory disclosures:** some laws require specific information, such as customs declarations.\n- **Court compulsion:** a court can require evidence, but that is different from a police station interview.",
+  "practicalOptions": "1. Say: **\"I am exercising my right to remain silent until I speak to a lawyer.\"**\n2. Give your name and address if lawfully required.\n3. Do not invent explanations or guess at facts.\n4. Ask for a lawyer, Legal Aid, or a trusted person.\n5. If you choose to speak, keep it accurate and ask for it to be recorded.",
+  "whatToAvoid": "- Confessing to something you did not do to end the questioning.\n- Arguing with officers or making threats.\n- Signing a statement you have not read.",
+  "whatToDocument": "- Questions asked and your responses.\n- Whether you were cautioned.\n- Whether you asked for a lawyer and what happened.\n- Names of officers present.",
+  "whatToDoAfter": "Tell your lawyer what happened at the station. A statement or admission obtained without proper caution can be challenged.",
+  "sources": [
+    {
+      "sourceId": "constitution-1999",
+      "sections": [
+        "35",
+        "36"
+      ],
+      "notes": "s35(2) right to silence and consultation; s36 fair hearing."
+    },
+    {
+      "sourceId": "acja-2015",
+      "sections": [
+        "6"
+      ],
+      "notes": "s6 notification of right to silence and consequences."
+    },
+    {
+      "sourceId": "nigeria-police-act-2020",
+      "sections": [
+        "60",
+        "61"
+      ],
+      "notes": "s60 voluntary statement; s61 name/address."
+    }
+  ]
+}

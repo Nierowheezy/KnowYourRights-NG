@@ -1,0 +1,54 @@
+{
+  "status": "approved",
+  "reviewer": "Content team (source check)",
+  "lastReviewed": "2026-10-31",
+  "nextReview": "2027-04-30",
+  "reviewNotes": "Citations checked against the official text downloaded from the issuing agency's portal. Source verification is not legal advice. Re-check before the next review date.",
+  "changeHistory": [
+    {
+      "date": "2026-10-31",
+      "note": "Added during full-coverage content expansion across the available statutes.",
+      "reviewer": "Content team (source check)"
+    }
+  ],
+  "jurisdiction": "federal",
+  "agency": [
+    "nscdc"
+  ],
+  "relatedScenarios": [
+    "nscdc-arrest-powers",
+    "nscdc-search-premises",
+    "lnsc-neighbourhood-powers",
+    "nscdc-infrastructure-powers"
+  ],
+  "keywords": [
+    "nscdc",
+    "private guard",
+    "security company",
+    "inspection",
+    "licence",
+    "regulation"
+  ],
+  "id": "nscdc-private-guard",
+  "title": "What powers does NSCDC have over private security guards?",
+  "shortTitle": "NSCDC and private guards",
+  "icon": "🔐",
+  "question": "NSCDC officers came to inspect our estate security company. Can they do that?",
+  "category": "other",
+  "shortAnswer": "Yes. NSCDC is responsible for supervising and monitoring private guard companies. It may inspect their premises and training facilities, keep a register, and seal up a company operating without a valid licence. This is a regulatory power over the company, not a general power over residents.",
+  "legalExplanation": "The **NSCDC Act, 2003, section 3(1)(c)–(d)** gives the Corps power to:\n- inspect the premises of private guard companies and their training facilities, and approve them if they meet the standard;\n- supervise and monitor the activities of all private guard companies and keep a register for that purpose;\n- organise workshops and training for private guard companies;\n- seal up any private guard company operating without a valid licence.\n\nThis is part of the Corps' mandate to regulate the private security industry. It does not give NSCDC power to search residents' homes or arrest residents simply because a guard company is being inspected.",
+  "exceptions": "- **Criminal offence:** if the inspection reveals a criminal offence, the matter may be handed to the police or prosecuted under the relevant law.\n- **Licensed company:** a licensed company still has to cooperate with inspection and training requirements.\n- **Residents:** the inspection is directed at the company, not at clients or residents.",
+  "practicalOptions": "1. Ask the officers to identify themselves and state the inspection purpose.\n2. Refer them to the security company's management.\n3. Ask for the inspection report or any notice issued.\n4. Do not allow a search of residents' homes without a lawful basis.\n5. Record the officers' names and command.",
+  "whatToAvoid": "- Assuming an inspection of the guard company authorises a search of your home.\n- Refusing a lawful inspection of the company's premises.\n- Paying an unofficial fee to avoid a seal.",
+  "whatToDocument": "- Officers' names/numbers and command.\n- Purpose of the inspection.\n- Any notice or report issued.\n- Company licence details.\n- Any demand for payment.",
+  "whatToDoAfter": "If the inspection was abusive or a demand was made, report it to the **NSCDC** and the **Public Complaints Commission**. The company can also seek advice on any licence decision.",
+  "sources": [
+    {
+      "sourceId": "nscdc-act",
+      "sections": [
+        "3"
+      ],
+      "notes": "s3(1)(c)-(d) inspection and supervision of private guard companies, register, training and sealing of unlicensed operators."
+    }
+  ]
+}

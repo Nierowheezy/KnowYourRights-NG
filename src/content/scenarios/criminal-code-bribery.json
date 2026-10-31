@@ -1,0 +1,66 @@
+{
+  "status": "approved",
+  "reviewer": "Content team (source check)",
+  "lastReviewed": "2026-10-31",
+  "nextReview": "2027-04-30",
+  "reviewNotes": "Citations checked against the official text downloaded from the issuing agency's portal. Source verification is not legal advice. Re-check before the next review date.",
+  "changeHistory": [
+    {
+      "date": "2026-10-31",
+      "note": "Added during full-coverage content expansion across the available statutes.",
+      "reviewer": "Content team (source check)"
+    }
+  ],
+  "jurisdiction": "federal",
+  "agency": [
+    "icpc",
+    "npf"
+  ],
+  "relatedScenarios": [
+    "icpc-report-bribe",
+    "icpc-corruption-reporting",
+    "officer-demanded-money",
+    "icpc-invitation-summons"
+  ],
+  "keywords": [
+    "bribe",
+    "criminal code",
+    "official corruption",
+    "gratification",
+    "public officer",
+    "prosecution"
+  ],
+  "id": "criminal-code-bribery",
+  "title": "Is offering a bribe a crime for the person paying?",
+  "shortTitle": "Bribery and official corruption",
+  "icon": "💵",
+  "question": "If I offer money to an officer to avoid a fine, can I be prosecuted too?",
+  "category": "complaints",
+  "shortAnswer": "Yes. Both asking for and giving a bribe can be offences. Under the Criminal Code, official corruption covers a public official who corruptly asks for or receives a benefit, and a person who corruptly gives or promises one. The offence can carry imprisonment, and the bribe can be forfeited.",
+  "legalExplanation": "The **Criminal Code Act** (applied in states that have not replaced it with a state criminal code):\n- **Section 98** makes it a felony for a public official to corruptly ask for, receive or obtain property or a benefit on account of their own act, omission, favour or disfavour. The penalty is imprisonment for seven years.\n- **Section 98A** makes it a felony for a person to corruptly give, confer or procure property or a benefit to a public official on account of such an act, omission, favour or disfavour.\n- **Section 98B** covers a person who corruptly asks for or obtains a benefit on account of a public official's act or omission.\n\n**Section 20 of the Corrupt Practices and Other Related Offences Act, 2000** additionally provides for forfeiture of the gratification and a fine.",
+  "exceptions": "- **Official published fee:** paying a lawful fee through the proper channel is not a bribe.\n- **Compulsion or threat:** if you paid because you were threatened, that is a matter to report and explain; it does not automatically make the payment lawful, but it is relevant.\n- **State criminal codes:** some states have their own criminal laws; the applicable code depends on where the offence occurred.",
+  "practicalOptions": "1. Do not offer money to avoid a fine or arrest.\n2. Ask for the official fee, notice or receipt instead.\n3. If an officer demands money, record the details and report it.\n4. If you have already paid, keep evidence and seek advice before making a statement.\n5. Report to the **ICPC** or the police anti-corruption unit.",
+  "whatToAvoid": "- Offering \"something small\" to resolve an official problem.\n- Paying and then destroying receipts or messages.\n- Assuming only the official can be prosecuted.",
+  "whatToDocument": "- Who asked or offered what.\n- Exact words, messages or receipts.\n- Date, time and place.\n- Any official notice or fee schedule.\n- Witness details.",
+  "whatToDoAfter": "Report to the **ICPC** or the police. If you are invited for questioning, attend with a lawyer and do not sign a statement without reading it.",
+  "sources": [
+    {
+      "sourceId": "criminal-code-act",
+      "sections": [
+        "98",
+        "98A",
+        "98B"
+      ],
+      "notes": "s98 public official inviting/receiving bribes; s98A giving or promising bribes; s98B inviting bribes on account of a public official's act; penalty seven years."
+    },
+    {
+      "sourceId": "cpo-act-2000",
+      "sections": [
+        "8",
+        "9",
+        "20"
+      ],
+      "notes": "ss8-9 gratification offences; s20 forfeiture and fine."
+    }
+  ]
+}

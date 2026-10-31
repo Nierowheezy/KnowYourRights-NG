@@ -1,0 +1,56 @@
+{
+  "status": "approved",
+  "reviewer": "Content team (source check)",
+  "lastReviewed": "2026-10-31",
+  "nextReview": "2027-04-30",
+  "reviewNotes": "Citations checked against the official text downloaded from the issuing agency's portal. Source verification is not legal advice. Re-check before the next review date.",
+  "changeHistory": [
+    {
+      "date": "2026-10-31",
+      "note": "Added during full-coverage content expansion across the available statutes.",
+      "reviewer": "Content team (source check)"
+    }
+  ],
+  "jurisdiction": "federal",
+  "agency": [
+    "lastma"
+  ],
+  "relatedScenarios": [
+    "lastma-impound-fees",
+    "lastma-one-way-brt",
+    "vio-roadworthiness-stop",
+    "officer-demanded-money"
+  ],
+  "keywords": [
+    "lagos",
+    "okada",
+    "keke",
+    "motorcycle",
+    "tricycle",
+    "restricted route",
+    "fine",
+    "impound"
+  ],
+  "id": "lagos-okada-restrictions",
+  "title": "Where can okada and kekes not operate in Lagos?",
+  "shortTitle": "Okada and keke restrictions",
+  "icon": "🛺",
+  "question": "Are there roads where motorcycles and tricycles are banned in Lagos, and what happens if I ride there?",
+  "category": "other",
+  "shortAnswer": "Lagos State law restricts motorcycles and tricycles on specified routes and highways, and imposes penalties for violations. Enforcement may include fines and impoundment. Riders should check the current restricted-route list and carry the required documents.",
+  "legalExplanation": "The **Lagos State Road Traffic Law, 2012** and its schedule regulate motorcycles and tricycles, including restrictions on specified routes, helmet requirements, passenger limits, and penalties for operating in restricted areas.\n\nThe schedule lists offences such as riding without a crash helmet, carrying more than one passenger, operating in a restricted area, and using a motorcycle without the required documents. Enforcement is carried out by the police and Lagos traffic agencies.",
+  "exceptions": "- **Exempted routes:** some roads may permit motorcycles or tricycles; the current list should be checked.\n- **Emergency or official use:** authorised official use may be exempt.\n- **Private vs commercial:** different rules may apply to commercial operations.",
+  "practicalOptions": "1. Check the current restricted-route list before riding.\n2. Carry your rider's licence, vehicle documents and helmet.\n3. If stopped, ask which restriction is alleged and request the notice.\n4. Pay only through official channels and keep the receipt.\n5. If the vehicle is impounded, get the park location and release process.",
+  "whatToAvoid": "- Riding without a helmet or with excess passengers.\n- Evading a checkpoint.\n- Paying cash without a receipt.",
+  "whatToDocument": "- Location and restriction alleged.\n- Officer details.\n- Notice and receipt.\n- Park location if impounded.\n- Any signage or route evidence.",
+  "whatToDoAfter": "Comply with the restriction and follow the release process if impounded. Complain to LASTMA or the Lagos State Public Complaints Commission if enforcement was abusive.",
+  "sources": [
+    {
+      "sourceId": "lagos-state-traffic-law-2012",
+      "sections": [
+        "22"
+      ],
+      "notes": "s22 arrest without warrant; Schedule contains motorcycle/tricycle restrictions and penalties."
+    }
+  ]
+}

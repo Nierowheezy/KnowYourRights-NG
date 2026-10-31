@@ -1,0 +1,60 @@
+{
+  "status": "approved",
+  "reviewer": "Content team (source check)",
+  "lastReviewed": "2026-10-31",
+  "nextReview": "2027-04-30",
+  "reviewNotes": "Citations checked against the official text downloaded from the issuing agency's portal. Source verification is not legal advice. Re-check before the next review date.",
+  "changeHistory": [
+    {
+      "date": "2026-10-31",
+      "note": "Added during full-coverage content expansion across the available statutes.",
+      "reviewer": "Content team (source check)"
+    }
+  ],
+  "jurisdiction": "federal",
+  "agency": [
+    "nis"
+  ],
+  "relatedScenarios": [
+    "immigration-document-check",
+    "immigration-deportation-detention",
+    "immigration-offences",
+    "immigration-arrest-deportation"
+  ],
+  "keywords": [
+    "immigration",
+    "entry",
+    "refusal",
+    "airport",
+    "passport",
+    "visa",
+    "prohibited immigrant"
+  ],
+  "id": "immigration-entry-refusal",
+  "title": "Can immigration refuse me entry at the airport?",
+  "shortTitle": "Refusal of entry",
+  "icon": "🛂",
+  "question": "An immigration officer says I cannot enter Nigeria. What powers do they have, and what can I do?",
+  "category": "documents",
+  "shortAnswer": "Immigration officers may examine travellers, require travel documents, and refuse entry where the legal entry requirements are not met or the person is a prohibited immigrant. You should be told the reason and given a chance to respond. If entry is refused, the Act provides for removal, and you can contact your embassy or a lawyer.",
+  "legalExplanation": "The **Immigration Act, 2015**:\n- **Section 1** makes persons entering or leaving Nigeria liable to examination.\n- **Section 2** provides for examination of persons landing or embarking.\n- **Section 4** requires production of travel documents.\n- **Section 7** gives an immigration officer power to refuse entry.\n- **Section 17** provides for removal of an immigrant whose entry is refused.\n- **Section 18** defines prohibited immigrants.\n\nA refusal must be based on the Act, not on an arbitrary preference. The officer should be able to identify the requirement that was not met or the ground for prohibition.",
+  "exceptions": "- **Nigerian citizens:** citizens have a right to enter Nigeria; refusal should not apply to a citizen who establishes citizenship.\n- **Valid documents produced later:** if the issue is a missing document, producing it may resolve the refusal.\n- **Exempt persons:** some officials and exempted travellers have special treatment under the Act.",
+  "practicalOptions": "1. Ask: **\"Under which provision are you refusing entry?\"**\n2. Provide your passport, visa and supporting documents.\n3. Ask to speak to a supervisor if the reason is unclear.\n4. Contact your embassy or a lawyer.\n5. Ask for any decision or removal notice in writing.",
+  "whatToAvoid": "- Becoming aggressive at the border.\n- Handing over your passport without a receipt if it is retained.\n- Signing documents you do not understand.",
+  "whatToDocument": "- Officer name/number and port.\n- Reason given for refusal.\n- Documents produced.\n- Any written notice.\n- Names of witnesses.",
+  "whatToDoAfter": "Contact your embassy and a lawyer immediately. A refusal can be challenged through the Immigration Service and, where appropriate, the courts.",
+  "sources": [
+    {
+      "sourceId": "nigeria-immigration-act",
+      "sections": [
+        "1",
+        "2",
+        "4",
+        "7",
+        "17",
+        "18"
+      ],
+      "notes": "s1 liability to examination; s2 examination; s4 travel documents; s7 refusal of entry; s17 removal after refusal; s18 prohibited immigrants."
+    }
+  ]
+}

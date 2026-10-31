@@ -1,0 +1,65 @@
+{
+  "status": "approved",
+  "reviewer": "Content team (source check)",
+  "lastReviewed": "2026-10-31",
+  "nextReview": "2027-04-30",
+  "reviewNotes": "Citations checked against the official text downloaded from the issuing agency's portal. Source verification is not legal advice. Re-check before the next review date.",
+  "changeHistory": [
+    {
+      "date": "2026-10-31",
+      "note": "Added during full-coverage content expansion across the available statutes.",
+      "reviewer": "Content team (source check)"
+    }
+  ],
+  "jurisdiction": "federal",
+  "agency": [
+    "frsc"
+  ],
+  "relatedScenarios": [
+    "frsc-fines-on-the-spot",
+    "frsc-roadworthiness-certificate",
+    "vehicle-documents-checks",
+    "lastma-impound-fees"
+  ],
+  "keywords": [
+    "frsc",
+    "arrest",
+    "tow",
+    "detain",
+    "vehicle",
+    "impound",
+    "custody fee"
+  ],
+  "id": "frsc-arrest-towing",
+  "title": "Can FRSC arrest me or tow my vehicle?",
+  "shortTitle": "FRSC arrest and towing",
+  "icon": "🚛",
+  "question": "FRSC officers say they will arrest me and tow my car. What powers do they actually have?",
+  "category": "impoundment",
+  "shortAnswer": "FRSC may arrest or prosecute for traffic offences and may remove, detain or seize a vehicle or documents in defined circumstances under its Act. The vehicle must be dealt with lawfully, and you should receive a notice and a record. Custody fees may apply after 24 hours.",
+  "legalExplanation": "The **FRSC Act 2007, section 10(4)–(5)** gives the Corps power to arrest and prosecute traffic offenders, serve notices of offence, and arrest, remove or detain vehicles and seize licences or documents in accordance with the Act.\n\n**Section 28** allows retention of a driving licence or vehicle documents to secure compliance, with a notice of offence sheet.\n\nThe Act's schedule includes a **custody fee** for vehicles held after 24 hours. Any towing or storage charge should be tied to the published schedule and documented.",
+  "exceptions": "- **Obstruction or danger:** a vehicle causing an obstruction may be removed to restore safety.\n- **Document deficiency:** detention may be tied to missing or invalid documents.\n- **Serious offence:** arrest may be justified for a serious traffic offence, but ordinary document offences should not routinely lead to arrest.",
+  "practicalOptions": "1. Ask: **\"What offence is alleged, and are you arresting me or detaining the vehicle?\"**\n2. Request the **notice of offence** and any vehicle detention record.\n3. Ask where the vehicle is being taken and what the fees are.\n4. Do not resist physically; record the officer and vehicle details.\n5. Keep receipts for towing, storage or fines.",
+  "whatToAvoid": "- Driving away while a lawful detention is being processed.\n- Paying towing/storage fees without a receipt or schedule.\n- Leaving the scene without the vehicle's location and a record.",
+  "whatToDocument": "- Officer names/numbers and location.\n- Offence and legal basis stated.\n- Vehicle details and condition.\n- Notice, detention record and fee schedule.\n- Where the vehicle is taken.",
+  "whatToDoAfter": "Follow the reclaim process on the notice. If the vehicle is not released or fees exceed the schedule, complain to the FRSC command and keep all documents.",
+  "sources": [
+    {
+      "sourceId": "frsc-act-2007",
+      "sections": [
+        "10",
+        "28"
+      ],
+      "notes": "s10(4)-(5) arrest/prosecution and vehicle removal/detention; s28 document retention; Schedule custody fee."
+    },
+    {
+      "sourceId": "national-road-traffic-regulations-2012",
+      "sections": [
+        "18",
+        "22",
+        "142"
+      ],
+      "notes": "vehicle particulars and roadworthiness framework."
+    }
+  ]
+}

@@ -1,0 +1,63 @@
+{
+  "status": "approved",
+  "reviewer": "Content team (source check)",
+  "lastReviewed": "2026-10-31",
+  "nextReview": "2027-04-30",
+  "reviewNotes": "Citations checked against the official text downloaded from the issuing agency's portal. Source verification is not legal advice. Re-check before the next review date.",
+  "changeHistory": [
+    {
+      "date": "2026-10-31",
+      "note": "Added during full-coverage content expansion across the available statutes.",
+      "reviewer": "Content team (source check)"
+    }
+  ],
+  "jurisdiction": "federal",
+  "agency": [
+    "frsc"
+  ],
+  "relatedScenarios": [
+    "frsc-fines-on-the-spot",
+    "frsc-speed-limit",
+    "frsc-driver-licence-demand",
+    "vehicle-documents-checks"
+  ],
+  "keywords": [
+    "frsc",
+    "phone",
+    "seatbelt",
+    "driving",
+    "fine",
+    "distraction",
+    "offence"
+  ],
+  "id": "frsc-seatbelt-phone",
+  "title": "Is using a phone while driving an offence?",
+  "shortTitle": "Seatbelts and phones",
+  "icon": "📱",
+  "question": "Can FRSC fine me for holding my phone or not wearing a seatbelt?",
+  "category": "payments",
+  "shortAnswer": "Yes. The FRSC Act's penalty schedule includes driving without a seatbelt and use of a phone while driving. An officer should issue a notice of offence stating the fine. You can pay through the official channel or challenge the notice.",
+  "legalExplanation": "The **FRSC Act 2007** schedule of offences prescribes penalties for **driving without a seat belt** and **use of a phone while driving**, among other road safety offences. The Corps has power to enforce these offences (s 10).\n\nThe **National Road Traffic Regulations, 2012** also regulate driver conduct and vehicle equipment. Enforcement should be documented by a notice of offence; a roadside cash demand without a notice is not the lawful process.",
+  "exceptions": "- **Hands-free use:** the offence targets phone use that interferes with driving; hands-free arrangements may still be restricted by regulation — check the current rule.\n- **Parked vehicle:** a phone used while safely parked is different from use while driving.\n- **Medical or emergency use:** genuine emergency use may be a defence, but it is for the court to assess.",
+  "practicalOptions": "1. Pull over safely before using a phone.\n2. If stopped, ask for the **notice of offence** and the prescribed fine.\n3. Pay through the official channel and keep the receipt.\n4. If you disagree, note the challenge process.\n5. Record the officer and location.",
+  "whatToAvoid": "- Arguing while still driving.\n- Paying cash without a receipt.\n- Using a phone in heavy traffic where the vehicle is in motion.",
+  "whatToDocument": "- Offence alleged.\n- Notice and receipt.\n- Officer name/number and location.\n- Any court date.",
+  "whatToDoAfter": "Keep the notice. If it was not issued, complain to the FRSC command or the Public Complaints Commission.",
+  "sources": [
+    {
+      "sourceId": "frsc-act-2007",
+      "sections": [
+        "10"
+      ],
+      "notes": "s10 enforcement powers; Schedule prescribes seatbelt and phone-use penalties."
+    },
+    {
+      "sourceId": "national-road-traffic-regulations-2012",
+      "sections": [
+        "18",
+        "22"
+      ],
+      "notes": "road traffic regulation framework."
+    }
+  ]
+}

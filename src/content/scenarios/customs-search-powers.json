@@ -1,0 +1,64 @@
+{
+  "status": "approved",
+  "reviewer": "Content team (source check)",
+  "lastReviewed": "2026-10-31",
+  "nextReview": "2027-04-30",
+  "reviewNotes": "Citations checked against the official text downloaded from the issuing agency's portal. Source verification is not legal advice. Re-check before the next review date.",
+  "changeHistory": [
+    {
+      "date": "2026-10-31",
+      "note": "Added during full-coverage content expansion across the available statutes.",
+      "reviewer": "Content team (source check)"
+    }
+  ],
+  "jurisdiction": "federal",
+  "agency": [
+    "ncs"
+  ],
+  "relatedScenarios": [
+    "customs-search-seizure",
+    "customs-highway-stop",
+    "customs-traveller-declaration",
+    "immigration-document-check"
+  ],
+  "keywords": [
+    "customs",
+    "search",
+    "border",
+    "airport",
+    "baggage",
+    "body search",
+    "ncs"
+  ],
+  "id": "customs-search-powers",
+  "title": "What can customs officers search at the border?",
+  "shortTitle": "Customs search powers",
+  "icon": "🛃",
+  "question": "Customs officers want to search me and my bags at the airport. What are their search powers?",
+  "category": "stop-search",
+  "shortAnswer": "Customs officers may search people arriving in or leaving Nigeria where they have reasonable and probable grounds to suspect concealed goods, contraband or evidence of a customs offence. Same-gender rules apply to personal searches, and internal body searches must be done by a qualified medical practitioner. Entry into premises generally requires written authorisation from the Comptroller-General or an exigent circumstance.",
+  "legalExplanation": "The **Nigeria Customs Service Act, 2023** gives customs officers the same powers, authorities and privileges as police officers **for the purpose of enforcing the Act** (s 6). That is a customs-enforcement power, not a general licence to police the whole country.\n\n**Section 227** sets the search framework:\n- The Service may enter any place, premises or means of conveyance and examine it where there are reasonable grounds to suspect an offence (s 227(1)).\n- For premises, the officer must obtain **written authorisation** from the Comptroller-General or a designee and produce a copy on demand (s 227(2)).\n- Written authorisation may be dispensed with only in **exigent circumstances**, such as danger to life or the likely destruction of evidence (ss 227(3)–(4)).\n- An officer may search a person arriving or departing where there are reasonable and probable grounds to suspect concealment of prohibited goods or evidence (s 227(5)).\n- A person must not be searched by someone of a different gender, except for a limited weapons search where there is an immediate threat; **internal body searches** must be conducted by a qualified medical practitioner (s 227(5)(a)–(b)).\n- The officer may end the search if the grounds no longer exist (s 227(5)(c)).",
+  "exceptions": "- **Routine baggage examination:** customs may examine baggage as part of normal clearance; that is different from a personal body search.\n- **Exigent circumstances:** entry without written authorisation may be justified to prevent destruction of evidence or danger to life (s 227(3)–(4)).\n- **Border property:** customs may enter and cross private property to access the border, and may remove structures within five metres of the border (s 227(7)–(8)).",
+  "practicalOptions": "1. Ask the officer to identify themselves and state the reason for the search.\n2. For a premises search, ask to see the **written authorisation** (s 227(2)).\n3. For a personal search, ask that the same-gender and medical-practitioner rules be followed.\n4. Keep your baggage tags and a record of anything removed.\n5. Ask for the legal basis if you are detained beyond the search.",
+  "whatToAvoid": "- Refusing a lawful baggage examination.\n- Submitting to an internal body search conducted by an unqualified person.\n- Handing over goods without any record.",
+  "whatToDocument": "- Officer names/numbers and port or command.\n- Reason given for the search.\n- Written authorisation, if any.\n- Items taken and any receipt or inventory.\n- Time and location.",
+  "whatToDoAfter": "If a search breached the gender or medical rules, or was conducted without authorisation, complain to the **Nigeria Customs Service** command and the **Public Complaints Commission**.",
+  "sources": [
+    {
+      "sourceId": "nigeria-customs-service-act-2023",
+      "sections": [
+        "6",
+        "227",
+        "245"
+      ],
+      "notes": "s6 customs officers have police powers to enforce the Act; s227 search of persons, premises authorisation and safeguards; s245 seizure and detention."
+    },
+    {
+      "sourceId": "constitution-1999",
+      "sections": [
+        "37"
+      ],
+      "notes": "s37 privacy of persons, homes and communications."
+    }
+  ]
+}

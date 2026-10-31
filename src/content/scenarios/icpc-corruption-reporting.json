@@ -14,12 +14,12 @@
     "petition"
   ],
   "category": "complaints",
-  "shortAnswer": "You can report corruption to the **Independent Corrupt Practices Commission (ICPC)** by petition, online, or in person. The **Corrupt Practices and Other Related Offences Act, 2000** criminalises bribery, abuse of office, and related offences. Your identity can be protected.",
-  "legalExplanation": "The **ICPC Act, 2000** establishes the Commission and offences:\n- **Section 8**: **Bribery** — giving/receiving gratification to influence official action.\n- **Section 9**: **Fraudulent acquisition/receipt** of property.\n- **Section 10**: **Abuse of office** — using position for private gain.\n- **Section 12**: **Conspiracy** to commit corruption offences.\n- **Section 13**: **Attempt** and **aiding/abetting** corruption.\n- **Section 26**: **Protection of informants** — identity of complainants/informants shall not be disclosed without consent.\n- **Section 27**: **False petitions** are an offence — report in good faith.\n\n**How to report**:\n1. **Online**: ICPC website petition portal.\n2. **Email**: petitions@icpc.gov.ng\n3. **In person**: ICPC headquarters (Abuja) or state offices.\n4. **Post**: Written petition to the Chairman, ICPC.\n5. **Phone**: ICPC hotlines (see Help directory).",
-  "exceptions": "- **False reports**: Section 27 makes knowingly false petitions an offence.\n- **Jurisdiction**: ICPC handles **federal** public officers; state equivalents exist (e.g., Lagos State Public Complaints Commission).\n- **Police overlap**: Some corruption cases may also be reported to Police (Anti-Corruption Unit) or EFCC.",
-  "practicalOptions": "1. **Document everything**: date, time, place, officer's name/rank/agency, what was demanded, witnesses.\n2. **Submit a written petition** with evidence (photos, recordings if legal, documents).\n3. **Request confidentiality** — ICPC Act Section 26 protects informant identity.\n4. **Follow up** — get a petition reference number.\n5. **If urgent** (ongoing extortion), also call Police **Complaints Response Unit** (Help directory).",
+  "shortAnswer": "You can report corruption to the **Independent Corrupt Practices and Other Related Offences Commission (ICPC)** by petition, online, or in person. The **Corrupt Practices and Other Related Offences Act, 2000** criminalises accepting and giving gratification, bribery of public officers, and abuse of office. The Act also imposes a duty to report bribery transactions and protects informers.",
+  "legalExplanation": "The **Corrupt Practices and Other Related Offences Act, 2000** establishes the Commission and the main offences:\n- **Section 8**: a person corruptly asks for, receives or obtains property or a benefit on account of a public officer's act, omission, favour or disfavour.\n- **Section 9**: a person corruptly gives, promises or offers such a benefit.\n- **Section 18**: bribery of a public officer.\n- **Section 19**: a public officer uses their office or position to confer a corrupt or unfair advantage on themselves, a relation or an associate.\n- **Section 23**: a **duty to report** bribery transactions.\n- **Section 25**: making false or misleading statements to the Commission is an offence.\n- **Section 27**: the Commission may investigate reports and enquiries.\n- **Section 64**: protection of informers and information.\n\n**How to report**: use the ICPC's official petition portal, write to the Commission, or visit an ICPC state office. Confirm current contact details in the Help directory before travelling.",
+  "exceptions": "- **Lawful fees**: a published official fee paid through the proper channel is not a bribe.\n- **Jurisdiction**: the ICPC handles public-sector corruption; the EFCC handles financial crimes, and state anti-corruption bodies may also have jurisdiction.\n- **Good faith**: report what you know truthfully; false or misleading statements to the Commission are themselves an offence (s 25).",
+  "practicalOptions": "1. **Document everything**: date, time, place, the officer's name/rank/agency, what was demanded, and witnesses.\n2. **Submit a written petition** with any evidence you lawfully hold.\n3. **Ask for confidentiality** — s 64 protects informers and information.\n4. **Get a reference number** and follow up.\n5. **If the demand is ongoing**, also contact the Police Complaints Response Unit (see Help directory).",
   "whatToAvoid": "- Paying the bribe to \"gather evidence\" — you become complicit.\n- Making false or exaggerated claims.\n- Sharing the petition publicly before ICPC acts — may compromise investigation.\n- Retaliation against the officer — let the process work.",
-  "whatToDocument": "- Officer's full name, rank, agency, department.\n- Date, time, exact location of demand.\n- Exact words spoken (what was demanded, amount, purpose).\n- Witnesses (names, contacts if willing).\n- Any documents, receipts, or recordings (check legality).\n- Your petition reference number from ICPC.",
+  "whatToDocument": "- Officer's full name, rank, agency and department.\n- Date, time and exact location of the demand.\n- Exact words spoken (what was demanded, amount and purpose).\n- Witnesses (names and contacts if willing).\n- Any documents, receipts or recordings you lawfully hold.\n- Your petition reference number from the ICPC.",
   "whatToDoAfter": "ICPC will acknowledge, investigate, and may prosecute. Track progress via your reference number. For support, see **Legal Aid Council** or **NHRC** in Help directory. If the officer is state-level, also report to the relevant state anti-corruption body.",
   "sources": [
     {
@@ -27,13 +27,14 @@
       "sections": [
         "8",
         "9",
-        "10",
-        "12",
-        "13",
-        "26",
-        "27"
+        "18",
+        "19",
+        "23",
+        "25",
+        "27",
+        "64"
       ],
-      "notes": "s8 bribery; s9 fraudulent acquisition; s10 abuse of office; s12 conspiracy; s13 attempt/aiding; s26 informant protection; s27 false petitions."
+      "notes": "ss8-9 accepting and giving gratification; s18 bribery of a public officer; s19 abuse of office; s23 duty to report; s25 false statements; s27 investigation; s64 protection of informers."
     }
   ],
   "jurisdiction": "federal",
@@ -44,16 +45,23 @@
   "reviewer": "Content team (source check)",
   "lastReviewed": "2026-10-29",
   "nextReview": "2027-04-30",
-  "reviewNotes": "Citations checked against ICPC Act 2000 as downloaded from ICPC website on 2026-10-29. Section 26 informant protection is key for reporters. Source verification is not legal advice.",
+  "reviewNotes": "Citations re-checked against the Corrupt Practices and Other Related Offences Act, 2000 in the legal-sources library on 2026-10-31. Source verification is not legal advice.",
   "changeHistory": [
     {
+      "date": "2026-10-31",
+      "note": "Corrected section citations to match the Act: s18 bribery, s19 abuse of office, s23 duty to report, s64 informer protection.",
+      "reviewer": "Content team (source check)"
+    },
+    {
       "date": "2026-10-29",
-      "note": "Initial published draft based on ICPC Act 2000 sections 8-10, 12-13, 26-27.",
+      "note": "Initial published draft based on ICPC Act 2000.",
       "reviewer": "Content team (source check)"
     }
   ],
   "relatedScenarios": [
-    "officer-demanded-money",
-    "police-arrest-detention"
+    "icpc-report-bribe",
+    "icpc-invitation-summons",
+    "criminal-code-bribery",
+    "officer-demanded-money"
   ]
 }

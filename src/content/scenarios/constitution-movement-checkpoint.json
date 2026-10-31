@@ -1,0 +1,65 @@
+{
+  "status": "approved",
+  "reviewer": "Content team (source check)",
+  "lastReviewed": "2026-10-31",
+  "nextReview": "2027-04-30",
+  "reviewNotes": "Citations checked against the official text downloaded from the issuing agency's portal. Source verification is not legal advice. Re-check before the next review date.",
+  "changeHistory": [
+    {
+      "date": "2026-10-31",
+      "note": "Added during full-coverage content expansion across the available statutes.",
+      "reviewer": "Content team (source check)"
+    }
+  ],
+  "jurisdiction": "federal",
+  "agency": [
+    "npf"
+  ],
+  "relatedScenarios": [
+    "police-roadblock-legality",
+    "police-checkpoint-documents",
+    "officer-demanded-money",
+    "police-record-encounter"
+  ],
+  "keywords": [
+    "movement",
+    "checkpoint",
+    "roadblock",
+    "constitution",
+    "travel",
+    "police",
+    "rights"
+  ],
+  "id": "constitution-movement-checkpoint",
+  "title": "Does a checkpoint restrict my right to move freely?",
+  "shortTitle": "Freedom of movement",
+  "icon": "🛣️",
+  "question": "Can police or another agency stop me from travelling on a public road without a specific reason?",
+  "category": "stop-search",
+  "shortAnswer": "The Constitution guarantees your freedom of movement across Nigeria. A checkpoint may involve a brief lawful stop, but it cannot be used to block your movement arbitrarily or to extort money. If you are prevented from travelling, ask for the legal basis and record what happened.",
+  "legalExplanation": "The **Constitution, section 41(1)** guarantees every citizen the right to move freely throughout Nigeria and to reside in any part of it. Restrictions must be imposed by a law that is reasonably justifiable in a democratic society.\n\nA police stop or search is a temporary interference, not a general power to prohibit travel. The **Police Act 2020** requires grounds and a search record for searches (ss 49–57). Other agencies such as FRSC, Customs, Immigration and NDLEA have their own statutory limits.\n\nWhere an officer blocks a road without lawful authority, that may be an unlawful restriction of movement and can be challenged.",
+  "exceptions": "- **Lawful curfew or security order:** a valid legal restriction may temporarily limit movement.\n- **Arrest:** if you are lawfully arrested, your movement is restricted by the arrest.\n- **Specific enforcement:** an agency may detain a vehicle or person under its own law, but must follow that law.",
+  "practicalOptions": "1. Ask: **\"Under what law are you preventing me from travelling?\"**\n2. Stay calm and avoid driving through a barrier.\n3. Record the agency, officer, location and time.\n4. If you are detained, ask for the reason and a written record.\n5. Contact a lawyer or the NHRC if the restriction continues.",
+  "whatToAvoid": "- Forcing your way through a checkpoint.\n- Assuming every delay is unlawful — a brief lawful stop is different from a blockade.\n- Paying money to be allowed to pass.",
+  "whatToDocument": "- Agency and officers involved.\n- Exact location and time.\n- What you were told.\n- How long you were delayed.\n- Any demand for payment.",
+  "whatToDoAfter": "Report an arbitrary blockade to the **NHRC**, the **Public Complaints Commission**, or the agency's complaint unit.",
+  "sources": [
+    {
+      "sourceId": "constitution-1999",
+      "sections": [
+        "41"
+      ],
+      "notes": "s41 freedom of movement."
+    },
+    {
+      "sourceId": "nigeria-police-act-2020",
+      "sections": [
+        "49",
+        "50",
+        "56",
+        "57"
+      ],
+      "notes": "stop/search powers and records."
+    }
+  ]
+}

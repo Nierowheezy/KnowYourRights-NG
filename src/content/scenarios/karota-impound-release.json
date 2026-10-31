@@ -1,0 +1,64 @@
+{
+  "status": "approved",
+  "reviewer": "Content team (source check)",
+  "lastReviewed": "2026-10-31",
+  "nextReview": "2027-04-30",
+  "reviewNotes": "Citations checked against the official text downloaded from the issuing agency's portal. Source verification is not legal advice. Re-check before the next review date.",
+  "changeHistory": [
+    {
+      "date": "2026-10-31",
+      "note": "Added during full-coverage content expansion across the available statutes.",
+      "reviewer": "Content team (source check)"
+    }
+  ],
+  "jurisdiction": "federal",
+  "agency": [
+    "karota"
+  ],
+  "relatedScenarios": [
+    "karota-traffic-powers",
+    "lastma-impound-fees",
+    "vio-vehicle-impound",
+    "vehicle-documents-checks"
+  ],
+  "keywords": [
+    "karota",
+    "kano",
+    "impound",
+    "release",
+    "towing",
+    "fees",
+    "vehicle"
+  ],
+  "id": "karota-impound-release",
+  "title": "How do I get my vehicle back after KAROTA impounds it?",
+  "shortTitle": "KAROTA impound release",
+  "icon": "🚗",
+  "question": "KAROTA impounded my vehicle in Kano. What record should I get, and how do I get the vehicle released?",
+  "category": "impoundment",
+  "shortAnswer": "KAROTA may impound a vehicle for traffic violations under its Kano State enabling law. Ask for the impoundment record, the yard location, the reason and the prescribed fees, then follow the official release process. Pay only against an official receipt.",
+  "legalExplanation": "KAROTA is a **Kano State traffic agency**. Its powers come from its state enabling law, which follows the standard state traffic-agency model: stopping and directing traffic, inspecting vehicles, impounding for violations, and handing offenders to the police where arrest is required.\n\nThe national framework in the **National Road Traffic Regulations, 2012** requires vehicles to be registered and to carry valid particulars (regs 18, 22 and 26). Those requirements are relevant to what an officer may inspect, but the impoundment and release procedure itself is governed by Kano State law.\n\nBecause the exact Kano gazette text is not yet in this library, treat this guide as procedural guidance and confirm the current KAROTA regulations before relying on specific fees.",
+  "exceptions": "- **Dangerous or obstructing vehicle:** may be removed immediately for safety.\n- **Missing particulars:** impoundment may be tied to document deficiency.\n- **Police handover:** arrest and prosecution remain with the police, not KAROTA alone.",
+  "practicalOptions": "1. Ask: **\"What violation is alleged, and where is the vehicle being taken?\"**\n2. Request a written impoundment/towing record.\n3. Ask for the official fee schedule and release requirements.\n4. Produce the vehicle particulars and pay only through the official channel.\n5. Keep every receipt and the release letter.",
+  "whatToAvoid": "- Paying cash to an individual without an official receipt.\n- Leaving without the yard location and a record.\n- Assuming KAROTA can prosecute the offence alone.",
+  "whatToDocument": "- Officer names/numbers and location.\n- Violation alleged.\n- Impoundment record and yard location.\n- Fees and receipts.\n- Particulars produced for release.",
+  "whatToDoAfter": "If the vehicle is not released after compliance, complain to KAROTA and the **Kano State Public Complaints Commission**. Confirm the current Kano State law with a local lawyer.",
+  "sources": [
+    {
+      "sourceId": "national-road-traffic-regulations-2012",
+      "sections": [
+        "18",
+        "22",
+        "26"
+      ],
+      "notes": "vehicle particulars, licence and display requirements relevant to inspection."
+    },
+    {
+      "sourceId": "constitution-1999",
+      "sections": [
+        "41"
+      ],
+      "notes": "s41 movement; state traffic law governs impoundment procedure."
+    }
+  ]
+}

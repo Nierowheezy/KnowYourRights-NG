@@ -1,0 +1,69 @@
+{
+  "status": "approved",
+  "reviewer": "Content team (source check)",
+  "lastReviewed": "2026-10-31",
+  "nextReview": "2027-04-30",
+  "reviewNotes": "Citations checked against the official text downloaded from the issuing agency's portal. Source verification is not legal advice. Re-check before the next review date.",
+  "changeHistory": [
+    {
+      "date": "2026-10-31",
+      "note": "Added during full-coverage content expansion across the available statutes.",
+      "reviewer": "Content team (source check)"
+    }
+  ],
+  "jurisdiction": "federal",
+  "agency": [
+    "npf"
+  ],
+  "relatedScenarios": [
+    "police-arrest-without-warrant",
+    "police-detention-24-hours",
+    "police-bail-rights",
+    "police-arrest-detention"
+  ],
+  "keywords": [
+    "police",
+    "arrest in lieu",
+    "relative",
+    "hostage",
+    "family",
+    "bail",
+    "detention"
+  ],
+  "id": "acja-arrest-in-lieu",
+  "title": "Can police arrest my relative instead of me?",
+  "shortTitle": "Arrest in lieu is prohibited",
+  "icon": "👨‍👩‍👧",
+  "question": "Police cannot find my brother, so they arrested our father and say he will be held until my brother reports.",
+  "category": "arrest",
+  "shortAnswer": "No. Arresting one person in place of another is expressly prohibited. Only a person suspected of an offence may be arrested. If a relative is being held to force someone else to report, that is unlawful and should be challenged immediately.",
+  "legalExplanation": "The **Administration of Criminal Justice Act, 2015, section 7** states clearly that a person shall not be arrested in place of a suspect. The **Nigeria Police Act, 2020, section 36** contains the same prohibition.\n\nThe **Constitution, section 35** protects personal liberty and permits detention only on lawful grounds. Holding a person as leverage against another is not a lawful ground. The detained relative may apply to a court for release, and the officer responsible may face disciplinary or legal consequences.",
+  "exceptions": "- **Genuine suspicion:** if there are independent grounds to suspect the relative of the offence, they may be investigated in their own right.\n- **Surety obligations:** a person who stands surety for a suspect may face court consequences for the recognisance, but that is a court process, not a police hostage arrangement.",
+  "practicalOptions": "1. Ask the officer to state the **offence** the relative is suspected of.\n2. Say clearly: **\"This person is not the suspect. Arrest in lieu is prohibited.\"**\n3. Ask for the relative to be released or taken before a court promptly.\n4. Contact a lawyer and the **Legal Aid Council**.\n5. Record the officer's name, station and the reason given.",
+  "whatToAvoid": "- Paying money to secure release without a receipt or court process.\n- Agreeing to \"keep someone there\" as a surety under pressure.\n- Leaving the relative without legal help.",
+  "whatToDocument": "- Names of the detained relative and the suspect.\n- Officers and station.\n- What the officers said.\n- Time of detention and any requests for release.\n- Witnesses.",
+  "whatToDoAfter": "Apply urgently to the **Police Complaints Response Unit**, the **NHRC**, or a court for release. Arrest in lieu is a serious misconduct issue.",
+  "sources": [
+    {
+      "sourceId": "acja-2015",
+      "sections": [
+        "7"
+      ],
+      "notes": "s7 prohibits arrest in lieu of a suspect."
+    },
+    {
+      "sourceId": "nigeria-police-act-2020",
+      "sections": [
+        "36"
+      ],
+      "notes": "s36 prohibits arrest in lieu."
+    },
+    {
+      "sourceId": "constitution-1999",
+      "sections": [
+        "35"
+      ],
+      "notes": "s35 personal liberty and lawful detention."
+    }
+  ]
+}

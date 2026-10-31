@@ -1,0 +1,58 @@
+{
+  "status": "approved",
+  "reviewer": "Content team (source check)",
+  "lastReviewed": "2026-10-31",
+  "nextReview": "2027-04-30",
+  "reviewNotes": "Citations checked against the official text downloaded from the issuing agency's portal. Source verification is not legal advice. Re-check before the next review date.",
+  "changeHistory": [
+    {
+      "date": "2026-10-31",
+      "note": "Added during full-coverage content expansion across the available statutes.",
+      "reviewer": "Content team (source check)"
+    }
+  ],
+  "jurisdiction": "federal",
+  "agency": [
+    "vio"
+  ],
+  "relatedScenarios": [
+    "vio-vehicle-impound",
+    "vio-arrest-powers",
+    "vehicle-documents-checks",
+    "lastma-impound-fees"
+  ],
+  "keywords": [
+    "vio",
+    "lagos",
+    "vehicle inspection",
+    "roadworthiness",
+    "impound",
+    "particulars",
+    "documents"
+  ],
+  "id": "vio-roadworthiness-stop",
+  "title": "What can VIO officers check on my vehicle?",
+  "shortTitle": "VIO vehicle checks",
+  "icon": "🔧",
+  "question": "Lagos vehicle inspection officers stopped me. What can they inspect, and when can they impound my car?",
+  "category": "documents",
+  "shortAnswer": "VIO officers may inspect vehicles for roadworthiness and check the prescribed particulars. Under the Lagos State Road Traffic Law, a vehicle without the required particulars may be impounded. Ask what is deficient, produce what you have, and get a written record before any vehicle is taken.",
+  "legalExplanation": "The **Lagos State Road Traffic Law, 2012**:\n- **Sections 11–12** establish the Vehicle Inspection Service and set out inspection/enforcement powers.\n- **Section 15** allows impoundment where a vehicle is used without the prescribed particulars.\n- **Section 16** sets release rules, including release within 24 hours on producing the required particulars.\n\nInspection should be tied to roadworthiness and the required documents, not to an arbitrary demand. A vehicle should not be taken without a record of the reason and the park.",
+  "exceptions": "- **Dangerous vehicle:** an unsafe vehicle may be stopped from continuing until defects are fixed.\n- **Missing particulars:** impoundment may be used to secure compliance.\n- **Emergency:** a vehicle posing an immediate danger may be moved.",
+  "practicalOptions": "1. Ask: **\"Which particular or defect is the problem?\"**\n2. Show the documents you have; ask for time to produce missing ones.\n3. Request a written inspection/impoundment record.\n4. If the vehicle is taken, get the park location and fee schedule.\n5. Keep receipts for any payment.",
+  "whatToAvoid": "- Paying an officer to \"pass\" an unsafe vehicle.\n- Driving away before the inspection is complete.\n- Handing over documents without a record.",
+  "whatToDocument": "- Officer names/numbers and location.\n- Defect or missing document alleged.\n- Inspection/impoundment record.\n- Park location and fees.\n- Receipts.",
+  "whatToDoAfter": "Fix the defect or produce the documents, then follow the release process. Complain to the Lagos State Vehicle Inspection Service or the Public Complaints Commission if the process was abusive.",
+  "sources": [
+    {
+      "sourceId": "lagos-state-traffic-law-2012",
+      "sections": [
+        "11",
+        "12",
+        "15",
+        "16"
+      ],
+      "notes": "ss11-12 Vehicle Inspection Service; s15 impound for missing particulars; s16 release."
+    }
+  ]
+}

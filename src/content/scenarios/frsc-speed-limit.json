@@ -1,0 +1,64 @@
+{
+  "status": "approved",
+  "reviewer": "Content team (source check)",
+  "lastReviewed": "2026-10-31",
+  "nextReview": "2027-04-30",
+  "reviewNotes": "Citations checked against the official text downloaded from the issuing agency's portal. Source verification is not legal advice. Re-check before the next review date.",
+  "changeHistory": [
+    {
+      "date": "2026-10-31",
+      "note": "Added during full-coverage content expansion across the available statutes.",
+      "reviewer": "Content team (source check)"
+    }
+  ],
+  "jurisdiction": "federal",
+  "agency": [
+    "frsc"
+  ],
+  "relatedScenarios": [
+    "frsc-fines-on-the-spot",
+    "frsc-seatbelt-phone",
+    "frsc-driver-licence-demand",
+    "vehicle-documents-checks"
+  ],
+  "keywords": [
+    "frsc",
+    "speed",
+    "speeding",
+    "fine",
+    "notice",
+    "payment",
+    "radar"
+  ],
+  "id": "frsc-speed-limit",
+  "title": "Can FRSC fine me for speeding on the spot?",
+  "shortTitle": "Speeding fines",
+  "icon": "💨",
+  "question": "FRSC says I was over the speed limit and wants payment immediately. What is the lawful process?",
+  "category": "payments",
+  "shortAnswer": "FRSC may enforce speed limits and serve a notice of offence with the prescribed fine. You are entitled to know the alleged speed, the limit, the device or evidence used, and the payment channel. Do not pay cash without an official receipt, and you may challenge the notice in court.",
+  "legalExplanation": "The **FRSC Act 2007** gives the Corps power to enforce traffic offences and prosecute them (s 10). The Act's schedule prescribes penalties for offences including **speed limit violation** and **dangerous driving**.\n\nThe **National Road Traffic Regulations, 2012** set speed limits and related rules. Enforcement should identify the specific offence and the evidence relied on.\n\nA lawful demand should be documented. An officer cannot simply demand an arbitrary sum at the roadside. You may ask for the notice of offence and the prescribed penalty, and you may contest it.",
+  "exceptions": "- **Emergency vehicles:** authorised emergency vehicles may have limited exemptions, but ordinary drivers do not.\n- **Road conditions:** temporary lower limits may apply in construction or danger zones.\n- **Device calibration:** if speed was measured by device, the reading and device details may matter to a challenge.",
+  "practicalOptions": "1. Ask: **\"What speed was recorded, what was the limit, and what device was used?\"**\n2. Request the **notice of offence** showing the prescribed fine.\n3. Pay through the official channel and keep the receipt.\n4. If you dispute it, note the court or challenge process on the notice.\n5. Record the officer, location and time.",
+  "whatToAvoid": "- Paying an arbitrary cash sum at the roadside.\n- Arguing aggressively or driving off.\n- Ignoring the notice and missing the challenge deadline.",
+  "whatToDocument": "- Alleged speed and speed limit.\n- Device details, if any.\n- Notice of offence and receipt.\n- Officer name/number and location.\n- Any court date.",
+  "whatToDoAfter": "If the fine was not documented, complain to the FRSC command. If you dispute the reading, follow the challenge process promptly.",
+  "sources": [
+    {
+      "sourceId": "frsc-act-2007",
+      "sections": [
+        "10",
+        "27"
+      ],
+      "notes": "s10 enforcement/prosecution; s27 penalties where none prescribed; Schedule includes speed limit violation."
+    },
+    {
+      "sourceId": "national-road-traffic-regulations-2012",
+      "sections": [
+        "18",
+        "22"
+      ],
+      "notes": "road traffic regulation framework; verify current speed-limit schedule."
+    }
+  ]
+}

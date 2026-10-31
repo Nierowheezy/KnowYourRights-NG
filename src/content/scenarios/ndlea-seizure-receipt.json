@@ -1,0 +1,63 @@
+{
+  "status": "approved",
+  "reviewer": "Content team (source check)",
+  "lastReviewed": "2026-10-31",
+  "nextReview": "2027-04-30",
+  "reviewNotes": "Citations checked against the official text downloaded from the issuing agency's portal. Source verification is not legal advice. Re-check before the next review date.",
+  "changeHistory": [
+    {
+      "date": "2026-10-31",
+      "note": "Added during full-coverage content expansion across the available statutes.",
+      "reviewer": "Content team (source check)"
+    }
+  ],
+  "jurisdiction": "federal",
+  "agency": [
+    "ndlea"
+  ],
+  "relatedScenarios": [
+    "ndlea-search-arrest",
+    "ndlea-premises-search",
+    "police-seize-phone-evidence",
+    "customs-seizure-receipt"
+  ],
+  "keywords": [
+    "ndlea",
+    "seizure",
+    "receipt",
+    "property",
+    "drugs",
+    "investigation",
+    "forfeiture"
+  ],
+  "id": "ndlea-seizure-receipt",
+  "title": "NDLEA seized my property. Must they give me a receipt?",
+  "shortTitle": "NDLEA seizure receipts",
+  "icon": "🧾",
+  "question": "NDLEA officers took my phone, cash or car during a drug investigation. Are they required to give me a receipt?",
+  "category": "impoundment",
+  "shortAnswer": "Yes. The NDLEA Act requires a written receipt from the Agency for any item, substance or thing seized under its search and seizure powers. Ask for the receipt, record what was taken and the officer's details, and keep it safe for any later application for return.",
+  "legalExplanation": "The **National Drug Law Enforcement Agency Act, section 41** gives authorised officers power, without warrant, to:\n- enter and search any land, building or carrier they have reason to believe is connected with an offence under the Act;\n- test and take samples of substances;\n- arrest a person they have reason to believe committed an offence under the Act;\n- seize any item or substance they have reason to believe was used in the commission of an offence.\n\n**Section 41(2)** requires that **a written receipt of the Agency shall be given for any item, substance or thing seized** under the section.\n\nSection 42 also allows the Agency, with the Attorney-General's written approval, to seek a freezing order over bank accounts linked to an arrested person where there is reason to believe the money came from drug trafficking.",
+  "exceptions": "- **Samples:** an officer may take samples for testing; ask for a record of what was sampled.\n- **Forfeiture proceedings:** seized property may later be subject to forfeiture, but the initial seizure should still be documented.\n- **Bank accounts:** freezing requires the Attorney-General's written approval under s 42(3).",
+  "practicalOptions": "1. Ask for the **written receipt** required by s 41(2).\n2. Record the item, quantity, condition and serial/IMEI numbers.\n3. Note the officer's name, number and command.\n4. Ask where the property is being taken and the case reference.\n5. Keep the receipt for any application for return.",
+  "whatToAvoid": "- Leaving without any record of the seizure.\n- Signing a receipt for items you did not receive.\n- Assuming the property is permanently forfeited before a court order.",
+  "whatToDocument": "- Written receipt and case reference.\n- Item details and condition.\n- Officer details.\n- Where the property was taken.\n- Any request for its return.",
+  "whatToDoAfter": "Follow up with the Agency and, if the property is not returned or forfeited unlawfully, seek legal advice about an application to court.",
+  "sources": [
+    {
+      "sourceId": "ndlea-act",
+      "sections": [
+        "41",
+        "42"
+      ],
+      "notes": "s41 search, seizure and arrest powers; s41(2) written receipt for seized items; s42 freezing orders with Attorney-General approval."
+    },
+    {
+      "sourceId": "constitution-1999",
+      "sections": [
+        "37"
+      ],
+      "notes": "s37 privacy of homes and communications."
+    }
+  ]
+}

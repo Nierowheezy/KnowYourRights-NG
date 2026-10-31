@@ -7,12 +7,30 @@
     "jurisdiction": "federal",
     "mandate": "General law enforcement, checkpoints, arrest, search and detention — the most common encounter.",
     "relevantScenarios": [
-      "police-stop-search-car",
-      "police-phone-search-checkpoint",
-      "police-arrest-detention",
       "police-record-encounter",
+      "officer-demanded-money",
+      "police-roadblock-legality",
+      "police-arrest-detention",
+      "police-consent-search",
+      "acja-arrest-in-lieu",
+      "police-phone-privacy",
+      "police-stop-search-car",
+      "police-search-home-warrant",
+      "police-phone-search-checkpoint",
+      "police-seize-phone-evidence",
+      "acja-legal-aid",
+      "police-right-to-silence",
+      "constitution-movement-checkpoint",
+      "police-detention-24-hours",
+      "police-use-of-force",
+      "criminal-code-bribery",
+      "police-identity-badge",
       "police-phone-unlock",
-      "officer-demanded-money"
+      "police-statement-caution",
+      "police-bail-rights",
+      "police-checkpoint-documents",
+      "police-arrest-without-warrant",
+      "vehicle-documents-checks"
     ]
   },
   {
@@ -23,7 +41,15 @@
     "jurisdiction": "federal",
     "mandate": "Highways, driver fitness, vehicle roadworthiness and road safety rules.",
     "relevantScenarios": [
+      "officer-demanded-money",
+      "frsc-arrest-towing",
       "frsc-fines-on-the-spot",
+      "frsc-speed-limit",
+      "frsc-vehicle-inspection",
+      "frsc-driver-licence-demand",
+      "frsc-seatbelt-phone",
+      "frsc-accident-duty",
+      "frsc-roadworthiness-certificate",
       "vehicle-documents-checks"
     ]
   },
@@ -35,7 +61,12 @@
     "jurisdiction": "federal",
     "mandate": "Border and import enforcement. Where their highway jurisdiction starts, and where it stops.",
     "relevantScenarios": [
-      "customs-highway-stop"
+      "customs-arrest-powers",
+      "customs-search-seizure",
+      "customs-highway-stop",
+      "customs-seizure-receipt",
+      "customs-traveller-declaration",
+      "customs-search-powers"
     ]
   },
   {
@@ -45,7 +76,13 @@
     "type": "civil-defence",
     "jurisdiction": "federal",
     "mandate": "Critical infrastructure protection and their limits on the road.",
-    "relevantScenarios": []
+    "relevantScenarios": [
+      "nscdc-vandalism-arrest",
+      "nscdc-arrest-powers",
+      "nscdc-infrastructure-powers",
+      "nscdc-search-premises",
+      "nscdc-private-guard"
+    ]
   },
   {
     "id": "ndlea",
@@ -54,7 +91,11 @@
     "type": "law-enforcement",
     "jurisdiction": "federal",
     "mandate": "Drug enforcement stops, search powers, and what reasonable suspicion actually requires.",
-    "relevantScenarios": []
+    "relevantScenarios": [
+      "ndlea-search-arrest",
+      "ndlea-premises-search",
+      "ndlea-seizure-receipt"
+    ]
   },
   {
     "id": "nis",
@@ -63,17 +104,28 @@
     "type": "immigration",
     "jurisdiction": "federal",
     "mandate": "Residency checks and document demands, and your rights in them.",
-    "relevantScenarios": []
+    "relevantScenarios": [
+      "immigration-deportation-detention",
+      "immigration-arrest-deportation",
+      "immigration-document-check",
+      "immigration-entry-refusal",
+      "immigration-offences"
+    ]
   },
   {
     "id": "lastma",
     "name": "Lagos State Traffic Management Authority (LASTMA)",
     "abbr": "LASTMA",
     "type": "traffic",
-    "jurisdiction": "federal",
+    "jurisdiction": "state",
     "mandate": "Towing, impound procedure and lawful fees.",
     "relevantScenarios": [
-      "lastma-towing"
+      "officer-demanded-money",
+      "lastma-impound-fees",
+      "lastma-arrest-powers",
+      "lastma-towing",
+      "lastma-one-way-brt",
+      "lagos-okada-restrictions"
     ]
   },
   {
@@ -84,7 +136,10 @@
     "jurisdiction": "state",
     "mandate": "Roadworthiness stops and the narrow grounds for impoundment.",
     "relevantScenarios": [
-      "vio-vehicle-impound"
+      "vio-arrest-powers",
+      "vio-roadworthiness-stop",
+      "vio-vehicle-impound",
+      "vehicle-documents-checks"
     ]
   },
   {
@@ -92,9 +147,12 @@
     "name": "Kano Road and Traffic Agency (KAROTA)",
     "abbr": "KAROTA",
     "type": "traffic",
-    "jurisdiction": "federal",
+    "jurisdiction": "state",
     "mandate": "State traffic rules that differ from federal highway rules.",
-    "relevantScenarios": []
+    "relevantScenarios": [
+      "karota-impound-release",
+      "karota-traffic-powers"
+    ]
   },
   {
     "id": "lnsc",
@@ -103,6 +161,22 @@
     "type": "other",
     "jurisdiction": "state",
     "mandate": "Community policing powers and their legal limits.",
-    "relevantScenarios": []
+    "relevantScenarios": [
+      "lnsc-neighbourhood-powers"
+    ]
+  },
+  {
+    "id": "icpc",
+    "name": "Independent Corrupt Practices and Other Related Offences Commission (ICPC)",
+    "abbr": "ICPC",
+    "type": "other",
+    "jurisdiction": "federal",
+    "mandate": "Investigates and prosecutes bribery, gratification and abuse of office by public officers, and corruption-related complaints.",
+    "relevantScenarios": [
+      "icpc-report-bribe",
+      "icpc-corruption-reporting",
+      "icpc-invitation-summons",
+      "criminal-code-bribery"
+    ]
   }
 ]
